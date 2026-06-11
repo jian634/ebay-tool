@@ -1,0 +1,1757 @@
+﻿汽配类别树状图 (Auto Parts Category Tree Diagram)
+============================================================
+
+◆ Vehicles 车辆
+  ├── Cars and trucks  汽车与卡车
+      ├── Shop by body type 按车身类型浏览
+          ├── Convertible 敞篷车
+          ├── Coupe 双门轿跑
+          ├── Hatchback 掀背车
+          ├── Minivan MPV商务车
+          ├── Sedan 轿车
+          ├── SUV 运动型多用途车
+          ├── Truck卡车/皮卡
+          ├── Van 厢式货车
+          ├── Wagon旅行车
+      ├── Shop by era 按年代浏览
+          ├── 2010's & newer 2010年代及以后
+          ├── 2000's
+          ├── 1990's
+          ├── 1980's
+          ├── 1970's
+          ├── 1960's
+          ├── 1950's
+          ├── 1940's
+          ├── 1939 & earlier 1939年及以前
+      ├── Shop by make or model 按品牌或车型浏览
+          ├── Popular makes 热门品牌
+              └── AMC AMC汽车
+              └── BMW 宝马
+              └── Buick 别克
+              └── Cadillac 凯迪拉克
+              └── Chevrolet 雪佛兰
+              └── Dodge 道奇
+              └── Ferrari 法拉利
+              └── Ford 福特
+              └── Jeep 吉普
+              └── Lamborghini兰博基尼
+              └── Mercedes-Benz梅赛德斯奔驰
+              └── Plymouth普利茅斯
+              └── Pontiac庞蒂亚克
+              └── Porsche保时捷
+              └── Toyota丰田
+          ├── Popular models 热门车型
+              └── Chevrolet Camaro 雪佛兰科迈罗
+              └── Chevrolet Chevelle 雪佛兰舍韦勒
+              └── Chevrolet Corvette 雪佛兰科尔维特
+              └── Dodge Challenger 道奇挑战者
+              └── Dodge Charger 道奇战马
+              └── Ford Bronco 福特烈马
+              └── Ford F-150 福特F-150
+              └── Ford F-250 福特F-250
+              └── Ford Mustang 福特野马
+              └── Honda Civic 本田思域
+              └── Jeep Wrangler 吉普牧马人
+              └── Pontiac GTO 庞蒂亚克GTO
+              └── Porsche 911 保时捷911
+              └── Toyota Supra 丰田Supra
+              └── Toyota Tacoma 丰田塔科马
+      ├── Shop by vehicle type按车辆类型浏览
+          ├── Classics 经典车
+          ├── Collector cars 收藏车
+          ├── Shop by Vehicle Type 按车型选购
+              └── Antique & Vintage 古董与复古车
+              └── Convertible 敞篷车
+              └── Hot Rod/Street Rod 改装/街头改装车
+              └── Military 军用车辆
+              └── Muscle 肌肉车
+          ├── Shop By Era 按年代选购
+              └── 1939 & Earlier 1939年及更早
+              └── 1940's
+              └── 1950's
+              └── 1960's
+              └── 1970's
+              └── 1980's
+          ├── Shop by Popular Models 按热门车型选购
+              └── Camaro 科迈罗
+              └── Corvette 科尔维特
+              └── GTO GTO
+              └── Impala 英帕拉
+              └── Mercedes-Benz SL 奔驰SL
+              └── Mustang 野马
+              └── Porsche 356 保时捷356
+              └── Chevrolet Bel Air 雪佛兰贝莱尔
+              └── Volkswagen Beetle 大众甲壳虫
+          ├── Shop by category 按类别选购
+              └── Parts & Accessories 零配件
+          ├── Shop Parts & Accessories 选购零配件
+              └── Car & Truck Parts 轿车与卡车零件
+              └── Automotive Tools & Supplies 汽车工具与用品
+          ├── Drag racing 直线加速赛
+          ├── Electrics & hybrids 电动车与混合动力车
+          ├── Shop Popular Makes 按热门品牌选购
+              └── BMW 宝马
+              └── Chevrolet 雪佛兰
+              └── Ford 福特
+              └── Lexus 雷克萨斯
+              └── Mercedes-Benz 奔驰
+              └── Porsche 保时捷
+              └── Nissan 日产
+              └── Tesla 特斯拉
+              └── All Makes 所有品牌
+          ├── Shop by Fuel Type 按燃料类型选购
+              └── Electric Cars & Trucks 电动轿车与卡车
+              └── Hybrid Cars & Trucks 混合动力轿车与卡车
+          ├── Shop Parts & Accessories 选购零配件
+              └── Electric, Hybrid & PHEV Car & Truck Specific Parts 电动、混合动力及插电混动专用零件
+              └── Automotive Tools & Supplies 汽车工具与用品
+          ├── Exotics 异国跑车
+              └── Low riders 低趴改装车
+              └── Muscle cars 肌肉车
+              └── Rat rods 锈迹改装车
+              └── Sports cars 跑车
+          ├── Low riders 低趴改装车
+          ├── Muscle cars 肌肉车
+          ├── Rat rods 锈迹改装车
+          ├── Sports cars 跑车
+      ├── Shop more vehicles 选购更多车辆
+          ├── Boats 船只
+          ├── Motorcycles 摩托车
+          ├── Powersports 动力运动车
+          ├── Other vehicles & trailers 其他车辆与拖车
+      ├── Shop parts & acccessories 选购零配件
+          ├── Car & truck parts 轿车与卡车零件
+          ├── Automotive tools & supplies 汽车工具与用品
+  ├── Classic cars 经典轿车
+      ├── Shop by Make 按品牌选购
+          ├── AMC AMC
+          ├── Cord 科德
+          ├── DeSoto 德索托
+          ├── Edsel 埃德塞尔
+          ├── Hudson 哈德逊
+          ├── International Harvester 万国收割机
+          ├── Mercury 水星
+          ├── MG MG
+          ├── Nash 纳什
+          ├── Oldsmobile 奥兹莫比尔
+          ├── Packard 帕卡德
+          ├── Plymouth 普利茅斯
+          ├── Pontiac 庞蒂亚克
+          ├── Studebaker 斯蒂庞克
+          ├── Willys 威利斯
+          ├── All Makes 所有品牌
+      ├── Shop by Era 按年代选购
+          ├── 1939 & Earlier 1939年及更早
+          ├── 1940's
+          ├── 1950's
+          ├── 1960's
+          ├── 1970's
+          ├── 1980's
+      ├── Shop by Popular Models 按热门车型选购
+          ├── Barracuda 梭鱼
+          ├── Bonneville 博纳维尔
+          ├── Camaro 科迈罗
+          ├── Challenger 挑战者
+          ├── Charger 战马
+          ├── Corvette 科尔维特
+          ├── Duster 除尘者
+          ├── Firebird 火鸟
+          ├── Grand Am 大阿姆
+          ├── Grand Prix 大奖赛
+          ├── Javelin 标枪
+          ├── Mustang 野马
+          ├── Road Runner 走鹃
+          ├── Satellite 卫星
+          ├── Shelby 谢尔比
+          ├── Torino 托里诺
+          ├── Trans Am 火鸟Trans Am
+      ├── Shop by category 按类别选购
+          ├── eBay Motors eBay汽车
+          ├── Shop Parts & Accessories 选购零配件
+          ├── Car & Truck Parts 轿车与卡车零件
+          ├── Automotive Tools & Supplies 汽车工具与用品
+  ├── Collector cars 收藏车
+      ├── Shop by Vehicle Type 按车型选购
+          ├── Antique & Vintage 古董与复古车
+          ├── Convertible 敞篷车
+          ├── Hot Rod/Street Rod 改装/街头改装车
+          ├── Military 军用车辆
+          ├── Muscle 肌肉车
+      ├── Shop By Era 按年代选购
+          ├── 1939 & Earlier 1939年及更早
+          ├── 1940's
+          ├── 1950's
+          ├── 1960's
+          ├── 1970's
+          ├── 1980's
+      ├── Shop by Popular Models 按热门车型选购
+          ├── Camaro 科迈罗
+          ├── Corvette 科尔维特
+          ├── GTO GTO
+          ├── Impala 英帕拉
+          ├── Mercedes-Benz SL 奔驰SL
+          ├── Mustang 野马
+          ├── Porsche 356 保时捷356
+          ├── Chevrolet Bel Air 雪佛兰贝莱尔
+          ├── Volkswagen Beetle 大众甲壳虫
+      ├── Shop by category 按类别选购
+          ├── Parts & Accessories 零配件
+      ├── Shop Parts & Accessories 选购零配件
+          ├── Car & Truck Parts 轿车与卡车零件
+          ├── Automotive Tools & Supplies 汽车工具与用品
+  ├── Commercial trucks 商用卡车
+          ├── Bucket/Boom Trucks 斗臂/高空作业车
+          ├── Commercial Pickups 商用皮卡
+          ├── Dump Trucks 自卸卡车
+          ├── Emergency & Fire Trucks 应急与消防车
+          ├── Other Heavy Duty Trucks 其他重型卡车
+          ├── Other Light Duty Trucks 其他轻型卡车
+          ├── Other Medium Duty Trucks 其他中型卡车
+          ├── Semi Trucks 半挂卡车
+          ├── Tow Trucks 拖车
+          ├── Utility & Service Trucks 公用事业与服务车
+          ├── Van/Box Trucks 厢式货车
+  ├── Electric and hybrid cars 电动车与混合动力车
+      ├── Shop Popular Makes 按热门品牌选购
+          ├── BMW 宝马
+          ├── Chevrolet 雪佛兰
+          ├── Ford 福特
+          ├── Lexus 雷克萨斯
+          ├── Mercedes-Benz 奔驰
+          ├── Porsche 保时捷
+          ├── Nissan 日产
+          ├── Tesla 特斯拉
+      ├── Shop by Fuel Type 按燃料类型选购
+          ├── Electric Cars & Trucks 电动轿车与卡车
+          ├── Hybrid Cars & Trucks 混合动力轿车与卡车
+      ├── Shop Parts & Accessories 选购零配件
+          ├── Electric, Hybrid & PHEV Car & Truck Specific Parts 电动、混合动力及插电混动专用零件
+          ├── Automotive Tools & Supplies 汽车工具与用品
+  ├── Exotic cars 异国跑车
+      ├── Shop By Make 按品牌选购
+          ├── Alfa Romeo 阿尔法·罗密欧
+          ├── Aston Martin 阿斯顿·马丁
+          ├── Bentley 宾利
+          ├── Bugatti 布加迪
+          ├── Ferrari 法拉利
+          ├── Jaguar 捷豹
+          ├── Lamborghini 兰博基尼
+          ├── Land Rover 路虎
+          ├── Lotus 莲花
+          ├── Maserati 玛莎拉蒂
+          ├── Maybach 迈巴赫
+          ├── McLaren 迈凯伦
+          ├── Mercedes-Benz 奔驰
+          ├── Porsche 保时捷
+          ├── Rolls-Royce 劳斯莱斯
+          ├── All Makes 所有品牌
+      ├── Shop Parts & Accessories 选购零配件
+          ├── Car & Truck Parts 轿车与卡车零件
+          ├── Automotive Tools and Supplies 汽车工具与用品
+  ├── Boats 船只
+          ├── Fishing Boats 渔船
+          ├── Other Boats 其他船只
+          ├── Powerboats & Motorboats 动力艇与摩托艇
+          ├── Sailboats 帆船
+  ├── Motorcycles 摩托车
+          ├── American Classic Motors 美国经典摩托
+          ├── American Ironhorse 美国铁马
+          ├── Aprilia 阿普利亚
+          ├── BETA 测试版
+          ├── BMW 宝马
+          ├── Benelli 贝纳利
+          ├── Buell 布尔
+          ├── Campagna 坎帕尼亚
+          ├── Can-Am 庞巴迪
+          ├── Desperado 亡命之徒
+          ├── Ducati 杜卡迪
+          ├── Greeves 格里夫斯
+          ├── Harley-Davidson 哈雷戴维森
+          ├── Hodaka 穗高
+          ├── Honda 本田
+          ├── Husaberg 胡萨贝格
+          ├── Husqvarna 胡斯瓦纳
+          ├── Hyosung 晓星
+          ├── Indian 印第安
+          ├── Kawasaki 川崎
+          ├── Kymco 光阳
+          ├── Lifan 力帆
+          ├── MV Agusta MV阿古斯塔
+          ├── Other Makes 其他品牌
+          ├── Qlink
+          ├── TM Racing TM赛车队        
+          ├── Titan 泰坦
+          ├── Triumph 凯旋
+          ├── Ural 乌拉尔
+          ├── Vento 文托
+          ├── Vincent 文森特
+  ├── Powersports 动力运动
+          ├── ATVs 全地形车
+          ├── Dune Buggies & Sand Rails 沙丘车与沙轨车
+          ├── Go Karts: High-performance 卡丁车：高性能
+          ├── Other Powersports 其他动力运动车
+          ├── Personal Watercraft 个人水上摩托
+          ├── Powersport Vehicles Under 50cc 50cc以下动力运动车
+          ├── Scooters & Mopeds 踏板车与助力车
+          ├── Snowmobiles 雪地摩托
+          ├── UTVs 多功能地形车
+      ├── Shop ATVs by Make 按品牌选购全地形车
+          ├── Arctic Cat 北极猫
+          ├── Can-Am 庞巴迪Can-Am
+          ├── CF Moto 春风动力
+          ├── Honda 本田
+          ├── Kawasaki 川崎
+          ├── Polaris 北极星
+          ├── Suzuki 铃木
+          ├── Yamaha 雅马哈
+      ├── Shop UTVs by Make 按品牌选购多功能地形车
+          ├── Arctic Cat 北极猫
+          ├── Can-am 庞巴迪Can-Am
+          ├── Honda 本田
+          ├── John Deere 约翰迪尔
+          ├── Kawasaki 川崎
+          ├── Polaris 北极星
+          ├── Yamaha 雅马哈
+  ├── Rvs and campers 房车与露营车
+          ├── Class A RVs A型房车
+          ├── Class B RVs B型房车
+          ├── Class C RVs C型房车
+          ├── Towable RVs & Camper 拖挂式房车与露营车
+  ├── Trailers 拖车
+          ├── Boat & Watercraft Trailers 船只与水上运动拖车
+          ├── Car Trailers 汽车拖车
+          ├── Cargo & Utility Trailers 货物与公用拖车
+          ├── Commercial Truck Trailers 商用卡车拖车
+          ├── Horse Trailers 马匹拖车
+          ├── Motorcycle Trailers 摩托车拖车
+          ├── Other Trailers 其他拖车
+  ├── Other vehicles 其他车辆
+          ├── Aircraft 飞机
+          ├── Buses 巴士
+          ├── Commercial Trucks 商用卡车
+          ├── Golf Carts 高尔夫球车
+          ├── Military Vehicles 军用车辆
+          ├── Other 其他
+          ├── RVs & Campers 房车与露营车
+          ├── Race Cars (Not Street Legal) 赛车（非街道合法）
+          ├── Trailers 拖车
+
+◆ Car and truck parts 轿车与卡车零件
+  ├── Accessory belts 附件皮带
+          ├── Belts 皮带
+          ├── Idlers & Tensioners 惰轮与张紧器
+          ├── Other Belt Parts 其他皮带零件
+          ├── Pulleys 皮带轮
+  ├── Advanced driver assistance systems 高级驾驶辅助系统
+          ├── ADAS Control Modules ADAS控制模块
+          ├── Alert & Warning Devices 警报与警示装置
+          ├── Cruise Control Components 巡航控制组件
+          ├── Lidar & Radar Sensors 激光雷达与雷达传感器
+          ├── Other Advanced Driver Assistance Systems 其他高级驾驶辅助系统
+          ├── Parking Assistance 泊车辅助
+          ├── Visible Cameras 可见光摄像头
+  ├── Air and fuel delivery 进气与燃油供给
+          ├── Air Filter Housings 空气滤清器壳体
+          ├── Air Filters 空气滤清器
+          ├── Air Intake & Fuel Sensors 进气与燃油传感器
+          ├── Carburetor Parts 化油器零件
+          ├── Carburetors 化油器
+          ├── Fuel Filters 燃油滤清器
+          ├── Fuel Injection Parts 燃油喷射零件
+          ├── Fuel Pumps & Sending Units 燃油泵与发送单元
+          ├── Fuel Tank Caps 油箱盖
+          ├── Fuel Tanks & Filler Necks 油箱与加油颈
+          ├── Gaskets, Seals & O-Rings 垫片、密封圈与O型圈
+          ├── Hoses, Lines & Pipes 软管、管路
+          ├── Intake Manifolds 进气歧管
+          ├── Other Air & Fuel Delivery 其他进气与燃油供给零件
+          ├── Throttle Bodies 节气门体
+          ├── Throttle Cables & Linkages 节气门拉线与连杆
+          ├── Turbos, Superchargers & Intercoolers 涡轮、机械增压器与中冷器
+          ├── Vacuum Pumps 真空泵
+  ├── Air conditioning and heating 空调与暖风
+          ├── A/C Compressors & Clutches 空调压缩机与离合器
+          ├── A/C Condensers 空调冷凝器
+          ├── A/C Evaporators 空调蒸发器
+          ├── A/C Expansion Valves 空调膨胀阀
+          ├── A/C Hoses & Fittings 空调软管与接头
+          ├── A/C Pressure Switches 空调压力开关
+          ├── A/C Receiver Dryers & Accumulators 空调储液干燥器与储液器
+          ├── Blowers & Fans 鼓风机与风扇
+          ├── Cabin Air Filters 空调滤芯
+          ├── HVAC Control Unit Parts HVAC控制单元零件
+          ├── HVAC Controls & Control Units HVAC控制装置与控制单元
+          ├── HVAC Temperature Sensors HVAC温度传感器
+          ├── HVAC Vent Actuators HVAC通风执行器
+          ├── Heater Control Valves 暖风控制阀
+          ├── Heater Cores 暖风水箱
+          ├── Other Air Conditioning & Heating 其他空调与暖风零件
+  ├── Brakes and brake parts 制动系统与刹车零件
+          ├── ABS & Stability Hydraulic Units ABS与稳定液压单元
+          ├── ABS Control Modules ABS控制模块
+          ├── ABS Speed Sensors ABS轮速传感器
+          ├── Additional ABS Parts 其他ABS零件
+          ├── Additional Brake Sensors & Switches 其他制动传感器与开关
+          ├── Brake Boosters 制动助力器
+          ├── Brake Cables 制动拉线
+          ├── Brake Component Kits 制动组件套装
+          ├── Brake Disc Rotors 制动盘
+          ├── Brake Drums 制动鼓
+          ├── Brake Hoses, Lines & Fittings 制动软管、管路与接头
+          ├── Brake Pad & Shoe Hardware 刹车片与蹄片硬件
+          ├── Brake Pad Wear Sensors 刹车片磨损传感器
+          ├── Brake Pads 刹车片
+          ├── Brake Relays 制动继电器
+          ├── Brake Shoes 制动蹄片
+          ├── Calipers & Brackets 制动卡钳与支架
+          ├── Master Cylinders 制动总泵
+          ├── Other Brake Parts 其他制动零件
+          ├── Rebuild Kits & Parts 修复套装与零件
+          ├── Reservoirs & Caps 储液罐与盖子
+          ├── Wheel Cylinders 制动轮缸
+          ├── Wires, Cables & Connectors 电线、拉线与连接器
+  ├── Electric, hybrid and PHEV specific parts 电动、混合动力与插电混动专用零件
+          ├── Air Conditioner Compressors 空调压缩机
+          ├── Batteries, BMS & Fuel Cells 电池、电池管理系统与燃料电池
+          ├── Charging Components 充电组件
+          ├── Charging Units 充电单元
+          ├── Control Modules 控制模块
+          ├── Conversion Kits 转换套件
+           ├── Converters & Inverters 转换器与逆变器
+          ├── Cooling Components 冷却组件
+          ├── Drivetrain Motors & Parts 驱动电机与零件
+          ├── High Voltage Circuit Fuses & Breakers 高压电路保险丝与断路器
+          ├── Other Electric, Hybrid & PHEV Specific Parts 其他电动、混合动力与插电混动专用零件
+          ├── Relays & Contactors 继电器与接触器
+          ├── Switches 开关
+          ├── Wiring Harnesses, Cables & Connectors 线束、电缆与连接器
+  ├── Engine cooling components 发动机冷却组件
+          ├── Caps 盖子
+          ├── Clamps & Hardware 卡箍与硬件
+          ├── Coolant Hoses 冷却液软管
+          ├── Engine Oil Coolers & Lines 发动机机油冷却器与管路
+          ├── Expansion & Overflow Tanks 膨胀水箱与溢流罐
+          ├── Fan & Shroud Assemblies 风扇与护罩总成
+          ├── Fan Blades 风扇叶片
+          ├── Fan Clutches 风扇离合器
+          ├── Fan Motors 风扇电机
+          ├── Gaskets, Seals & O-Rings 垫片、密封圈与O型圈
+          ├── Other Engine Cooling Components 其他发动机冷却组件
+          ├── Radiators 散热器
+          ├── Temperature Sensors 温度传感器
+          ├── Thermostats & Housings 节温器与壳体
+          ├── Water Pumps 水泵
+  ├── Engines and engine parts 发动机与发动机零件
+          ├── Connecting Rods & Parts 连杆与零件
+          ├── Crankshafts 曲轴
+          ├── Cylinder Heads 气缸盖
+          ├── Engine Bearings 发动机轴承
+          ├── Engine Blocks 发动机缸体
+          ├── Engine Mounts 发动机支架
+          ├── Engine Rebuild Kits 发动机修复套装
+          ├── Engine Sensors & Switches 发动机传感器与开关
+          ├── Engines 发动机
+          ├── Gaskets, Seals & Hardware 垫片、密封圈与硬件
+          ├── Oil Drain Plugs, Filler Caps & Dipsticks 放油螺塞、加油盖与机油尺
+          ├── Oil Filters 机油滤清器
+          ├── Oil Pans 油底壳
+          ├── Oil Pumps & Parts 机油泵与零件
+          ├── Other Engine Parts 其他发动机零件
+          ├── Pistons & Rings 活塞与活塞环
+          ├── Service Kits 维修套装
+          ├── Timing Components & Kits 正时组件与套装
+          ├── Valvetrain Components 气门传动组件
+  ├── Exhaust and emission systems 排气与排放系统
+          ├── Air Bypass Valves 空气旁通阀
+          ├── Catalytic Converters 催化转化器
+          ├── Clamps, Flanges, Hangers & Hardware 卡箍、法兰、吊架与硬件
+          ├── Diesel Exhaust Fluid System Parts 柴油尾气处理液系统零件
+          ├── EGR Parts & Valves EGR零件与阀门
+          ├── Emission Gaskets 排放垫片
+          ├── Emissions Hardware & Components 排放硬件与组件
+          ├── Exhaust Gaskets 排气垫片
+          ├── Exhaust Pipes & Tips 排气管与尾嘴
+          ├── Exhaust System Kits 排气系统套装
+          ├── Fuel Vapor Canisters 燃油蒸气罐
+          ├── Heat Shields, Wraps & Sleeves 隔热罩、隔热包与隔热套
+          ├── Manifolds & Headers 歧管与排气头段
+          ├── Mufflers & Resonators 消声器与谐振器
+          ├── Other Exhaust & Emission Parts 其他排气与排放零件
+          ├── Oxygen Sensors 氧传感器
+          ├── Particulate Filters 颗粒捕集器
+          ├── Secondary Air & Smog Pumps 二次空气泵与烟雾泵
+          ├── Solenoids 电磁阀
+          ├── Switches 开关
+  ├── Exterior parts and accessories 外观零件与配件
+          ├── Antennas 天线
+          ├── Body Moldings & Trims 车身饰条与装饰条
+          ├── Bumpers & Components 保险杠与组件
+          ├── Car & Truck Covers 轿车与卡车车罩
+          ├── Decals & Vinyls 贴纸与车贴
+          ├── Doors, Trunk Lids & Hatches 车门、行李箱盖与舱门
+          ├── Emblems & Ornaments 徽标与装饰件
+          ├── Exterior Locks & Lock Hardware 外部门锁与锁具硬件
+          ├── Frame Rails & Subframes 车架纵梁与副车架
+          ├── Glass & Window Parts 玻璃与车窗零件
+          ├── Grilles 格栅
+          ├── Guards & Protection 护板与防护件
+          ├── Hoods 引擎盖
+          ├── Horns 喇叭
+          ├── License Plates & Frames 车牌与车牌框
+          ├── Mounts, Brackets & Hardware 支架、托架与硬件
+          ├── Other Exterior Parts & Accessories 其他外观零件与配件
+          ├── Panels 车身板件
+          ├── Roofs, Tops & Sunroofs 车顶、顶篷与天窗
+          ├── Running Boards & Step Bars 侧踏板与登车踏板
+          ├── Side View Mirrors 外后视镜
+          ├── Snow Plows & Parts 雪犁与零件
+          ├── Spare Tire Carriers & Covers 备胎架与备胎罩
+          ├── Spoilers & Wings 扰流板与尾翼
+          ├── Truck Beds & Parts 货厢与零件
+          ├── Wipers & Washers 雨刮器与洗涤器
+  ├── Ignition systems and components 点火系统与组件
+          ├── Additional Distributor Parts 分电器附加零件
+          ├── Distributor Caps 分电器盖
+          ├── Distributor Rotors 分电器转子
+          ├── Distributors 分电器
+          ├── Glow Plugs 预热塞
+          ├── Ignition Coils 点火线圈
+          ├── Ignition Condensers 点火电容器
+          ├── Ignition Kits 点火套装
+          ├── Ignition Modules 点火模块
+          ├── Ignition Points 断电器触点
+          ├── Ignition Wires & Coil Boots 点火线与线圈护套
+          ├── Other Ignition Systems & Components 其他点火系统与组件
+          ├── Spark Plugs 火花塞
+  ├── Interior parts and accessories 内饰零件与配件
+          ├── Cargo Covers 行李厢遮物帘
+          ├── Center, Overhead Consoles & Parts 中控台、顶置控制台与零件
+          ├── Dash Panels & Glove Boxes 仪表板与手套箱
+          ├── Door Panels 车门内饰板
+          ├── Floor Mats, Carpets & Cargo Liners 脚垫、地毯与行李厢垫
+          ├── Gauges 仪表
+          ├── Handbrake & Shift Boots 手刹与换挡防尘套
+          ├── Headliners & Parts 车顶内衬与零件
+          ├── Interior Hardware & Clips 内饰硬件与卡扣
+          ├── Interior Locks & Lock Hardware 内部门锁与锁具硬件
+          ├── Interior Safety 内饰安全件
+          ├── Mobility & Adaptive Driving Controls 移动性与自适应驾驶控制
+          ├── Other Interior Parts & Accessories 其他内饰零件与配件
+          ├── Parking Brake Levers 驻车制动拉杆
+          ├── Pedal Assemblies, Pads & Parts 踏板总成、踏板垫与零件
+          ├── Power Outlets & Lighters 电源插座与点烟器
+          ├── Rear View Mirrors 内后视镜
+          ├── Seats, Parts & Accessories 座椅、零件与配件
+          ├── Shift Knobs 换挡旋钮
+          ├── Steering Wheel Covers 方向盘套
+          ├── Steering Wheels & Horn Buttons 方向盘与喇叭按钮
+          ├── Storage & Organizers 储物与收纳件
+          ├── Sun & Privacy Shades 遮阳板与隐私遮阳帘
+          ├── Sun Visors 遮阳板
+          ├── Switches & Controls 开关与控制装置
+          ├── Trim 装饰条
+          ├── Window Cranks, Grab Handles & Door Pulls 车窗摇把、扶手与门拉手
+          ├── Window Motors & Regulators 车窗电机与升降器
+  ├── Lighting and lamps 照明与灯具
+          ├── Accessory Lighting 辅助照明
+          ├── Center & Third Brake Light Assemblies 中央与第三刹车灯总成
+          ├── Daytime Running Lights 日间行车灯
+          ├── Fog Light Assemblies 雾灯总成
+          ├── Headlight Assemblies 大灯总成
+          ├── Headlight Ballasts & Igniters 大灯安定器与点火器
+          ├── Headlights 大灯
+          ├── Interior Light Assemblies 内饰灯总成
+          ├── License Plate Light Assemblies 牌照灯总成
+          ├── Light Bulbs & LEDs 灯泡与LED灯
+          ├── Light Mounts & Brackets 灯架与支架
+          ├── Other Lighting & Lamps 其他照明与灯具
+          ├── Park & Combination Light Assemblies 驻车灯与组合灯总成
+          ├── Reflectors 反光片
+          ├── Side Marker Light Assemblies 侧标志灯总成
+          ├── Sockets, Connectors & Wiring 灯座、连接器与线束
+          ├── Tail Light Assemblies 尾灯总成
+          ├── Turn Signal Light Assemblies 转向灯总成
+  ├── Racks and cargo carriers 行李架与货物架
+          ├── Anchors 锚点
+          ├── Bike Racks 自行车架
+          ├── Cargo Bars 货物横杆
+          ├── Cargo Boxes, Bags & Baskets 货箱、货袋与货篮
+          ├── Other Racks & Cargo Carriers 其他行李架与货物架
+          ├── Roof Rack Accessories 车顶行李架配件
+          ├── Roof Racks & Cross Bars 车顶行李架与横杆
+          ├── Ski & Snowboard Racks 滑雪板架
+          ├── Straps & Tie-Downs 绑带与固定带
+          ├── Watersport Racks 水上运动器材架
+  ├── Starters, alternators, ECUs and wiring 起动机、发电机、ECU与线束
+          ├── Alternator & Generator Parts 发电机与发电机零件
+          ├── Alternators & Generators 发电机
+          ├── Batteries 电池
+          ├── Battery Accessories 电池配件
+          ├── ECUs & Computer Modules ECU与电脑模块
+          ├── Fuses & Fuse Boxes 保险丝与保险丝盒
+          ├── Other Starters, Alternators, ECUs & Wiring 其他起动机、发电机、ECU与线束
+          ├── Relays 继电器
+          ├── Starter Motor Parts 起动机零件
+          ├── Starter Motors 起动机
+          ├── Voltage Regulators 电压调节器
+          ├── Wiring Harnesses, Cables & Connectors 线束、电缆与连接器
+  ├── Steering and suspension 转向与悬挂
+          ├── Camber & Caster Parts 外倾角与后倾角零件
+          ├── Control Arms, Ball Joints & Assemblies 控制臂、球头与总成
+          ├── Gearbox, Rack & Pinion Parts 转向机、齿条与小齿轮零件
+          ├── Gearboxes, Rack & Pinions 转向机、齿条与小齿轮
+          ├── King Pins 主销
+          ├── Leaf & Coil Springs 钢板弹簧与螺旋弹簧
+          ├── Other Steering & Suspension Parts 其他转向与悬挂零件
+          ├── Pitman & Idler Arms 转向摇臂与惰臂
+          ├── Power Steering Hoses 动力转向软管
+          ├── Power Steering Pump Parts 动力转向泵零件
+          ├── Power Steering Pumps 动力转向泵
+          ├── Radius, Swing & Trailing Arms 半径臂、摆臂与纵臂
+          ├── Self-Leveling Suspension Parts 自动调平悬挂零件
+          ├── Shock & Strut Mounts 减震器与支柱安装座
+          ├── Shocks, Struts & Assemblies 减震器、支柱与总成
+          ├── Steering & Suspension Bushings 转向与悬挂衬套
+          ├── Steering Columns 转向柱
+          ├── Steering Knuckles 转向节
+          ├── Steering Stabilizers 转向稳定器
+          ├── Suspension Component Replacement Kits 悬挂组件更换套装
+          ├── Sway Bars, Links & Bushings 防倾杆、连杆与衬套
+          ├── Tie Rods & Steering Linkages 横拉杆与转向连杆
+          ├── Wheel Bearings, Hubs & Seals 轮毂轴承、轮毂与密封圈
+  ├── Towing parts and accessories 拖车零件与配件
+          ├── Other Towing Parts 其他拖车零件
+          ├── Tow Balls & Ball Mounts 拖车球与球座
+          ├── Tow Bars & Poles 牵引杆与牵引柱
+          ├── Towing Accessories 拖车配件
+          ├── Towing Mirrors 拖车后视镜
+         ├── Trailer Brake Controllers 拖车制动控制器
+          ├── Trailer Hitches 拖车钩
+          ├── Wiring, Harnesses & Connectors 线束与连接器
+  ├── Transmission and drivetrain 变速箱与传动系统
+          ├── Automatic Transmission 自动变速箱
+          ├── Automatic Transmission Parts 自动变速箱零件
+          ├── Axle Housings & Parts 桥壳与零件
+          ├── Axles 半轴
+          ├── CV Axle Assemblies 等速万向节半轴总成
+          ├── CV Joints, Boots & Parts 等速万向节、防尘套与零件
+          ├── Clutch Parts & Kits 离合器零件与套装
+          ├── Differentials, Assemblies & Parts 差速器、总成与零件
+          ├── Driveshafts & Parts 传动轴与零件
+          ├── Drivetrain Hardware & Fasteners 传动系统硬件与紧固件
+          ├── Flywheels & Flexplates 飞轮与挠性板
+          ├── Manual Transmission 手动变速箱
+          ├── Manual Transmission Parts 手动变速箱零件
+          ├── Oil Coolers & Lines 机油冷却器与管路
+          ├── Other Transmission & Drivetrain 其他变速箱与传动零件
+          ├── Shifters, Cables & Linkages 换挡器、拉线与连杆
+          ├── Torque Converters 液力变矩器
+          ├── Transfer Case Parts 分动箱零件
+          ├── Transfer Cases 分动箱
+          ├── Transmission & Drivetrain Mounts 变速箱与传动支架
+          ├── Transmission Control Modules 变速箱控制模块
+          ├── Transmission Filters 变速箱滤清器
+          ├── Transmission Gaskets & Seals 变速箱垫片与密封圈
+          ├── Transmission Rebuild Kits 变速箱修复套装
+          ├── Transmission Sensors 变速箱传感器
+          ├── Wiring, Harnesses & Connectors 线束与连接器
+
+◆ Wheels and tires 轮毂与轮胎
+  ├── Tires 轮胎
+          ├── Other Wheel & Tire Parts 其他轮毂与轮胎零件
+          ├── Tire Pressure Monitoring Sensor 胎压监测传感器
+          ├── Valve Stems & Caps 气门嘴与气门帽
+          ├── Wheel & Tire Accessories 轮毂与轮胎配件
+          ├── Wheel & Tire Packages 轮毂与轮胎套装
+          ├── Wheel Hub Caps, Center Caps & Trim Rings 轮毂盖、中心盖与装饰环
+          ├── Wheel Nuts, Bolts & Studs 轮毂螺母、螺栓与螺柱
+          ├── Wheel Spacers, Adapters & Hub Centric Rings 轮毂垫片、变径圈与中心孔环
+          ├── Wheels 轮毂
+  ├── Tire pressure monitoring sensors 胎压监测传感器
+          ├── Other Wheel & Tire Parts 其他轮毂与轮胎零件
+          ├── Tires 轮胎
+          ├── Valve Stems & Caps 气门嘴与气门帽
+          ├── Wheel & Tire Accessories 轮毂与轮胎配件
+          ├── Wheel & Tire Packages 轮毂与轮胎套装
+          ├── Wheel Hub Caps, Center Caps & Trim Rings 轮毂盖、中心盖与装饰环
+          ├── Wheel Nuts, Bolts & Studs 轮毂螺母、螺栓与螺柱
+          ├── Wheel Spacers, Adapters & Hub Centric Rings 轮毂垫片、变径圈与中心孔环
+          ├── Wheels 轮毂
+  ├── Wheels 轮毂
+          ├── Other Wheel & Tire Parts 其他轮毂与轮胎零件
+          ├── Tire Pressure Monitoring Sensor 胎压监测传感器
+          ├── Tires 轮胎
+          ├── Valve Stems & Caps 气门嘴与气门帽
+          ├── Wheel & Tire Accessories 轮毂与轮胎配件
+          ├── Wheel & Tire Packages 轮毂与轮胎套装
+          ├── Wheel Hub Caps, Center Caps & Trim Rings 轮毂盖、中心盖与装饰环
+          ├── Wheel Nuts, Bolts & Studs 轮毂螺母、螺栓与螺柱
+          ├── Wheel Spacers, Adapters & Hub Centric Rings 轮毂垫片、变径圈与中心孔环
+  ├── Wheel hub caps, center caps and trim Rings 轮毂盖、中心盖与装饰环
+          ├── Rim Protectors 轮辋保护圈
+          ├── Wheel Center Caps 轮毂中心盖
+          ├── Wheel Hub Caps & Trim Rings 轮毂盖与装饰环
+  ├── Wheel nuts, bolts and studs 轮毂螺母、螺栓与螺柱
+          ├── Other Wheel & Tire Parts 其他轮毂与轮胎零件
+          ├── Tire Pressure Monitoring Sensor 胎压监测传感器
+          ├── Tires 轮胎
+          ├── Valve Stems & Caps 气门嘴与气门帽
+          ├── Wheel & Tire Accessories 轮毂与轮胎配件
+          ├── Wheel & Tire Packages 轮毂与轮胎套装
+          ├── Wheel Hub Caps, Center Caps & Trim Rings 轮毂盖、中心盖与装饰环
+          ├── Wheel Spacers, Adapters & Hub Centric Rings 轮毂垫片、变径圈与中心孔环
+          ├── Wheels 轮毂
+  ├── Wheel spacers, adapters and hub centric rings 轮毂垫片、变径圈与中心孔环
+          ├── Other Wheel & Tire Parts 其他轮毂与轮胎零件
+          ├── Tire Pressure Monitoring Sensor 胎压监测传感器
+          ├── Tires 轮胎
+          ├── Valve Stems & Caps 气门嘴与气门帽
+          ├── Wheel & Tire Accessories 轮毂与轮胎配件
+          ├── Wheel & Tire Packages 轮毂与轮胎套装
+          ├── Wheel Hub Caps, Center Caps & Trim Rings 轮毂盖、中心盖与装饰环
+          ├── Wheel Nuts, Bolts & Studs 轮毂螺母、螺栓与螺柱
+          ├── Wheels 轮毂
+  ├── Wheel and tire accessories 轮毂与轮胎配件
+          ├── Other Tire Accessories 其他轮胎配件
+          ├── Spare Tire Jack & Tool Kits 备胎千斤顶与工具套装
+          ├── Tire Chains, Anti-Skid & Socks 轮胎防滑链、防滑装置与防滑袜
+  ├── Wheel and tire packages 轮毂与轮胎套装
+          ├── Other Wheel & Tire Parts 其他轮毂与轮胎零件
+          ├── Tire Pressure Monitoring Sensor 胎压监测传感器
+          ├── Tires 轮胎
+          ├── Valve Stems & Caps 气门嘴与气门帽
+          ├── Wheel & Tire Accessories 轮毂与轮胎配件
+          ├── Wheel Hub Caps, Center Caps & Trim Rings 轮毂盖、中心盖与装饰环
+          ├── Wheel Nuts, Bolts & Studs 轮毂螺母、螺栓与螺柱
+          ├── Wheel Spacers, Adapters & Hub Centric Rings 轮毂垫片、变径圈与中心孔环
+          ├── Wheels 轮毂
+  ├── Valve stems and caps 气门嘴与气门帽
+          ├── Other Wheel & Tire Parts 其他轮毂与轮胎零件
+          ├── Tire Pressure Monitoring Sensor 胎压监测传感器
+          ├── Tires 轮胎
+          ├── Wheel & Tire Accessories 轮毂与轮胎配件
+          ├── Wheel & Tire Packages 轮毂与轮胎套装
+          ├── Wheel Hub Caps, Center Caps & Trim Rings 轮毂盖、中心盖与装饰环
+          ├── Wheel Nuts, Bolts & Studs 轮毂螺母、螺栓与螺柱
+          ├── Wheel Spacers, Adapters & Hub Centric Rings 轮毂垫片、变径圈与中心孔环
+          ├── Wheels 轮毂
+
+◆ Motorcycle parts 摩托车零件
+  ├── Air intake and fuel delivery 进气与燃油供给
+          ├── Air filters 空气滤清器
+          ├── Air filter housings 空气滤清器壳体
+          ├── Air hoses, lines and pipes 空气软管、管路与管道
+          ├── Air Intake and Fuel Sensors 进气与燃油传感器
+          ├── Carburetors 化油器
+          ├── Carburetor parts 化油器零件
+          ├── Fuel filters 燃油滤清器
+          ├── Fuel hoses, lines and pipes 燃油软管、管路与管道
+          ├── Fuel injectors 喷油器
+          ├── Fuel petcocks and taps 燃油开关与龙头
+          ├── Fuel pumps and sending units 燃油泵与发送单元
+          ├── Fuel tank caps 油箱盖
+          ├── Fuel tanks 油箱
+          ├── Gaskets, seals and o-rings 垫片、密封圈与O型圈
+          ├── Intake covers, ducts and scoops 进气罩、导管与进气口
+           ├── Manifold intake adapters, inlets and joints 进气歧管适配器、进气口与接头
+          ├── Throttle bodies 节气门体
+          ├── Throttle, idle, cruise control cables and linkages 节气门、怠速、巡航控制拉线与连杆
+          ├── Turbochargers, superchargers and parts 涡轮增压器、机械增压器与零件
+          ├── Other air intake and fuel delivery 其他进气与燃油供给零件
+  ├── Body and frame 车身与车架
+          ├── Decals and vinyls 贴纸与车贴
+          ├── Emblems and ornaments 徽标与装饰件
+          ├── Fairings, plastics and body kits 整流罩、塑料件与车身套件
+          ├── Fender eliminators 挡泥板消除器
+          ├── Fenders 挡泥板
+          ├── Frames and parts 车架与零件
+          ├── Kick stands and center stands 侧支架与中支架
+          ├── License plates, frames and holders 车牌、车牌框与支架
+          ├── Mounts, brackets and hardware 支架、托架与硬件
+          ├── Seats, parts and accessories 座椅、零件与配件
+          ├── Windshields 挡风玻璃
+          ├── Other body and frame 其他车身与车架零件
+  ├── Audio, communication and navigation 音响、通信与导航
+          ├── communication and navigation 通信与导航
+          ├── Accessory mounts 配件支架
+          ├── Amplifiers 功放
+          ├── Antennas 天线
+          ├── Complete audio kits 完整音响套装
+          ├── GPS and navigation GPS与导航
+          ├── Headsets and intercoms 耳机与对讲机
+          ├── Infotainment and multimedia players 信息娱乐与多媒体播放器
+          ├── Soundbars 条形音箱
+          ├── Speakers 扬声器
+          ├── Stereos and radios 音响与收音机
+          ├── Wiring harnesses, cables and connectors 线束、电缆与连接器
+          ├── Other audio, communication and navigation 其他音响、通信与导航设备
+  ├── Brakes and brake parts 制动系统与刹车零件
+          ├── ABS pumps and control modules ABS泵与控制模块
+          ├── Additional ABS parts 其他ABS零件
+          ├── Brake cables and rods 制动拉线与拉杆
+          ├── Brake calipers and brackets 制动卡钳与支架
+          ├── Brake component kits 制动组件套装
+          ├── Brake disc rotors 制动盘
+          ├── Brake disc rotor covers 制动盘罩
+          ├── Brake drums 制动鼓
+          ├── Brake lines, hoses and fittings 制动管路、软管与接头
+          ├── Brake master cylinders 制动总泵
+          ├── Brake pads 刹车片
+          ├── Brake shoes 制动蹄片
+          ├── Brake pad and shoe hardware 刹车片与蹄片硬件
+          ├── Brake sensors and switches 制动传感器与开关
+          ├── Rebuild kits and parts 修复套装与零件
+          ├── Reservoirs, caps and covers 储液罐、盖子与护盖
+          ├── Wheel cylinders 制动轮缸
+          ├── Other brake parts 其他制动零件
+  ├── Electrical and ignition components 电气与点火组件
+          ├── Batteries, BMS and charging units 电池、电池管理系统与充电单元
+          ├── Charging components 充电组件
+          ├── Control modules 控制模块
+          ├── Conversion kits 转换套件
+          ├── Converters and inverters 转换器与逆变器
+          ├── Cooling components 冷却组件
+          ├── Drive motors and parts 驱动电机与零件
+          ├── High voltage circuit fuses and breakers 高压电路保险丝与断路器
+          ├── Relays and contactors 继电器与接触器
+          ├── Switches 开关
+          ├── Wiring harnesses, cables and connectors 线束、电缆与连接器
+          ├── Other electric motorcycle and scooter parts 其他电动摩托车与踏板车零件
+  ├── Engines and engine parts 发动机与发动机零件
+          ├── Alternators and generators 发电机
+          ├── Alternator and generator parts 发电机零件
+          ├── Batteries 电池
+          ├── Battery accessories 电池配件
+          ├── Distributors 分电器
+          ├── Distributor parts 分电器零件
+          ├── ECUs, CDIs and computer modules ECU、CDI与电脑模块
+          ├── Electrical and ignition sensors and switches 电气与点火传感器和开关
+          ├── Fuses and fuse boxes 保险丝与保险丝盒
+          ├── Horns and horn covers 喇叭与喇叭罩
+          ├── Ignition coils 点火线圈
+          ├── Ignition kits 点火套装
+          ├── Ignition wires, caps and boots 点火线、帽与护套
+          ├── Relays 继电器
+          ├── Spark plugs 火花塞
+          ├── Starter motors 起动机
+          ├── Starter motor parts 起动机零件
+          ├── Stators and magnetos 定子与磁电机
+          ├── Stator and magneto parts 定子与磁电机零件
+          ├── Voltage regulators and rectifiers 电压调节器与整流器
+          ├── Wiring harnesses, cables and connectors 线束、电缆与连接器
+          ├── Other electrical and ignition components 其他电气与点火组件
+          ├── Engine cooling 发动机冷却
+          ├── Engines and engine parts 发动机与发动机零件
+          ├── Exhaust and emission systems 排气与排放系统
+          ├── Foot controls, pedals and pegs 脚踏控制、踏板与脚蹬
+          ├── Guards and protection 护板与防护件
+          ├── Handlebars, grips and controls 车把、握把与控制装置
+          ├── Instruments and gauges 仪表与量表
+          ├── Lighting and lamps 照明与灯具
+          ├── Luggage, racks and storage 行李、货架与储物
+          ├── Mirrors 后视镜
+          ├── Suspension and handling 悬挂与操控
+          ├── Transmission and drivetrain 变速箱与传动系统
+          ├── Wheels, tires and parts 车轮、轮胎与零件
+          ├── Other motorcycle and scooter parts and accessories 其他摩托车与踏板车零件及配件
+  ├── Engine cooling 发动机冷却
+          ├── Clamps and hardware 卡箍与硬件
+          ├── Expansion and overflow tanks 膨胀水箱与溢流罐
+          ├── Fans and fan parts 风扇与风扇零件
+          ├── Gaskets, seals and o-rings 垫片、密封圈与O型圈
+          ├── Oil coolers and lines 机油冷却器与管路
+          ├── Pipes and hoses 管道与软管
+          ├── Radiator and coolant reservoir caps 散热器与冷却液储液罐盖
+          ├── Radiators 散热器
+          ├── Temperature sensors and switches 温度传感器与开关
+          ├── Thermostats and housings 节温器与壳体
+          ├── Water pumps 水泵
+          ├── Other engine cooling parts 其他发动机冷却零件
+  ├── Engines and engine parts 发动机与发动机零件
+          ├── Brackets and hardware 支架与硬件
+          ├── Complete cylinders 完整气缸
+          ├── Complete engines 完整发动机
+          ├── Connecting rods and parts 连杆与零件
+          ├── Crankshafts 曲轴
+          ├── Cylinder bolts 气缸螺栓
+          ├── Cylinder heads 气缸盖
+          ├── Engine bearings 发动机轴承
+          ├── Engine covers 发动机盖
+          ├── Engine crankcases 发动机曲轴箱
+          ├── Engine mounts 发动机支架
+          ├── Engine rebuild kits and components 发动机修复套装与组件
+          ├── Engine sensors and switches 发动机传感器与开关
+          ├── Flywheels and flywheel parts 飞轮与飞轮零件
+          ├── Gaskets, seals and kits 垫片、密封圈与套装
+          ├── Kick start levers 脚启动杆
+          ├── Oil drain plugs, filler caps and dipsticks 放油螺塞、加油盖与机油尺
+          ├── Oil filters 机油滤清器
+          ├── Oil pans 油底壳
+          ├── Oil pumps and parts 机油泵与零件
+          ├── Oil tanks 油箱
+          ├── Pistons, rings and piston kits 活塞、活塞环与活塞套装
+          ├── Service kits 维修套装
+          ├── Timing components and kits 正时组件与套装
+          ├── Valvetrain components 气门传动组件
+          ├── Other engine parts 其他发动机零件
+  ├── Exhaust and emission systems 排气与排放系统
+          ├── Catalytic converters 催化转化器
+          ├── Clamps, flanges, hangers and hardware 卡箍、法兰、吊架与硬件
+          ├── EVAP components EVAP组件
+          ├── Exhaust gaskets and seals 排气垫片与密封圈
+          ├── Exhaust pipes and rips 排气管与尾嘴
+          ├── Exhaust system kits 排气系统套装
+          ├── Heat shields and wraps 隔热罩与隔热包
+          ├── Manifolds and headers 歧管与排气头段
+          ├── Oxygen sensors 氧传感器
+          ├── Silencers, mufflers and baffles 消声器、消音器与隔板
+          ├── Other exhaust and emission system parts 其他排气与排放系统零件
+  ├── Foot controls, pedals and pegs 脚踏控制、踏板与脚蹬
+          ├── Clamps and mounts 卡箍与安装座
+          ├── Floorboards and parts 脚踏板与零件
+          ├── Foot brake levers and pedals 脚制动杆与踏板
+          ├── Footrests, foot pegs and pedal pads 脚踏、脚蹬与踏板垫
+          ├── Forward controls and relocation kits 前置控制与改装套件
+          ├── Rearsets 后移脚踏
+          ├── Shift and gear levers 换挡杆与变速杆
+          ├── Other foot controls, pedals and pegs 其他脚踏控制、踏板与脚蹬
+  ├── Handlebars, grips and controls 车把、握把与控制装置
+          ├── Bar end weights and caps 车把端重与端帽
+          ├── Buttons and switches 按钮与开关
+          ├── Clutch levers 离合器拉杆
+          ├── Clutch and hand brake lever kits 离合器与手刹拉杆套装
+          ├── Control extenders 控制延长杆
+          ├── Grips, covers and pads 握把、护套与垫片
+          ├── Hand brake levers 手刹拉杆
+          ├── Handlebars 车把
+          ├── Risers, clamps and brackets 增高座、卡箍与支架
+          ├── Throttle controls 油门控制
+          ├── Other handlebars, grips and controls 其他车把、握把与控制装置
+  ├── Guards and protection 护板与防护件
+          ├── Engine guards and highway bars 发动机护杠与公路杠
+          ├── Exhaust guards 排气护罩
+          ├── Frame and crash protection 车架与碰撞防护
+          ├── Handlebar guards and protection 车把护罩与防护
+          ├── Motorcycle and scooter covers 摩托车与踏板车车罩
+          ├── Mud flaps and splash guards 挡泥板与防溅罩
+          ├── Radiator and oil cooler guards 散热器与机油冷却器护罩
+          ├── Skid plates, siders and spools 发动机护板、滑块与起车钉
+          ├── Tank covers, pads and protection 油箱罩、护垫与防护件
+          ├── Additional guards and protection 其他护板与防护件
+ ├── Instruments and gauges 仪表与量表
+          ├── Individual gauges 独立仪表
+          ├── Instrument and gauge parts 仪表与量表零件
+          ├── Instrument clusters 仪表总成
+          ├── Instrument drive cables 仪表传动拉线
+          ├── Wiring harnesses, cables and connectors 线束、电缆与连接器
+  ├── Lighting and lamps 照明与灯具
+          ├── Accessory lighting 辅助照明
+          ├── Daytime running lights 日间行车灯
+          ├── Fog light assemblies 雾灯总成
+          ├── Hardware, mounts and brackets 硬件、支架与托架
+          ├── Headlight assemblies 大灯总成
+          ├── Headlight ballasts and igniters 大灯安定器与点火器
+          ├── Lenses 灯罩
+          ├── License plate light assemblies 牌照灯总成
+          ├── Light bulbs and LEDs 灯泡与LED灯
+          ├── Reflectors 反光片
+          ├── Sockets, connectors and wiring 灯座、连接器与线束
+          ├── Tail and brake light assemblies 尾灯与刹车灯总成
+          ├── Turn signal light assemblies 转向灯总成
+          ├── Other lighting and lamps 其他照明与灯具
+  ├── Suspension and handling 悬挂与操控
+          ├── Control arms, ball joints and assemblies 控制臂、球头与总成
+          ├── Fork suspension and parts 前叉悬挂与零件
+          ├── Launch control devices 弹射起步控制装置
+          ├── Lowering and lift kits 降低与升高套件
+          ├── Power steering system and parts 动力转向系统与零件
+          ├── Shocks and coil overs 减震器与绞牙避震
+          ├── Steering bearings 转向轴承
+          ├── Steering columns 转向柱
+          ├── Steering knuckles 转向节
+          ├── Steering stabilizers and dampers 转向稳定器与阻尼器
+          ├── Suspension bearings, bushings and seals 悬挂轴承、衬套与密封圈
+          ├── Suspension springs 悬挂弹簧
+          ├── Swingarms 摇臂
+          ├── Tie rods and steering linkages 横拉杆与转向连杆
+          ├── Other suspension and handling 其他悬挂与操控零件
+  ├── Luggage, racks and storage 行李、货架与储物
+          ├── Luggage racks 行李架
+          ├── Onboard tool bags and repair kits 随车工具包与修理套装
+          ├── Saddlebags and panniers 边包与驮包
+          ├── Tank bags and flanges 油箱包与法兰
+          ├── Top boxes and tail bags 尾箱与尾包
+          ├── Other luggage, racks and storage 其他行李、货架与储物
+  ├── Mirrors 后视镜
+          ├── Mirror assemblies 后视镜总成
+          ├── Mirror components 后视镜组件
+  ├── Transmission and drivetrain 变速箱与传动系统
+          ├── Bearings 轴承
+          ├── Clutch parts and kits 离合器零件与套装
+          ├── Differentials 差速器
+          ├── Differential parts 差速器零件
+          ├── Final and primary drive parts and kits 末级与初级传动零件及套装
+          ├── Gaskets and seals 垫片与密封圈
+          ├── Gearboxes and transmissions 变速箱与变速器
+          ├── Gearbox and transmission parts 变速箱与变速器零件
+          ├── Other transmission and drivetrain parts 其他变速箱与传动零件
+  ├── Wheels, tires and parts 车轮、轮胎与零件
+          ├── Tires 轮胎
+          ├── Wheels and rims 车轮与轮辋
+          ├── Wheel and tire packages 轮毂与轮胎套装
+          ├── Tubes and protection 内胎与防护
+          ├── Valve stems and caps 气门嘴与气门帽
+          ├── Spokes and nipples 辐条与条母
+          ├── Tire and wheel trim 轮胎与轮毂装饰
+          ├── Wheel nuts, bolts and studs 轮毂螺母、螺栓与螺柱
+          ├── Axles, bearings, seals and spacers 半轴、轴承、密封圈与垫片
+          ├── Wheel hubs 轮毂
+          ├── Other wheel and tire parts 其他车轮与轮胎零件
+
+◆ Atv, utv, and side-by-side parts 全地形车、多功能地形车与并排座车零件
+  ├── Air intake and fuel delivery 进气与燃油供给
+          ├── Air filters 空气滤清器
+          ├── Air filter housings 空气滤清器壳体
+          ├── Air hoses, lines and pipes 空气软管、管路与管道
+          ├── Air intake and fuel sensors 进气与燃油传感器
+          ├── Carburetors 化油器
+          ├── Carburetor parts 化油器零件
+          ├── Fuel filters 燃油滤清器
+          ├── Fuel hoses, lines and pipes 燃油软管、管路与管道
+          ├── Fuel injectors 喷油器
+          ├── Fuel pumps and sending units 燃油泵与发送单元
+          ├── Fuel tank caps 油箱盖
+          ├── Fuel tanks 油箱
+          ├── Fuel valves and petcocks 燃油阀门与龙头
+          ├── Gaskets, seals and o-rings 垫片、密封圈与O型圈
+          ├── Intake covers, ducts and scoops 进气罩、导管与进气口
+          ├── Manifold intake adapter, inlet and joint 进气歧管适配器、进气口与接头
+          ├── Throttle bodies 节气门体
+          ├── Throttle, idle, cruise control cables and linkages 节气门、怠速、巡航控制拉线与连杆
+          ├── Turbochargers, superchargers and parts 涡轮增压器、机械增压器与零件
+          ├── Other air intake and fuel delivery 其他进气与燃油供给零件
+  ├── Audio, communication and navigation 音响、通信与导航
+          ├── Accessory mounts 配件支架
+          ├── Amplifiers 功放
+          ├── Antennas 天线
+          ├── Complete audio kits 完整音响套装
+          ├── GPS and navigation GPS与导航
+          ├── Headsets and intercoms 耳机与对讲机
+          ├── Infotainment and multimedia players 信息娱乐与多媒体播放器
+          ├── Soundbars 条形音箱
+          ├── Speakers 扬声器
+          ├── Stereos and radios 音响与收音机
+          ├── Wiring harnesses, cables and connectors 线束、电缆与连接器
+          ├── Other audio, communication and navigation 其他音响、通信与导航设备
+  ├── Body and frame 车身与车架
+          ├── Body parts, doors and fenders 车身零件、车门与挡泥板
+          ├── Bumpers and parts 保险杠与零件
+          ├── Dashboards, consoles and parts 仪表板、控制台与零件
+          ├── Decals and vinyls 贴纸与车贴
+          ├── Emblems and ornaments 徽标与装饰件
+          ├── Frames, subframes and roll cages 车架、副车架与防滚架
+          ├── Grab bars and handles 扶手与把手
+          ├── License plates, frames and holders 车牌、车牌框与支架
+          ├── Mounts, brackets and hardware 支架、托架与硬件
+          ├── Running boards and step bars 侧踏板与登车踏板
+          ├── Other body and frame 其他车身与车架零件
+  ├── Brakes and brake parts 制动系统与刹车零件
+          ├── Brakeblockoffs 制动锁止块
+          ├── Brake cables and rods 制动拉线与拉杆
+          ├── Brake calipers and brackets 制动卡钳与支架
+          ├── Brake component kits 制动组件套装
+          ├── Brake disc rotors 制动盘
+          ├── Brake drums 制动鼓
+          ├── Brake lines, hoses and fittings 制动管路、软管与接头
+          ├── Brake master cylinders 制动总泵
+          ├── Brake pads 刹车片
+          ├── Brake shoes 制动蹄片
+          ├── Brake pad and shoe hardware 刹车片与蹄片硬件
+          ├── Brake sensors and switches 制动传感器与开关
+          ├── Rebuild kits and parts 修复套装与零件
+          ├── Reservoirs, caps and covers 储液罐、盖子与护盖
+          ├── Other brake parts 其他制动零件
+  ├── Electric ATV, side-by-side and UTV parts 电动全地形车、并排座车与多功能地形车零件
+          ├── Batteries, BMS and charging units 电池、电池管理系统与充电单元
+          ├── Charging components 充电组件
+          ├── Control modules 控制模块
+          ├── Conversion kits 转换套件
+          ├── Converters and inverters 转换器与逆变器
+          ├── Cooling components 冷却组件
+          ├── Drive motors and parts 驱动电机与零件
+          ├── High voltage circuit fuses and breakers 高压电路保险丝与断路器
+          ├── Relays and contactors 继电器与接触器
+          ├── Switches 开关
+          ├── Wiring harnesses, cables and connectors 线束、电缆与连接器
+          ├── Other electric ATV, side-by-side and UTV parts 其他电动全地形车、并排座车与多功能地形车零件
+  ├── Electrical and ignition components 电气与点火组件
+          ├── Alternators and generators 发电机
+          ├── Alternator and generator parts 发电机零件
+          ├── Batteries 电池
+          ├── Battery accessories 电池配件
+          ├── Distributors 分电器
+          ├── Distributor parts 分电器零件
+          ├── ECUs, CDIs and computer modules ECU、CDI与电脑模块
+          ├── Electrical and ignition sensors and switches 电气与点火传感器和开关
+          ├── Fuses and fuse boxes 保险丝与保险丝盒
+          ├── Horns and horn covers 喇叭与喇叭罩
+          ├── Ignition coils 点火线圈
+          ├── Ignition kits 点火套装
+          ├── Ignition wires, caps and boots 点火线、帽与护套
+          ├── Relays 继电器
+          ├── Spark plugs and glow plugs 火花塞与预热塞
+          ├── Starter motors 起动机
+          ├── Starter motor parts 起动机零件
+          ├── Stators and magnetos 定子与磁电机
+          ├── Stator and magneto parts 定子与磁电机零件
+          ├── Voltage regulators and rectifiers 电压调节器与整流器
+          ├── Wiring harnesses, cables and connectors 线束、电缆与连接器
+          ├── Other electrical and ignition components 其他电气与点火组件
+  ├── Engine cooling 发动机冷却
+          ├── Clamps and hardware 卡箍与硬件
+          ├── Expansion and overflow tanks 膨胀水箱与溢流罐
+          ├── Fans and fan parts 风扇与风扇零件
+          ├── Gaskets, seals and o-rings 垫片、密封圈与O型圈
+          ├── Oil coolers and lines 机油冷却器与管路
+          ├── Pipes and hoses 管道与软管
+          ├── Radiator and coolant reservoir caps 散热器与冷却液储液罐盖
+          ├── Radiators 散热器
+          ├── Temperature sensors and switches 温度传感器与开关
+          ├── Thermostats and housings 节温器与壳体
+          ├── Water pumps 水泵
+          ├── Other engine cooling parts 其他发动机冷却零件
+  ├── Engines and engine parts 发动机与发动机零件
+          ├── Brackets and hardware 支架与硬件
+          ├── Complete cylinders 完整气缸
+          ├── Complete engines 完整发动机
+          ├── Connecting rods and parts 连杆与零件
+          ├── Crankshafts 曲轴
+          ├── Cylinder bolts 气缸螺栓
+          ├── Cylinder heads 气缸盖
+          ├── Engine bearings 发动机轴承
+          ├── Engine covers 发动机盖
+          ├── Engine crankcases 发动机曲轴箱
+          ├── Engine mounts 发动机支架
+          ├── Engine rebuild kits and components 发动机修复套装与组件
+          ├── Engine sensors and switches 发动机传感器与开关
+          ├── Flywheels and flywheel parts 飞轮与飞轮零件
+          ├── Gaskets, seals and kits 垫片、密封圈与套装
+          ├── Kick start levers 脚启动杆
+          ├── Oil drain plugs, filler caps and dipsticks 放油螺塞、加油盖与机油尺
+          ├── Oil filters 机油滤清器
+          ├── Oil pans 油底壳
+          ├── Oil pumps and parts 机油泵与零件
+          ├── Oil tanks 油箱
+          ├── Pistons, rings and piston kits 活塞、活塞环与活塞套装
+          ├── Service kits 维修套装
+          ├── Timing components and kits 正时组件与套装
+          ├── Valvetrain components 气门传动组件
+          ├── Other engine parts 其他发动机零件
+  ├── Exhaust and emission systems 排气与排放系统
+          ├── Catalytic converters and diesel particulate filters 催化转化器与柴油颗粒捕集器
+          ├── Clamps, flanges, hangers and hardware 卡箍、法兰、吊架与硬件
+          ├── EVAP components EVAP组件
+          ├── Exhaust gaskets and seals 排气垫片与密封圈
+          ├── Exhaust pipes and tips 排气管与尾嘴
+          ├── Exhaust system kits 排气系统套装
+          ├── Heat shields and wraps 隔热罩与隔热包
+          ├── Manifolds and headers 歧管与排气头段
+          ├── Oxygen sensors 氧传感器
+          ├── Silencers, mufflers and baffles 消声器、消音器与隔板
+          ├── Other exhaust and emission system parts 其他排气与排放系统零件
+  ├── Footrests, pedals and pegs 脚踏、踏板与脚蹬
+          ├── Clamps and mounts 卡箍与安装座
+          ├── Floorboards and parts 脚踏板与零件
+          ├── Footrests, foot pegs and pedal pads 脚踏、脚蹬与踏板垫
+          ├── Other footrests, pedals and pegs 其他脚踏、踏板与脚蹬
+  ├── Guards and protection 护板与防护件
+          ├── ATV and UTV covers 全地形车与多功能地形车车罩
+          ├── Engine guards 发动机护杠
+          ├── Frame and crash protectors 车架与碰撞防护件
+          ├── Grille guards and light protectors 格栅护杠与灯具护罩
+          ├── Handlebar guards and protection 车把护罩与防护件
+          ├── Radiator and oil cooler guards 散热器与机油冷却器护罩
+          ├── Skid plates, sliders and spools 发动机护板、滑块与起车钉
+          ├── Splash guards and mud flaps 挡泥板与防溅罩
+          ├── Tank covers, pads and guards 油箱罩、护垫与护板
+          ├── Additional guards and protection 其他护板与防护件
+  ├── Hand and foot controls 手脚控制装置
+          ├── Clutch levers 离合器拉杆
+          ├── Hand brake levers 手刹拉杆
+          ├── Clutch and hand brake lever kits 离合器与手刹拉杆套装
+          ├── Foot brake levers and pedals 脚制动杆与踏板
+          ├── Shift and gear levers 换挡杆与变速杆
+          ├── Throttle controls 油门控制
+          ├── Other hand and foot controls 其他手脚控制装置
+  ├── Instruments and gauges 仪表与量表
+          ├── Individual gauges 独立仪表
+          ├── Instrument and gauge parts 仪表与量表零件
+          ├── Instrumen clusters 仪表总成
+          ├── Instrument drive cables 仪表传动拉线
+          ├── Wiring harnesses, cables and connectors 线束、电缆与连接器
+  ├── Lighting and lamps 照明与灯具
+          ├── Accessory lighting 辅助照明
+          ├── Daytime running lights 日间行车灯
+          ├── Fog light assemblies 雾灯总成
+          ├── Hardware, mounts and brackets 硬件、支架与托架
+          ├── Headlight assemblies 大灯总成
+          ├── Headlight ballasts and igniters 大灯安定器与点火器
+          ├── Lenses 灯罩
+          ├── License plate light assemblies 牌照灯总成
+          ├── Light bulbs and LEDs 灯泡与LED灯
+          ├── Reflectors 反光片
+          ├── Sockets, connectors and wiring 灯座、连接器与线束
+          ├── Tail and brake light assemblies 尾灯与刹车灯总成
+          ├── Turn signal light assemblies 转向灯总成
+          ├── Other lighting and lamps 其他照明与灯具
+  ├── Mirrors 后视镜
+          ├── Mirror assemblies 后视镜总成
+          ├── Mirror components 后视镜组件
+  ├── Seats, parts and accessories 座椅、零件与配件
+          ├── Backrests 靠背
+          ├── Headrests 头枕
+          ├── Seats 座椅
+          ├── Seat belts, harnesses and parts 安全带、安全带总成与零件
+          ├── Seat covers 座椅套
+          ├── Additional seat parts 其他座椅零件
+  ├── Steering and suspension 转向与悬挂
+          ├── A-arms and swingarms A臂与摇臂
+          ├── Control arms, ball joints and assemblies 控制臂、球头与总成
+          ├── Forks and parts 前叉与零件
+          ├── Lowering, lift and long travel kits 降低、升高与长行程套件
+          ├── Power steering system and parts 动力转向系统与零件
+          ├── Shocks and coil overs 减震器与绞牙避震
+          ├── Steering bearings 转向轴承
+          ├── Steering bellcranks 转向摇臂
+          ├── Steering columns 转向柱
+          ├── Steering knuckles 转向节
+          ├── Steering stabilizers and dampers 转向稳定器与阻尼器
+          ├── Suspension bearings, bushings and seals 悬挂轴承、衬套与密封圈
+          ├── Suspension springs 悬挂弹簧
+          ├── Sway bars, links and bushings 防倾杆、连杆与衬套
+          ├── Tie rods and steering linkages 横拉杆与转向连杆
+          ├── Wheel bearings, hubs and seals 轮毂轴承、轮毂与密封圈
+          ├── Other steering and suspension 其他转向与悬挂零件
+  ├── Steering wheels, gandlebars and grips 方向盘、车把与握把
+          ├── Bar end weights and caps 车把端重与端帽
+          ├── Buttons and switches 按钮与开关
+          ├── Grips, covers and pads 握把、护套与垫片
+          ├── Handlebars 车把
+          ├── Risers, clamps and brackets 增高座、卡箍与支架
+          ├── Steering wheels 方向盘
+          ├── Other steering wheels, handlebars and grips 其他方向盘、车把与握把
+  ├── Storage and racks 储物与货架
+          ├── Cargo and utility racks 货物与公用货架
+          ├── Onboard tool bags and repair kits 随车工具包与修理套装
+          ├── Spare tire carriers 备胎架
+          ├── Tank bags and flanges 油箱包与法兰
+          ├── Trunk and cargo boxes 尾箱与货箱
+          ├── Other storage and racks 其他储物与货架
+  ├── Towing, recovery and accessories 拖车、救援与配件
+          ├── Tow ropes, chains and straps 牵引绳、链条与绑带
+          ├── Trailer hitches 拖车钩
+          ├── Trailer hitch accessories 拖车钩配件
+          ├── Winches 绞盘
+          ├── Winch accessories 绞盘配件
+  ├── Transmission and drivetrain 变速箱与传动系统
+          ├── Axles 半轴
+          ├── Axle housings and parts 桥壳与零件
+          ├── Bearings 轴承
+          ├── Clutch parts and kits 离合器零件与套装
+          ├── CV axle assemblies 等速万向节半轴总成
+          ├── CV joints, boots and parts 等速万向节、防尘套与零件
+          ├── Differentials 差速器
+          ├── Differential parts 差速器零件
+          ├── Final and primary drive parts and kits 末级与初级传动零件及套装
+          ├── Gaskets and seals 垫片与密封圈
+          ├── Gearboxes and transmissions 变速箱与变速器
+          ├── Gearbox and transmission parts 变速箱与变速器零件
+          ├── Other transmission and drivetrain parts 其他变速箱与传动零件
+  ├── Wheels, tires and parts 车轮、轮胎与零件
+          ├── Tires 轮胎
+          ├── Wheels 轮毂
+          ├── Wheel and tire packages 轮毂与轮胎套装
+          ├── Tubes and protection 内胎与防护
+          ├── Valve stems and caps 气门嘴与气门帽
+          ├── Wheel nuts, bolts and studs 轮毂螺母、螺栓与螺柱
+          ├── Wheel spacers and adapters 轮毂垫片与变径圈
+          ├── Center caps and trim rings 中心盖与装饰环
+          ├── Tire chains, anti-skid and socks 轮胎防滑链、防滑装置与防滑袜
+          ├── Other wheel and tire parts 其他车轮与轮胎零件
+  ├── Other ATV, side-by-side and UTV parts and accessories 其他全地形车、并排座车与多功能地形车零件及配件
+
+◆ Boatparts 船用零件
+  ├── Accessories & Gear 配件与装备
+  ├── Anchoring, Docking 锚泊与系泊
+  ├── Body Parts 船体零件
+  ├── Controls & Steering 控制与转向
+  ├── Deck & Cabin Hardware 甲板与舱室五金
+  ├── Electrical & Lighting 电气与照明
+  ├── Electronics & Navigation 电子与导航
+  ├── Inboard Engines & Components 舷内发动机与组件
+  ├── Interior, Cabin & Galley 内饰、舱室与厨房
+  ├── Jet Drives 喷射推进器
+  ├── Marine Batteries 船用电池
+  ├── Marine Rope 船用绳索
+  ├── Memorabilia 纪念品
+  ├── Other 其他
+  ├── Outboard Engines & Components 舷外发动机与组件
+  ├── Plumbing & Ventilation 管路与通风
+  ├── Propellers 螺旋桨
+  ├── Sailing Hardware & Gear 帆船五金与装备
+  ├── Service Tools 维修工具
+  ├── Sterndrive Motors & Components 尾机驱动发动机与组件
+  ├── Trailer Parts 拖车零件
+  ├── Trolling Motors & Components 拖钓电机与组件
+
+◆ Other vehicle parts 其他车辆零件
+  ├── ATV, side-by-side and UTV parts and accessories 全地形车、并排座车与多功能地形车零件及配件
+          ├── Air intake and fuel delivery 进气与燃油供给
+          ├── Audio, communication and navigation 音响、通信与导航
+          ├── Body and frame 车身与车架
+          ├── Brakes and brake parts 制动系统与刹车零件
+          ├── Electric ATV, side-by-side and UTV parts 电动全地形车、并排座车与多功能地形车零件
+          ├── Electrical and ignition components 电气与点火组件
+          ├── Engine cooling 发动机冷却
+          ├── Engines and engine parts 发动机与发动机零件
+          ├── Exhaust and emission systems 排气与排放系统
+          ├── Footrests, pedals and pegs 脚踏、踏板与脚蹬
+          ├── Guards and protection 护板与防护件
+          ├── Hand and foot controls 手脚控制装置
+          ├── Instruments and gauges 仪表与量表
+          ├── Lighting and lamps 照明与灯具
+          ├── Mirrors 后视镜
+          ├── Seats, parts and accessories 座椅、零件与配件
+          ├── Steering and suspension 转向与悬挂
+          ├── Steering wheels, handlebars and grips 方向盘、车把与握把
+          ├── Storage and racks 储物与货架
+          ├── Towing, recovery and accessories 拖车、救援与配件
+          ├── Transmission and drivetrain 变速箱与传动系统
+          ├── Wheels, tires and parts 车轮、轮胎与零件
+          ├── Other ATV, side-by-side and UTV parts and accessories 其他全地形车、并排座车与多功能地形车零件及配件
+  ├── Apparel, protective gear and merchandise 服装、防护装备与商品
+          ├── Helmets and accessories 头盔与配件
+          ├── Protective gear 防护装备
+          ├── Motorcycle and powersports gear 摩托车与动力运动装备
+          ├── Automotive accessories and merchandise 汽车配件与商品
+          ├── Other apparel, protective gear and merchandise 其他服装、防护装备与商品
+  ├── Aviation parts and accessories 航空零件与配件
+          ├── Aircraft tires and tubes 飞机轮胎与内胎
+          ├── Aviation memorabilia 航空纪念品
+          ├── Avionics 航空电子
+          ├── Engines 发动机
+          ├── Kits 套件
+          ├── Parts 零件
+          ├── Pilot gear 飞行员装备
+          ├── Plans 图纸
+          ├── Other aviation parts and accessories 其他航空零件与配件
+  ├── Boat parts 船用零件
+          ├── Accessories and gear 配件与装备
+          ├── Anchoring and docking 锚泊与系泊
+          ├── Body parts 船体零件
+          ├── Controls and steering 控制与转向
+          ├── Deck and cabin hardware 甲板与舱室五金
+          ├── Electrical and lighting 电气与照明
+          ├── Electronics and navigation 电子与导航
+          ├── Inboard engines and components 舷内发动机与组件
+          ├── Interior, cabin and galley 内饰、舱室与厨房
+          ├── Jet drives 喷射推进器
+          ├── Marine batteries 船用电池
+          ├── Marine rope 船用绳索
+          ├── Memorabilia 纪念品
+          ├── Outboard engines and components 舷外发动机与组件
+          ├── Plumbing and ventilation 管路与通风
+          ├── Propellers 螺旋桨
+          ├── Sailing hardware and gear 帆船五金与装备
+          ├── Service tools 维修工具
+          ├── Sterndrive motors and components 尾机驱动发动机与组件
+          ├── Trailer parts 拖车零件
+          ├── Trolling motors and components 拖钓电机与组件
+          ├── Other boat parts 其他船用零件
+  ├── In-car technology, GPS and security 车载技术、GPS与安全
+          ├── In-car entertainment 车载娱乐
+          ├── Electronic accessories 电子配件
+          ├── Dash cams, alarms and security 行车记录仪、报警器与安全设备
+          ├── GPS and sat nav devices GPS与卫星导航设备
+          ├── Terminals and wiring 端子与线束
+          ├── DIY for speakers and subwoofers 扬声器与低音炮DIY
+          ├── Radios for parts 收音机零件
+          ├── Vintage radios 复古收音机
+          ├── Other in-car technology 其他车载技术
+  ├── Car and truck parts and accessories 轿车与卡车零件及配件
+          ├── Accessory belts 附件皮带
+          ├── Advanced driver assistance systems 高级驾驶辅助系统
+          ├── Air and fuel delivery 进气与燃油供给
+          ├── Air conditioning and heating 空调与暖风
+          ├── Brakes and brake parts 制动系统与刹车零件
+          ├── Electric, hybrid and PHEV specific parts 电动、混合动力与插电混动专用零件
+          ├── Engine cooling components 发动机冷却组件
+          ├── Engines and engine parts 发动机与发动机零件
+          ├── Exhaust and emission systems 排气与排放系统
+          ├── Exterior parts and accessories 外观零件与配件
+          ├── Ignition systems and components 点火系统与组件
+          ├── Interior parts and accessories 内饰零件与配件
+          ├── Lighting and lamps 照明与灯具
+          ├── Racks and cargo carriers 行李架与货物架
+          ├── Starters, alternators, ECUs and wiring 起动机、发电机、ECU与线束
+          ├── Steering and suspension 转向与悬挂
+          ├── Towing parts and accessories 拖车零件与配件
+          ├── Transmission and drivetrain 变速箱与传动系统
+          ├── Wheels, tires and parts 轮毂与轮胎
+          ├── Other car and truck parts and accessories 其他轿车与卡车零件及配件
+  ├── Commercial truck parts 商用卡车零件
+          ├── Accessories 配件
+          ├── Air conditioning and heating 空调与暖风
+          ├── Air intake and fuel delivery 进气与燃油供给
+          ├── Brakes and brake parts 制动系统与刹车零件
+          ├── Cargo handling 货物装卸
+          ├── Cargo heating and refrigeration 货物加热与制冷
+          ├── Coupling and towing 连接与牵引
+          ├── Engine cooling 发动机冷却
+          ├── Engines and components 发动机与组件
+          ├── Exhaust and emissions 排气与排放
+          ├── Exterior, body and frame 外观、车身与车架
+          ├── Filters 滤清器
+          ├── Gaskets 垫片
+          ├── Glass 玻璃
+          ├── Hydraulics 液压系统
+          ├── Ignition, charging and starting 点火、充电与启动
+          ├── Instruments, dials and gauges 仪表、刻度盘与量表
+          ├── Interior 内饰
+          ├── Lighting 照明
+          ├── Suspension and steering 悬挂与转向
+          ├── Transmission and drivetrain 变速箱与传动系统
+          ├── Wheels and tires 车轮与轮胎
+          ├── Other commercial truck parts 其他商用卡车零件
+  ├── Golf cart parts and accessories 高尔夫球车零件与配件
+          ├── Golf cart cables and parts 高尔夫球车线缆与零件
+          ├── Golf cart chargers 高尔夫球车充电器
+          ├── Golf cart enclosures 高尔夫球车围罩
+          ├── Golf cart windshields 高尔夫球车挡风玻璃
+          ├── Golf cart wheels and tires 高尔夫球车轮毂与轮胎
+          ├── Other golf cart parts 其他高尔夫球车零件
+  ├── Manuals and literature 手册与文献
+          ├── Aviation 航空
+          ├── Boats and watercraft 船只与水上交通工具
+          ├── Car and truck manuals 轿车与卡车手册
+          ├── Motorcycle manuals and literature 摩托车手册与文献
+          ├── Other repair manuals and literature 其他维修手册与文献
+  ├── Motorcycle and scooter parts and accessories 摩托车与踏板车零件及配件
+          ├── Air intake and fuel delivery 进气与燃油供给
+          ├── Audio, communication and navigation 音响、通信与导航
+          ├── Body and frame 车身与车架
+          ├── Brakes and brake parts 制动系统与刹车零件
+          ├── Electric motorcycle and scooter parts 电动摩托车与踏板车零件
+          ├── Electrical and ignition components 电气与点火组件
+          ├── Engine cooling 发动机冷却
+          ├── Engines and engine parts 发动机与发动机零件
+          ├── Exhaust and emission systems 排气与排放系统
+          ├── Foot controls, pedals and pegs 脚踏控制、踏板与脚蹬
+          ├── Guards and protection 护板与防护件
+          ├── Handlebars, grips and controls 车把、握把与控制装置
+          ├── Instruments and gauges 仪表与量表
+          ├── Lighting and lamps 照明与灯具
+          ├── Luggage, racks and storage 行李、货架与储物
+          ├── Mirrors 后视镜
+          ├── Suspension and handling 悬挂与操控
+          ├── Transmission and drivetrain 变速箱与传动系统
+          ├── Wheels, tires and parts 车轮、轮胎与零件
+          ├── Other motorcycle and scooter parts and accessories 其他摩托车与踏板车零件及配件
+  ├── Motorcycle maintenance, stands and towing 摩托车维护、支架与拖车
+          ├── Battery chargers and optimizers 电池充电器与优化器
+          ├── Care, cleaning and protection 护理、清洁与防护
+          ├── Lifts and stands 举升机与支架
+          ├── Ramps and towing 坡道与拖车
+          ├── Safety and security 安全与防盗
+          ├── Other motorcycle maintenance, stands and towing 其他摩托车维护、支架与拖车
+  ├── Performance and racing parts 性能与赛车零件
+          ├── Accessories 配件
+          ├── Asphalt oval racing parts 沥青椭圆赛道赛车零件
+          ├── Auto performance parts 汽车性能零件
+          ├── Dirt oval racing parts 泥土椭圆赛道赛车零件
+          ├── Drag racing parts 直线加速赛零件
+          ├── Fasteners, fluids and gaskets 紧固件、油液与垫片
+          ├── Kart racing parts 卡丁车赛车零件
+          ├── Off-road racing 越野赛车
+          ├── Racing equipment 赛车装备
+          ├── Safety equipment 安全装备
+          ├── Other performance and racing parts 其他性能与赛车零件
+  ├── Personal watercraft parts 个人水上摩托零件
+          ├── Accessories and gear 配件与装备
+          ├── Body parts 船体零件
+          ├── Engines, impellers and component 发动机、叶轮与组件
+          ├── Exhaust 排气
+          ├── Ignition and starting systems 点火与启动系统
+          ├── Intake and fuel systems 进气与燃油系统
+          ├── Other personal watercraft parts 其他个人水上摩托零件
+  ├── RV, trailer and camper parts and accessories 房车、拖车与露营车零件及配件
+          ├── Air conditioners and heating 空调与暖风
+          ├── Appliances 电器
+          ├── Awnings, pop-top roofs and covers 遮阳篷、弹出式车顶与车罩
+          ├── Doors and door hardware 车门与车门五金
+          ├── Electric power supplies, generators and parts 电源、发电机与零件
+          ├── Furniture and conversion kits 家具与改装套件
+          ├── Gas systems 燃气系统
+          ├── Hatches, windows, vents and accessories 舱口、窗户、通风口与配件
+          ├── Lighting 照明
+          ├── Satellite and TV technology 卫星与电视技术
+          ├── Smoke alarms and gas sensors 烟雾报警器与气体传感器
+          ├── Steps and ladders 台阶与梯子
+          ├── Trailer leveling and towing 拖车调平与牵引
+          ├── Trailer tires and wheels 拖车轮胎与轮毂
+          ├── Water and sanitation systems 供水与卫生系统
+          ├── Bathroom accessories 浴室配件
+          ├── Kitchen accessories 厨房配件
+          ├── Other RV, trailer and camper parts and accessories 其他房车、拖车与露营车零件及配件
+  ├── Salvage parts cars 报废车零件
+  ├── Services and Installation 服务与安装
+          ├── Accessory installation 配件安装
+          ├── Air conditioning and heater 空调与暖风
+          ├── Alignment and steering 四轮定位与转向
+          ├── Appraisal and inspection 评估与检查
+          ├── Battery and electronics 电池与电子
+          ├── Body and paint 车身与喷漆
+          ├── Brakes 制动系统
+          ├── Cooling system and radiator 冷却系统与散热器
+          ├── Engine services 发动机服务
+          ├── Exhaust and muffler 排气与消声器
+          ├── Extended service contracts 延保合同
+          ├── Glass repair or replacement 玻璃维修或更换
+          ├── Machining service 机加工服务
+          ├── Oil change and lube 换油与润滑
+          ├── Performance or racing mods 性能或赛车改装
+          ├── Restoration and fabrication 修复与制造
+          ├── State inspection and smog 年检与尾气检测
+          ├── Tire and wheel installation 轮胎与轮毂安装
+          ├── Transmission service 变速箱服务
+          ├── Tune-up 调校
+          ├── Vehicle shipping 车辆运输
+          ├── Other services and installation 其他服务与安装
+  ├── Sidecars 边车
+  ├── Snowmobile parts 雪地摩托零件
+          ├── Accessories 配件
+          ├── Air intake and fuel systems 进气与燃油系统
+          ├── Body parts 车身零件
+          ├── Brakes 制动系统
+          ├── Clutch and drive belts 离合器与传动皮带
+          ├── Decals and stickers 贴纸与贴花
+          ├── Electrical components 电气组件
+          ├── Engines and components 发动机与组件
+          ├── Exhaust 排气
+          ├── Gauges and cables 仪表与拉线
+          ├── Handlebars and mirrors 车把与后视镜
+          ├── Lighting 照明
+          ├── Seats 座椅
+          ├── Shocks and suspension 减震器与悬挂
+          ├── Skis and runners 滑雪板与滑轨
+          ├── Snowmobile covers 雪地摩托罩
+          ├── Starters 启动器
+          ├── Tracks and studs 履带与钉齿
+          ├── Windshields 挡风玻璃
+          ├── Other snowmobile parts 其他雪地摩托零件
+  ├── Wholesale lots 批发批量
+          ├── Apparel and merchandise 服装与商品
+          ├── Aviation 航空
+          ├── Boats and watercraft 船只与水上交通工具
+          ├── Car and truck 轿车与卡车
+          ├── Manuals and literature 手册与文献
+          ├── Motorcycle and ATV 摩托车与全地形车
+          ├── Tools 工具
+  ├── Other vehicle parts 其他车辆零件
+          ├── Go-kart accessories 卡丁车配件
+          ├── Go-kart parts 卡丁车零件
+          ├── Other 其他
+  ├── Other 其他
+
+◆ Automotive tools and supplies 汽车工具与用品
+  ├── Air compressors 空气压缩机
+  ├── Air tools 气动工具
+          ├── Air drills 气动钻
+          ├── Air flange tools 气动法兰工具
+          ├── Air grinders 气动磨光机
+          ├── Air ratchets 气动棘轮扳手
+          ├── Air sanders 气动砂光机
+          ├── Air tool parts and accessories 气动工具零件与配件
+          ├── Impact wrenches 冲击扳手
+          ├── Spray guns 喷枪
+          ├── Other automotive air tools 其他汽车气动工具
+  ├── Auto paints and supplies 汽车油漆与用品
+          ├── Auto paint additives 汽车油漆添加剂
+          ├── Automotive clear coats 汽车清漆
+          ├── Automotive paint kits 汽车油漆套装
+          ├── Automotive paint supplies 汽车油漆用品
+          ├── Automotive primers 汽车底漆
+          ├── Automotive tape and adhesives 汽车胶带与粘合剂
+          ├── Multi-stage auto paint 多工序汽车油漆
+          ├── Single-stage auto paint 单工序汽车油漆
+          ├── Specialty paint and coatings 特种油漆与涂料
+          ├── Touchup and spray paint 补漆与喷漆
+          ├── Other automotive paint 其他汽车油漆
+  ├── Auto safety kits and supplies 汽车安全套装与用品
+  ├── Auto tool boxes and storage 汽车工具箱与存储
+          ├── Garage/shop tool chests 车库/车间工具柜
+          ├── Tool storage organizers 工具收纳整理盒
+          ├── Truck tool boxes 卡车工具箱
+          ├── Other automotive tool storage 其他汽车工具存储
+  ├── Automotive care and detailing 汽车护理与精洗
+          ├── Bug and tar removers 虫胶与焦油去除剂
+          ├── Car wash soap 洗车液
+          ├── Glass care and water repellant 玻璃护理与驱水剂
+          ├── Ice scrapers and snow brushes 除冰铲与雪刷
+          ├── Interior cleaners and protectant 内饰清洁剂与保护剂
+          ├── Mitts, bonnets and buffing pads 洗车手套、机罩与抛光垫
+          ├── Power polishers 电动抛光机
+          ├── Squeegees 刮水板
+          ├── Vehicle vacuums 车载吸尘器
+          ├── Wash, wax and cleaning Kits 清洗、打蜡与清洁套装
+          ├── Washing brushes and nozzles 洗车刷与喷嘴
+          ├── Waxes and polishes 车蜡与抛光剂
+          ├── Wheel/tire cleaners and polishes 轮毂/轮胎清洁剂与抛光剂
+          ├── Other automotive care supplies 其他汽车护理用品
+  ├── Automotive repair kits 汽车维修套装
+          ├── Dent repair kits and tools 凹陷修复套装与工具
+          ├── Scratch repair kits and tools 划痕修复套装与工具
+          ├── Tire repair kits and tools 轮胎修补套装与工具
+          ├── Windshield repair kits and tools 挡风玻璃修复套装与工具
+          ├── Other repair kits and tools 其他维修套装与工具
+  ├── Battery testers and chargers 电池检测仪与充电器
+          ├── Battery testers 电池检测仪
+          ├── Booster/jumper cables 搭电线/跨接电缆
+          ├── Chargers and jump starters 充电器与应急启动电源
+          ├── Other battery equipment 其他电池设备
+  ├── Diagnostic services tools 诊断服务工具
+          ├── Air bag scan tools/simulators 安全气囊扫描工具/模拟器
+          ├── Auto inspection cams and scopes 汽车检测摄像头与内窥镜
+          ├── Code readers and scanners 故障码读取器与扫描仪
+          ├── Compression and vacuum testers 压缩比与真空度测试仪
+          ├── Connectors, adapters and parts 连接器、适配器与零件
+          ├── Diagnostic software 诊断软件
+          ├── Electrical testers, test leads 电气测试仪与测试导线
+          ├── Emissions analyzers 排放分析仪
+          ├── Fuel pressure testers 燃油压力测试仪
+          ├── Ignition testers 点火测试仪
+          ├── Multimeters and analyzers 万用表与分析仪
+          ├── Timing lights 正时灯
+          ├── Other diagnostic service tools 其他诊断服务工具
+  ├── Fluids and chemicals 油液与化学品
+          ├── Air conditioning chemicals 空调化学品
+          ├── Antifreeze 防冻液
+          ├── Brake lubricants and cleaners 制动润滑剂与清洁剂
+          ├── Engine cleaners 发动机清洁剂
+          ├── Fuel additives and treatments 燃油添加剂与处理剂
+          ├── Gasket makers/removers/sealers 垫片制造剂/去除剂/密封剂
+          ├── Gear/differential oil 齿轮/差速器油
+          ├── Grease and lube 润滑脂与润滑油
+          ├── Motor oil 机油
+          ├── Power steering fluids 动力转向液
+          ├── Radiator additives and sealants 散热器添加剂与密封剂
+          ├── Starting fluids 启动液
+          ├── Tire sealant 轮胎密封剂
+          ├── Transmission fluid 变速箱油
+          ├── Windshield wiper fluid 挡风玻璃清洗液
+          ├── Other fluids and chemicals 其他油液与化学品
+  ├── Hand tools 手动工具
+          ├── Body hammers and dollies 钣金锤与垫铁
+          ├── Clamps 夹具
+          ├── Cutting tools 切割工具
+          ├── Hand tool parts and accessories 手动工具零件与配件
+          ├── Mixed hand tool sets 混合手动工具套装
+          ├── Pliers 钳子
+          ├── Precision and measuring tools 精密与测量工具
+          ├── Pullers and extractors 拉拔器与提取器
+          ├── Ratchets 棘轮扳手
+          ├── Riveters 铆钉枪
+          ├── Screwdrivers 螺丝刀
+          ├── Slide hammers 滑锤
+          ├── Sockets and socket sets 套筒与套筒套装
+          ├── Threading tools 螺纹工具
+          ├── Wrenches 扳手
+          ├── Other automotive hand tools 其他汽车手动工具
+  ├── Power tools 电动工具
+  ├── Shop equipment and supplies 车间设备与用品
+          ├── Auto lifts and frame machines 汽车举升机与车架校正机
+          ├── Brake lathes 制动盘车床
+          ├── Brake service tools 制动维修工具
+          ├── Come-alongs 手拉葫芦
+          ├── Dollies 移动小车
+          ├── Engine hoists and stands 发动机吊机与支架
+          ├── Fender covers 翼子板护罩
+          ├── Fluid transfer pumps 液体输送泵
+          ├── Funnels, oil pans and mats 漏斗、接油盘与垫
+          ├── Grease guns, lubrication tools 黄油枪与润滑工具
+          ├── Jacks and jack stands 千斤顶与支架
+          ├── Paint booths 喷漆房
+          ├── Roller seats and creepers 滚轮座椅与躺板
+          ├── Sand blasters 喷砂机
+          ├── Service ramps 维修坡道
+          ├── Shop supplies 车间用品
+          ├── Strut compressors 减震器弹簧压缩器
+          ├── Tire changers/wheel balancers 轮胎拆装机/动平衡机
+          ├── Wheel alignment systems/tools 四轮定位系统/工具
+          ├── Other shop equipment 其他车间设备
+  ├── Other auto tools and supplies 其他汽车工具与用品
+
+◆ Safety and security accessories 安全与防盗配件
+  ├── Safety 安全
+  ├── Security 防盗
+
+◆ Automotive accessories 汽车配件
+  ├── Car and truck exterior 轿车与卡车外观
+          ├── Antennas 天线
+          ├── Car and truck covers 轿车与卡车车罩
+          ├── Decals and vinyls 贴纸与车贴
+          ├── Emblems and ornaments 徽标与装饰件
+          ├── License plates and frames 车牌与车牌框
+          ├── Light bars 灯条
+          ├── Roof racks and cross bars 车顶行李架与横杆
+          ├── Running boards and step bars 侧踏板与登车踏板
+          ├── Splash guards and mud flaps 挡泥板与防溅罩
+          ├── Sun visors, wind and bug deflectors 遮阳板、挡风与防虫导流板
+          ├── Tire chains 轮胎防滑链
+          ├── Trailer hitches 拖车钩
+          ├── Truck bed accessories 货厢配件
+          ├── Wheel hub caps and trim rings 轮毂盖与装饰环
+          ├── Window tinting 车窗贴膜
+  ├── Car and truck interior 轿车与卡车内饰
+          ├── Additional storage and organizers 额外储物与收纳件
+          ├── Cargo covers 行李厢遮物帘
+          ├── Cargo nets, pet barriers and storage bins 货物网、宠物隔离栏与储物箱
+          ├── Cup holders 杯架
+          ├── Floor mats, carpets and cargo liners 脚垫、地毯与行李厢垫
+          ├── Garbage cans 垃圾桶
+          ├── Seat covers 座椅套
+          ├── Steering wheel covers 方向盘套
+          ├── Sun and privacy shades 遮阳板与隐私遮阳帘
+  ├── In-Car technology, GPS and security devices 车载技术、GPS与防盗设备
+          ├── Amplifiers 功放
+          ├── Built-in sat nav 内置卫星导航
+          ├── Key blanks 钥匙坯
+          ├── Keys, fobs and remotes 钥匙、遥控钥匙与遥控器
+          ├── Remote entry system kits 遥控进入系统套装
+          ├── Remote start system kits 远程启动系统套装
+          ├── Screens 屏幕
+          ├── Speakers 扬声器
+          ├── Stereos and head units 音响与主机
+          ├── Wiring and wiring harnesses 线束与线束总成
+  ├── Motorcycle parts 摩托车零件
+          ├── Decals and vinyls 贴纸与车贴
+          ├── Engine guards and highway bars 发动机护杠与公路杠
+          ├── Fairings, plastics and body kits 整流罩、塑料件与车身套件
+          ├── Fender eliminators 挡泥板消除器
+          ├── Headsets and intercoms 耳机与对讲机
+          ├── Luggage racks 行李架
+          ├── Saddlebags and panniers 边包与驮包
+          ├── Seat covers 座椅套
+          ├── Speakers 扬声器
+          ├── Top boxes and tail bags 尾箱与尾包
+  ├── Apparel, protection and merchandise 服装、防护装备与商品
+          ├── Boots and shoes 靴子与鞋子
+          ├── Eyewear 眼镜
+          ├── Gloves 手套
+          ├── Helmets 头盔
+          ├── Jackets 夹克
+          ├── Keyrings, key fobs and lanyards 钥匙圈、遥控钥匙与挂绳
+          ├── Motocross kits 越野摩托车套装
+          ├── Pants and chaps 裤子与皮裤
+          ├── Racing and riding suits 赛车与骑行服
+          ├── Snowmobile jackets and bibs 雪地摩托夹克与围兜
