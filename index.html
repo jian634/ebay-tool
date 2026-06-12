@@ -3612,11 +3612,11 @@ async function runListingCompare() {
     return;
   }
 
-  resultEl.innerHTML = '<div style="text-align:center;padding:24px;color:#4F46E5;font-size:13px">⏳ AI 分析中，请稍候（约 5-10 秒）...</div>';
+  resultEl.innerHTML = '<div style="text-align:center;padding:24px;color:#4F46E5;font-size:13px">⏳ AI 分析中，请稍候（约 30 秒）...</div>';
 
   let bp;
   try {
-    const resp = await fetch('https://jesus-realistic-grad-scenes.trycloudflare.com/ai-advice', {
+    const resp = await fetch('https://lens-deals-ballot-hey.trycloudflare.com/ai-advice', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -3810,7 +3810,7 @@ function renderListingCompare({ bp, title, price, imgCount, mySpecs }) {
 }
 
 // ===== CLIP IMAGE RECOGNITION =====
-const CLIP_URL = 'https://jesus-realistic-grad-scenes.trycloudflare.com';
+const CLIP_URL = 'https://lens-deals-ballot-hey.trycloudflare.com';
 
 function handleImageDrop(e) {
   const file = e.dataTransfer.files[0];
@@ -3878,8 +3878,8 @@ function analyze() {
   }
   if (!excellentData) { alert('数据加载中，请稍候...'); return; }
 
-  // Try semantic service first (https://jesus-realistic-grad-scenes.trycloudflare.com), fall back to keyword matching
-  const semUrl = `https://jesus-realistic-grad-scenes.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
+  // Try semantic service first (https://lens-deals-ballot-hey.trycloudflare.com), fall back to keyword matching
+  const semUrl = `https://lens-deals-ballot-hey.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
   fetch(semUrl, { signal: AbortSignal.timeout(15000) })
     .then(r => r.ok ? r.json() : Promise.reject('!ok'))
     .then(semResults => {
