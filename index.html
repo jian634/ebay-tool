@@ -36,6 +36,12 @@ textarea.form-input{height:72px;resize:vertical}
 .analyze-btn{padding:12px;background:var(--blue);color:#fff;border:none;border-radius:6px;font-size:14px;font-weight:700;cursor:pointer;transition:background .2s;letter-spacing:.5px}
 .analyze-btn:hover{background:#0052a8}
 .analyze-btn:active{transform:scale(.98)}
+#img-drop-zone{border:2px dashed #D1D5DB;border-radius:10px;padding:16px 12px;cursor:pointer;transition:border-color .2s,background .2s;background:#FAFAFA;text-align:center;min-height:90px;display:flex;align-items:center;justify-content:center}
+#img-drop-zone:hover,#img-drop-zone.img-drop-hover{border-color:#0064D2;background:#EFF6FF}
+#img-result-badge span{display:inline-block;padding:3px 10px;border-radius:20px;font-weight:600}
+.clip-match{background:#EFF6FF;color:#0064D2;border:1px solid #BFDBFE}
+.clip-loading{background:#FFF7ED;color:#D97706;border:1px solid #FDE68A}
+.clip-error{background:#FFF1F1;color:#E53238;border:1px solid #FFCDD0}
 .tip{font-size:11px;color:#999;line-height:1.5}
 
 /* ===== RIGHT PANEL ===== */
@@ -239,6 +245,25 @@ textarea.form-input{height:72px;resize:vertical}
     <div class="form-group">
       <label class="form-label" id="l-desc-label">商品描述 / Description</label>
       <textarea class="form-input" id="inp-desc" placeholder="补充关键词，如：2018-2022 Honda Civic, LED, left side..."></textarea>
+    </div>
+    <!-- Image Upload (CLIP) -->
+    <div class="form-group" id="img-upload-group">
+      <label class="form-label" id="l-img-label">商品图片识别 / Image Recognition <span style="font-size:0.72em;color:#9CA3AF;font-weight:400">(可选 · 需启动 clip_service.py)</span></label>
+      <div id="img-drop-zone" onclick="document.getElementById('img-file-input').click()"
+           ondragover="event.preventDefault();this.classList.add('img-drop-hover')"
+           ondragleave="this.classList.remove('img-drop-hover')"
+           ondrop="event.preventDefault();this.classList.remove('img-drop-hover');handleImageDrop(event)">
+        <input type="file" id="img-file-input" accept="image/*" style="display:none" onchange="handleImageFile(this.files[0])">
+        <div id="img-drop-content">
+          <div style="font-size:1.6rem;margin-bottom:6px">📷</div>
+          <div id="img-drop-text" style="font-size:0.82rem;color:#9CA3AF">点击或拖拽上传商品图片</div>
+          <div style="font-size:0.72rem;color:#C4C4C4;margin-top:4px">CLIP ViT-L/14 自动识别类目</div>
+        </div>
+        <div id="img-preview-wrap" style="display:none;text-align:center">
+          <img id="img-preview" style="max-height:110px;max-width:100%;border-radius:8px;object-fit:contain">
+          <div id="img-result-badge" style="margin-top:8px;font-size:0.8rem"></div>
+        </div>
+      </div>
     </div>
     <button class="analyze-btn" id="analyze-btn" onclick="analyze()">开始分析 →</button>
     <div class="tip" id="l-tip">支持中英文输入，系统将自动匹配eBay类目优秀商品基准</div>
@@ -3482,6 +3507,63 @@ function renderAll(results) {
   renderComparison(results);
   renderOptimization();
   renderRecommendations(results);
+}
+
+// ===== CLIP IMAGE RECOGNITION =====
+const CLIP_URL = 'http://localhost:8002';
+
+function handleImageDrop(e) {
+  const file = e.dataTransfer.files[0];
+  if (file && file.type.startsWith('image/')) handleImageFile(file);
+}
+
+function handleImageFile(file) {
+  if (!file) return;
+  // Show preview
+  const reader = new FileReader();
+  reader.onload = e => {
+    document.getElementById('img-drop-content').style.display = 'none';
+    document.getElementById('img-preview-wrap').style.display = 'block';
+    document.getElementById('img-preview').src = e.target.result;
+    document.getElementById('img-result-badge').innerHTML =
+      '<span class="clip-loading">⏳ CLIP 识别中...</span>';
+  };
+  reader.readAsDataURL(file);
+
+  // Send to clip_service
+  const fd = new FormData();
+  fd.append('file', file);
+  fd.append('site', currentSite);
+  fd.append('top_k', '5');
+
+  fetch(`${CLIP_URL}/identify`, { method: 'POST', body: fd, signal: AbortSignal.timeout(15000) })
+    .then(r => r.ok ? r.json() : Promise.reject('!ok'))
+    .then(data => {
+      const cats = data.top_categories || [];
+      if (!cats.length) throw new Error('empty');
+      const top = cats[0];
+      // Auto-fill product name with top category leaf name
+      const nameInput = document.getElementById('inp-name');
+      if (!nameInput.value.trim()) nameInput.value = top.leaf;
+      // Show top-3 results as badges
+      const badges = cats.slice(0, 3).map((c, i) =>
+        `<span class="clip-match" style="margin:2px 3px;font-size:0.75rem;display:inline-block;padding:2px 8px;border-radius:12px;border:1px solid #BFDBFE;background:#EFF6FF;color:#0064D2">
+          ${i === 0 ? '✅' : `#${i+1}`} ${c.leaf} <span style="opacity:.6">${(c.similarity*100).toFixed(0)}%</span>
+        </span>`
+      ).join('');
+      document.getElementById('img-result-badge').innerHTML =
+        `<div style="font-size:0.72rem;color:#6B7280;margin-bottom:4px">CLIP 识别结果：</div>${badges}`;
+    })
+    .catch(() => {
+      document.getElementById('img-result-badge').innerHTML =
+        '<span class="clip-error">⚠️ 识别失败，请启动 clip_service.py 后重试</span>';
+    });
+}
+
+function resetImageUpload() {
+  document.getElementById('img-drop-content').style.display = 'flex';
+  document.getElementById('img-preview-wrap').style.display = 'none';
+  document.getElementById('img-file-input').value = '';
 }
 
 function analyze() {
