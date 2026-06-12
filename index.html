@@ -2449,7 +2449,7 @@ function matchCategories(query, site) {
   const withSim = sorted.filter(r => r.similarity > 0);
   const results  = withSim.length >= 3 ? withSim : sorted;
 
-  return results.slice(0, 15);
+  return results.slice(0, 100);
 }
 
 // ===== FORMAT =====
