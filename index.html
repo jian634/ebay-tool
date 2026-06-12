@@ -2104,8 +2104,20 @@ const LANG = {
     qStar: '⭐ 明星区域 (高GMV + 高增长)', qPain: '⚠️ 痛点区域 (高流量 + 低增长)',
     qHidden: '💎 黑马区域 (低曝光 + 高增长)', qWeak: '📉 观望区域 (低GMV + 低增长)',
     recTitle0: '产品力建议', recTitle1: '内容力建议', recTitle2: '流量力建议', recTitle3: '评价力建议',
-    yourCat: '您的类目',
-    topCat: '优秀基准',
+    yourCat: '您的商品市场区间（前5匹配类目加权均值）',
+    topCat: '最佳匹配类目（市场基准）',
+    sellerCat: '您的实际经营数据',
+    chartTitle3b: '商家自测 · 与最佳类目对比',
+    sellerFormTitle: '📊 输入您的经营数据，与最佳匹配类目对比',
+    sellerGmv: '月均GMV ($)',
+    sellerGrowth: '近12月增长率 (%)',
+    sellerComp: '竞争激烈程度',
+    sellerTraffic: '月均访客 / 曝光量',
+    sellerPrice: '价格定位',
+    sellerBtn: '生成对比图',
+    sellerHint: '数据仅用于本地图表展示，不会上传',
+    compOpts: ['极低','较低','中等','较高','极高'],
+    priceOpts: ['低价策略','中低价','均价水平','中高价','高价高质'],
     noData: '该站点暂无数据',
   },
   en: {
@@ -2134,8 +2146,20 @@ const LANG = {
     qStar: '⭐ Stars (High GMV + High Growth)', qPain: '⚠️ Pain Points (High Traffic + Low Growth)',
     qHidden: '💎 Hidden Gems (Low Traffic + High Growth)', qWeak: '📉 Watchers (Low GMV + Low Growth)',
     recTitle0: 'Product Strength', recTitle1: 'Content Strategy', recTitle2: 'Traffic Strategy', recTitle3: 'Review Strategy',
-    yourCat: 'Your Category',
-    topCat: 'Top Benchmark',
+    yourCat: 'Your Market Range (Weighted avg of top-5 matches)',
+    topCat: 'Best Match Category (Market Benchmark)',
+    sellerCat: 'Your Actual Business Data',
+    chartTitle3b: 'Self-Assessment · vs Best Match',
+    sellerFormTitle: '📊 Enter your business data to compare with best-matched category',
+    sellerGmv: 'Monthly GMV ($)',
+    sellerGrowth: '12-Month Growth Rate (%)',
+    sellerComp: 'Competition Level',
+    sellerTraffic: 'Monthly Visitors / Impressions',
+    sellerPrice: 'Price Positioning',
+    sellerBtn: 'Generate Comparison',
+    sellerHint: 'Data stays local — never uploaded',
+    compOpts: ['Very Low','Low','Medium','High','Very High'],
+    priceOpts: ['Budget','Low-Mid','Mid-Market','Mid-Premium','Premium'],
     noData: 'No data for this site',
   }
 };
@@ -2557,13 +2581,23 @@ function renderMatches(results) {
 }
 
 // ===== RENDER CHARTS =====
+let sellerRadarChart = null;
+
 function renderComparison(results) {
   if (!results || results.length === 0) return;
   const panel = document.getElementById('panel1');
+
+  const compOpts = T('compOpts');
+  const priceOpts = T('priceOpts');
+
   panel.innerHTML = `
     <div class="charts-grid">
       <div class="chart-box">
         <div class="chart-title">${T('chartTitle1')}</div>
+        <div style="font-size:10px;color:#888;margin-bottom:8px;line-height:1.5">
+          <span style="display:inline-block;width:22px;height:3px;background:#0064D2;vertical-align:middle;margin-right:4px;border-radius:2px"></span>${T('topCat')}<br>
+          <span style="display:inline-block;width:22px;height:0;border-top:2px dashed #E53238;vertical-align:middle;margin-right:4px;margin-top:4px"></span>${T('yourCat')}
+        </div>
         <div class="chart-wrap"><canvas id="radarChart"></canvas></div>
       </div>
       <div class="chart-box">
@@ -2571,18 +2605,53 @@ function renderComparison(results) {
         <div class="chart-wrap"><canvas id="barChart"></canvas></div>
       </div>
     </div>
+
+    <div style="margin-top:18px;background:#f8f7ff;border:1px solid #e0d9ff;border-radius:10px;padding:14px 16px">
+      <div style="font-size:13px;font-weight:700;color:#4F46E5;margin-bottom:12px">${T('sellerFormTitle')}</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px">
+        <div>
+          <div class="form-label" style="margin-bottom:4px">${T('sellerGmv')}</div>
+          <input id="s-gmv" type="number" min="0" placeholder="e.g. 5000" style="width:100%;padding:6px 8px;border:1px solid #d1d5db;border-radius:6px;font-size:12px;box-sizing:border-box">
+        </div>
+        <div>
+          <div class="form-label" style="margin-bottom:4px">${T('sellerGrowth')}</div>
+          <input id="s-growth" type="number" placeholder="e.g. 15" style="width:100%;padding:6px 8px;border:1px solid #d1d5db;border-radius:6px;font-size:12px;box-sizing:border-box">
+        </div>
+        <div>
+          <div class="form-label" style="margin-bottom:4px">${T('sellerTraffic')}</div>
+          <input id="s-traffic" type="number" min="0" placeholder="e.g. 3000" style="width:100%;padding:6px 8px;border:1px solid #d1d5db;border-radius:6px;font-size:12px;box-sizing:border-box">
+        </div>
+        <div>
+          <div class="form-label" style="margin-bottom:4px">${T('sellerComp')}</div>
+          <select id="s-comp" style="width:100%;padding:6px 8px;border:1px solid #d1d5db;border-radius:6px;font-size:12px;box-sizing:border-box;background:#fff">
+            ${compOpts.map((o,i)=>`<option value="${i}">${o}</option>`).join('')}
+          </select>
+        </div>
+        <div>
+          <div class="form-label" style="margin-bottom:4px">${T('sellerPrice')}</div>
+          <select id="s-price" style="width:100%;padding:6px 8px;border:1px solid #d1d5db;border-radius:6px;font-size:12px;box-sizing:border-box;background:#fff">
+            ${priceOpts.map((o,i)=>`<option value="${i}">${o}</option>`).join('')}
+          </select>
+        </div>
+        <div style="display:flex;align-items:flex-end">
+          <button onclick="buildSellerRadar()" style="width:100%;padding:7px;background:#4F46E5;color:#fff;border:none;border-radius:6px;font-size:12px;font-weight:700;cursor:pointer">${T('sellerBtn')}</button>
+        </div>
+      </div>
+      <div style="font-size:10px;color:#aaa">${T('sellerHint')}</div>
+      <div id="seller-radar-wrap" style="display:none;margin-top:14px">
+        <div style="font-size:13px;font-weight:700;color:#333;margin-bottom:6px">${T('chartTitle3b')}</div>
+        <div style="font-size:10px;color:#888;margin-bottom:8px;line-height:1.5">
+          <span style="display:inline-block;width:22px;height:3px;background:#0064D2;vertical-align:middle;margin-right:4px;border-radius:2px"></span>${T('topCat')}<br>
+          <span style="display:inline-block;width:22px;height:0;border-top:2px dashed #7C3AED;vertical-align:middle;margin-right:4px;margin-top:4px"></span>${T('sellerCat')}
+        </div>
+        <div style="height:260px;position:relative"><canvas id="sellerRadarChart"></canvas></div>
+      </div>
+    </div>
   `;
 
   const top = results[0];
   const dims = [T('dim0'), T('dim1'), T('dim2'), T('dim3'), T('dim4')];
 
-  // Site-wide averages for "your category" baseline
-  const data = excellentData[currentSite] || [];
-  const avgNormGmv    = data.reduce((s,d)=>s+d.normGmv,   0) / Math.max(data.length,1);
-  const avgNormSi     = data.reduce((s,d)=>s+d.normSi,    0) / Math.max(data.length,1);
-  const avgNormGrowth = data.reduce((s,d)=>s+d.normGrowth,0) / Math.max(data.length,1);
-
-  // "Your" estimated position: weighted average of top-5 matches (similarity-weighted)
   const top5 = results.slice(0, 5);
   const totalSim = top5.reduce((s,r)=>s+Math.max(r.similarity,0.01),0);
   const wAvg = key => top5.reduce((s,r)=>s+r[key]*Math.max(r.similarity,0.01),0)/totalSim;
@@ -2590,12 +2659,11 @@ function renderComparison(results) {
   const topScores = [
     Math.round(top.normGmv    * 100),
     Math.round(top.normGrowth * 100),
-    Math.round((1 - top.normGmv * 0.4) * 100),   // competition: high GMV = high competition
+    Math.round((1 - top.normGmv * 0.4) * 100),
     Math.round(top.normSi     * 100),
-    Math.round((1 - top.normGmv * 0.3 + top.normGrowth * 0.3) * 80), // price edge heuristic
+    Math.round((1 - top.normGmv * 0.3 + top.normGrowth * 0.3) * 80),
   ];
 
-  // User scores: where your best-matched category sits vs site average
   const userScores = [
     Math.round(wAvg('normGmv')    * 100),
     Math.round(wAvg('normGrowth') * 100),
@@ -2604,38 +2672,88 @@ function renderComparison(results) {
     Math.round((1 - wAvg('normGmv') * 0.3 + wAvg('normGrowth') * 0.3) * 80),
   ];
 
+  // store top scores for seller radar reference
+  window._topRadarScores = topScores;
+  window._topItem = top;
+
   if (radarChart) radarChart.destroy();
-  const rCtx = document.getElementById('radarChart');
-  radarChart = new Chart(rCtx, {
+  radarChart = new Chart(document.getElementById('radarChart'), {
     type: 'radar',
     data: {
       labels: dims,
       datasets: [
         { label: T('topCat'), data: topScores, borderColor:'#0064D2', backgroundColor:'rgba(0,100,210,.15)', pointBackgroundColor:'#0064D2', borderWidth:2 },
-        { label: T('yourCat'), data: userScores, borderColor:'#E53238', backgroundColor:'rgba(229,50,56,.1)', pointBackgroundColor:'#E53238', borderWidth:2, borderDash:[5,3] },
+        { label: T('yourCat'), data: userScores, borderColor:'#E53238', backgroundColor:'rgba(229,50,56,.08)', pointBackgroundColor:'#E53238', borderWidth:2, borderDash:[5,3] },
       ]
     },
-    options: { responsive:true, maintainAspectRatio:false, scales:{ r:{ min:0, max:100, ticks:{stepSize:20,font:{size:9}}, pointLabels:{font:{size:10}} } }, plugins:{ legend:{labels:{font:{size:11}}} } }
+    options: { responsive:true, maintainAspectRatio:false, scales:{ r:{ min:0, max:100, ticks:{stepSize:20,font:{size:9}}, pointLabels:{font:{size:10}} } }, plugins:{ legend:{display:false} } }
   });
 
-  // Bar chart: Category scale index comparison top 5
   const top5bar = results.slice(0, 5);
   const barQualLabels = top5bar.map(r => gmvQual(r));
   if (barChart) barChart.destroy();
-  const bCtx = document.getElementById('barChart');
-  barChart = new Chart(bCtx, {
+  barChart = new Chart(document.getElementById('barChart'), {
     type: 'bar',
     data: {
       labels: top5bar.map(r => r.leaf.length > 16 ? r.leaf.slice(0,16)+'…' : r.leaf),
-      datasets: [
-        { label: lang==='zh'?'品类规模指数':'Scale Index', data: top5bar.map(r => Math.round((r.normGmv||0)*100)), backgroundColor: top5bar.map((_,i) => i===0?'#0064D2':'rgba(0,100,210,.4)'), borderRadius:4 }
-      ]
+      datasets: [{ label: lang==='zh'?'品类规模指数':'Scale Index', data: top5bar.map(r => Math.round((r.normGmv||0)*100)), backgroundColor: top5bar.map((_,i) => i===0?'#0064D2':'rgba(0,100,210,.4)'), borderRadius:4 }]
     },
     options: {
       responsive:true, maintainAspectRatio:false, indexAxis:'y',
       plugins:{ legend:{display:false}, tooltip:{ callbacks:{ label: ctx => barQualLabels[ctx.dataIndex] } } },
-      scales:{ x:{ min:0, max:100, ticks:{ callback: v=>v, font:{size:9} }, title:{ display:true, text: lang==='zh'?'相对规模指数 (0-100)':'Relative Scale Index (0-100)', font:{size:9}, color:'#999' } }, y:{ ticks:{font:{size:9}} } }
+      scales:{ x:{ min:0, max:100, ticks:{font:{size:9}}, title:{ display:true, text: lang==='zh'?'相对规模指数 (0-100)':'Relative Scale Index (0-100)', font:{size:9}, color:'#999' } }, y:{ ticks:{font:{size:9}} } }
     }
+  });
+}
+
+function buildSellerRadar() {
+  const topScores = window._topRadarScores;
+  const top = window._topItem;
+  if (!topScores || !top) return;
+
+  const gmvVal    = parseFloat(document.getElementById('s-gmv').value)    || 0;
+  const growthVal = parseFloat(document.getElementById('s-growth').value)  || 0;
+  const trafficVal= parseFloat(document.getElementById('s-traffic').value) || 0;
+  const compIdx   = parseInt(document.getElementById('s-comp').value);   // 0-4
+  const priceIdx  = parseInt(document.getElementById('s-price').value);  // 0-4
+
+  // Normalize against top category reference values
+  const refGmv  = (top.gmv_y || 1) / 12; // monthly
+  const refSi   = top.si || 1;
+
+  // 市场规模: seller monthly GMV vs top category monthly GMV
+  const s0 = Math.min(100, Math.round(gmvVal / Math.max(refGmv, 1) * 100));
+
+  // 增长潜力: growth rate mapped -50%→0 to +100%→100
+  const s1 = Math.min(100, Math.max(0, Math.round((growthVal + 50) / 150 * 100)));
+
+  // 竞争密度: select 0(极低)→高分 4(极高)→低分 (inverted: low competition = high score)
+  const compScore = [85, 70, 55, 35, 20];
+  const s2 = compScore[compIdx];
+
+  // SI销售力: seller traffic vs top category SI
+  const s3 = Math.min(100, Math.round(trafficVal / Math.max(refSi, 1) * 100));
+
+  // 价格优势: 低价→高价格优势分, 高价→低价格优势分
+  const priceScore = [85, 72, 60, 45, 30];
+  const s4 = priceScore[priceIdx];
+
+  const sellerScores = [s0, s1, s2, s3, s4];
+  const dims = [T('dim0'), T('dim1'), T('dim2'), T('dim3'), T('dim4')];
+
+  document.getElementById('seller-radar-wrap').style.display = 'block';
+
+  if (sellerRadarChart) sellerRadarChart.destroy();
+  sellerRadarChart = new Chart(document.getElementById('sellerRadarChart'), {
+    type: 'radar',
+    data: {
+      labels: dims,
+      datasets: [
+        { label: T('topCat'),    data: topScores,    borderColor:'#0064D2', backgroundColor:'rgba(0,100,210,.15)', pointBackgroundColor:'#0064D2', borderWidth:2 },
+        { label: T('sellerCat'), data: sellerScores, borderColor:'#7C3AED', backgroundColor:'rgba(124,58,237,.1)',  pointBackgroundColor:'#7C3AED', borderWidth:2, borderDash:[5,3] },
+      ]
+    },
+    options: { responsive:true, maintainAspectRatio:false, scales:{ r:{ min:0, max:100, ticks:{stepSize:20,font:{size:9}}, pointLabels:{font:{size:10}} } }, plugins:{ legend:{display:false} } }
   });
 }
 
@@ -3378,10 +3496,39 @@ function analyze() {
   }
   if (!excellentData) { alert('数据加载中，请稍候...'); return; }
 
-  const results = matchCategories(query, currentSite);
-  lastResults = results;
-  renderAll(results);
-  switchTab(0);
+  // Try semantic service first (http://localhost:8001), fall back to keyword matching
+  const semUrl = `http://localhost:8001/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=15`;
+  fetch(semUrl, { signal: AbortSignal.timeout(3000) })
+    .then(r => r.ok ? r.json() : Promise.reject('!ok'))
+    .then(semResults => {
+      if (!Array.isArray(semResults) || semResults.length === 0) throw new Error('empty');
+      // Map semantic results to the format renderAll() expects
+      const results = semResults.map(item => ({
+        category:    item.leaf || item.l2 || '',
+        l1:          item.l1  || '',
+        l2:          item.l2  || '',
+        site:        item.site || currentSite,
+        gmv:         item.gmv_y || 0,
+        si:          item.si   || 0,
+        yoy:         item.yoy_y || 0,
+        normGmv:     item.normGmv    || 0,
+        normSi:      item.normSi     || 0,
+        normGrowth:  item.normGrowth || 0,
+        score:       item.finalScore || 0,
+        similarity:  item.similarity || 0,
+        _semantic:   true,
+      }));
+      lastResults = results;
+      renderAll(results);
+      switchTab(0);
+    })
+    .catch(() => {
+      // Semantic service unavailable — fall back to keyword matching
+      const results = matchCategories(query, currentSite);
+      lastResults = results;
+      renderAll(results);
+      switchTab(0);
+    });
 }
 
 // Pre-compute normalised fields on every item so radar/heatmap can use them
