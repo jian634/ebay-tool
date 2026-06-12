@@ -3616,7 +3616,7 @@ async function runListingCompare() {
 
   let bp;
   try {
-    const resp = await fetch('http://localhost:8001/ai-advice', {
+    const resp = await fetch('https://jesus-realistic-grad-scenes.trycloudflare.com/ai-advice', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -3624,14 +3624,14 @@ async function runListingCompare() {
         product_name: document.getElementById('inp-name').value || category,
         site: currentSite
       }),
-      signal: AbortSignal.timeout(30000)
+      signal: AbortSignal.timeout(15000)
     });
     if (!resp.ok) throw new Error('服务返回错误 ' + resp.status);
     bp = await resp.json();
   } catch (e) {
     resultEl.innerHTML = `<div style="background:#fde8e8;border:1px solid #f5b8b8;border-radius:6px;padding:12px;font-size:12px;color:#c0392b">
       ⚠️ 无法连接 AI 服务（localhost:8001）<br>
-      请确认 service.py 已启动，且 ANTHROPIC_API_KEY 已配置。<br>
+      请确认 service.py 已启动，且 SF_API_KEY 已配置。<br>
       <span style="color:#888;font-size:11px">错误：${e.message}</span>
     </div>`;
     return;
@@ -3810,7 +3810,7 @@ function renderListingCompare({ bp, title, price, imgCount, mySpecs }) {
 }
 
 // ===== CLIP IMAGE RECOGNITION =====
-const CLIP_URL = 'http://localhost:8002';
+const CLIP_URL = 'https://jesus-realistic-grad-scenes.trycloudflare.com';
 
 function handleImageDrop(e) {
   const file = e.dataTransfer.files[0];
@@ -3878,9 +3878,9 @@ function analyze() {
   }
   if (!excellentData) { alert('数据加载中，请稍候...'); return; }
 
-  // Try semantic service first (http://localhost:8001), fall back to keyword matching
-  const semUrl = `http://localhost:8001/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
-  fetch(semUrl, { signal: AbortSignal.timeout(3000) })
+  // Try semantic service first (https://jesus-realistic-grad-scenes.trycloudflare.com), fall back to keyword matching
+  const semUrl = `https://jesus-realistic-grad-scenes.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
+  fetch(semUrl, { signal: AbortSignal.timeout(15000) })
     .then(r => r.ok ? r.json() : Promise.reject('!ok'))
     .then(semResults => {
       if (!Array.isArray(semResults) || semResults.length === 0) throw new Error('empty');
@@ -4110,3 +4110,4 @@ document.addEventListener('keydown', e => {
 
 </body>
 </html>
+
