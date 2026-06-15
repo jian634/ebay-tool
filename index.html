@@ -385,7 +385,7 @@ textarea.form-input{height:72px;resize:vertical}
       <div class="opt-section" id="img-upload-section">
         <div class="opt-section-header">📷 上传商品图片 · 获取针对性建议</div>
         <div id="img-drop-zone" class="img-drop-zone"
-             onclick="document.getElementById('img-file-input').click()"
+             onclick="document.getElementById('img-upload-input').click()"
              ondragover="event.preventDefault();this.classList.add('drag-over')"
              ondragleave="this.classList.remove('drag-over')"
              ondrop="event.preventDefault();this.classList.remove('drag-over');addFiles(event.dataTransfer.files)">
@@ -393,7 +393,7 @@ textarea.form-input{height:72px;resize:vertical}
           <div class="img-drop-text">点击上传或拖拽图片到此处</div>
           <div class="img-drop-sub">支持 JPG · PNG · WebP · GIF · PDF &nbsp;·&nbsp; 最多12张</div>
         </div>
-        <input type="file" id="img-file-input" accept="image/*,.pdf" multiple style="display:none" onchange="addFiles(this.files);this.value=''">
+        <input type="file" id="img-upload-input" accept="image/*,.pdf" multiple style="display:none" onchange="addFiles(this.files);this.value=''">
         <div id="img-count-bar" style="font-size:12px;margin-bottom:8px;display:none"></div>
         <div id="img-preview-grid" class="img-preview-grid" style="display:none"></div>
         <button class="img-analyze-btn" id="img-analyze-btn" onclick="analyzeImages()" style="display:none">🔍 分析上传图片</button>
