@@ -3632,7 +3632,7 @@ async function runListingCompare() {
 
   let bp;
   try {
-    const resp = await fetch('https://burst-lyrics-survivor-faster.trycloudflare.com/ai-advice', {
+    const resp = await fetch('https://demo-crimes-conventional-ruling.trycloudflare.com/ai-advice', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -3923,7 +3923,7 @@ function restoreHistory(index) {
 }
 
 // ===== CLIP IMAGE RECOGNITION =====
-const CLIP_URL = 'https://burst-lyrics-survivor-faster.trycloudflare.com';
+const CLIP_URL = 'https://demo-crimes-conventional-ruling.trycloudflare.com';
 
 function handleImageDrop(e) {
   const file = e.dataTransfer.files[0];
@@ -3991,8 +3991,8 @@ function analyze() {
   }
   if (!excellentData) { alert('数据加载中，请稍候...'); return; }
 
-  // Try semantic service first (https://burst-lyrics-survivor-faster.trycloudflare.com), fall back to keyword matching
-  const semUrl = `https://burst-lyrics-survivor-faster.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
+  // Try semantic service first (https://demo-crimes-conventional-ruling.trycloudflare.com), fall back to keyword matching
+  const semUrl = `https://demo-crimes-conventional-ruling.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
   fetch(semUrl, { signal: AbortSignal.timeout(15000) })
     .then(r => r.ok ? r.json() : Promise.reject('!ok'))
     .then(semResults => {
