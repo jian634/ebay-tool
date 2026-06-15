@@ -240,6 +240,11 @@ textarea.form-input{height:72px;resize:vertical}
 .lc-price-track{position:relative;height:10px;background:#e0e0e0;border-radius:5px;margin:8px 0 4px}
 .lc-price-fill{position:absolute;top:0;height:100%;border-radius:5px}
 .lc-price-pin{position:absolute;top:-4px;width:18px;height:18px;border-radius:50%;border:3px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.3);transform:translateX(-50%)}
+.lc-hist-card{border:1px solid #e0e0e0;border-radius:6px;padding:10px 12px;margin-bottom:6px;cursor:pointer;transition:border-color .15s;background:#fff}
+.lc-hist-card:hover{border-color:#4F46E5;background:#f8f7ff}
+.lc-hist-score{font-size:22px;font-weight:900;line-height:1;border-radius:6px;padding:4px 8px;text-align:center;min-width:40px}
+.lc-hist-title{font-size:11px;color:#444;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:280px}
+.lc-hist-meta{font-size:10px;color:#999;margin-bottom:3px}
 </style>
 </head>
 <body>
@@ -344,6 +349,14 @@ textarea.form-input{height:72px;resize:vertical}
           </div>
           <button onclick="runListingCompare()" style="width:100%;padding:10px;background:#4F46E5;color:#fff;border:none;border-radius:6px;font-size:13px;font-weight:700;cursor:pointer;transition:background .15s">AI 分析对比 →</button>
           <div id="lc-result" style="margin-top:14px"></div>
+          <!-- 历史分析记录 -->
+          <div id="lc-history-section" style="margin-top:16px;display:none">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0 6px;border-top:1px solid #e0e0e0;margin-bottom:8px">
+              <span style="font-size:12px;font-weight:700;color:#1e1b4b">📊 历史分析记录</span>
+              <button onclick="clearHistory()" style="font-size:11px;color:#aaa;background:none;border:none;cursor:pointer;padding:0">清空</button>
+            </div>
+            <div id="lc-hist-list"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -3795,6 +3808,22 @@ function renderListingCompare({ bp, title, price, imgCount, mySpecs }) {
     ${hitMust.length  ? `<div class="lc-row"><div class="lc-key">P0 关键词 ✓</div><div class="lc-mine" style="color:#1a7a3a">${hitMust.join('、')}</div><div class="lc-best"></div></div>` : ''}
     ${missBonus.length? `<div class="lc-row"><div class="lc-key">可补 P1 关键词</div><div class="lc-mine" style="color:#856404">${missBonus.join('、')}</div><div class="lc-best">加分词，建议酌情加入</div></div>` : ''}
     ${hitBonus.length ? `<div class="lc-row"><div class="lc-key">P1 关键词 ✓</div><div class="lc-mine" style="color:#1a7a3a">${hitBonus.join('、')}</div><div class="lc-best"></div></div>` : ''}
+
+    <!-- 优化标题建议 -->
+    ${(() => {
+      let suggested = title || '';
+      missMust.forEach(kw => { if (!suggested.toLowerCase().includes(kw.toLowerCase())) suggested = (suggested + ' ' + kw).trim(); });
+      missBonus.forEach(kw => { if (suggested.length < maxLen - kw.length - 1 && !suggested.toLowerCase().includes(kw.toLowerCase())) suggested = (suggested + ' ' + kw).trim(); });
+      if (!suggested) return '';
+      const lenOk = suggested.length >= minLen && suggested.length <= maxLen;
+      const lenNote = lenOk ? `<span style="color:#1a7a3a">✓ ${suggested.length} 字符</span>` : `<span style="color:#e67e22">⚠ ${suggested.length} 字符（目标 ${minLen}-${maxLen}）</span>`;
+      return `<div style="margin:10px 0 6px;padding:10px 12px;background:#f8f4ff;border:1px solid #d1c4e9;border-radius:6px">
+        <div style="font-size:11px;font-weight:700;color:#5e35b1;margin-bottom:6px">✨ 优化标题建议 ${lenNote}</div>
+        <div id="lc-suggested-title" style="font-size:12px;color:#333;line-height:1.6;word-break:break-all;background:#fff;border:1px solid #e0e0e0;border-radius:4px;padding:6px 8px;margin-bottom:6px">${suggested.replace(/</g,'&lt;')}</div>
+        <button onclick="(function(){var t=document.getElementById('lc-suggested-title').textContent;navigator.clipboard.writeText(t).then(function(){var b=event.target;var orig=b.textContent;b.textContent='✅ 已复制';b.style.background='#1a7a3a';setTimeout(function(){b.textContent=orig;b.style.background='#5e35b1'},1500)})})();"
+          style="font-size:11px;padding:4px 14px;border-radius:4px;border:none;background:#5e35b1;color:#fff;cursor:pointer;font-weight:600">📋 一键复制</button>
+      </div>`;
+    })()}
 
     <!-- 价格 -->
     ${priceHTML}
