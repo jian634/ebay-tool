@@ -3590,6 +3590,7 @@ function toggleListingCompare() {
   const open = area.style.display === 'none';
   area.style.display = open ? 'block' : 'none';
   arrow.textContent = open ? '▲' : '▼';
+  if (open) renderHistoryPanel();
 }
 
 function autoFillCategory(results) {
@@ -3631,7 +3632,7 @@ async function runListingCompare() {
 
   let bp;
   try {
-    const resp = await fetch('http://localhost:8001/ai-advice', {
+    const resp = await fetch('https://burst-lyrics-survivor-faster.trycloudflare.com/ai-advice', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -3639,7 +3640,7 @@ async function runListingCompare() {
         product_name: document.getElementById('inp-name').value || category,
         site: currentSite
       }),
-      signal: AbortSignal.timeout(90000)
+      signal: AbortSignal.timeout(15000)
     });
     if (!resp.ok) throw new Error('服务返回错误 ' + resp.status);
     bp = await resp.json();
@@ -3783,6 +3784,21 @@ function renderListingCompare({ bp, title, price, imgCount, mySpecs }) {
   const formulaHTML = tpl.formula
     ? `<div style="background:#f0f4f8;border-radius:6px;padding:8px 12px;margin-bottom:10px;font-size:12px;color:#333"><b>推荐公式：</b>${tpl.formula}</div>` : '';
 
+  // ── 9. 存入历史记录 ──
+  saveAnalysisToHistory({
+    ts: Date.now(),
+    category: (document.getElementById('lc-category') || {}).value || '',
+    title,
+    price,
+    imgCount,
+    score,
+    scoreLabel,
+    p0Missing: p0Miss.map(s => s.key),
+    p1Missing: p1Miss.map(s => s.key),
+    specsFound: foundCnt,
+    totalSpecs: totalSpec
+  });
+
   resultEl.innerHTML = `
     <!-- 评分横幅 -->
     <div class="lc-score-banner" style="background:${scoreBg};border:1.5px solid ${scoreColor}30">
@@ -3840,8 +3856,74 @@ function renderListingCompare({ bp, title, price, imgCount, mySpecs }) {
   `;
 }
 
+// ===== ANALYSIS HISTORY =====
+const HIST_KEY = 'ebay_analysis_history';
+const HIST_MAX = 20;
+
+function saveAnalysisToHistory(record) {
+  const list = loadAnalysisHistory();
+  list.unshift(record);
+  if (list.length > HIST_MAX) list.pop();
+  try { localStorage.setItem(HIST_KEY, JSON.stringify(list)); } catch(e) {}
+  renderHistoryPanel();
+}
+
+function loadAnalysisHistory() {
+  try { return JSON.parse(localStorage.getItem(HIST_KEY) || '[]'); }
+  catch { return []; }
+}
+
+function clearHistory() {
+  if (!confirm('确认清空所有历史记录？')) return;
+  localStorage.removeItem(HIST_KEY);
+  renderHistoryPanel();
+}
+
+function renderHistoryPanel() {
+  const section = document.getElementById('lc-history-section');
+  const container = document.getElementById('lc-hist-list');
+  if (!section || !container) return;
+  const list = loadAnalysisHistory();
+  section.style.display = list.length ? 'block' : 'none';
+  if (!list.length) { container.innerHTML = ''; return; }
+  container.innerHTML = list.map((r, i) => {
+    const color = r.score >= 80 ? '#27ae60' : r.score >= 60 ? '#e67e22' : '#e53238';
+    const bg    = r.score >= 80 ? '#f0fff4'  : r.score >= 60 ? '#fffbf0'  : '#fde8e8';
+    const d = new Date(r.ts);
+    const date = `${d.getMonth()+1}/${d.getDate()} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`;
+    const p0txt = r.p0Missing && r.p0Missing.length
+      ? `<span style="color:#c0392b">P0缺${r.p0Missing.length}项</span>`
+      : '<span style="color:#27ae60">P0完整</span>';
+    const p0hint = r.p0Missing && r.p0Missing.length
+      ? `<div style="margin-top:5px;font-size:10px;color:#c0392b;background:#fde8e8;border-radius:4px;padding:3px 8px">缺：${r.p0Missing.slice(0,3).join('、')}${r.p0Missing.length>3?'…':''}</div>`
+      : '';
+    return `<div class="lc-hist-card" onclick="restoreHistory(${i})">
+      <div style="display:flex;gap:10px;align-items:center">
+        <div class="lc-hist-score" style="color:${color};background:${bg}">${r.score}</div>
+        <div style="flex:1;min-width:0">
+          <div class="lc-hist-meta">${date}　${r.category || '未知类目'}　${p0txt}</div>
+          <div class="lc-hist-title">${r.title || '（无标题）'}</div>
+          <div style="font-size:10px;color:#aaa;margin-top:2px">$${r.price||0}　${r.imgCount||0}张图　Specifics ${r.specsFound}/${r.totalSpecs}</div>
+        </div>
+        <div style="font-size:11px;color:#c7d2fe">回填▶</div>
+      </div>${p0hint}
+    </div>`;
+  }).join('');
+}
+
+function restoreHistory(index) {
+  const r = loadAnalysisHistory()[index];
+  if (!r) return;
+  if (r.category) document.getElementById('lc-category').value = r.category;
+  if (r.title)    document.getElementById('lc-title').value    = r.title;
+  if (r.price)    document.getElementById('lc-price').value    = r.price;
+  if (r.imgCount) document.getElementById('lc-img-count').value = r.imgCount;
+  document.getElementById('lc-result').innerHTML =
+    `<div style="font-size:11px;color:#4F46E5;padding:6px 0">已回填该次输入，点击「AI 分析对比」重新分析。</div>`;
+}
+
 // ===== CLIP IMAGE RECOGNITION =====
-const CLIP_URL = 'https://wit-ohio-incredible-goals.trycloudflare.com';
+const CLIP_URL = 'https://burst-lyrics-survivor-faster.trycloudflare.com';
 
 function handleImageDrop(e) {
   const file = e.dataTransfer.files[0];
@@ -3909,8 +3991,8 @@ function analyze() {
   }
   if (!excellentData) { alert('数据加载中，请稍候...'); return; }
 
-  // Try semantic service first (https://wit-ohio-incredible-goals.trycloudflare.com), fall back to keyword matching
-  const semUrl = `https://wit-ohio-incredible-goals.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
+  // Try semantic service first (https://burst-lyrics-survivor-faster.trycloudflare.com), fall back to keyword matching
+  const semUrl = `https://burst-lyrics-survivor-faster.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
   fetch(semUrl, { signal: AbortSignal.timeout(15000) })
     .then(r => r.ok ? r.json() : Promise.reject('!ok'))
     .then(semResults => {
