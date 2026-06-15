@@ -2753,22 +2753,7 @@ function renderComparison(results) {
   ).join('');
 
   panel.innerHTML = `
-    <div class="charts-grid">
-      <div class="chart-box">
-        <div class="chart-title">${T('chartTitle1')}</div>
-        <div style="font-size:10px;color:#888;margin-bottom:8px;line-height:1.5">
-          <span style="display:inline-block;width:22px;height:3px;background:#0064D2;vertical-align:middle;margin-right:4px;border-radius:2px"></span>${T('topCat')}<br>
-          <span style="display:inline-block;width:22px;height:0;border-top:2px dashed #E53238;vertical-align:middle;margin-right:4px;margin-top:4px"></span>${T('yourCat')}
-        </div>
-        <div class="chart-wrap"><canvas id="radarChart"></canvas></div>
-      </div>
-      <div class="chart-box">
-        <div class="chart-title">${T('chartTitle2')}</div>
-        <div class="chart-wrap-tall"><canvas id="barChart"></canvas></div>
-      </div>
-    </div>
-
-    <div style="margin:12px 0 8px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+    <div style="margin:0 0 10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">
       <span style="font-size:11px;font-weight:600;color:#4F46E5;white-space:nowrap">📊 ${lang==='zh'?'对比基准类目：':'Benchmark Category:'}</span>
       <select id="comp-cat-select" onchange="switchComparisonCat()" style="flex:1;min-width:200px;max-width:520px;padding:5px 8px;border:1px solid #c4b5fd;border-radius:6px;font-size:11px;background:#fff;color:#333;cursor:pointer">
         ${catOptions}
@@ -2817,6 +2802,11 @@ function renderComparison(results) {
         <div style="height:260px;position:relative"><canvas id="sellerRadarChart"></canvas></div>
       </div>
     </div>
+
+    <div class="chart-box" style="margin-top:16px">
+      <div class="chart-title">${T('chartTitle2')}</div>
+      <div class="chart-wrap-tall"><canvas id="barChart"></canvas></div>
+    </div>
   `;
 
   const top = results[0];
@@ -2847,19 +2837,6 @@ function renderComparison(results) {
   window._topItem = top;
   window._userRadarScores = userScores;
   window._radarDims = dims;
-
-  if (radarChart) radarChart.destroy();
-  radarChart = new Chart(document.getElementById('radarChart'), {
-    type: 'radar',
-    data: {
-      labels: dims,
-      datasets: [
-        { label: T('topCat'), data: topScores, borderColor:'#0064D2', backgroundColor:'rgba(0,100,210,.15)', pointBackgroundColor:'#0064D2', borderWidth:2 },
-        { label: T('yourCat'), data: userScores, borderColor:'#E53238', backgroundColor:'rgba(229,50,56,.08)', pointBackgroundColor:'#E53238', borderWidth:2, borderDash:[5,3] },
-      ]
-    },
-    options: { responsive:true, maintainAspectRatio:false, scales:{ r:{ min:0, max:100, ticks:{stepSize:20,font:{size:9}}, pointLabels:{font:{size:10}} } }, plugins:{ legend:{display:false} } }
-  });
 
   const top5bar = results.slice(0, 5);
   const barQualLabels = top5bar.map(r => gmvQual(r));
@@ -2964,22 +2941,6 @@ function switchComparisonCat() {
   ];
   window._topRadarScores = newTopScores;
   window._topItem = r;
-
-  const dims = window._radarDims || [T('dim0'), T('dim1'), T('dim2'), T('dim3'), T('dim4')];
-  const userScores = window._userRadarScores || [];
-
-  if (radarChart) radarChart.destroy();
-  radarChart = new Chart(document.getElementById('radarChart'), {
-    type: 'radar',
-    data: {
-      labels: dims,
-      datasets: [
-        { label: T('topCat'),  data: newTopScores, borderColor:'#0064D2', backgroundColor:'rgba(0,100,210,.15)', pointBackgroundColor:'#0064D2', borderWidth:2 },
-        { label: T('yourCat'), data: userScores,   borderColor:'#E53238', backgroundColor:'rgba(229,50,56,.08)',  pointBackgroundColor:'#E53238', borderWidth:2, borderDash:[5,3] },
-      ]
-    },
-    options: { responsive:true, maintainAspectRatio:false, scales:{ r:{ min:0, max:100, ticks:{stepSize:20,font:{size:9}}, pointLabels:{font:{size:10}} } }, plugins:{ legend:{display:false} } }
-  });
 
   // If seller radar is visible, refresh it against the new benchmark
   const wrap = document.getElementById('seller-radar-wrap');
