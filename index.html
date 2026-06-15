@@ -3228,7 +3228,7 @@ function generateCompetitorAnalysis() {
 
   // AI deep analysis
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  fetch('http://localhost:8001/competitor-compare', {
+  fetch('https://directors-appeals-cayman-revolution.trycloudflare.com/competitor-compare', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -3240,7 +3240,7 @@ function generateCompetitorAnalysis() {
       category:  category,
       site:      currentSite,
     }),
-    signal: AbortSignal.timeout(60000),
+    signal: AbortSignal.timeout(90000),
   })
   .then(r => r.ok ? r.json() : Promise.reject(r.status))
   .then(ai => {
@@ -3616,7 +3616,7 @@ async function fetchImageAdvice(name, brand, desc) {
   if (!el) return;
   const product = [brand, name, desc].filter(Boolean).join(' ');
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  const AI_URL = 'https://paying-hawk-coal-dozen.trycloudflare.com/image-advice';
+  const AI_URL = 'https://directors-appeals-cayman-revolution.trycloudflare.com/image-advice';
   const isZh = lang === 'zh';
 
   try {
@@ -3624,7 +3624,7 @@ async function fetchImageAdvice(name, brand, desc) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ product_name: product, category, site: currentSite }),
-      signal: AbortSignal.timeout(30000),
+      signal: AbortSignal.timeout(90000),
     });
     if (!resp.ok) throw new Error(resp.status);
     const ai = await resp.json();
@@ -3728,7 +3728,7 @@ async function runListingCompare() {
 
   let bp;
   try {
-    const AI_URL = 'https://paying-hawk-coal-dozen.trycloudflare.com/ai-advice';
+    const AI_URL = 'https://directors-appeals-cayman-revolution.trycloudflare.com/ai-advice';
     const resp = await fetch(AI_URL, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -4057,7 +4057,7 @@ function restoreHistory(index) {
 }
 
 // ===== CLIP IMAGE RECOGNITION =====
-const CLIP_URL = 'https://paying-hawk-coal-dozen.trycloudflare.com';
+const CLIP_URL = 'https://directors-appeals-cayman-revolution.trycloudflare.com';
 
 function handleImageDrop(e) {
   const file = e.dataTransfer.files[0];
@@ -4125,8 +4125,8 @@ function analyze() {
   }
   if (!excellentData) { alert('数据加载中，请稍候...'); return; }
 
-  // Try semantic service first (https://paying-hawk-coal-dozen.trycloudflare.com), fall back to keyword matching
-  const semUrl = `https://paying-hawk-coal-dozen.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
+  // Try semantic service first (https://directors-appeals-cayman-revolution.trycloudflare.com), fall back to keyword matching
+  const semUrl = `https://directors-appeals-cayman-revolution.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
   fetch(semUrl, { signal: AbortSignal.timeout(90000) })
     .then(r => r.ok ? r.json() : Promise.reject('!ok'))
     .then(semResults => {
