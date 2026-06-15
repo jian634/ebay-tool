@@ -3144,38 +3144,55 @@ function generateCompetitorAnalysis() {
     });
   });
 
+  // Split gaps: competitor has it (I don't) vs both missing
+  const both = { must: [], expect: [], wow: [] };
+  ['must', 'expect', 'wow'].forEach(tier => {
+    (checks[tier] || []).forEach(c => {
+      const compHit = c.pattern.test(compText);
+      const myHit   = myText ? c.pattern.test(myText) : false;
+      if (!compHit && !myHit) both[tier].push(c);
+    });
+  });
+
   const allGaps = [...gaps.must, ...gaps.expect, ...gaps.wow];
   const hasMyProduct = myText.length > 5;
 
-  // Score bar HTML
   function scoreBar(score, color) {
     return `<div class="comp-score-bar"><div class="comp-score-fill" style="width:${score}%;background:${color}"></div></div>`;
   }
 
-  // Priority labels
   const tierMeta = {
-    must:   { label: 'P0 必须补齐', bg: '#fef2f2', border: '#fecaca', color: '#dc2626', dot: '#ef4444' },
-    expect: { label: 'P1 建议优化', bg: '#fffbeb', border: '#fde68a', color: '#d97706', dot: '#f59e0b' },
-    wow:    { label: 'P2 加分项',   bg: '#f0fdf4', border: '#bbf7d0', color: '#16a34a', dot: '#22c55e' },
+    must:   { label: 'P0 竞品有·你没有', bg: '#fef2f2', border: '#fecaca', color: '#dc2626', dot: '#ef4444' },
+    expect: { label: 'P1 竞品有·你没有', bg: '#fffbeb', border: '#fde68a', color: '#d97706', dot: '#f59e0b' },
+    wow:    { label: 'P2 竞品有·你没有', bg: '#f0fdf4', border: '#bbf7d0', color: '#16a34a', dot: '#22c55e' },
+  };
+  const bothMeta = {
+    must:   { label: 'P0 双方都缺·强烈建议补', bg: '#fef2f2', border: '#fecaca', color: '#dc2626', dot: '#ef4444' },
+    expect: { label: 'P1 双方都缺·建议加入',   bg: '#fffbeb', border: '#fde68a', color: '#d97706', dot: '#f59e0b' },
+    wow:    { label: 'P2 双方都缺·加分项',      bg: '#f0fdf4', border: '#bbf7d0', color: '#16a34a', dot: '#22c55e' },
   };
 
-  let gapHTML = '';
-  ['must', 'expect', 'wow'].forEach(tier => {
-    if (gaps[tier].length === 0) return;
-    const m = tierMeta[tier];
-    gapHTML += `
-      <div style="margin-bottom:10px">
-        <div class="comp-gap-title" style="background:${m.bg};color:${m.color};border:1px solid ${m.border}">${m.label}（${gaps[tier].length}项）</div>
-        ${gaps[tier].map(c => `
+  function buildGapBlock(gapObj, meta) {
+    let html = '';
+    ['must', 'expect', 'wow'].forEach(tier => {
+      if (gapObj[tier].length === 0) return;
+      const m = meta[tier];
+      html += `<div style="margin-bottom:10px">
+        <div class="comp-gap-title" style="background:${m.bg};color:${m.color};border:1px solid ${m.border}">${m.label}（${gapObj[tier].length}项）</div>
+        ${gapObj[tier].map(c => `
           <div class="comp-gap-item">
             <span class="comp-gap-label" style="color:${m.dot}">▸ ${c.label}</span>
             <div class="comp-gap-tip">💡 ${c.tip}</div>
-          </div>
-        `).join('')}
+          </div>`).join('')}
       </div>`;
-  });
+    });
+    return html;
+  }
 
-  if (allGaps.length === 0) {
+  const gapBlock  = buildGapBlock(gaps, tierMeta);
+  const bothBlock = buildGapBlock(both, bothMeta);
+  let gapHTML = gapBlock + (bothBlock ? `<div style="margin-top:8px;padding-top:8px;border-top:1px dashed #e5e7eb">${bothBlock}</div>` : '');
+  if (!gapHTML.trim()) {
     gapHTML = `<div class="comp-ok">✅ 恭喜！您的listing在 ${typeLabel} 核心维度上已与竞品持平或领先，建议继续优化价格与图片。</div>`;
   }
 
@@ -3197,14 +3214,63 @@ function generateCompetitorAnalysis() {
     </div>
     <div style="font-size:11px;color:#888;margin-top:4px">填写您的商品信息后可生成对比分析</div>`;
 
+  const aiPlaceholder = `<div id="comp-ai-result" style="margin-top:12px;padding:10px 12px;background:#f5f3ff;border:1px solid #ddd6fe;border-radius:6px;font-size:12px;color:#7c3aed">
+    ⏳ AI 深度分析中（约 10-20 秒）...
+  </div>`;
+
   document.getElementById('comp-output').innerHTML = `
     <div class="comp-report">
       <div class="comp-report-title">📊 ${typeLabel} 竞品差距分析</div>
       ${scoreSection}
-      <div class="comp-gap-section">
-        ${gapHTML}
-      </div>
+      <div class="comp-gap-section">${gapHTML}</div>
+      ${aiPlaceholder}
     </div>`;
+
+  // AI deep analysis
+  const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
+  fetch('http://localhost:8001/competitor-compare', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      competitor_title:   compTitle,
+      competitor_details: compDetails,
+      my_title:  myTitle,
+      my_brand:  myBrand,
+      my_desc:   myDesc,
+      category:  category,
+      site:      currentSite,
+    }),
+    signal: AbortSignal.timeout(60000),
+  })
+  .then(r => r.ok ? r.json() : Promise.reject(r.status))
+  .then(ai => {
+    const mkItems = (arr, color, icon) => (arr || []).map(x =>
+      `<div style="padding:5px 8px;margin-bottom:4px;border-left:3px solid ${color};background:#fafafa;border-radius:0 4px 4px 0;font-size:11px;line-height:1.5">
+        <b style="color:${color}">${icon} ${x.item}</b><br>${x.detail || x.action || ''}
+        ${x.example ? `<span style="color:#888;font-style:italic"> — 示例：${x.example}</span>` : ''}
+      </div>`).join('');
+    const pColor = p => p === 'P0' ? '#dc2626' : p === 'P1' ? '#d97706' : '#16a34a';
+    const gapItems = (ai.seller_gaps || []).map(x =>
+      `<div style="padding:5px 8px;margin-bottom:4px;border-left:3px solid ${pColor(x.priority)};background:#fafafa;border-radius:0 4px 4px 0;font-size:11px;line-height:1.5">
+        <span style="font-size:10px;font-weight:700;color:${pColor(x.priority)};background:${pColor(x.priority)}18;padding:1px 5px;border-radius:3px">${x.priority}</span>
+        <b style="margin-left:4px">${x.item}</b><br>${x.action || ''}
+        ${x.example ? `<span style="color:#888;font-style:italic"> — ${x.example}</span>` : ''}
+      </div>`).join('');
+
+    let html = `<div style="font-size:11px;font-weight:700;color:#5e35b1;margin-bottom:8px">🤖 AI 深度分析（DeepSeek-V3）</div>`;
+    if (ai.summary) html += `<div style="font-size:12px;color:#333;margin-bottom:10px;padding:8px;background:#fff;border-radius:4px;border:1px solid #ede9fe">${ai.summary}</div>`;
+    if ((ai.seller_gaps || []).length) html += `<div style="font-weight:600;font-size:11px;color:#dc2626;margin-bottom:4px">📌 你需要改进的点</div>${gapItems}`;
+    if ((ai.competitor_strengths || []).length) html += `<div style="font-weight:600;font-size:11px;color:#4f46e5;margin:8px 0 4px">💪 竞品的优势</div>${mkItems(ai.competitor_strengths, '#4f46e5', '▸')}`;
+    if ((ai.seller_advantages || []).length)    html += `<div style="font-weight:600;font-size:11px;color:#16a34a;margin:8px 0 4px">✅ 你的优势</div>${mkItems(ai.seller_advantages, '#16a34a', '▸')}`;
+    if ((ai.competitor_weaknesses || []).length) html += `<div style="font-weight:600;font-size:11px;color:#d97706;margin:8px 0 4px">🎯 竞品弱点（你可超越）</div>${mkItems(ai.competitor_weaknesses, '#d97706', '▸')}`;
+
+    const el = document.getElementById('comp-ai-result');
+    if (el) el.innerHTML = html;
+  })
+  .catch(() => {
+    const el = document.getElementById('comp-ai-result');
+    if (el) el.innerHTML = `<span style="color:#888;font-size:11px">⚠ AI 服务未启动（localhost:8001），规则分析已完成</span>`;
+  });
 }
 
 // ===== IMAGE UPLOAD =====
@@ -3658,6 +3724,37 @@ async function runListingCompare() {
   renderListingCompare({ bp, title, price, imgCount, mySpecs });
 }
 
+// ── 中文翻译字典 ──
+const FIELD_ZH = {
+  'brand':'品牌','fitment type':'适配类型','placement on vehicle':'安装位置',
+  'part name':'零件名称','oe/oem part number':'OEM编号','oem part number':'OEM编号',
+  'manufacturer part number':'制造商编号','mpn':'制造商编号','warranty':'质保期',
+  'material':'材质','color':'颜色','country of manufacture':'生产国',
+  'country/region of manufacture':'生产国/地区','surface finish':'表面处理',
+  'bolt hole quantity':'螺栓孔数','bolt pattern':'螺栓孔型','type':'类型',
+  'position':'位置','part type':'零件类型','compatible make':'适配品牌',
+  'compatible model':'适配车型','compatible year':'适配年份',
+  'brake pad material':'刹车片材质','rotor type':'刹车盘类型',
+  'piston quantity':'活塞数量','quantity':'数量','included hardware':'含五金件',
+  'certifications':'认证','bulb type':'灯泡类型','bulb included':'含灯泡',
+  'connector type':'接头类型','voltage':'电压','wattage':'功率',
+  'lens color':'灯罩颜色','housing color':'灯壳颜色','oe replacement':'OE替换',
+  'interchange part number':'互换件编号','other part number':'其他编号',
+  'part number':'零件编号','upc':'UPC条码','condition':'成色',
+  'capacity':'容量（Ah）','cold cranking amps':'冷启动电流(CCA)',
+  'terminal position':'接线柱位置','battery type':'电池类型',
+  'filter type':'滤清器类型','thread size':'螺纹规格','gasket included':'含垫片',
+  'kit contents':'套件内容','number of pieces':'件数','set':'套装',
+  'weight':'重量','dimension':'尺寸','length':'长度','width':'宽度','height':'高度',
+  'california prop 65 warning':'加州65提案','custom bundle':'自定义套装',
+};
+const PRICE_ZH = {'Budget':'入门','Mid':'主流','Premium':'高端','Entry':'入门','Standard':'标准','High-End':'高端','Low':'低价','High':'高端'};
+const IMG_ZH   = {'Main':'主图','Multi-angle':'多角度','Detail':'细节特写','Installed':'安装效果','Lifestyle':'场景图','Infographic':'信息图'};
+
+function zhField(key) { return FIELD_ZH[(key||'').toLowerCase()] || ''; }
+function zhPrice(label) { return PRICE_ZH[label] || label; }
+function zhImg(type)  { return IMG_ZH[type] || type; }
+
 function renderListingCompare({ bp, title, price, imgCount, mySpecs }) {
   const resultEl = document.getElementById('lc-result');
 
@@ -3726,11 +3823,11 @@ function renderListingCompare({ bp, title, price, imgCount, mySpecs }) {
     }).join('');
     const pinPct = Math.max(0, Math.min(100, Math.round(((price - allMin) / span) * 100)));
     const myRange = segments.find(r => price >= r.min && price <= r.max);
-    const rangeLabel = myRange ? `<span class="tag-ok">${myRange.label}区</span> ${myRange.note}` : price < allMin ? '<span class="tag-p2">低于市场入门价</span>' : '<span class="tag-p1">高于市场高端价</span>';
+    const rangeLabel = myRange ? `<span class="tag-ok">${zhPrice(myRange.label)} ${myRange.label}</span> ${myRange.note}` : price < allMin ? '<span class="tag-p2">低于市场入门价</span>' : '<span class="tag-p1">高于市场高端价</span>';
     priceHTML = `
       <div class="lc-section-title">💰 价格区间</div>
       <div style="font-size:11px;color:#888;margin-bottom:4px">
-        ${segments.map(r => `<span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${r.color};vertical-align:middle;margin-right:3px"></span>${r.label} $${r.min}-$${r.max}`).join('　')}
+        ${segments.map(r => `<span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${r.color};vertical-align:middle;margin-right:3px"></span>${zhPrice(r.label)} ${r.label} $${r.min}-$${r.max}`).join('　')}
       </div>
       <div class="lc-price-track">${barSegs}<div class="lc-price-pin" style="left:${pinPct}%;background:#E53238"></div></div>
       <div style="font-size:11px;margin-top:6px">你的价格 <b>$${price}</b>：${rangeLabel}</div>`;
@@ -3743,7 +3840,9 @@ function renderListingCompare({ bp, title, price, imgCount, mySpecs }) {
   if (imgAll > 0) {
     const imgRows = (bp.images || []).map(img => {
       const tag = img.required ? `<span class="tag-p0">必需</span>` : `<span class="tag-p2">加分</span>`;
-      return `<div class="lc-row"><div class="lc-key">${img.slot ? '图'+img.slot+' ' : ''}${img.type}</div><div class="lc-mine">${tag}</div><div class="lc-best">${img.rule}</div></div>`;
+      const typeZh = zhImg(img.type);
+      const typeLabel = typeZh !== img.type ? `${typeZh} <span style="color:#aaa;font-weight:normal">${img.type}</span>` : img.type;
+      return `<div class="lc-row"><div class="lc-key">${img.slot ? '图'+img.slot+' ' : ''}${typeLabel}</div><div class="lc-mine">${tag}</div><div class="lc-best">${img.rule}</div></div>`;
     }).join('');
     const cntClass = imgCount >= imgReq ? 'tag-ok' : 'tag-p1';
     imgHTML = `
@@ -3759,18 +3858,22 @@ function renderListingCompare({ bp, title, price, imgCount, mySpecs }) {
   const totalSpec = (bp.specifics || []).length;
   const foundCnt = specsFound.length;
 
-  const mkSpecRow = (s, cls, tagHtml) =>
-    `<div class="${cls}" style="padding:6px 10px;border-radius:4px;margin-bottom:4px;font-size:11px;line-height:1.5">
-      ${tagHtml} <b>${s.key}</b>${s.note ? ' — '+s.note : ''}
+  const mkSpecRow = (s, cls, tagHtml) => {
+    const zh = zhField(s.key);
+    return `<div class="${cls}" style="padding:6px 10px;border-radius:4px;margin-bottom:4px;font-size:11px;line-height:1.5">
+      ${tagHtml} <b>${s.key}</b>${zh ? `<span style="color:#888;font-weight:normal"> / ${zh}</span>` : ''}${s.note ? `<span style="color:#999"> — ${s.note}</span>` : ''}
     </div>`;
+  };
 
   const p0Rows = p0Miss.map(s => mkSpecRow(s, 'lc-spec-missing-p0', '<span class="tag-p0">P0</span>')).join('');
   const p1Rows = p1Miss.map(s => mkSpecRow(s, 'lc-spec-missing-p1', '<span class="tag-p1">P1</span>')).join('');
   const p2Rows = p2Miss.map(s => mkSpecRow(s, '', '<span class="tag-p2">P2</span>')).join('');
-  const okRows = specsFound.map(s =>
-    `<div style="padding:4px 10px;border-radius:4px;background:#f0fff4;margin-bottom:3px;font-size:11px">
-      <span class="tag-ok">✓</span> ${s.key}：<span style="color:#888">${mySpecs.get(s.key.toLowerCase()) || ''}</span>
-    </div>`).join('');
+  const okRows = specsFound.map(s => {
+    const zh = zhField(s.key);
+    return `<div style="padding:4px 10px;border-radius:4px;background:#f0fff4;margin-bottom:3px;font-size:11px">
+      <span class="tag-ok">✓</span> ${s.key}${zh ? `<span style="color:#aaa"> / ${zh}</span>` : ''}：<span style="color:#555">${mySpecs.get(s.key.toLowerCase()) || ''}</span>
+    </div>`;
+  }).join('');
 
   // ── 7. 行动清单 (最多5条) ──
   const top5 = actions.slice(0, 5);
