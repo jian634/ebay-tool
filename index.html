@@ -2748,6 +2748,9 @@ function renderComparison(results) {
 
   const compOpts = T('compOpts');
   const priceOpts = T('priceOpts');
+  const catOptions = results.slice(0, Math.min(10, results.length)).map((r, i) =>
+    `<option value="${i}">#${i+1} ${r.leaf} · 相似度${Math.round((r.similarity||0)*100)}%</option>`
+  ).join('');
 
   panel.innerHTML = `
     <div class="charts-grid">
@@ -2763,6 +2766,14 @@ function renderComparison(results) {
         <div class="chart-title">${T('chartTitle2')}</div>
         <div class="chart-wrap-tall"><canvas id="barChart"></canvas></div>
       </div>
+    </div>
+
+    <div style="margin:12px 0 8px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+      <span style="font-size:11px;font-weight:600;color:#4F46E5;white-space:nowrap">📊 ${lang==='zh'?'对比基准类目：':'Benchmark Category:'}</span>
+      <select id="comp-cat-select" onchange="switchComparisonCat()" style="flex:1;min-width:200px;max-width:520px;padding:5px 8px;border:1px solid #c4b5fd;border-radius:6px;font-size:11px;background:#fff;color:#333;cursor:pointer">
+        ${catOptions}
+      </select>
+      <span style="font-size:10px;color:#aaa">${lang==='zh'?'可切换查看不同类目的对比数据':'Switch to compare different categories'}</span>
     </div>
 
     <div style="margin-top:18px;background:#f8f7ff;border:1px solid #e0d9ff;border-radius:10px;padding:14px 16px">
@@ -2831,9 +2842,11 @@ function renderComparison(results) {
     Math.round((1 - wAvg('normGmv') * 0.3 + wAvg('normGrowth') * 0.3) * 80),
   ];
 
-  // store top scores for seller radar reference
+  // store scores for seller radar and category switching
   window._topRadarScores = topScores;
   window._topItem = top;
+  window._userRadarScores = userScores;
+  window._radarDims = dims;
 
   if (radarChart) radarChart.destroy();
   radarChart = new Chart(document.getElementById('radarChart'), {
@@ -2933,6 +2946,44 @@ function buildSellerRadar() {
     },
     options: { responsive:true, maintainAspectRatio:false, scales:{ r:{ min:0, max:100, ticks:{stepSize:20,font:{size:9}}, pointLabels:{font:{size:10}} } }, plugins:{ legend:{display:false} } }
   });
+}
+
+function switchComparisonCat() {
+  const sel = document.getElementById('comp-cat-select');
+  if (!sel || !lastResults) return;
+  const idx = parseInt(sel.value);
+  const r = lastResults[idx];
+  if (!r) return;
+
+  const newTopScores = [
+    Math.round((r.normGmv    || 0) * 100),
+    Math.round((r.normGrowth || 0) * 100),
+    Math.round((1 - (r.normGmv || 0) * 0.4) * 100),
+    Math.round((r.normSi     || 0) * 100),
+    Math.round((1 - (r.normGmv || 0) * 0.3 + (r.normGrowth || 0) * 0.3) * 80),
+  ];
+  window._topRadarScores = newTopScores;
+  window._topItem = r;
+
+  const dims = window._radarDims || [T('dim0'), T('dim1'), T('dim2'), T('dim3'), T('dim4')];
+  const userScores = window._userRadarScores || [];
+
+  if (radarChart) radarChart.destroy();
+  radarChart = new Chart(document.getElementById('radarChart'), {
+    type: 'radar',
+    data: {
+      labels: dims,
+      datasets: [
+        { label: T('topCat'),  data: newTopScores, borderColor:'#0064D2', backgroundColor:'rgba(0,100,210,.15)', pointBackgroundColor:'#0064D2', borderWidth:2 },
+        { label: T('yourCat'), data: userScores,   borderColor:'#E53238', backgroundColor:'rgba(229,50,56,.08)',  pointBackgroundColor:'#E53238', borderWidth:2, borderDash:[5,3] },
+      ]
+    },
+    options: { responsive:true, maintainAspectRatio:false, scales:{ r:{ min:0, max:100, ticks:{stepSize:20,font:{size:9}}, pointLabels:{font:{size:10}} } }, plugins:{ legend:{display:false} } }
+  });
+
+  // If seller radar is visible, refresh it against the new benchmark
+  const wrap = document.getElementById('seller-radar-wrap');
+  if (wrap && wrap.style.display !== 'none') buildSellerRadar();
 }
 
 // renderHeatmap removed
