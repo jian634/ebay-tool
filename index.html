@@ -2761,7 +2761,7 @@ function renderComparison(results) {
       </div>
       <div class="chart-box">
         <div class="chart-title">${T('chartTitle2')}</div>
-        <div class="chart-wrap"><canvas id="barChart"></canvas></div>
+        <div class="chart-wrap-tall"><canvas id="barChart"></canvas></div>
       </div>
     </div>
 
@@ -2850,17 +2850,36 @@ function renderComparison(results) {
 
   const top5bar = results.slice(0, 5);
   const barQualLabels = top5bar.map(r => gmvQual(r));
+
+  // Build multilevel labels: skip L1 (eBay Motors) + L2 (Parts & Accessories), show L3→L4→L5
+  const barLabels = top5bar.map(r => {
+    const path = r.leaf_path || r.path || '';
+    if (!path) return [r.leaf || ''];
+    const parts = path.split(':').map(p => p.trim()).filter(Boolean);
+    const specific = parts.length > 2 ? parts.slice(2) : parts;
+    if (specific.length === 0) return [r.leaf || ''];
+    // Return up to last 3 levels as array (Chart.js renders each element as a separate line)
+    return specific.slice(-3);
+  });
+
   if (barChart) barChart.destroy();
   barChart = new Chart(document.getElementById('barChart'), {
     type: 'bar',
     data: {
-      labels: top5bar.map(r => r.leaf),
+      labels: barLabels,
       datasets: [{ label: lang==='zh'?'品类规模指数':'Scale Index', data: top5bar.map(r => Math.round((r.normGmv||0)*100)), backgroundColor: top5bar.map((_,i) => i===0?'#0064D2':'rgba(0,100,210,.4)'), borderRadius:4 }]
     },
     options: {
       responsive:true, maintainAspectRatio:false, indexAxis:'y',
-      plugins:{ legend:{display:false}, tooltip:{ callbacks:{ label: ctx => barQualLabels[ctx.dataIndex] } } },
-      scales:{ x:{ min:0, max:100, ticks:{font:{size:9}}, title:{ display:true, text: lang==='zh'?'相对规模指数 (0-100)':'Relative Scale Index (0-100)', font:{size:9}, color:'#999' } }, y:{ ticks:{font:{size:9}} } }
+      plugins:{ legend:{display:false}, tooltip:{ callbacks:{
+        title: ctx => top5bar[ctx[0].dataIndex].leaf || '',
+        label: ctx => barQualLabels[ctx.dataIndex],
+        afterLabel: ctx => { const p = top5bar[ctx.dataIndex].leaf_path||''; return p ? '路径: '+p.split(':').map(s=>s.trim()).filter(Boolean).join(' > ') : ''; }
+      }}},
+      scales:{
+        x:{ min:0, max:100, ticks:{font:{size:9}}, title:{ display:true, text: lang==='zh'?'相对规模指数 (0-100)':'Relative Scale Index (0-100)', font:{size:9}, color:'#999' } },
+        y:{ ticks:{ font:{size:9}, autoSkip:false } }
+      }
     }
   });
 }
@@ -4200,6 +4219,7 @@ function analyze() {
         return {
           leaf:       item.leaf     || '',
           zh_leaf:    item.zh_leaf  || '',
+          leaf_path:  item.leaf_path || '',
           parent:     parent,
           zh_parent:  item.zh_parent || '',
           site:       item.site     || currentSite,
