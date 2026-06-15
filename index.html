@@ -3887,21 +3887,26 @@ function analyze() {
     .then(semResults => {
       if (!Array.isArray(semResults) || semResults.length === 0) throw new Error('empty');
       // Map semantic results to the format renderAll() expects
-      const results = semResults.map(item => ({
-        category:    item.leaf || item.l2 || '',
-        l1:          item.l1  || '',
-        l2:          item.l2  || '',
-        site:        item.site || currentSite,
-        gmv:         item.gmv_y || 0,
-        si:          item.si   || 0,
-        yoy:         item.yoy_y || 0,
-        normGmv:     item.normGmv    || 0,
-        normSi:      item.normSi     || 0,
-        normGrowth:  item.normGrowth || 0,
-        finalScore:  item.similarity || 0,
-        similarity:  item.similarity || 0,
-        _semantic:   true,
-      }));
+      const results = semResults.map(item => {
+        const pathParts = (item.leaf_path || '').split(':');
+        const parent = pathParts.length > 1 ? pathParts[pathParts.length - 2].trim() : '';
+        return {
+          leaf:       item.leaf     || '',
+          zh_leaf:    item.zh_leaf  || '',
+          parent:     parent,
+          zh_parent:  item.zh_parent || '',
+          site:       item.site     || currentSite,
+          gmv_y:      item.gmv_y1   || 0,
+          si:         item.si_sum   || 0,
+          yoy_y:      0,
+          normGmv:    item.normGmv  || 0,
+          normSi:     item.normSi   || 0,
+          normGrowth: 0,
+          finalScore: item.similarity || 0,
+          similarity: item.similarity || 0,
+          _semantic:  true,
+        };
+      });
       lastResults = results;
       renderAll(results);
       switchTab(0);
