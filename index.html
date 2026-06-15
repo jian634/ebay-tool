@@ -2627,6 +2627,64 @@ function getProductCompetitiveDims(productType, top) {
   return map[productType] || map.general;
 }
 
+// ===== ERROR REPORT =====
+let _cardData = [];
+
+function openErrorForm(btn, idx) {
+  const card = btn.closest('.match-card');
+  if (card.querySelector('.err-form')) return;
+  const d = _cardData[idx] || {};
+  btn.style.display = 'none';
+  const form = document.createElement('div');
+  form.className = 'err-form';
+  form.style.cssText = 'margin-top:6px;padding:8px 10px;background:#fef2f2;border:1px solid #fecaca;border-radius:6px';
+  form.innerHTML = `
+    <div style="font-size:11px;font-weight:600;color:#dc2626;margin-bottom:5px">🚩 标记「${d.leaf}」为错误匹配</div>
+    <input id="err-input-${idx}" type="text" placeholder="说明原因（可选）：如"应为刹车盘不是刹车片"" style="width:100%;padding:4px 8px;border:1px solid #fca5a5;border-radius:4px;font-size:11px;box-sizing:border-box;margin-bottom:6px">
+    <div style="display:flex;gap:6px">
+      <button onclick="submitErrorReport(${idx})" style="font-size:11px;padding:3px 12px;background:#dc2626;color:#fff;border:none;border-radius:4px;cursor:pointer;font-weight:600">提交</button>
+      <button onclick="this.closest('.err-form').remove();document.querySelectorAll('.match-card')[${idx}].querySelector('button').style.display=''" style="font-size:11px;padding:3px 10px;background:#fff;color:#666;border:1px solid #e5e7eb;border-radius:4px;cursor:pointer">取消</button>
+    </div>`;
+  card.appendChild(form);
+}
+
+async function submitErrorReport(idx) {
+  const d = _cardData[idx] || {};
+  const comment = (document.getElementById(`err-input-${idx}`) || {}).value || '';
+  const report = {
+    query: lastQuery,
+    site: currentSite,
+    matched_leaf: d.leaf || '',
+    matched_path: d.path || '',
+    similarity: d.similarity || 0,
+    comment,
+    ts: new Date().toISOString(),
+  };
+
+  // Save to localStorage always
+  try {
+    const stored = JSON.parse(localStorage.getItem('ebay_err') || '[]');
+    stored.push(report);
+    localStorage.setItem('ebay_err', JSON.stringify(stored));
+  } catch(e) {}
+
+  // Try backend
+  let synced = false;
+  try {
+    const r = await fetch('https://paying-hawk-coal-dozen.trycloudflare.com/error-report', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(report), signal: AbortSignal.timeout(8000),
+    });
+    if (r.ok) synced = true;
+  } catch(e) {}
+
+  const form = document.querySelector(`#err-input-${idx}`)?.closest('.err-form');
+  if (form) {
+    form.innerHTML = `<div style="font-size:11px;color:#16a34a;padding:2px 0">✅ 已提交，感谢反馈！${synced ? '' : '（已存本地，服务上线后同步）'}</div>`;
+    setTimeout(() => form.remove(), 2500);
+  }
+}
+
 // ===== RENDER MATCH CARDS =====
 function renderMatches(results) {
   const panel = document.getElementById('panel0');
@@ -2634,6 +2692,7 @@ function renderMatches(results) {
     panel.innerHTML = `<div class="empty"><div class="empty-icon">😕</div><div class="empty-text">${T('noData')}</div></div>`;
     return;
   }
+  _cardData = results.map(r => ({ leaf: r.leaf, path: r.leaf_path || '', similarity: r.similarity || r.finalScore || 0 }));
   const si = SITES[currentSite];
   let html = `<div style="font-size:12px;color:#888;margin-bottom:12px">${T('matchOf')(results.length, currentSite + ' ' + (lang==='zh'?si.name:si.nameEn))}</div>`;
 
@@ -2672,6 +2731,9 @@ function renderMatches(results) {
           </div>
         </div>
         <div class="sim-bar"><div class="sim-fill" style="width:${Math.round(item.finalScore*100)}%"></div></div>
+        <div style="display:flex;justify-content:flex-end;margin-top:4px">
+          <button onclick="openErrorForm(this,${idx})" style="font-size:10px;color:#9CA3AF;border:1px solid #e5e7eb;background:transparent;border-radius:4px;padding:2px 8px;cursor:pointer;line-height:1.6">🚩 标记错误</button>
+        </div>
       </div>`;
   });
   panel.innerHTML = html;
