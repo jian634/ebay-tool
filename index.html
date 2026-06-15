@@ -2792,7 +2792,7 @@ function renderComparison(results) {
   barChart = new Chart(document.getElementById('barChart'), {
     type: 'bar',
     data: {
-      labels: top5bar.map(r => r.leaf.length > 16 ? r.leaf.slice(0,16)+'…' : r.leaf),
+      labels: top5bar.map(r => r.leaf),
       datasets: [{ label: lang==='zh'?'品类规模指数':'Scale Index', data: top5bar.map(r => Math.round((r.normGmv||0)*100)), backgroundColor: top5bar.map((_,i) => i===0?'#0064D2':'rgba(0,100,210,.4)'), borderRadius:4 }]
     },
     options: {
