@@ -2686,9 +2686,9 @@ async function submitErrorReport(idx) {
   // Try backend
   let synced = false;
   try {
-    const r = await fetch('https://paying-hawk-coal-dozen.trycloudflare.com/error-report', {
+    const r = await fetch('https://kyle-defend-pink-biography.trycloudflare.com/error-report', {
       method: 'POST', headers: {'Content-Type':'application/json'},
-      body: JSON.stringify(report), signal: AbortSignal.timeout(8000),
+      body: JSON.stringify(report), signal: AbortSignal.timeout(90000),
     });
     if (r.ok) synced = true;
   } catch(e) {}
@@ -3336,7 +3336,7 @@ function generateCompetitorAnalysis() {
 
   // AI deep analysis
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  fetch('https://directors-appeals-cayman-revolution.trycloudflare.com/competitor-compare', {
+  fetch('https://kyle-defend-pink-biography.trycloudflare.com/competitor-compare', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -3724,7 +3724,7 @@ async function fetchImageAdvice(name, brand, desc) {
   if (!el) return;
   const product = [brand, name, desc].filter(Boolean).join(' ');
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  const AI_URL = 'https://directors-appeals-cayman-revolution.trycloudflare.com/image-advice';
+  const AI_URL = 'https://kyle-defend-pink-biography.trycloudflare.com/image-advice';
   const isZh = lang === 'zh';
 
   try {
@@ -3835,8 +3835,8 @@ async function fetchAndFillItem() {
   status.textContent = '⏳ 正在抓取 eBay 商品数据（约 5-10 秒）...';
   try {
     const r = await fetch(
-      `http://localhost:8000/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
-      { signal: AbortSignal.timeout(25000) }
+      `https://kyle-defend-pink-biography.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
+      { signal: AbortSignal.timeout(90000) }
     );
     if (!r.ok) { const e = await r.json().catch(()=>({})); throw new Error(e.detail || 'HTTP ' + r.status); }
     const d = await r.json();
@@ -3871,7 +3871,7 @@ async function runListingCompare() {
 
   let bp;
   try {
-    const AI_URL = 'https://directors-appeals-cayman-revolution.trycloudflare.com/ai-advice';
+    const AI_URL = 'https://kyle-defend-pink-biography.trycloudflare.com/ai-advice';
     const resp = await fetch(AI_URL, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -4200,7 +4200,7 @@ function restoreHistory(index) {
 }
 
 // ===== CLIP IMAGE RECOGNITION =====
-const CLIP_URL = 'https://directors-appeals-cayman-revolution.trycloudflare.com';
+const CLIP_URL = 'https://kyle-defend-pink-biography.trycloudflare.com';
 
 function handleImageDrop(e) {
   const file = e.dataTransfer.files[0];
@@ -4268,8 +4268,8 @@ function analyze() {
   }
   if (!excellentData) { alert('数据加载中，请稍候...'); return; }
 
-  // Try semantic service first (https://directors-appeals-cayman-revolution.trycloudflare.com), fall back to keyword matching
-  const semUrl = `https://directors-appeals-cayman-revolution.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
+  // Try semantic service first (https://kyle-defend-pink-biography.trycloudflare.com), fall back to keyword matching
+  const semUrl = `https://kyle-defend-pink-biography.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
   fetch(semUrl, { signal: AbortSignal.timeout(90000) })
     .then(r => r.ok ? r.json() : Promise.reject('!ok'))
     .then(semResults => {
