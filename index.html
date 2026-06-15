@@ -325,6 +325,21 @@ textarea.form-input{height:72px;resize:vertical}
           <span id="lc-arrow" style="font-size:14px">▼</span>
         </div>
         <div id="lc-form-area" style="display:none;background:#f8f7ff;border:1.5px solid #c7d2fe;border-top:none;border-radius:0 0 8px 8px;padding:14px">
+          <!-- Item ID 一键填写 -->
+          <div style="margin-bottom:14px;padding:10px 12px;background:#f0fdf4;border:1px solid #86efac;border-radius:8px">
+            <div style="font-size:11px;font-weight:700;color:#15803d;margin-bottom:7px">⚡ 快速填写：输入 eBay Item ID 自动抓取商品信息</div>
+            <div style="display:flex;gap:8px;align-items:center">
+              <input id="lc-item-id" class="form-input" type="text"
+                     placeholder="粘贴 Item ID（如 123456789012）或完整 eBay 商品链接"
+                     style="flex:1;font-family:monospace;font-size:11px"
+                     onkeydown="if(event.key==='Enter') fetchAndFillItem()">
+              <button onclick="fetchAndFillItem()"
+                      style="padding:6px 14px;background:#16a34a;color:#fff;border:none;border-radius:6px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0">
+                ⬇ 一键填写
+              </button>
+            </div>
+            <div id="lc-fetch-status" style="font-size:11px;color:#666;margin-top:5px;min-height:16px"></div>
+          </div>
           <div style="margin-bottom:10px">
             <label class="form-label">商品类目（如"刹车片 Brake Pad"，分析后自动填入）</label>
             <input id="lc-category" class="form-input" type="text" placeholder="运行左侧分析后自动填入，也可手动填写">
@@ -3802,6 +3817,41 @@ function parseMySpecs(text) {
     if (k) map.set(k, v);
   });
   return map;
+}
+
+async function fetchAndFillItem() {
+  const raw = (document.getElementById('lc-item-id').value || '').trim();
+  if (!raw) return;
+  // 支持直接粘贴完整 eBay 链接，提取 /itm/ 后的数字 ID
+  const match = raw.match(/(?:\/itm\/(?:[^\/]+\/)?)(\d{10,13})/);
+  const itemId = match ? match[1] : raw.replace(/\D/g, '');
+  const status = document.getElementById('lc-fetch-status');
+  if (!itemId || itemId.length < 10) {
+    status.style.color = '#c0392b';
+    status.textContent = '❌ 请输入有效的 Item ID（10-13位数字）或 eBay 商品链接';
+    return;
+  }
+  status.style.color = '#666';
+  status.textContent = '⏳ 正在抓取 eBay 商品数据（约 5-10 秒）...';
+  try {
+    const r = await fetch(
+      `http://localhost:8000/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
+      { signal: AbortSignal.timeout(25000) }
+    );
+    if (!r.ok) { const e = await r.json().catch(()=>({})); throw new Error(e.detail || 'HTTP ' + r.status); }
+    const d = await r.json();
+    if (d.title)     document.getElementById('lc-title').value     = d.title;
+    if (d.price)     document.getElementById('lc-price').value     = d.price;
+    if (d.img_count) document.getElementById('lc-img-count').value = d.img_count;
+    if (d.specs)     document.getElementById('lc-specs').value     = d.specs;
+    const filled = [d.title&&'标题', d.price&&'价格', d.img_count&&'图片数', d.specs&&'规格参数'].filter(Boolean);
+    const warn = d.error_fields && d.error_fields.length ? `（⚠️ 未能获取：${d.error_fields.join('、')}）` : '';
+    status.style.color = '#15803d';
+    status.textContent = `✅ 已自动填写：${filled.join(' + ')}${warn}`;
+  } catch(e) {
+    status.style.color = '#c0392b';
+    status.textContent = `❌ 抓取失败：${e.message}。请确认服务已启动（start_all.py）。`;
+  }
 }
 
 async function runListingCompare() {
