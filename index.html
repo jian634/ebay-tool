@@ -3632,7 +3632,8 @@ async function runListingCompare() {
 
   let bp;
   try {
-    const resp = await fetch('https://demo-crimes-conventional-ruling.trycloudflare.com/ai-advice', {
+    const AI_URL = 'https://paying-hawk-coal-dozen.trycloudflare.com/ai-advice';
+    const resp = await fetch(AI_URL, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -3640,14 +3641,14 @@ async function runListingCompare() {
         product_name: document.getElementById('inp-name').value || category,
         site: currentSite
       }),
-      signal: AbortSignal.timeout(15000)
+      signal: AbortSignal.timeout(90000)
     });
     if (!resp.ok) throw new Error('服务返回错误 ' + resp.status);
     bp = await resp.json();
   } catch (e) {
     resultEl.innerHTML = `<div style="background:#fde8e8;border:1px solid #f5b8b8;border-radius:6px;padding:12px;font-size:12px;color:#c0392b">
-      ⚠️ 无法连接 AI 服务（localhost:8001）<br>
-      请确认 service.py 已启动，且 SF_API_KEY 已配置。<br>
+      ⚠️ 无法连接 AI 服务<br>
+      请确认 start_all.py 已启动，且 SF_API_KEY 已配置。<br>
       <span style="color:#888;font-size:11px">错误：${e.message}</span>
     </div>`;
     return;
@@ -3923,7 +3924,7 @@ function restoreHistory(index) {
 }
 
 // ===== CLIP IMAGE RECOGNITION =====
-const CLIP_URL = 'https://demo-crimes-conventional-ruling.trycloudflare.com';
+const CLIP_URL = 'https://paying-hawk-coal-dozen.trycloudflare.com';
 
 function handleImageDrop(e) {
   const file = e.dataTransfer.files[0];
@@ -3949,7 +3950,7 @@ function handleImageFile(file) {
   fd.append('site', currentSite);
   fd.append('top_k', '5');
 
-  fetch(`${CLIP_URL}/identify`, { method: 'POST', body: fd, signal: AbortSignal.timeout(15000) })
+  fetch(`${CLIP_URL}/identify`, { method: 'POST', body: fd, signal: AbortSignal.timeout(90000) })
     .then(r => r.ok ? r.json() : Promise.reject('!ok'))
     .then(data => {
       const cats = data.top_categories || [];
@@ -3991,9 +3992,9 @@ function analyze() {
   }
   if (!excellentData) { alert('数据加载中，请稍候...'); return; }
 
-  // Try semantic service first (https://demo-crimes-conventional-ruling.trycloudflare.com), fall back to keyword matching
-  const semUrl = `https://demo-crimes-conventional-ruling.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
-  fetch(semUrl, { signal: AbortSignal.timeout(15000) })
+  // Try semantic service first (https://paying-hawk-coal-dozen.trycloudflare.com), fall back to keyword matching
+  const semUrl = `https://paying-hawk-coal-dozen.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
+  fetch(semUrl, { signal: AbortSignal.timeout(90000) })
     .then(r => r.ok ? r.json() : Promise.reject('!ok'))
     .then(semResults => {
       if (!Array.isArray(semResults) || semResults.length === 0) throw new Error('empty');
