@@ -2436,14 +2436,16 @@ function matchCategories(query, site) {
 
     // When query has tokens but nothing matches at all, score stays 0 so those
     // items sink to the bottom instead of being ranked by GMV alone
-    const finalScore = (qTokens.size > 0 && sim === 0)
-      ? normGmv * 0.05   // tiny fallback so they don't all tie at 0
-      : 0.60 * sim + 0.20 * normGmv + 0.12 * normSi + 0.08 * normGrowth;
+    const finalScore = sim;
 
     return { ...item, similarity: sim, finalScore, normGmv, normSi, normGrowth };
   });
 
-  const sorted = scored.sort((a, b) => b.finalScore - a.finalScore);
+  const sorted = scored.sort((a, b) => {
+    const simDiff = b.similarity - a.similarity;
+    if (Math.abs(simDiff) > 0.001) return simDiff;
+    return b.normGmv - a.normGmv;
+  });
 
   // If we have items with real similarity, drop zero-sim items from top results
   const withSim = sorted.filter(r => r.similarity > 0);
@@ -3616,7 +3618,7 @@ async function runListingCompare() {
 
   let bp;
   try {
-    const resp = await fetch('https://wit-ohio-incredible-goals.trycloudflare.com/ai-advice', {
+    const resp = await fetch('http://localhost:8001/ai-advice', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -3624,7 +3626,7 @@ async function runListingCompare() {
         product_name: document.getElementById('inp-name').value || category,
         site: currentSite
       }),
-      signal: AbortSignal.timeout(15000)
+      signal: AbortSignal.timeout(90000)
     });
     if (!resp.ok) throw new Error('服务返回错误 ' + resp.status);
     bp = await resp.json();
@@ -3896,7 +3898,7 @@ function analyze() {
         normGmv:     item.normGmv    || 0,
         normSi:      item.normSi     || 0,
         normGrowth:  item.normGrowth || 0,
-        score:       item.finalScore || 0,
+        finalScore:  item.similarity || 0,
         similarity:  item.similarity || 0,
         _semantic:   true,
       }));
