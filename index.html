@@ -2693,7 +2693,7 @@ async function submitErrorReport(idx) {
   // Try backend
   let synced = false;
   try {
-    const r = await fetch('https://kyle-defend-pink-biography.trycloudflare.com/error-report', {
+    const r = await fetch('https://motorola-adipex-convicted-faces.trycloudflare.com/error-report', {
       method: 'POST', headers: {'Content-Type':'application/json'},
       body: JSON.stringify(report), signal: AbortSignal.timeout(90000),
     });
@@ -3346,7 +3346,7 @@ function generateCompetitorAnalysis() {
 
   // AI deep analysis
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  fetch('https://kyle-defend-pink-biography.trycloudflare.com/competitor-compare', {
+  fetch('https://motorola-adipex-convicted-faces.trycloudflare.com/competitor-compare', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -3734,7 +3734,7 @@ async function fetchImageAdvice(name, brand, desc) {
   if (!el) return;
   const product = [brand, name, desc].filter(Boolean).join(' ');
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  const AI_URL = 'https://kyle-defend-pink-biography.trycloudflare.com/image-advice';
+  const AI_URL = 'https://motorola-adipex-convicted-faces.trycloudflare.com/image-advice';
   const isZh = lang === 'zh';
 
   try {
@@ -3845,7 +3845,7 @@ async function fetchAndFillItem() {
   status.textContent = '⏳ 正在抓取 eBay 商品数据（约 5-10 秒）...';
   try {
     const r = await fetch(
-      `https://kyle-defend-pink-biography.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
+      `https://motorola-adipex-convicted-faces.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
       { signal: AbortSignal.timeout(90000) }
     );
     if (!r.ok) { const e = await r.json().catch(()=>({})); throw new Error(e.detail || 'HTTP ' + r.status); }
@@ -3881,7 +3881,7 @@ async function runListingCompare() {
 
   let bp;
   try {
-    const AI_URL = 'https://kyle-defend-pink-biography.trycloudflare.com/ai-advice';
+    const AI_URL = 'https://motorola-adipex-convicted-faces.trycloudflare.com/ai-advice';
     const resp = await fetch(AI_URL, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -4210,7 +4210,7 @@ function restoreHistory(index) {
 }
 
 // ===== CLIP IMAGE RECOGNITION =====
-const CLIP_URL = 'https://kyle-defend-pink-biography.trycloudflare.com';
+const CLIP_URL = 'https://motorola-adipex-convicted-faces.trycloudflare.com';
 
 function handleImageDrop(e) {
   const file = e.dataTransfer.files[0];
@@ -4278,8 +4278,8 @@ function analyze() {
   }
   if (!excellentData) { alert('数据加载中，请稍候...'); return; }
 
-  // Try semantic service first (https://kyle-defend-pink-biography.trycloudflare.com), fall back to keyword matching
-  const semUrl = `https://kyle-defend-pink-biography.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
+  // Try semantic service first (https://motorola-adipex-convicted-faces.trycloudflare.com), fall back to keyword matching
+  const semUrl = `https://motorola-adipex-convicted-faces.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
   fetch(semUrl, { signal: AbortSignal.timeout(90000) })
     .then(r => r.ok ? r.json() : Promise.reject('!ok'))
     .then(semResults => {
@@ -4513,6 +4513,412 @@ document.addEventListener('keydown', e => {
     <button class="cat-confirm-btn" onclick="confirmCategory()">✓ 确认并分析</button>
   </div>
 </div>
+
+
+<!-- ══════════════════════════════════════════════
+     错误反馈管理：浮动入口按钮
+══════════════════════════════════════════════ -->
+<button id="err-admin-fab" onclick="openErrAdmin()"
+  title="错误反馈管理"
+  style="position:fixed;bottom:24px;right:24px;z-index:1200;
+         width:48px;height:48px;border-radius:50%;
+         background:#dc2626;color:#fff;border:none;
+         font-size:20px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.25);
+         display:flex;align-items:center;justify-content:center;">
+  🚩
+</button>
+
+<!-- ══════════════════════════════════════════════
+     错误反馈管理面板（Modal）
+══════════════════════════════════════════════ -->
+<div id="err-admin-overlay"
+  style="display:none;position:fixed;inset:0;z-index:1300;
+         background:rgba(0,0,0,.45);backdrop-filter:blur(2px);">
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+              width:min(860px,96vw);max-height:88vh;
+              background:#fff;border-radius:12px;overflow:hidden;
+              display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,.3);">
+
+    <!-- 头部 -->
+    <div style="padding:16px 20px;background:#dc2626;color:#fff;
+                display:flex;align-items:center;justify-content:space-between;flex-shrink:0;">
+      <div>
+        <div style="font-size:16px;font-weight:700;">🚩 错误反馈管理中心</div>
+        <div style="font-size:11px;opacity:.85;margin-top:2px;">
+          查看高频错误类目 · 标记已修正 · 持续优化匹配精度
+        </div>
+      </div>
+      <button onclick="closeErrAdmin()"
+        style="background:rgba(255,255,255,.2);border:none;color:#fff;
+               font-size:18px;width:32px;height:32px;border-radius:6px;cursor:pointer;">×</button>
+    </div>
+
+    <!-- 统计条 -->
+    <div id="err-admin-stats"
+      style="padding:12px 20px;background:#fef2f2;border-bottom:1px solid #fecaca;
+             display:flex;gap:24px;flex-shrink:0;flex-wrap:wrap;">
+      <div style="font-size:12px;color:#666;">加载中...</div>
+    </div>
+
+    <!-- 内容区（可滚动） -->
+    <div id="err-admin-body" style="flex:1;overflow-y:auto;padding:16px 20px;">
+      <div style="text-align:center;color:#aaa;padding:40px 0;">⏳ 正在加载...</div>
+    </div>
+
+    <!-- 底部操作 -->
+    <div style="padding:12px 20px;border-top:1px solid #e5e7eb;
+                display:flex;justify-content:space-between;align-items:center;
+                flex-shrink:0;background:#f9fafb;">
+      <span style="font-size:11px;color:#9ca3af;">
+        数据来源：unified_service.py error_reports.json
+      </span>
+      <div style="display:flex;gap:8px;">
+        <button onclick="loadErrAdmin()" id="err-admin-refresh"
+          style="font-size:12px;padding:6px 14px;border:1px solid #d1d5db;
+                 background:#fff;border-radius:6px;cursor:pointer;color:#374151;">
+          🔄 刷新
+        </button>
+        <button onclick="deleteAllResolved()"
+          style="font-size:12px;padding:6px 14px;border:1px solid #fca5a5;
+                 background:#fff;border-radius:6px;cursor:pointer;color:#dc2626;">
+          🗑 清除全部已修正
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── 管理面板入口 ──────────────────────────────────────
+const _ERR_ADMIN_URL = 'https://motorola-adipex-convicted-faces.trycloudflare.com';
+
+function openErrAdmin() {
+  document.getElementById('err-admin-overlay').style.display = 'block';
+  loadErrAdmin();
+}
+function closeErrAdmin() {
+  document.getElementById('err-admin-overlay').style.display = 'none';
+}
+
+// ── 加载统计数据 ──────────────────────────────────────
+async function loadErrAdmin() {
+  const statsEl = document.getElementById('err-admin-stats');
+  const bodyEl  = document.getElementById('err-admin-body');
+  statsEl.innerHTML = '<div style="font-size:12px;color:#666;">⏳ 加载中...</div>';
+  bodyEl.innerHTML  = '<div style="text-align:center;color:#aaa;padding:40px 0;">⏳ 正在请求数据...</div>';
+
+  try {
+    const res  = await fetch(_ERR_ADMIN_URL + '/error-stats', { signal: AbortSignal.timeout(90000) });
+    const data = await res.json();
+    renderErrAdminStats(data);
+    renderErrAdminBody(data);
+  } catch(e) {
+    statsEl.innerHTML = '<div style="color:#dc2626;font-size:12px;">❌ 无法连接服务，请确认 unified_service.py 已启动</div>';
+    bodyEl.innerHTML  = `<div style="text-align:center;color:#dc2626;padding:40px 0;">
+      连接失败：${e.message}<br>
+      <span style="font-size:11px;color:#9ca3af;margin-top:8px;display:block">
+        需要运行 start_all.py 后此功能才可用
+      </span></div>`;
+  }
+}
+
+// ── 渲染统计条 ────────────────────────────────────────
+function renderErrAdminStats(data) {
+  const el = document.getElementById('err-admin-stats');
+  const pct = data.total > 0 ? Math.round(data.resolved / data.total * 100) : 0;
+  el.innerHTML = `
+    <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap;width:100%;">
+      <div style="text-align:center;">
+        <div style="font-size:22px;font-weight:700;color:#1f2937;">${data.total}</div>
+        <div style="font-size:11px;color:#6b7280;">总计</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:22px;font-weight:700;color:#dc2626;">${data.unresolved}</div>
+        <div style="font-size:11px;color:#6b7280;">待处理</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:22px;font-weight:700;color:#16a34a;">${data.resolved}</div>
+        <div style="font-size:11px;color:#6b7280;">已修正</div>
+      </div>
+      <div style="flex:1;min-width:160px;">
+        <div style="font-size:11px;color:#6b7280;margin-bottom:4px;">修正进度 ${pct}%</div>
+        <div style="height:8px;background:#fecaca;border-radius:4px;overflow:hidden;">
+          <div style="height:100%;width:${pct}%;background:#16a34a;border-radius:4px;transition:width .4s;"></div>
+        </div>
+      </div>
+    </div>`;
+}
+
+// ── 渲染分组列表 ──────────────────────────────────────
+function renderErrAdminBody(data) {
+  const el = document.getElementById('err-admin-body');
+  if (!data.groups || data.groups.length === 0) {
+    el.innerHTML = '<div style="text-align:center;color:#aaa;padding:60px 0;">🎉 暂无错误反馈记录</div>';
+    return;
+  }
+
+  const rows = data.groups.map(g => {
+    const isAllResolved = g.unresolved === 0;
+    const statusBadge = isAllResolved
+      ? '<span style="font-size:10px;padding:2px 7px;background:#d1fae5;color:#065f46;border-radius:10px;font-weight:600;">✅ 已修正</span>'
+      : `<span style="font-size:10px;padding:2px 7px;background:#fee2e2;color:#dc2626;border-radius:10px;font-weight:600;">待处理 ${g.unresolved}</span>`;
+
+    const queries = g.example_queries.length
+      ? g.example_queries.map(q => `<span style="background:#f3f4f6;padding:1px 6px;border-radius:3px;font-size:10px;margin-right:4px;">${q}</span>`).join('')
+      : '<span style="color:#aaa;font-size:10px;">—</span>';
+
+    const resolveBtn = isAllResolved ? '' : `
+      <button onclick="resolveCategory('${g.matched_leaf.replace(/'/g,"\\'")}', this)"
+        style="font-size:11px;padding:4px 10px;background:#16a34a;color:#fff;
+               border:none;border-radius:5px;cursor:pointer;white-space:nowrap;">
+        ✅ 标记已修正
+      </button>`;
+
+    const deleteBtn = `
+      <button onclick="deleteCategory('${g.matched_leaf.replace(/'/g,"\\'")}', this)"
+        style="font-size:11px;padding:4px 10px;background:#fff;color:#dc2626;
+               border:1px solid #fca5a5;border-radius:5px;cursor:pointer;white-space:nowrap;">
+        🗑 删除
+      </button>`;
+
+    return `
+      <div class="err-group-row" style="border:1px solid #e5e7eb;border-radius:8px;
+           padding:12px 14px;margin-bottom:10px;background:${isAllResolved ? '#f9fafb' : '#fff'};
+           opacity:${isAllResolved ? '.7' : '1'};">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;">
+          <div style="flex:1;min-width:0;">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;">
+              ${statusBadge}
+              <span style="font-size:13px;font-weight:600;color:#111;word-break:break-word;">${g.matched_leaf}</span>
+            </div>
+            <div style="font-size:11px;color:#6b7280;margin-bottom:4px;">
+              共 <strong>${g.total}</strong> 条 &nbsp;·&nbsp;
+              平均相似度 <strong>${g.avg_similarity}</strong> &nbsp;·&nbsp;
+              最近：${g.latest_ts ? g.latest_ts.slice(0,10) : '—'}
+            </div>
+            <div style="margin-top:4px;">
+              <span style="font-size:10px;color:#9ca3af;">示例查询：</span>${queries}
+            </div>
+          </div>
+          <div style="display:flex;gap:6px;align-items:center;flex-shrink:0;">
+            ${resolveBtn}
+            ${deleteBtn}
+          </div>
+        </div>
+      </div>`;
+  }).join('');
+
+  el.innerHTML = rows;
+}
+
+// ── 操作：标记已修正 ──────────────────────────────────
+async function resolveCategory(leaf, btn) {
+  btn.disabled = true;
+  btn.textContent = '处理中...';
+  try {
+    const res = await fetch(_ERR_ADMIN_URL + '/error-resolve', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ matched_leaf: leaf, action: 'resolve' }),
+      signal: AbortSignal.timeout(90000),
+    });
+    const d = await res.json();
+    if (d.status === 'ok') {
+      btn.textContent = '✅ 已修正';
+      btn.style.background = '#d1fae5';
+      btn.style.color = '#065f46';
+      setTimeout(loadErrAdmin, 600);
+    }
+  } catch(e) {
+    btn.disabled = false;
+    btn.textContent = '❌ 失败，重试';
+  }
+}
+
+// ── 操作：删除该类目所有反馈 ──────────────────────────
+async function deleteCategory(leaf, btn) {
+  if (!confirm(`确认删除「${leaf}」的全部反馈记录？此操作不可撤销。`)) return;
+  btn.disabled = true;
+  btn.textContent = '删除中...';
+  try {
+    const res = await fetch(_ERR_ADMIN_URL + '/error-resolve', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ matched_leaf: leaf, action: 'delete' }),
+      signal: AbortSignal.timeout(90000),
+    });
+    const d = await res.json();
+    if (d.status === 'ok') setTimeout(loadErrAdmin, 300);
+  } catch(e) {
+    btn.disabled = false;
+    btn.textContent = '❌ 失败';
+  }
+}
+
+// ── 操作：清除全部已修正 ──────────────────────────────
+async function deleteAllResolved() {
+  const statsEl = document.getElementById('err-admin-stats');
+  // 先获取所有已修正的类目名，逐一删除
+  try {
+    const res  = await fetch(_ERR_ADMIN_URL + '/error-stats', { signal: AbortSignal.timeout(90000) });
+    const data = await res.json();
+    const resolved = data.groups.filter(g => g.unresolved === 0);
+    if (resolved.length === 0) { alert('没有已修正的记录。'); return; }
+    if (!confirm(`确认清除全部 ${resolved.length} 个已修正类目的记录？`)) return;
+
+    for (const g of resolved) {
+      await fetch(_ERR_ADMIN_URL + '/error-resolve', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({ matched_leaf: g.matched_leaf, action: 'delete' }),
+        signal: AbortSignal.timeout(90000),
+      });
+    }
+    await loadErrAdmin();
+  } catch(e) {
+    alert('操作失败：' + e.message);
+  }
+}
+
+// 点击遮罩层关闭
+document.getElementById('err-admin-overlay').addEventListener('click', function(e) {
+  if (e.target === this) closeErrAdmin();
+});
+</script>
+
+<!-- ══════════════════════════════════════════════
+     导出报告：浮动按钮
+══════════════════════════════════════════════ -->
+<button id="export-pdf-fab" onclick="exportReport()"
+  title="导出分析报告为 PDF"
+  style="position:fixed;bottom:24px;left:24px;z-index:1200;
+         height:40px;padding:0 16px;border-radius:20px;
+         background:#2563eb;color:#fff;border:none;
+         font-size:13px;font-weight:600;cursor:pointer;
+         box-shadow:0 4px 12px rgba(37,99,235,.4);
+         display:flex;align-items:center;gap:6px;">
+  📥 导出报告
+</button>
+
+<script>
+function exportReport() {
+  if (!lastResults || !lastResults.length) {
+    alert('请先运行分析，再导出报告。');
+    return;
+  }
+
+  const productName = (document.getElementById('inp-name').value || '').trim() || '—';
+  const brand       = (document.getElementById('inp-brand').value || '').trim() || '—';
+  const desc        = (document.getElementById('inp-desc').value || '').trim() || '';
+  const date        = new Date().toLocaleDateString('zh-CN', {year:'numeric', month:'2-digit', day:'2-digit'});
+
+  // ── Top-10 类目匹配表格 ──────────────────────────
+  const matchRows = lastResults.slice(0, 10).map((r, i) => {
+    const sim = Math.round((r.similarity || r.finalScore || 0) * 100);
+    const gmv = r.gmv_y1   ? (r.gmv_y1 / 1e6).toFixed(1) + 'M'       : '—';
+    const si  = r.si_sum   ? Math.round(r.si_sum / 1000) + 'K'        : '—';
+    const simColor = sim > 70 ? '#dbeafe' : sim > 50 ? '#fef3c7' : '#fee2e2';
+    return `<tr>
+      <td style="text-align:center;font-weight:700;color:${i===0?'#2563eb':'#374151'}">#${i+1}</td>
+      <td style="font-weight:${i===0?'700':'400'};color:#111">${r.leaf || ''}</td>
+      <td style="color:#6b7280;font-size:10px;max-width:220px;word-break:break-word">${(r.leaf_path||'').replace(/:/g,' › ')}</td>
+      <td style="text-align:center"><span style="background:${simColor};padding:2px 8px;border-radius:10px;font-weight:700;font-size:11px">${sim}%</span></td>
+      <td style="text-align:center;color:#374151">${gmv}</td>
+      <td style="text-align:center;color:#374151">${si}</td>
+    </tr>`;
+  }).join('');
+
+  // ── 清理 DOM 区块（去掉按钮/输入框等交互元素）──
+  function cleanSection(id) {
+    const el = document.getElementById(id);
+    if (!el || !el.innerText.trim()) return '';
+    const clone = el.cloneNode(true);
+    clone.querySelectorAll('button, input, select, textarea, .err-form').forEach(e => e.remove());
+    clone.querySelectorAll('[style*="animation"],[style*="spin"]').forEach(e => e.remove());
+    // 把内联 onclick 都去掉，防止打印窗口执行
+    clone.querySelectorAll('[onclick]').forEach(e => e.removeAttribute('onclick'));
+    return clone.innerHTML;
+  }
+
+  const optHtml = cleanSection('opt-content');
+  const recHtml = cleanSection('panel2-recs');
+
+  // ── 组装报告 HTML ─────────────────────────────────
+  const reportHtml = `<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>eBay 分析报告 — ${productName}</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:"Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  font-size:12px; line-height:1.75; color:#1a1a1a;
+  padding:28px 36px; max-width:960px; margin:0 auto;
+}
+h1 { font-size:20px; font-weight:700; color:#111; margin-bottom:6px; }
+.report-meta {
+  font-size:11px; color:#6b7280; padding:10px 14px;
+  background:#f9fafb; border:1px solid #e5e7eb; border-radius:6px;
+  margin-bottom:24px; line-height:2;
+}
+h2 {
+  font-size:14px; font-weight:700; color:#1d4ed8;
+  margin:24px 0 10px; padding-bottom:5px;
+  border-bottom:2px solid #bfdbfe;
+}
+table { width:100%; border-collapse:collapse; font-size:11px; margin-bottom:8px; }
+th {
+  background:#eff6ff; padding:7px 10px; text-align:left;
+  font-size:11px; color:#1e40af; border:1px solid #dbeafe; font-weight:700;
+}
+td { padding:7px 10px; border:1px solid #e5e7eb; vertical-align:top; }
+tr:nth-child(even) td { background:#f9fafb; }
+.section-body { font-size:12px; }
+.section-body button, .section-body input { display:none !important; }
+@media print {
+  body { padding:16px 20px; font-size:11px; }
+  h2 { page-break-before:auto; margin-top:16px; }
+  .section-body { page-break-inside:avoid; }
+}
+</style>
+</head>
+<body>
+<h1>📊 eBay 选品分析报告</h1>
+<div class="report-meta">
+  <strong>商品名称：</strong>${productName}&emsp;
+  <strong>品牌：</strong>${brand}&emsp;
+  <strong>eBay 站点：</strong>${currentSite}&emsp;
+  <strong>生成时间：</strong>${date}
+  ${desc ? '<br><strong>补充描述：</strong>' + desc : ''}
+</div>
+
+<h2>一、Top 10 类目匹配结果</h2>
+<table>
+  <thead>
+    <tr>
+      <th>排名</th><th>类目名称</th><th>类目路径</th>
+      <th>相似度</th><th>GMV Y1</th><th>SI_SUM</th>
+    </tr>
+  </thead>
+  <tbody>${matchRows}</tbody>
+</table>
+
+${optHtml ? `<h2>二、Listing 优化建议</h2><div class="section-body">${optHtml}</div>` : ''}
+
+${recHtml ? `<h2>三、智能建议 & 竞品分析</h2><div class="section-body">${recHtml}</div>` : ''}
+
+</body>
+</html>`;
+
+  // ── 打开新窗口并触发打印 ──────────────────────────
+  const win = window.open('', '_blank', 'width=960,height=750');
+  if (!win) { alert('请允许弹出窗口后重试。'); return; }
+  win.document.write(reportHtml);
+  win.document.close();
+  win.onload = () => setTimeout(() => win.print(), 400);
+}
+</script>
 
 </body>
 </html>
