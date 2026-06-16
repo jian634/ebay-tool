@@ -2693,7 +2693,7 @@ async function submitErrorReport(idx) {
   // Try backend
   let synced = false;
   try {
-    const r = await fetch('https://motorola-adipex-convicted-faces.trycloudflare.com/error-report', {
+    const r = await fetch('https://candles-mating-pit-remained.trycloudflare.com/error-report', {
       method: 'POST', headers: {'Content-Type':'application/json'},
       body: JSON.stringify(report), signal: AbortSignal.timeout(90000),
     });
@@ -3346,7 +3346,7 @@ function generateCompetitorAnalysis() {
 
   // AI deep analysis
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  fetch('https://motorola-adipex-convicted-faces.trycloudflare.com/competitor-compare', {
+  fetch('https://candles-mating-pit-remained.trycloudflare.com/competitor-compare', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -3734,7 +3734,7 @@ async function fetchImageAdvice(name, brand, desc) {
   if (!el) return;
   const product = [brand, name, desc].filter(Boolean).join(' ');
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  const AI_URL = 'https://motorola-adipex-convicted-faces.trycloudflare.com/image-advice';
+  const AI_URL = 'https://candles-mating-pit-remained.trycloudflare.com/image-advice';
   const isZh = lang === 'zh';
 
   try {
@@ -3845,7 +3845,7 @@ async function fetchAndFillItem() {
   status.textContent = '⏳ 正在抓取 eBay 商品数据（约 5-10 秒）...';
   try {
     const r = await fetch(
-      `https://motorola-adipex-convicted-faces.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
+      `https://candles-mating-pit-remained.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
       { signal: AbortSignal.timeout(90000) }
     );
     if (!r.ok) { const e = await r.json().catch(()=>({})); throw new Error(e.detail || 'HTTP ' + r.status); }
@@ -3881,7 +3881,7 @@ async function runListingCompare() {
 
   let bp;
   try {
-    const AI_URL = 'https://motorola-adipex-convicted-faces.trycloudflare.com/ai-advice';
+    const AI_URL = 'https://candles-mating-pit-remained.trycloudflare.com/ai-advice';
     const resp = await fetch(AI_URL, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -4210,7 +4210,7 @@ function restoreHistory(index) {
 }
 
 // ===== CLIP IMAGE RECOGNITION =====
-const CLIP_URL = 'https://motorola-adipex-convicted-faces.trycloudflare.com';
+const CLIP_URL = 'https://candles-mating-pit-remained.trycloudflare.com';
 
 function handleImageDrop(e) {
   const file = e.dataTransfer.files[0];
@@ -4278,8 +4278,8 @@ function analyze() {
   }
   if (!excellentData) { alert('数据加载中，请稍候...'); return; }
 
-  // Try semantic service first (https://motorola-adipex-convicted-faces.trycloudflare.com), fall back to keyword matching
-  const semUrl = `https://motorola-adipex-convicted-faces.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
+  // Try semantic service first (https://candles-mating-pit-remained.trycloudflare.com), fall back to keyword matching
+  const semUrl = `https://candles-mating-pit-remained.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
   fetch(semUrl, { signal: AbortSignal.timeout(90000) })
     .then(r => r.ok ? r.json() : Promise.reject('!ok'))
     .then(semResults => {
@@ -4590,7 +4590,7 @@ document.addEventListener('keydown', e => {
 
 <script>
 // ── 管理面板入口 ──────────────────────────────────────
-const _ERR_ADMIN_URL = 'https://motorola-adipex-convicted-faces.trycloudflare.com';
+const _ERR_ADMIN_URL = 'https://candles-mating-pit-remained.trycloudflare.com';
 
 function openErrAdmin() {
   document.getElementById('err-admin-overlay').style.display = 'block';
@@ -4791,12 +4791,12 @@ document.getElementById('err-admin-overlay').addEventListener('click', function(
 ══════════════════════════════════════════════ -->
 <button id="export-pdf-fab" onclick="exportReport()"
   title="导出分析报告为 PDF"
-  style="position:fixed;bottom:24px;left:24px;z-index:1200;
-         height:40px;padding:0 16px;border-radius:20px;
+  style="position:fixed;bottom:76px;left:20px;z-index:1200;
+         height:36px;padding:0 12px;border-radius:8px;
          background:#2563eb;color:#fff;border:none;
-         font-size:13px;font-weight:600;cursor:pointer;
-         box-shadow:0 4px 12px rgba(37,99,235,.4);
-         display:flex;align-items:center;gap:6px;">
+         font-size:12px;font-weight:600;cursor:pointer;
+         box-shadow:0 3px 10px rgba(37,99,235,.4);
+         display:flex;align-items:center;gap:5px;">
   📥 导出报告
 </button>
 
