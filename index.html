@@ -374,6 +374,13 @@ textarea.form-input{height:72px;resize:vertical}
           </div>
         </div>
       </div>
+      <!-- 品类规模 — 始终在 Listing 深度对比之后 -->
+      <div id="bar-chart-wrap" style="display:none;margin-top:16px">
+        <div class="chart-box">
+          <div id="bar-chart-title" class="chart-title"></div>
+          <div class="chart-wrap-tall"><canvas id="barChart"></canvas></div>
+        </div>
+      </div>
     </div>
     <div class="tab-panel" id="panel2">
       <!-- Competitor comparison — always visible -->
@@ -2818,10 +2825,6 @@ function renderComparison(results) {
       </div>
     </div>
 
-    <div class="chart-box" style="margin-top:16px">
-      <div class="chart-title">${T('chartTitle2')}</div>
-      <div class="chart-wrap-tall"><canvas id="barChart"></canvas></div>
-    </div>
   `;
 
   const top = results[0];
@@ -2852,6 +2855,13 @@ function renderComparison(results) {
   window._topItem = top;
   window._userRadarScores = userScores;
   window._radarDims = dims;
+
+  // 显示并初始化品类规模区块
+  const bcWrap = document.getElementById('bar-chart-wrap');
+  if (bcWrap) {
+    bcWrap.style.display = 'block';
+    document.getElementById('bar-chart-title').textContent = T('chartTitle2');
+  }
 
   const top5bar = results.slice(0, 5);
   const barQualLabels = top5bar.map(r => gmvQual(r));
