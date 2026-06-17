@@ -156,6 +156,16 @@ textarea.form-input{height:72px;resize:vertical}
 .comp-textarea:focus{outline:none;border-color:#4F46E5}
 .comp-btn{background:#4F46E5;color:#fff;border:none;border-radius:6px;padding:8px 16px;font-size:12px;font-weight:700;cursor:pointer;width:100%;transition:background .15s}
 .comp-btn:hover{background:#4338CA}
+.comp-slots-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
+.comp-slot{background:#f8f9ff;border:1px solid #c7d2fe;border-radius:8px;padding:10px}
+.comp-slot-label{font-size:11px;font-weight:700;color:#4f46e5;margin-bottom:6px}
+.comp-slot-optional{font-weight:400;color:#9ca3af;font-size:10px}
+.comp-slot-fetch-row{display:flex;gap:6px;margin-bottom:5px}
+.comp-id-input{flex:1;padding:5px 7px;border:1px solid #d1d5db;border-radius:5px;font-size:11px;font-family:monospace;min-width:0}
+.comp-fetch-btn{padding:5px 9px;background:#4f46e5;color:#fff;border:none;border-radius:5px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0}
+.comp-fetch-btn:hover{background:#4338ca}
+.comp-fetch-status{font-size:10px;color:#666;min-height:13px;margin-bottom:4px;line-height:1.3}
+.comp-slot .comp-textarea{min-height:44px;font-size:11px;margin-bottom:5px}
 .comp-report{background:#f8f7ff;border-radius:8px;padding:14px;margin-bottom:12px;border:1.5px solid #c7d2fe}
 .comp-report-title{font-size:13px;font-weight:700;color:#1e1b4b;margin-bottom:10px}
 .comp-score-row{display:flex;align-items:center;gap:8px;margin-bottom:7px}
@@ -165,9 +175,12 @@ textarea.form-input{height:72px;resize:vertical}
 .comp-score-val{font-size:11px;font-weight:700;width:32px;text-align:right;flex-shrink:0}
 .comp-gap-section{margin-top:12px}
 .comp-gap-title{font-size:11px;font-weight:700;margin-bottom:6px;padding:4px 10px;border-radius:4px;display:inline-block}
-.comp-gap-item{font-size:12px;color:#333;padding:7px 10px;background:#fff;border-radius:6px;margin-bottom:5px;border:1px solid #e5e7eb;line-height:1.6}
+.comp-gap-item{font-size:12px;color:#333;padding:7px 10px;background:#fff;border-radius:6px;margin-bottom:5px;border:1px solid #e5e7eb;line-height:1.6;display:flex;align-items:flex-start;gap:7px}
 .comp-gap-label{font-weight:700}
 .comp-gap-tip{color:#4F46E5;font-size:11px;margin-top:2px}
+.gap-check{width:15px;height:15px;cursor:pointer;flex-shrink:0;margin-top:2px;accent-color:#4f46e5}
+.gap-done{opacity:.42;background:#f7f7f7 !important}
+.gap-done .comp-gap-label,.gap-done .comp-gap-tip,.gap-done b{text-decoration:line-through}
 .comp-ok{font-size:11px;color:#16a34a;padding:8px 10px;background:#f0fdf4;border-radius:6px;border:1px solid #bbf7d0;margin-bottom:5px}
 /* ===== IMAGE UPLOAD ===== */
 .img-drop-zone{border:2px dashed #c0d0e8;border-radius:8px;padding:20px;text-align:center;cursor:pointer;transition:all .2s;background:#f8f9fa;margin-bottom:12px;user-select:none}
@@ -393,9 +406,39 @@ textarea.form-input{height:72px;resize:vertical}
       <div id="comp-section">
         <div class="comp-input-box">
           <div class="comp-input-header">🔍 <span id="comp-header-text">竞品对比分析</span></div>
-          <div class="comp-input-sub" id="comp-sub-text">粘贴优秀竞品的 eBay 标题及关键卖点，AI 将逐项对比差距并生成 P0/P1/P2 改进建议</div>
-          <textarea id="comp-title-input" class="comp-textarea" placeholder="竞品标题：e.g. For 2018-2022 Honda Civic LED Headlight Assembly Plug&Play DOT Certified Black..."></textarea>
-          <textarea id="comp-details-input" class="comp-textarea" placeholder="竞品卖点（可选）：e.g. IP67 waterproof, 6000K, 2-year warranty, sequential DRL, 3000lm..."></textarea>
+          <div class="comp-input-sub" id="comp-sub-text">输入竞品 Item ID 自动抓取，或手动粘贴标题 — 最多同时对比 3 个竞品</div>
+          <div class="comp-slots-row">
+            <div class="comp-slot">
+              <div class="comp-slot-label">竞品 1</div>
+              <div class="comp-slot-fetch-row">
+                <input id="comp-id-1" class="comp-id-input" type="text" placeholder="Item ID 或 eBay 链接" onkeydown="if(event.key==='Enter') fetchCompetitorItem(1)">
+                <button class="comp-fetch-btn" onclick="fetchCompetitorItem(1)">⬇ 抓取</button>
+              </div>
+              <div id="comp-fetch-status-1" class="comp-fetch-status"></div>
+              <textarea id="comp-title-1" class="comp-textarea" placeholder="竞品标题（自动填入或手动粘贴）"></textarea>
+              <textarea id="comp-details-1" class="comp-textarea" placeholder="卖点/规格（可选）"></textarea>
+            </div>
+            <div class="comp-slot">
+              <div class="comp-slot-label">竞品 2 <span class="comp-slot-optional">（可选）</span></div>
+              <div class="comp-slot-fetch-row">
+                <input id="comp-id-2" class="comp-id-input" type="text" placeholder="Item ID 或 eBay 链接" onkeydown="if(event.key==='Enter') fetchCompetitorItem(2)">
+                <button class="comp-fetch-btn" onclick="fetchCompetitorItem(2)">⬇ 抓取</button>
+              </div>
+              <div id="comp-fetch-status-2" class="comp-fetch-status"></div>
+              <textarea id="comp-title-2" class="comp-textarea" placeholder="竞品标题（自动填入或手动粘贴）"></textarea>
+              <textarea id="comp-details-2" class="comp-textarea" placeholder="卖点/规格（可选）"></textarea>
+            </div>
+            <div class="comp-slot">
+              <div class="comp-slot-label">竞品 3 <span class="comp-slot-optional">（可选）</span></div>
+              <div class="comp-slot-fetch-row">
+                <input id="comp-id-3" class="comp-id-input" type="text" placeholder="Item ID 或 eBay 链接" onkeydown="if(event.key==='Enter') fetchCompetitorItem(3)">
+                <button class="comp-fetch-btn" onclick="fetchCompetitorItem(3)">⬇ 抓取</button>
+              </div>
+              <div id="comp-fetch-status-3" class="comp-fetch-status"></div>
+              <textarea id="comp-title-3" class="comp-textarea" placeholder="竞品标题（自动填入或手动粘贴）"></textarea>
+              <textarea id="comp-details-3" class="comp-textarea" placeholder="卖点/规格（可选）"></textarea>
+            </div>
+          </div>
           <button class="comp-btn" onclick="generateCompetitorAnalysis()"><span id="comp-btn-text">⚡ 生成竞品差距报告</span></button>
         </div>
         <div id="comp-output"></div>
@@ -2699,7 +2742,7 @@ async function submitErrorReport(idx) {
   // Try backend
   let synced = false;
   try {
-    const r = await fetch('https://fruit-measured-warrior-valentine.trycloudflare.com/error-report', {
+    const r = await fetch('https://bachelor-figured-hopes-protocol.trycloudflare.com/error-report', {
       method: 'POST', headers: {'Content-Type':'application/json'},
       body: JSON.stringify(report), signal: AbortSignal.timeout(90000),
     });
@@ -3216,17 +3259,80 @@ function getProductKeywordChecks(productType) {
   return checks[productType] || checks.general;
 }
 
+function gapKey(label) {
+  return label.replace(/[^a-zA-Z0-9一-鿿]/g, '').slice(0, 30);
+}
+function toggleGapItem(key, checkbox) {
+  const el = document.getElementById('gapitem_' + key);
+  if (!el) return;
+  if (checkbox.checked) {
+    localStorage.setItem('comp_done_' + key, '1');
+    el.classList.add('gap-done');
+  } else {
+    localStorage.removeItem('comp_done_' + key);
+    el.classList.remove('gap-done');
+  }
+  updateGapProgress();
+}
+function updateGapProgress() {
+  const counter = document.getElementById('gap-progress-counter');
+  if (!counter) return;
+  const all = document.querySelectorAll('#comp-output .gap-check');
+  const done = document.querySelectorAll('#comp-output .gap-check:checked');
+  if (all.length === 0) { counter.textContent = ''; return; }
+  counter.textContent = `已处理 ${done.length} / ${all.length} 项`;
+  counter.style.color = done.length === all.length ? '#16a34a' : done.length > 0 ? '#d97706' : '#9ca3af';
+}
+
+async function fetchCompetitorItem(n) {
+  const raw = (document.getElementById(`comp-id-${n}`).value || '').trim();
+  if (!raw) return;
+  const match = raw.match(/(?:\/itm\/(?:[^\/]+\/)?)(\d{10,13})/);
+  const itemId = match ? match[1] : raw.replace(/\D/g, '');
+  const status = document.getElementById(`comp-fetch-status-${n}`);
+  if (!itemId || itemId.length < 10) {
+    status.style.color = '#c0392b';
+    status.textContent = '❌ 请输入有效的 Item ID（10-13位数字）';
+    return;
+  }
+  status.style.color = '#666';
+  status.textContent = '⏳ 抓取中（约 5-10 秒）...';
+  try {
+    const r = await fetch(
+      `https://bachelor-figured-hopes-protocol.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
+      { signal: AbortSignal.timeout(90000) }
+    );
+    if (!r.ok) { const e = await r.json().catch(()=>({})); throw new Error(e.detail || 'HTTP ' + r.status); }
+    const d = await r.json();
+    if (d.title) document.getElementById(`comp-title-${n}`).value = d.title;
+    if (d.specs) document.getElementById(`comp-details-${n}`).value = d.specs;
+    const warn = d.error_fields && d.error_fields.length ? ` ⚠️ 未能获取：${d.error_fields.join('、')}` : '';
+    status.style.color = '#15803d';
+    status.textContent = `✅ 已填写标题${d.specs ? ' + 规格' : ''}${warn}`;
+  } catch(e) {
+    status.style.color = '#c0392b';
+    status.textContent = `❌ 失败：${e.message}`;
+  }
+}
+
 function generateCompetitorAnalysis() {
-  const compTitle = (document.getElementById('comp-title-input').value || '').trim();
-  const compDetails = (document.getElementById('comp-details-input').value || '').trim();
+  // Collect all filled competitor slots
+  const compsList = [];
+  for (let n = 1; n <= 3; n++) {
+    const title = (document.getElementById(`comp-title-${n}`)?.value || '').trim();
+    const details = (document.getElementById(`comp-details-${n}`)?.value || '').trim();
+    if (title) compsList.push({ title, details, text: [title, details].join(' ').trim() });
+  }
+  const compTitle = compsList[0]?.title || '';
+  const compDetails = compsList[0]?.details || '';
   const myTitle = (document.getElementById('inp-name') ? document.getElementById('inp-name').value : '') || '';
   const myBrand = (document.getElementById('inp-brand') ? document.getElementById('inp-brand').value : '') || '';
   const myDesc = (document.getElementById('inp-desc') ? document.getElementById('inp-desc').value : '') || '';
   const myText = [myTitle, myBrand, myDesc].join(' ').trim();
   const compText = [compTitle, compDetails].join(' ').trim();
 
-  if (!compTitle) {
-    document.getElementById('comp-output').innerHTML = '<div class="comp-ok">请先粘贴竞品标题</div>';
+  if (compsList.length === 0) {
+    document.getElementById('comp-output').innerHTML = '<div class="comp-ok">请至少填写一个竞品标题</div>';
     return;
   }
 
@@ -3255,26 +3361,28 @@ function generateCompetitorAnalysis() {
     return tierItems.map(c => ({ ...c, hit: c.pattern.test(text) }));
   }
 
-  const compScore = scoreProduct(compText, checks);
+  // Score each competitor
+  compsList.forEach(c => { c.score = scoreProduct(c.text, checks); });
   const myScore = myText ? scoreProduct(myText, checks) : null;
+  const maxCompScore = Math.max(...compsList.map(c => c.score));
 
-  // Find gaps: competitor has it, I don't
+  // Gaps: ANY competitor has it but you don't
   const gaps = { must: [], expect: [], wow: [] };
   ['must', 'expect', 'wow'].forEach(tier => {
     (checks[tier] || []).forEach(c => {
-      const compHit = c.pattern.test(compText);
+      const anyCompHas = compsList.some(comp => c.pattern.test(comp.text));
       const myHit = myText ? c.pattern.test(myText) : false;
-      if (compHit && !myHit) gaps[tier].push(c);
+      if (anyCompHas && !myHit) gaps[tier].push(c);
     });
   });
 
-  // Split gaps: competitor has it (I don't) vs both missing
+  // Both missing: no competitor has it AND you don't
   const both = { must: [], expect: [], wow: [] };
   ['must', 'expect', 'wow'].forEach(tier => {
     (checks[tier] || []).forEach(c => {
-      const compHit = c.pattern.test(compText);
-      const myHit   = myText ? c.pattern.test(myText) : false;
-      if (!compHit && !myHit) both[tier].push(c);
+      const anyCompHas = compsList.some(comp => c.pattern.test(comp.text));
+      const myHit = myText ? c.pattern.test(myText) : false;
+      if (!anyCompHas && !myHit) both[tier].push(c);
     });
   });
 
@@ -3303,11 +3411,17 @@ function generateCompetitorAnalysis() {
       const m = meta[tier];
       html += `<div style="margin-bottom:10px">
         <div class="comp-gap-title" style="background:${m.bg};color:${m.color};border:1px solid ${m.border}">${m.label}（${gapObj[tier].length}项）</div>
-        ${gapObj[tier].map(c => `
-          <div class="comp-gap-item">
-            <span class="comp-gap-label" style="color:${m.dot}">▸ ${c.label}</span>
-            <div class="comp-gap-tip">💡 ${c.tip}</div>
-          </div>`).join('')}
+        ${gapObj[tier].map(c => {
+          const key = gapKey(c.label);
+          const done = !!localStorage.getItem('comp_done_' + key);
+          return `<div class="comp-gap-item${done ? ' gap-done' : ''}" id="gapitem_${key}">
+            <input type="checkbox" class="gap-check" onchange="toggleGapItem('${key}',this)" ${done ? 'checked' : ''}>
+            <div style="flex:1">
+              <span class="comp-gap-label" style="color:${m.dot}">▸ ${c.label}</span>
+              <div class="comp-gap-tip">💡 ${c.tip}</div>
+            </div>
+          </div>`;
+        }).join('')}
       </div>`;
     });
     return html;
@@ -3320,22 +3434,18 @@ function generateCompetitorAnalysis() {
     gapHTML = `<div class="comp-ok">✅ 恭喜！您的listing在 ${typeLabel} 核心维度上已与竞品持平或领先，建议继续优化价格与图片。</div>`;
   }
 
-  const scoreSection = hasMyProduct ? `
+  const compScoreBars = compsList.map((c, i) => `
     <div class="comp-score-row">
-      <div class="comp-score-label">竞品</div>
-      ${scoreBar(compScore, '#4F46E5')}
-      <div class="comp-score-val" style="color:#4F46E5">${compScore}%</div>
-    </div>
+      <div class="comp-score-label">竞品${compsList.length > 1 ? i+1 : ''}</div>
+      ${scoreBar(c.score, '#4F46E5')}
+      <div class="comp-score-val" style="color:#4F46E5">${c.score}%</div>
+    </div>`).join('');
+  const scoreSection = hasMyProduct ? compScoreBars + `
     <div class="comp-score-row">
       <div class="comp-score-label">我的</div>
-      ${scoreBar(myScore, myScore >= compScore ? '#16a34a' : '#ef4444')}
-      <div class="comp-score-val" style="color:${myScore >= compScore ? '#16a34a' : '#ef4444'}">${myScore}%</div>
-    </div>` : `
-    <div class="comp-score-row">
-      <div class="comp-score-label">竞品得分</div>
-      ${scoreBar(compScore, '#4F46E5')}
-      <div class="comp-score-val" style="color:#4F46E5">${compScore}%</div>
-    </div>
+      ${scoreBar(myScore, myScore >= maxCompScore ? '#16a34a' : '#ef4444')}
+      <div class="comp-score-val" style="color:${myScore >= maxCompScore ? '#16a34a' : '#ef4444'}">${myScore}%</div>
+    </div>` : compScoreBars + `
     <div style="font-size:11px;color:#888;margin-top:4px">填写您的商品信息后可生成对比分析</div>`;
 
   const aiPlaceholder = `<div id="comp-ai-result" style="margin-top:12px;padding:10px 12px;background:#f5f3ff;border:1px solid #ddd6fe;border-radius:6px;font-size:12px;color:#7c3aed">
@@ -3346,18 +3456,26 @@ function generateCompetitorAnalysis() {
     <div class="comp-report">
       <div class="comp-report-title">📊 ${typeLabel} 竞品差距分析</div>
       ${scoreSection}
-      <div class="comp-gap-section">${gapHTML}</div>
+      <div class="comp-gap-section">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <span style="font-size:11px;font-weight:700;color:#374151">差距清单</span>
+          <span id="gap-progress-counter" style="font-size:11px"></span>
+        </div>
+        ${gapHTML}
+      </div>
       ${aiPlaceholder}
     </div>`;
+  setTimeout(updateGapProgress, 0);
 
   // AI deep analysis
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  fetch('https://fruit-measured-warrior-valentine.trycloudflare.com/competitor-compare', {
+  fetch('https://bachelor-figured-hopes-protocol.trycloudflare.com/competitor-compare', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       competitor_title:   compTitle,
       competitor_details: compDetails,
+      competitors: compsList.map(c => ({ title: c.title, details: c.details })),
       my_title:  myTitle,
       my_brand:  myBrand,
       my_desc:   myDesc,
@@ -3374,12 +3492,18 @@ function generateCompetitorAnalysis() {
         ${x.example ? `<span style="color:#888;font-style:italic"> — 示例：${x.example}</span>` : ''}
       </div>`).join('');
     const pColor = p => p === 'P0' ? '#dc2626' : p === 'P1' ? '#d97706' : '#16a34a';
-    const gapItems = (ai.seller_gaps || []).map(x =>
-      `<div style="padding:5px 8px;margin-bottom:4px;border-left:3px solid ${pColor(x.priority)};background:#fafafa;border-radius:0 4px 4px 0;font-size:11px;line-height:1.5">
-        <span style="font-size:10px;font-weight:700;color:${pColor(x.priority)};background:${pColor(x.priority)}18;padding:1px 5px;border-radius:3px">${x.priority}</span>
-        <b style="margin-left:4px">${x.item}</b><br>${x.action || ''}
-        ${x.example ? `<span style="color:#888;font-style:italic"> — ${x.example}</span>` : ''}
-      </div>`).join('');
+    const gapItems = (ai.seller_gaps || []).map(x => {
+      const key = 'ai_' + gapKey(x.item);
+      const done = !!localStorage.getItem('comp_done_' + key);
+      return `<div class="comp-gap-item${done ? ' gap-done' : ''}" id="gapitem_${key}" style="border-left:3px solid ${pColor(x.priority)};background:#fafafa;border-radius:0 4px 4px 0;margin-bottom:4px;padding:5px 8px">
+        <input type="checkbox" class="gap-check" onchange="toggleGapItem('${key}',this)" ${done ? 'checked' : ''}>
+        <div style="flex:1;font-size:11px;line-height:1.5">
+          <span style="font-size:10px;font-weight:700;color:${pColor(x.priority)};background:${pColor(x.priority)}18;padding:1px 5px;border-radius:3px">${x.priority}</span>
+          <b style="margin-left:4px">${x.item}</b><br>${x.action || ''}
+          ${x.example ? `<span style="color:#888;font-style:italic"> — ${x.example}</span>` : ''}
+        </div>
+      </div>`;
+    }).join('');
 
     let html = `<div style="font-size:11px;font-weight:700;color:#5e35b1;margin-bottom:8px">🤖 AI 深度分析（DeepSeek-V3）</div>`;
     if (ai.summary) html += `<div style="font-size:12px;color:#333;margin-bottom:10px;padding:8px;background:#fff;border-radius:4px;border:1px solid #ede9fe">${ai.summary}</div>`;
@@ -3389,7 +3513,7 @@ function generateCompetitorAnalysis() {
     if ((ai.competitor_weaknesses || []).length) html += `<div style="font-weight:600;font-size:11px;color:#d97706;margin:8px 0 4px">🎯 竞品弱点（你可超越）</div>${mkItems(ai.competitor_weaknesses, '#d97706', '▸')}`;
 
     const el = document.getElementById('comp-ai-result');
-    if (el) el.innerHTML = html;
+    if (el) { el.innerHTML = html; setTimeout(updateGapProgress, 0); }
   })
   .catch(() => {
     const el = document.getElementById('comp-ai-result');
@@ -3740,7 +3864,7 @@ async function fetchImageAdvice(name, brand, desc) {
   if (!el) return;
   const product = [brand, name, desc].filter(Boolean).join(' ');
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  const AI_URL = 'https://fruit-measured-warrior-valentine.trycloudflare.com/image-advice';
+  const AI_URL = 'https://bachelor-figured-hopes-protocol.trycloudflare.com/image-advice';
   const isZh = lang === 'zh';
 
   try {
@@ -3851,7 +3975,7 @@ async function fetchAndFillItem() {
   status.textContent = '⏳ 正在抓取 eBay 商品数据（约 5-10 秒）...';
   try {
     const r = await fetch(
-      `https://fruit-measured-warrior-valentine.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
+      `https://bachelor-figured-hopes-protocol.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
       { signal: AbortSignal.timeout(90000) }
     );
     if (!r.ok) { const e = await r.json().catch(()=>({})); throw new Error(e.detail || 'HTTP ' + r.status); }
@@ -3887,7 +4011,7 @@ async function runListingCompare() {
 
   let bp;
   try {
-    const AI_URL = 'https://fruit-measured-warrior-valentine.trycloudflare.com/ai-advice';
+    const AI_URL = 'https://bachelor-figured-hopes-protocol.trycloudflare.com/ai-advice';
     const resp = await fetch(AI_URL, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -4216,7 +4340,7 @@ function restoreHistory(index) {
 }
 
 // ===== CLIP IMAGE RECOGNITION =====
-const CLIP_URL = 'https://fruit-measured-warrior-valentine.trycloudflare.com';
+const CLIP_URL = 'https://bachelor-figured-hopes-protocol.trycloudflare.com';
 
 function handleImageDrop(e) {
   const file = e.dataTransfer.files[0];
@@ -4284,8 +4408,8 @@ function analyze() {
   }
   if (!excellentData) { alert('数据加载中，请稍候...'); return; }
 
-  // Try semantic service first (https://fruit-measured-warrior-valentine.trycloudflare.com), fall back to keyword matching
-  const semUrl = `https://fruit-measured-warrior-valentine.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
+  // Try semantic service first (https://bachelor-figured-hopes-protocol.trycloudflare.com), fall back to keyword matching
+  const semUrl = `https://bachelor-figured-hopes-protocol.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
   fetch(semUrl, { signal: AbortSignal.timeout(90000) })
     .then(r => r.ok ? r.json() : Promise.reject('!ok'))
     .then(semResults => {
@@ -4596,7 +4720,7 @@ document.addEventListener('keydown', e => {
 
 <script>
 // ── 管理面板入口 ──────────────────────────────────────
-const _ERR_ADMIN_URL = 'https://fruit-measured-warrior-valentine.trycloudflare.com';
+const _ERR_ADMIN_URL = 'https://bachelor-figured-hopes-protocol.trycloudflare.com';
 
 function openErrAdmin() {
   document.getElementById('err-admin-overlay').style.display = 'block';
