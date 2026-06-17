@@ -2742,7 +2742,7 @@ async function submitErrorReport(idx) {
   // Try backend
   let synced = false;
   try {
-    const r = await fetch('https://unity-mixing-adware-fuzzy.trycloudflare.com/error-report', {
+    const r = await fetch('https://item-hundred-demonstration-emission.trycloudflare.com/error-report', {
       method: 'POST', headers: {'Content-Type':'application/json'},
       body: JSON.stringify(report), signal: AbortSignal.timeout(90000),
     });
@@ -3111,15 +3111,84 @@ function renderRecommendations(results) {
       </div>
     </div>`;
 
-  panel.innerHTML = kanoHtml + recData.map(sec => `
-    <div class="rec-box">
-      <div class="rec-header">
-        <div class="rec-dot" style="background:${sec.color}"></div>
-        <div class="rec-box-title">${sec.title}</div>
+  const name = (document.getElementById('inp-name') || {}).value || '';
+  const brand = (document.getElementById('inp-brand') || {}).value || '';
+  const productDesc = [brand.trim(), name.trim()].filter(Boolean).join(' ');
+  const category = top.leaf || '';
+
+  panel.innerHTML = kanoHtml + `
+    <div id="smart-advice-container">
+      <div id="smart-advice-loading" style="padding:16px;text-align:center;color:#4F46E5;
+           font-size:12px;background:#f5f3ff;border-radius:8px;border:1px solid #ddd6fe">
+        ⏳ AI 正在为「${productDesc || category}」生成专属建议（约10秒）...
       </div>
-      <ul class="rec-list">${sec.recs.map(r=>`<li>${r}</li>`).join('')}</ul>
-    </div>
-  `).join('');
+    </div>`;
+
+  fetchSmartAdvice(productDesc, category);
+}
+
+// ===== AI SMART ADVICE =====
+async function fetchSmartAdvice(productName, category) {
+  const container = document.getElementById('smart-advice-container');
+  if (!container) return;
+
+  const SMART_URL = 'https://item-hundred-demonstration-emission.trycloudflare.com/smart-advice';
+
+  try {
+    const resp = await fetch(SMART_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ product_name: productName || category, category, site: currentSite }),
+      signal: AbortSignal.timeout(90000),
+    });
+    if (!resp.ok) throw new Error(resp.status);
+    const data = await resp.json();
+
+    const pColor = p => p === 'P0' ? '#dc2626' : p === 'P1' ? '#d97706' : '#16a34a';
+    const pBg    = p => p === 'P0' ? '#fde8e8' : p === 'P1' ? '#fffbf0' : '#f0fff4';
+
+    const summaryHtml = data.product_summary ? `
+      <div style="padding:10px 14px;background:#f5f3ff;border:1px solid #ede9fe;border-radius:8px;
+                  font-size:12px;color:#1e1b4b;font-weight:600;margin-bottom:14px;border-left:4px solid #7C3AED">
+        🤖 ${data.product_summary}
+      </div>` : '';
+
+    const sectionsHtml = (data.sections || []).map(sec => {
+      const itemsHtml = (sec.items || []).map(item => {
+        const prioTag = item.priority
+          ? `<span style="display:inline-block;margin-right:6px;padding:1px 6px;border-radius:3px;
+               font-size:10px;font-weight:700;background:${pBg(item.priority)};color:${pColor(item.priority)}">${item.priority}</span>`
+          : '';
+        const exHtml = item.example
+          ? `<div style="margin-top:4px;padding:4px 8px;background:#f8f8f8;border-radius:4px;
+               font-size:10px;color:#666;font-family:monospace;border-left:2px solid #ccc">📌 ${item.example}</div>`
+          : '';
+        return `<li style="padding:7px 0;border-bottom:1px solid #f3f3f3;list-style:none">
+          ${prioTag}<b style="font-size:12px">${item.label}</b>
+          <div style="font-size:11px;color:#555;margin-top:3px;line-height:1.6">${item.detail}</div>
+          ${exHtml}
+        </li>`;
+      }).join('');
+
+      return `<div class="rec-box" style="border-color:${sec.color};margin-bottom:12px">
+        <div class="rec-header">
+          <div class="rec-dot" style="background:${sec.color}"></div>
+          <div class="rec-box-title">${sec.icon} ${sec.title}</div>
+        </div>
+        <ul style="padding:0;margin:0">${itemsHtml}</ul>
+      </div>`;
+    }).join('');
+
+    container.innerHTML = summaryHtml + sectionsHtml;
+
+  } catch(e) {
+    container.innerHTML = `
+      <div style="padding:12px 14px;background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;
+                  color:#888;font-size:12px;line-height:1.8">
+        ⚠ AI 服务未启动（需运行 start_all.py）<br>
+        <span style="font-size:11px">上方 KANO 模型分析为规则引擎，已包含核心优化方向</span>
+      </div>`;
+  }
 }
 
 // ===== COMPETITOR ANALYSIS =====
@@ -3307,7 +3376,7 @@ async function fetchCompetitorItem(n) {
   status.textContent = '⏳ 抓取中（约 5-10 秒）...';
   try {
     const r = await fetch(
-      `https://unity-mixing-adware-fuzzy.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
+      `https://item-hundred-demonstration-emission.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
       { signal: AbortSignal.timeout(90000) }
     );
     if (!r.ok) { const e = await r.json().catch(()=>({})); throw new Error(e.detail || 'HTTP ' + r.status); }
@@ -3465,7 +3534,7 @@ function generateCompetitorAnalysis() {
 
   // AI deep analysis
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  fetch('https://unity-mixing-adware-fuzzy.trycloudflare.com/competitor-compare', {
+  fetch('https://item-hundred-demonstration-emission.trycloudflare.com/competitor-compare', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -3792,7 +3861,7 @@ async function fetchImageAdvice(name, brand, desc) {
   if (!el) return;
   const product = [brand, name, desc].filter(Boolean).join(' ');
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  const AI_URL = 'https://unity-mixing-adware-fuzzy.trycloudflare.com/image-advice';
+  const AI_URL = 'https://item-hundred-demonstration-emission.trycloudflare.com/image-advice';
   const isZh = lang === 'zh';
 
   try {
@@ -3903,7 +3972,7 @@ async function fetchAndFillItem() {
   status.textContent = '⏳ 正在抓取 eBay 商品数据（约 5-10 秒）...';
   try {
     const r = await fetch(
-      `https://unity-mixing-adware-fuzzy.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
+      `https://item-hundred-demonstration-emission.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
       { signal: AbortSignal.timeout(90000) }
     );
     if (!r.ok) { const e = await r.json().catch(()=>({})); throw new Error(e.detail || 'HTTP ' + r.status); }
@@ -3939,7 +4008,7 @@ async function runListingCompare() {
 
   let bp;
   try {
-    const AI_URL = 'https://unity-mixing-adware-fuzzy.trycloudflare.com/ai-advice';
+    const AI_URL = 'https://item-hundred-demonstration-emission.trycloudflare.com/ai-advice';
     const resp = await fetch(AI_URL, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -4280,7 +4349,7 @@ function restoreHistory(index) {
 }
 
 // ===== CLIP IMAGE RECOGNITION =====
-const CLIP_URL = 'https://unity-mixing-adware-fuzzy.trycloudflare.com';
+const CLIP_URL = 'https://item-hundred-demonstration-emission.trycloudflare.com';
 
 function handleImageDrop(e) {
   const file = e.dataTransfer.files[0];
@@ -4348,8 +4417,8 @@ function analyze() {
   }
   if (!excellentData) { alert('数据加载中，请稍候...'); return; }
 
-  // Try semantic service first (https://unity-mixing-adware-fuzzy.trycloudflare.com), fall back to keyword matching
-  const semUrl = `https://unity-mixing-adware-fuzzy.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
+  // Try semantic service first (https://item-hundred-demonstration-emission.trycloudflare.com), fall back to keyword matching
+  const semUrl = `https://item-hundred-demonstration-emission.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
   fetch(semUrl, { signal: AbortSignal.timeout(90000) })
     .then(r => r.ok ? r.json() : Promise.reject('!ok'))
     .then(semResults => {
@@ -4660,7 +4729,7 @@ document.addEventListener('keydown', e => {
 
 <script>
 // ── 管理面板入口 ──────────────────────────────────────
-const _ERR_ADMIN_URL = 'https://unity-mixing-adware-fuzzy.trycloudflare.com';
+const _ERR_ADMIN_URL = 'https://item-hundred-demonstration-emission.trycloudflare.com';
 
 function openErrAdmin() {
   document.getElementById('err-admin-overlay').style.display = 'block';
