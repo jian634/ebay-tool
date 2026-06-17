@@ -2742,7 +2742,7 @@ async function submitErrorReport(idx) {
   // Try backend
   let synced = false;
   try {
-    const r = await fetch('https://serum-johnny-absence-column.trycloudflare.com/error-report', {
+    const r = await fetch('https://explicit-accepted-mins-jake.trycloudflare.com/error-report', {
       method: 'POST', headers: {'Content-Type':'application/json'},
       body: JSON.stringify(report), signal: AbortSignal.timeout(90000),
     });
@@ -3124,132 +3124,140 @@ function renderRecommendations(results) {
 
 // ===== COMPETITOR ANALYSIS =====
 function getProductKeywordChecks(productType) {
+  // 共用正则——提取公共模式减少重复
+  const _fitment  = /for\s+\d{4}|fits?\b|fitment|compatible|suit(?:able)?|interchange|\d{4}[-–]\d{2,4}/i;
+  const _oe       = /OE\b|OEM\b|part[\s#]*(?:number|no\.?)|P\/N|\bPN\b|replaces/i;
+  const _install  = /direct\s*fit|plug.?play|bolt.?on|oem\s+replacement|drop.?in|no\s+(?:mod|cut|drill|weld|wiring)|easy\s+install|direct\s+swap/i;
+  const _qty      = /\bkit\b|set\s+of\s+\d+|\d+\s*pcs?|\bpair\b|x\d+|\d+\s*piece|\bpack\b|qty[\s:]*\d+/i;
+  const _warranty = /\d+[\s-]yr?s?\.?\s*warrant|\blifetime\s+warrant|\bwarranty\s+included/i;
+  const _position = /\bfront\b|\brear\b|\bleft\b|\bright\b|driver|passenger/i;
+
   const checks = {
     lighting: {
       must: [
-        { label: '兼容车型', pattern: /for\s+\d{4}[-–]\d{4}|for\s+\d{4}\s+\w+|compatible|fits/i, tip: '标题加"For [年份] [车型]"，格式参考：For 2018-2022 Honda Civic' },
+        { label: '兼容车型', pattern: _fitment, tip: '标题加"For [年份] [车型]"，格式参考：For 2018-2022 Honda Civic' },
         { label: 'LED声明', pattern: /\bLED\b/i, tip: '标题中必须出现"LED"，买家用此词搜索' },
-        { label: '灯具类型', pattern: /headlight|tail\s?light|fog\s?light|daytime|DRL|turn\s?signal/i, tip: '明确写出灯具类型（Headlight/Taillight/Fog Light等）' },
-        { label: '安装方式', pattern: /plug.?play|bolt.?on|direct\s+replacement|drop.?in/i, tip: '加"Plug&Play"或"Direct Replacement"消除安装顾虑' },
+        { label: '灯具类型', pattern: /head\s?light|tail\s?(?:light|lamp)|fog\s?(?:light|lamp)|daytime|DRL|turn\s?signal|running\s+light|marker\s?light/i, tip: '明确写出灯具类型（Headlight/Taillight/Fog Light等）' },
+        { label: '安装方式', pattern: /plug.?play|bolt.?on|direct\s*(?:fit|replacement)|drop.?in|no\s+(?:mod|wiring|cut)|easy\s+install/i, tip: '加"Plug&Play"或"Direct Replacement"消除安装顾虑' },
       ],
       expect: [
         { label: '认证标准', pattern: /\bDOT\b|\bSAE\b|\bFMVSS\b/i, tip: '加"DOT Certified"提升信任度，eBay搜索有过滤项' },
         { label: '色温参数', pattern: /\d{4}K\b/i, tip: '加色温如"6000K"，买家会用此参数筛选' },
         { label: '亮度流明', pattern: /\d+\s*lm\b|\d+\s*lumen/i, tip: '加流明数如"3000lm"，是买家对比性能的核心指标' },
-        { label: '壳体颜色', pattern: /black\s+housing|chrome\s+housing|smoke|clear\s+lens/i, tip: '写明外壳颜色如"Black Housing"，改装买家强需求' },
+        { label: '壳体颜色', pattern: /black\s+hous(?:ing)?|chrome\s+hous(?:ing)?|smok(?:ed?)|clear\s+lens|tinted|amber/i, tip: '写明外壳颜色如"Black Housing"，改装买家强需求' },
       ],
       wow: [
-        { label: '防水等级', pattern: /\bIP6[567]\b|\bIP[67]\b|waterproof/i, tip: '加"IP67 Waterproof"是高价值卖点，可加入卖点描述' },
+        { label: '防水等级', pattern: /\bIP6[567]\b|\bIP[67]\b|waterproof|water[\s-]?resistant/i, tip: '加"IP67 Waterproof"是高价值卖点，可加入卖点描述' },
         { label: '顺序转向', pattern: /sequential|dynamic\s+turn/i, tip: '有顺序转向功能必写，是溢价功能，买家愿意多付钱' },
-        { label: '质保年限', pattern: /\d+[\s-]year\s+warrant|\blifetime\s+warrant/i, tip: '写明质保年限如"2-Year Warranty"，显著降低购买疑虑' },
+        { label: '质保年限', pattern: _warranty, tip: '写明质保年限如"2-Year Warranty"，显著降低购买疑虑' },
       ],
     },
     brake: {
       must: [
-        { label: '兼容车型', pattern: /for\s+\d{4}[-–]\d{4}|for\s+\d{4}\s+\w+|compatible|fits/i, tip: '标题加"For [年份] [车型]"，刹车安全件买家极重视兼容性' },
-        { label: '部件名称', pattern: /brake\s+pad|brake\s+rotor|brake\s+disc|brake\s+caliper|brake\s+kit/i, tip: '明确写出刹车件类型（Brake Pad/Rotor/Caliper等）' },
-        { label: '轴向位置', pattern: /\bfront\b|\brear\b|\bfront\s*&\s*rear\b/i, tip: '必须写前/后（Front/Rear），安全件买家不会猜' },
-        { label: '安装方式', pattern: /direct\s+fit|plug.?play|bolt.?on|OEM\s+replacement/i, tip: '加"Direct Fit"或"OEM Replacement"增加信任' },
+        { label: '兼容车型', pattern: _fitment, tip: '标题加"For [年份] [车型]"，刹车安全件买家极重视兼容性' },
+        { label: '部件名称', pattern: /brake\s*(?:pad|rotor|disc|caliper|kit)|disc\s+brake|\bbrakes?\b/i, tip: '明确写出刹车件类型（Brake Pad/Rotor/Caliper等）' },
+        { label: '轴向位置', pattern: /\bfront\b|\brear\b|\bf\s*[+&]\s*r\b/i, tip: '必须写前/后（Front/Rear），安全件买家不会猜' },
+        { label: '安装方式', pattern: _install, tip: '加"Direct Fit"或"OEM Replacement"增加信任' },
       ],
       expect: [
-        { label: '材质说明', pattern: /ceramic|semi.?metallic|organic|carbon/i, tip: '写明材质如"Ceramic"，买家用材质判断性能档次' },
-        { label: 'OE编号', pattern: /OE\b|OEM\b|OEM#|part\s+number|\bPN\b/i, tip: '提供OE件号可大幅提升精准搜索流量' },
-        { label: '套装件数', pattern: /\bkit\b|set\s+of\s+\d+|\d+\s*pcs?|\bpair\b/i, tip: '写清套装内容如"Set of 4"避免买家误解' },
-        { label: '认证标准', pattern: /\bFMSI\b|\bSAE\b|\bECE\b|\bISO\b/i, tip: '有FMSI/SAE认证必须写，刹车安全件买家重视认证' },
+        { label: '材质说明', pattern: /ceramic|semi.?metal(?:lic)?|organic|carbon|kevlar/i, tip: '写明材质如"Ceramic"，买家用材质判断性能档次' },
+        { label: 'OE编号', pattern: _oe, tip: '提供OE件号可大幅提升精准搜索流量' },
+        { label: '套装件数', pattern: _qty, tip: '写清套装内容如"Set of 4"避免买家误解' },
+        { label: '认证标准', pattern: /\bFMSI\b|\bSAE\b|\bECE\b|\bISO\b|\bR90\b/i, tip: '有FMSI/SAE认证必须写，刹车安全件买家重视认证' },
       ],
       wow: [
-        { label: '低粉尘', pattern: /low\s+dust|dust.?free/i, tip: '"Low Dust"是改装买家的溢价点，清洁车轮需求强' },
+        { label: '低粉尘', pattern: /low[\s-]dust|dust.?free/i, tip: '"Low Dust"是改装买家的溢价点，清洁车轮需求强' },
         { label: '静音技术', pattern: /quiet|noise.?free|silent|shim/i, tip: '"Quiet Operation"或"With Shims"是常见升级卖点' },
-        { label: '质保年限', pattern: /\d+[\s-]year\s+warrant|\blifetime\s+warrant/i, tip: '刹车件写质保尤其重要，可写"Lifetime Warranty"' },
+        { label: '质保年限', pattern: _warranty, tip: '刹车件写质保尤其重要，可写"Lifetime Warranty"' },
       ],
     },
     suspension: {
       must: [
-        { label: '兼容车型', pattern: /for\s+\d{4}[-–]\d{4}|for\s+\d{4}\s+\w+|compatible|fits/i, tip: '标题加兼容年份车型，悬挂件需精确匹配' },
-        { label: '部件名称', pattern: /shock|strut|spring|control\s+arm|ball\s+joint|sway\s+bar|tie\s+rod/i, tip: '明确写出悬挂件名称' },
-        { label: '安装位置', pattern: /\bfront\b|\brear\b|\bleft\b|\bright\b|driver|passenger/i, tip: '必须注明前后左右位置，悬挂件买家极重视' },
+        { label: '兼容车型', pattern: _fitment, tip: '标题加兼容年份车型，悬挂件需精确匹配' },
+        { label: '部件名称', pattern: /shock|strut|spring|control\s+arm|ball\s+joint|sway\s+bar|tie\s+rod|stabilizer/i, tip: '明确写出悬挂件名称' },
+        { label: '安装位置', pattern: _position, tip: '必须注明前后左右位置，悬挂件买家极重视' },
       ],
       expect: [
-        { label: 'OE编号', pattern: /OE\b|OEM\b|part\s+number|\bPN\b/i, tip: '提供OE件号可大幅提升精准流量' },
-        { label: '材质/规格', pattern: /\d+mm|heavy\s+duty|heavy-duty|forged|aluminum|steel/i, tip: '写明规格参数或材质，买家常用此筛选' },
-        { label: '套装说明', pattern: /\bpair\b|set\s+of\s+\d+|\bkit\b/i, tip: '注明是单支还是成对，避免退货纠纷' },
+        { label: 'OE编号', pattern: _oe, tip: '提供OE件号可大幅提升精准流量' },
+        { label: '材质/规格', pattern: /\d+mm|heavy[\s-]duty|forged|alum(?:in(?:um|ium))|steel|cast\s+iron/i, tip: '写明规格参数或材质，买家常用此筛选' },
+        { label: '套装说明', pattern: /\bpair\b|set\s+of\s+\d+|\bkit\b|x2\b/i, tip: '注明是单支还是成对，避免退货纠纷' },
       ],
       wow: [
-        { label: '质保', pattern: /\d+[\s-]year\s+warrant|\blifetime\s+warrant/i, tip: '悬挂件写质保显著降低购买疑虑' },
-        { label: '升级型号', pattern: /performance|sport|heavy\s+duty|upgraded|reinforced/i, tip: '"Performance"或"Heavy Duty"是溢价关键词' },
+        { label: '质保', pattern: _warranty, tip: '悬挂件写质保显著降低购买疑虑' },
+        { label: '升级型号', pattern: /performance|sport|heavy[\s-]duty|upgraded|reinforced/i, tip: '"Performance"或"Heavy Duty"是溢价关键词' },
       ],
     },
     filter: {
       must: [
-        { label: '兼容车型', pattern: /for\s+\d{4}[-–]\d{4}|for\s+\d{4}\s+\w+|compatible|fits/i, tip: '标题加兼容车型，滤清器买家需精确匹配' },
-        { label: '滤清器类型', pattern: /air\s+filter|oil\s+filter|fuel\s+filter|cabin\s+filter|cabin\s+air/i, tip: '明确写出类型（Air/Oil/Fuel/Cabin Filter）' },
-        { label: 'OE编号', pattern: /OE\b|OEM\b|replaces|part\s+number/i, tip: '写"Replaces [件号]"是滤清器最强转化手段' },
+        { label: '兼容车型', pattern: _fitment, tip: '标题加兼容车型，滤清器买家需精确匹配' },
+        { label: '滤清器类型', pattern: /air\s+filter|oil\s+filter|fuel\s+filter|cabin\s+(?:air\s+)?filter/i, tip: '明确写出类型（Air/Oil/Fuel/Cabin Filter）' },
+        { label: 'OE编号', pattern: _oe, tip: '写"Replaces [件号]"是滤清器最强转化手段' },
       ],
       expect: [
-        { label: '过滤效率', pattern: /\d+\s*micron|\d+%\s*efficiency|HEPA|high\s+flow/i, tip: '写过滤精度如"99% Efficiency"或"HEPA Grade"' },
-        { label: '套装数量', pattern: /pack\s+of\s+\d+|\d+\s*pack|\bset\b/i, tip: '多件装要写清数量如"Pack of 3"' },
+        { label: '过滤效率', pattern: /\d+\s*micron|\d+%\s*(?:efficiency|filtration)|HEPA|high[\s-]flow|multi.?layer/i, tip: '写过滤精度如"99% Efficiency"或"HEPA Grade"' },
+        { label: '套装数量', pattern: /pack\s+of\s+\d+|\d+\s*pack|\bset\b|x\d+/i, tip: '多件装要写清数量如"Pack of 3"' },
       ],
       wow: [
-        { label: '寿命承诺', pattern: /\d+[\s,]+mile|\d+k\s+mile|long\s+life/i, tip: '写使用寿命如"Up to 30,000 Miles"增加价值感' },
+        { label: '寿命承诺', pattern: /\d+[,\s]+mile|\d+k\s+mile|long[\s-]life/i, tip: '写使用寿命如"Up to 30,000 Miles"增加价值感' },
         { label: '质保', pattern: /warrant/i, tip: '有质保的滤清器写出来是差异化卖点' },
       ],
     },
     body: {
       must: [
-        { label: '兼容车型', pattern: /for\s+\d{4}[-–]\d{4}|for\s+\d{4}\s+\w+|compatible|fits/i, tip: '标题加兼容车型，车身件需精确匹配' },
-        { label: '部件名称', pattern: /bumper|fender|hood|door|mirror|grille|spoiler|side\s+skirt/i, tip: '写出具体部件名称' },
-        { label: '安装位置', pattern: /\bfront\b|\brear\b|\bleft\b|\bright\b|driver|passenger/i, tip: '必须注明位置（Front/Rear/Left/Right）' },
+        { label: '兼容车型', pattern: _fitment, tip: '标题加兼容车型，车身件需精确匹配' },
+        { label: '部件名称', pattern: /bumper|fender|hood|door|mirror|grille|spoiler|side\s+skirt|valance|lip/i, tip: '写出具体部件名称' },
+        { label: '安装位置', pattern: _position, tip: '必须注明位置（Front/Rear/Left/Right）' },
       ],
       expect: [
-        { label: '材质', pattern: /ABS|carbon\s+fiber|polyurethane|fiberglass|steel|aluminum/i, tip: '写材质如"ABS Plastic"或"Carbon Fiber"' },
-        { label: '表面处理', pattern: /primed|painted|unpainted|textured|gloss|matte/i, tip: '说明是否已喷漆（Primed/Painted/Unpainted）' },
-        { label: '安装方式', pattern: /direct\s+fit|bolt.?on|plug.?play|no\s+drill/i, tip: '写"Direct Fit"或"No Drill"消除安装顾虑' },
+        { label: '材质', pattern: /ABS|carbon\s*fiber|polyurethane|fiberglass|steel|alum(?:in(?:um|ium))/i, tip: '写材质如"ABS Plastic"或"Carbon Fiber"' },
+        { label: '表面处理', pattern: /prim(?:ed|er)|painted|unpainted|textured|gloss|matte|raw/i, tip: '说明是否已喷漆（Primed/Painted/Unpainted）' },
+        { label: '安装方式', pattern: _install, tip: '写"Direct Fit"或"No Drill"消除安装顾虑' },
       ],
       wow: [
-        { label: '颜色选项', pattern: /multiple\s+color|custom\s+color|color\s+match/i, tip: '"Color Match Available"可增加联系卖家咨询率' },
+        { label: '颜色选项', pattern: /multiple\s+color|custom\s+color|color\s+match|color\s+option/i, tip: '"Color Match Available"可增加联系卖家咨询率' },
         { label: '质保', pattern: /warrant/i, tip: '车身件有质保是差异化优势' },
       ],
     },
     exhaust: {
       must: [
-        { label: '兼容车型', pattern: /for\s+\d{4}[-–]\d{4}|for\s+\d{4}\s+\w+|compatible|fits/i, tip: '标题加兼容车型，排气件需精确匹配' },
-        { label: '部件名称', pattern: /exhaust|muffler|downpipe|header|catalytic|cat\s+back/i, tip: '写出排气件类型（Exhaust/Muffler/Header等）' },
-        { label: '材质', pattern: /stainless\s+steel|stainless|aluminized|titanium/i, tip: '必须写材质，不锈钢是最重要卖点' },
+        { label: '兼容车型', pattern: _fitment, tip: '标题加兼容车型，排气件需精确匹配' },
+        { label: '部件名称', pattern: /exhaust|muffler|downpipe|down\s+pipe|header|catalytic|cat[\s-]back|axle[\s-]back/i, tip: '写出排气件类型（Exhaust/Muffler/Header等）' },
+        { label: '材质', pattern: /stainless(?:\s+steel)?|aluminized|titanium|T304|T409/i, tip: '必须写材质，不锈钢是最重要卖点' },
       ],
       expect: [
-        { label: '管径规格', pattern: /\d+(\.\d+)?["'']\s*inlet|\d+(\.\d+)?["'']\s*outlet|\d+mm/i, tip: '写进出口管径如"2.5" Inlet / 3" Outlet"' },
-        { label: '安装方式', pattern: /direct\s+fit|bolt.?on|no\s+weld|clamp.?on/i, tip: '"No Weld"或"Bolt-On"是无改装买家首要需求' },
-        { label: '声音描述', pattern: /aggressive|deep\s+tone|mild|sport\s+sound/i, tip: '描述排气声浪如"Aggressive Sound"' },
+        { label: '管径规格', pattern: /\d+(?:\.\d+)?["""''′]\s*(?:inlet|outlet|id|od|in\b|out\b)|\d+(?:\.\d+)?"\s*(?:pipe|tube)?|\d+mm/i, tip: '写进出口管径如"2.5" Inlet / 3" Outlet"' },
+        { label: '安装方式', pattern: /direct\s*fit|bolt.?on|no\s+weld|clamp.?on|weld.?on/i, tip: '"No Weld"或"Bolt-On"是无改装买家首要需求' },
+        { label: '声音描述', pattern: /aggressive|deep\s+tone|mild|sport\s+sound|loud|rumble/i, tip: '描述排气声浪如"Aggressive Sound"' },
       ],
       wow: [
-        { label: '出口样式', pattern: /dual\s+outlet|dual\s+tip|single\s+tip|rolled\s+tip|burnt\s+tip/i, tip: '写出口样式如"Dual Rolled Tips"是改装卖点' },
+        { label: '出口样式', pattern: /dual\s+(?:outlet|tip)|single\s+tip|rolled\s+tip|burnt\s+tip|angle\s+tip/i, tip: '写出口样式如"Dual Rolled Tips"是改装卖点' },
         { label: '质保', pattern: /warrant/i, tip: '排气件写质保增加信任' },
       ],
     },
     electrical: {
       must: [
-        { label: '兼容车型', pattern: /for\s+\d{4}[-–]\d{4}|for\s+\d{4}\s+\w+|compatible|fits/i, tip: '标题加兼容车型，电气件需精确匹配' },
-        { label: '部件名称', pattern: /sensor|switch|relay|module|actuator|alternator|starter|fuse/i, tip: '写出具体电气件名称' },
-        { label: 'OE编号', pattern: /OE\b|OEM\b|replaces|part\s+number|\bPN\b/i, tip: '电气件OE件号是精准流量的关键' },
+        { label: '兼容车型', pattern: _fitment, tip: '标题加兼容车型，电气件需精确匹配' },
+        { label: '部件名称', pattern: /sensor|switch|relay|module|actuator|alternator|starter|fuse|solenoid|ignition/i, tip: '写出具体电气件名称' },
+        { label: 'OE编号', pattern: _oe, tip: '电气件OE件号是精准流量的关键' },
       ],
       expect: [
-        { label: '安装方式', pattern: /plug.?play|direct\s+fit|bolt.?on|no\s+programming/i, tip: '"Plug&Play"或"No Programming Required"消除安装疑虑' },
-        { label: '电压规格', pattern: /\d+V|\d+\s*volt|12V|24V/i, tip: '写明电压规格如"12V"，买家会对比确认' },
+        { label: '安装方式', pattern: /plug.?play|direct\s*fit|bolt.?on|no\s+(?:programming|coding|mod)/i, tip: '"Plug&Play"或"No Programming Required"消除安装疑虑' },
+        { label: '电压规格', pattern: /\d+\s*[Vv](?:olt)?|\b12V\b|\b24V\b/i, tip: '写明电压规格如"12V"，买家会对比确认' },
       ],
       wow: [
-        { label: '质保', pattern: /\d+[\s-]year\s+warrant|\blifetime\s+warrant/i, tip: '电气件写质保尤其重要，故障风险高' },
+        { label: '质保', pattern: _warranty, tip: '电气件写质保尤其重要，故障风险高' },
         { label: '认证', pattern: /\bOBD\b|\bISO\b|\bCE\b|certified/i, tip: '有认证标准写出来增加专业感' },
       ],
     },
     general: {
       must: [
-        { label: '兼容车型', pattern: /for\s+\d{4}[-–]\d{4}|for\s+\d{4}\s+\w+|compatible|fits/i, tip: '标题加兼容车型年份信息' },
-        { label: '品牌', pattern: /[A-Z][a-z]+brand|\bOEM\b|genuine|\bAftermarket\b/i, tip: '说明品牌或OEM/Aftermarket属性' },
-        { label: '安装方式', pattern: /direct\s+fit|plug.?play|bolt.?on|OEM\s+replacement/i, tip: '加"Direct Fit"降低买家安装顾虑' },
+        { label: '兼容车型', pattern: _fitment, tip: '标题加兼容车型年份信息' },
+        { label: '品牌属性', pattern: /\bOEM\b|\bgenuine\b|\baftermarket\b|\bbranded\b/i, tip: '说明品牌或OEM/Aftermarket属性' },
+        { label: '安装方式', pattern: _install, tip: '加"Direct Fit"降低买家安装顾虑' },
       ],
       expect: [
-        { label: 'OE编号', pattern: /OE\b|OEM\b|part\s+number|\bPN\b/i, tip: '写OE件号可提升精准搜索流量' },
-        { label: '材质/规格', pattern: /stainless|aluminum|heavy\s+duty|\d+mm/i, tip: '写材质或规格参数' },
+        { label: 'OE编号', pattern: _oe, tip: '写OE件号可提升精准搜索流量' },
+        { label: '材质/规格', pattern: /stainless|alum(?:in(?:um|ium))|heavy[\s-]duty|\d+mm/i, tip: '写材质或规格参数' },
       ],
       wow: [
         { label: '质保', pattern: /warrant/i, tip: '有质保写出来作为差异化卖点' },
@@ -3299,7 +3307,7 @@ async function fetchCompetitorItem(n) {
   status.textContent = '⏳ 抓取中（约 5-10 秒）...';
   try {
     const r = await fetch(
-      `https://serum-johnny-absence-column.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
+      `https://explicit-accepted-mins-jake.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
       { signal: AbortSignal.timeout(90000) }
     );
     if (!r.ok) { const e = await r.json().catch(()=>({})); throw new Error(e.detail || 'HTTP ' + r.status); }
@@ -3457,7 +3465,7 @@ function generateCompetitorAnalysis() {
 
   // AI deep analysis
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  fetch('https://serum-johnny-absence-column.trycloudflare.com/competitor-compare', {
+  fetch('https://explicit-accepted-mins-jake.trycloudflare.com/competitor-compare', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -3784,7 +3792,7 @@ async function fetchImageAdvice(name, brand, desc) {
   if (!el) return;
   const product = [brand, name, desc].filter(Boolean).join(' ');
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  const AI_URL = 'https://serum-johnny-absence-column.trycloudflare.com/image-advice';
+  const AI_URL = 'https://explicit-accepted-mins-jake.trycloudflare.com/image-advice';
   const isZh = lang === 'zh';
 
   try {
@@ -3895,7 +3903,7 @@ async function fetchAndFillItem() {
   status.textContent = '⏳ 正在抓取 eBay 商品数据（约 5-10 秒）...';
   try {
     const r = await fetch(
-      `https://serum-johnny-absence-column.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
+      `https://explicit-accepted-mins-jake.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
       { signal: AbortSignal.timeout(90000) }
     );
     if (!r.ok) { const e = await r.json().catch(()=>({})); throw new Error(e.detail || 'HTTP ' + r.status); }
@@ -3931,7 +3939,7 @@ async function runListingCompare() {
 
   let bp;
   try {
-    const AI_URL = 'https://serum-johnny-absence-column.trycloudflare.com/ai-advice';
+    const AI_URL = 'https://explicit-accepted-mins-jake.trycloudflare.com/ai-advice';
     const resp = await fetch(AI_URL, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -4260,7 +4268,7 @@ function restoreHistory(index) {
 }
 
 // ===== CLIP IMAGE RECOGNITION =====
-const CLIP_URL = 'https://serum-johnny-absence-column.trycloudflare.com';
+const CLIP_URL = 'https://explicit-accepted-mins-jake.trycloudflare.com';
 
 function handleImageDrop(e) {
   const file = e.dataTransfer.files[0];
@@ -4328,8 +4336,8 @@ function analyze() {
   }
   if (!excellentData) { alert('数据加载中，请稍候...'); return; }
 
-  // Try semantic service first (https://serum-johnny-absence-column.trycloudflare.com), fall back to keyword matching
-  const semUrl = `https://serum-johnny-absence-column.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
+  // Try semantic service first (https://explicit-accepted-mins-jake.trycloudflare.com), fall back to keyword matching
+  const semUrl = `https://explicit-accepted-mins-jake.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
   fetch(semUrl, { signal: AbortSignal.timeout(90000) })
     .then(r => r.ok ? r.json() : Promise.reject('!ok'))
     .then(semResults => {
@@ -4640,7 +4648,7 @@ document.addEventListener('keydown', e => {
 
 <script>
 // ── 管理面板入口 ──────────────────────────────────────
-const _ERR_ADMIN_URL = 'https://serum-johnny-absence-column.trycloudflare.com';
+const _ERR_ADMIN_URL = 'https://explicit-accepted-mins-jake.trycloudflare.com';
 
 function openErrAdmin() {
   document.getElementById('err-admin-overlay').style.display = 'block';
