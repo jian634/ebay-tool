@@ -2742,7 +2742,7 @@ async function submitErrorReport(idx) {
   // Try backend
   let synced = false;
   try {
-    const r = await fetch('https://explicit-accepted-mins-jake.trycloudflare.com/error-report', {
+    const r = await fetch('https://unity-mixing-adware-fuzzy.trycloudflare.com/error-report', {
       method: 'POST', headers: {'Content-Type':'application/json'},
       body: JSON.stringify(report), signal: AbortSignal.timeout(90000),
     });
@@ -3307,7 +3307,7 @@ async function fetchCompetitorItem(n) {
   status.textContent = '⏳ 抓取中（约 5-10 秒）...';
   try {
     const r = await fetch(
-      `https://explicit-accepted-mins-jake.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
+      `https://unity-mixing-adware-fuzzy.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
       { signal: AbortSignal.timeout(90000) }
     );
     if (!r.ok) { const e = await r.json().catch(()=>({})); throw new Error(e.detail || 'HTTP ' + r.status); }
@@ -3465,7 +3465,7 @@ function generateCompetitorAnalysis() {
 
   // AI deep analysis
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  fetch('https://explicit-accepted-mins-jake.trycloudflare.com/competitor-compare', {
+  fetch('https://unity-mixing-adware-fuzzy.trycloudflare.com/competitor-compare', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -3792,7 +3792,7 @@ async function fetchImageAdvice(name, brand, desc) {
   if (!el) return;
   const product = [brand, name, desc].filter(Boolean).join(' ');
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  const AI_URL = 'https://explicit-accepted-mins-jake.trycloudflare.com/image-advice';
+  const AI_URL = 'https://unity-mixing-adware-fuzzy.trycloudflare.com/image-advice';
   const isZh = lang === 'zh';
 
   try {
@@ -3903,7 +3903,7 @@ async function fetchAndFillItem() {
   status.textContent = '⏳ 正在抓取 eBay 商品数据（约 5-10 秒）...';
   try {
     const r = await fetch(
-      `https://explicit-accepted-mins-jake.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
+      `https://unity-mixing-adware-fuzzy.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
       { signal: AbortSignal.timeout(90000) }
     );
     if (!r.ok) { const e = await r.json().catch(()=>({})); throw new Error(e.detail || 'HTTP ' + r.status); }
@@ -3939,7 +3939,7 @@ async function runListingCompare() {
 
   let bp;
   try {
-    const AI_URL = 'https://explicit-accepted-mins-jake.trycloudflare.com/ai-advice';
+    const AI_URL = 'https://unity-mixing-adware-fuzzy.trycloudflare.com/ai-advice';
     const resp = await fetch(AI_URL, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -3996,6 +3996,17 @@ function zhField(key) { return FIELD_ZH[(key||'').toLowerCase()] || ''; }
 function zhPrice(label) { return PRICE_ZH[label] || label; }
 function zhImg(type)  { return IMG_ZH[type] || type; }
 
+function fuzzySpecMatch(aiKey, mySpecsMap) {
+  const norm = k => k.toLowerCase().replace(/[/\-()+]/g, ' ').split(/\s+/).filter(Boolean);
+  const ai = norm(aiKey);
+  for (const mk of mySpecsMap.keys()) {
+    if (mk === aiKey.toLowerCase()) return mk;
+    const mu = norm(mk);
+    if (ai.every(t => mu.includes(t)) || mu.every(t => ai.includes(t))) return mk;
+  }
+  return null;
+}
+
 function renderListingCompare({ bp, title, price, imgCount, mySpecs }) {
   const resultEl = document.getElementById('lc-result');
 
@@ -4024,8 +4035,9 @@ function renderListingCompare({ bp, title, price, imgCount, mySpecs }) {
   const specsMissing = {P0:[], P1:[], P2:[]};
   const specsFound = [];
   (bp.specifics || []).forEach(s => {
-    const found = mySpecs.has(s.key.toLowerCase());
-    if (found) { specsFound.push(s); }
+    const matchedKey = fuzzySpecMatch(s.key, mySpecs);
+    const found = matchedKey !== null;
+    if (found) { specsFound.push({...s, _mk: matchedKey}); }
     else {
       specsMissing[s.priority] = specsMissing[s.priority] || [];
       specsMissing[s.priority].push(s);
@@ -4112,7 +4124,7 @@ function renderListingCompare({ bp, title, price, imgCount, mySpecs }) {
   const okRows = specsFound.map(s => {
     const zh = zhField(s.key);
     return `<div style="padding:4px 10px;border-radius:4px;background:#f0fff4;margin-bottom:3px;font-size:11px">
-      <span class="tag-ok">✓</span> ${s.key}${zh ? `<span style="color:#aaa"> / ${zh}</span>` : ''}：<span style="color:#555">${mySpecs.get(s.key.toLowerCase()) || ''}</span>
+      <span class="tag-ok">✓</span> ${s.key}${zh ? `<span style="color:#aaa"> / ${zh}</span>` : ''}：<span style="color:#555">${mySpecs.get(s._mk || s.key.toLowerCase()) || ''}</span>
     </div>`;
   }).join('');
 
@@ -4268,7 +4280,7 @@ function restoreHistory(index) {
 }
 
 // ===== CLIP IMAGE RECOGNITION =====
-const CLIP_URL = 'https://explicit-accepted-mins-jake.trycloudflare.com';
+const CLIP_URL = 'https://unity-mixing-adware-fuzzy.trycloudflare.com';
 
 function handleImageDrop(e) {
   const file = e.dataTransfer.files[0];
@@ -4336,8 +4348,8 @@ function analyze() {
   }
   if (!excellentData) { alert('数据加载中，请稍候...'); return; }
 
-  // Try semantic service first (https://explicit-accepted-mins-jake.trycloudflare.com), fall back to keyword matching
-  const semUrl = `https://explicit-accepted-mins-jake.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
+  // Try semantic service first (https://unity-mixing-adware-fuzzy.trycloudflare.com), fall back to keyword matching
+  const semUrl = `https://unity-mixing-adware-fuzzy.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
   fetch(semUrl, { signal: AbortSignal.timeout(90000) })
     .then(r => r.ok ? r.json() : Promise.reject('!ok'))
     .then(semResults => {
@@ -4648,7 +4660,7 @@ document.addEventListener('keydown', e => {
 
 <script>
 // ── 管理面板入口 ──────────────────────────────────────
-const _ERR_ADMIN_URL = 'https://explicit-accepted-mins-jake.trycloudflare.com';
+const _ERR_ADMIN_URL = 'https://unity-mixing-adware-fuzzy.trycloudflare.com';
 
 function openErrAdmin() {
   document.getElementById('err-admin-overlay').style.display = 'block';
