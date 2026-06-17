@@ -2742,7 +2742,7 @@ async function submitErrorReport(idx) {
   // Try backend
   let synced = false;
   try {
-    const r = await fetch('https://cottage-helicopter-speeds-theology.trycloudflare.com/error-report', {
+    const r = await fetch('https://serum-johnny-absence-column.trycloudflare.com/error-report', {
       method: 'POST', headers: {'Content-Type':'application/json'},
       body: JSON.stringify(report), signal: AbortSignal.timeout(90000),
     });
@@ -3299,7 +3299,7 @@ async function fetchCompetitorItem(n) {
   status.textContent = '⏳ 抓取中（约 5-10 秒）...';
   try {
     const r = await fetch(
-      `https://cottage-helicopter-speeds-theology.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
+      `https://serum-johnny-absence-column.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
       { signal: AbortSignal.timeout(90000) }
     );
     if (!r.ok) { const e = await r.json().catch(()=>({})); throw new Error(e.detail || 'HTTP ' + r.status); }
@@ -3434,19 +3434,7 @@ function generateCompetitorAnalysis() {
     gapHTML = `<div class="comp-ok">✅ 恭喜！您的listing在 ${typeLabel} 核心维度上已与竞品持平或领先，建议继续优化价格与图片。</div>`;
   }
 
-  const compScoreBars = compsList.map((c, i) => `
-    <div class="comp-score-row">
-      <div class="comp-score-label">竞品${compsList.length > 1 ? i+1 : ''}</div>
-      ${scoreBar(c.score, '#4F46E5')}
-      <div class="comp-score-val" style="color:#4F46E5">${c.score}%</div>
-    </div>`).join('');
-  const scoreSection = hasMyProduct ? compScoreBars + `
-    <div class="comp-score-row">
-      <div class="comp-score-label">我的</div>
-      ${scoreBar(myScore, myScore >= maxCompScore ? '#16a34a' : '#ef4444')}
-      <div class="comp-score-val" style="color:${myScore >= maxCompScore ? '#16a34a' : '#ef4444'}">${myScore}%</div>
-    </div>` : compScoreBars + `
-    <div style="font-size:11px;color:#888;margin-top:4px">填写您的商品信息后可生成对比分析</div>`;
+  const scoreSection = '';
 
   const aiPlaceholder = `<div id="comp-ai-result" style="margin-top:12px;padding:10px 12px;background:#f5f3ff;border:1px solid #ddd6fe;border-radius:6px;font-size:12px;color:#7c3aed">
     ⏳ AI 深度分析中（约 10-20 秒）...
@@ -3469,7 +3457,7 @@ function generateCompetitorAnalysis() {
 
   // AI deep analysis
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  fetch('https://cottage-helicopter-speeds-theology.trycloudflare.com/competitor-compare', {
+  fetch('https://serum-johnny-absence-column.trycloudflare.com/competitor-compare', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -3796,7 +3784,7 @@ async function fetchImageAdvice(name, brand, desc) {
   if (!el) return;
   const product = [brand, name, desc].filter(Boolean).join(' ');
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  const AI_URL = 'https://cottage-helicopter-speeds-theology.trycloudflare.com/image-advice';
+  const AI_URL = 'https://serum-johnny-absence-column.trycloudflare.com/image-advice';
   const isZh = lang === 'zh';
 
   try {
@@ -3907,7 +3895,7 @@ async function fetchAndFillItem() {
   status.textContent = '⏳ 正在抓取 eBay 商品数据（约 5-10 秒）...';
   try {
     const r = await fetch(
-      `https://cottage-helicopter-speeds-theology.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
+      `https://serum-johnny-absence-column.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
       { signal: AbortSignal.timeout(90000) }
     );
     if (!r.ok) { const e = await r.json().catch(()=>({})); throw new Error(e.detail || 'HTTP ' + r.status); }
@@ -3943,7 +3931,7 @@ async function runListingCompare() {
 
   let bp;
   try {
-    const AI_URL = 'https://cottage-helicopter-speeds-theology.trycloudflare.com/ai-advice';
+    const AI_URL = 'https://serum-johnny-absence-column.trycloudflare.com/ai-advice';
     const resp = await fetch(AI_URL, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -4272,7 +4260,7 @@ function restoreHistory(index) {
 }
 
 // ===== CLIP IMAGE RECOGNITION =====
-const CLIP_URL = 'https://cottage-helicopter-speeds-theology.trycloudflare.com';
+const CLIP_URL = 'https://serum-johnny-absence-column.trycloudflare.com';
 
 function handleImageDrop(e) {
   const file = e.dataTransfer.files[0];
@@ -4340,8 +4328,8 @@ function analyze() {
   }
   if (!excellentData) { alert('数据加载中，请稍候...'); return; }
 
-  // Try semantic service first (https://cottage-helicopter-speeds-theology.trycloudflare.com), fall back to keyword matching
-  const semUrl = `https://cottage-helicopter-speeds-theology.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
+  // Try semantic service first (https://serum-johnny-absence-column.trycloudflare.com), fall back to keyword matching
+  const semUrl = `https://serum-johnny-absence-column.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
   fetch(semUrl, { signal: AbortSignal.timeout(90000) })
     .then(r => r.ok ? r.json() : Promise.reject('!ok'))
     .then(semResults => {
@@ -4652,7 +4640,7 @@ document.addEventListener('keydown', e => {
 
 <script>
 // ── 管理面板入口 ──────────────────────────────────────
-const _ERR_ADMIN_URL = 'https://cottage-helicopter-speeds-theology.trycloudflare.com';
+const _ERR_ADMIN_URL = 'https://serum-johnny-absence-column.trycloudflare.com';
 
 function openErrAdmin() {
   document.getElementById('err-admin-overlay').style.display = 'block';
