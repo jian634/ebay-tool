@@ -2742,7 +2742,7 @@ async function submitErrorReport(idx) {
   // Try backend
   let synced = false;
   try {
-    const r = await fetch('https://bachelor-figured-hopes-protocol.trycloudflare.com/error-report', {
+    const r = await fetch('https://cottage-helicopter-speeds-theology.trycloudflare.com/error-report', {
       method: 'POST', headers: {'Content-Type':'application/json'},
       body: JSON.stringify(report), signal: AbortSignal.timeout(90000),
     });
@@ -3299,7 +3299,7 @@ async function fetchCompetitorItem(n) {
   status.textContent = '⏳ 抓取中（约 5-10 秒）...';
   try {
     const r = await fetch(
-      `https://bachelor-figured-hopes-protocol.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
+      `https://cottage-helicopter-speeds-theology.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
       { signal: AbortSignal.timeout(90000) }
     );
     if (!r.ok) { const e = await r.json().catch(()=>({})); throw new Error(e.detail || 'HTTP ' + r.status); }
@@ -3469,7 +3469,7 @@ function generateCompetitorAnalysis() {
 
   // AI deep analysis
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  fetch('https://bachelor-figured-hopes-protocol.trycloudflare.com/competitor-compare', {
+  fetch('https://cottage-helicopter-speeds-theology.trycloudflare.com/competitor-compare', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -3734,40 +3734,6 @@ function renderOptimization() {
     ];
     panel.innerHTML = `
       <div class="opt-section">
-        <div class="opt-section-header">📝 标题优化建议</div>
-        <div class="opt-formula">
-          <div class="opt-formula-label">eBay 标题黄金公式</div>
-          <div class="opt-formula-body">[品牌] + [型号/关键词] + [核心卖点] + [规格] + [状态]</div>
-        </div>
-        <div class="opt-preview">
-          <div class="opt-preview-label">当前输入组合预览</div>
-          <div class="opt-preview-text">${suggestedTitle || '（请填写左侧商品信息）'}</div>
-          <span class="opt-preview-len ${lenClass}">${lenLabel}</span>
-        </div>
-        <div class="opt-checklist">
-          ${checks.map(c => `
-            <div class="opt-check-item">
-              <span class="opt-check-icon">${c.ok ? '✅' : '❌'}</span>
-              <div>
-                <span class="opt-check-key">${c.key}</span>
-                <span class="opt-check-desc">${c.desc}</span>
-              </div>
-            </div>
-          `).join('')}
-        </div>
-        <div class="opt-tips-box warn-box">
-          <div class="opt-tips-title">⚠️ 常见错误 vs 正确做法</div>
-          <div class="opt-tips-grid">
-            <div class="opt-tip-item bad"><span>❌ 标题太短 &lt;40字符</span><span>补充型号、规格、卖点</span></div>
-            <div class="opt-tip-item good"><span>✅ 60-80字符最佳</span><span>长度适中覆盖关键词</span></div>
-            <div class="opt-tip-item bad"><span>❌ 关键词堆砌</span><span>语句不自然影响体验</span></div>
-            <div class="opt-tip-item good"><span>✅ 自然流畅表达</span><span>关键词嵌入句子中</span></div>
-            <div class="opt-tip-item bad"><span>❌ 无品牌/型号</span><span>Cassini 排名靠后</span></div>
-            <div class="opt-tip-item good"><span>✅ 品牌开头</span><span>搜索匹配率 +30-50%</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="opt-section">
         <div class="opt-section-header">📸 图片优化建议</div>
         <div style="font-size:12px;color:#666;margin-bottom:10px;padding:8px 12px;background:#fff3cd;border-radius:6px;border:1px solid #ffc107">
           <b>最少6张，推荐12张</b> — 低于6张直接扣图片质量分，影响搜索排名
@@ -3804,40 +3770,6 @@ function renderOptimization() {
     ];
     panel.innerHTML = `
       <div class="opt-section">
-        <div class="opt-section-header">📝 Title Optimization</div>
-        <div class="opt-formula">
-          <div class="opt-formula-label">eBay Golden Title Formula</div>
-          <div class="opt-formula-body">[Brand] + [Model/Keywords] + [Key Selling Point] + [Specs] + [Condition]</div>
-        </div>
-        <div class="opt-preview">
-          <div class="opt-preview-label">Current Input Preview</div>
-          <div class="opt-preview-text">${suggestedTitle || '(Please fill in product info on the left)'}</div>
-          <span class="opt-preview-len ${lenClass}">${lenLabel}</span>
-        </div>
-        <div class="opt-checklist">
-          ${checks.map(c => `
-            <div class="opt-check-item">
-              <span class="opt-check-icon">${c.ok ? '✅' : '❌'}</span>
-              <div>
-                <span class="opt-check-key">${c.key}</span>
-                <span class="opt-check-desc">${c.desc}</span>
-              </div>
-            </div>
-          `).join('')}
-        </div>
-        <div class="opt-tips-box warn-box">
-          <div class="opt-tips-title">⚠️ Common Errors vs Best Practice</div>
-          <div class="opt-tips-grid">
-            <div class="opt-tip-item bad"><span>❌ Title too short &lt;40 chars</span><span>Add model, specs, selling points</span></div>
-            <div class="opt-tip-item good"><span>✅ 60-80 chars optimal</span><span>Covers keywords without padding</span></div>
-            <div class="opt-tip-item bad"><span>❌ Keyword stuffing</span><span>Unnatural — hurts buyer trust</span></div>
-            <div class="opt-tip-item good"><span>✅ Natural phrasing</span><span>Keywords embedded naturally</span></div>
-            <div class="opt-tip-item bad"><span>❌ No brand / model</span><span>Poor Cassini ranking</span></div>
-            <div class="opt-tip-item good"><span>✅ Brand first</span><span>Search match +30-50%</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="opt-section">
         <div class="opt-section-header">📸 Image Optimization</div>
         <div style="font-size:12px;color:#666;margin-bottom:10px;padding:8px 12px;background:#fff3cd;border-radius:6px;border:1px solid #ffc107">
           <b>Minimum 6 photos, recommend 12</b> — fewer than 6 loses image quality score and hurts search ranking
@@ -3864,7 +3796,7 @@ async function fetchImageAdvice(name, brand, desc) {
   if (!el) return;
   const product = [brand, name, desc].filter(Boolean).join(' ');
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  const AI_URL = 'https://bachelor-figured-hopes-protocol.trycloudflare.com/image-advice';
+  const AI_URL = 'https://cottage-helicopter-speeds-theology.trycloudflare.com/image-advice';
   const isZh = lang === 'zh';
 
   try {
@@ -3975,7 +3907,7 @@ async function fetchAndFillItem() {
   status.textContent = '⏳ 正在抓取 eBay 商品数据（约 5-10 秒）...';
   try {
     const r = await fetch(
-      `https://bachelor-figured-hopes-protocol.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
+      `https://cottage-helicopter-speeds-theology.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
       { signal: AbortSignal.timeout(90000) }
     );
     if (!r.ok) { const e = await r.json().catch(()=>({})); throw new Error(e.detail || 'HTTP ' + r.status); }
@@ -4011,7 +3943,7 @@ async function runListingCompare() {
 
   let bp;
   try {
-    const AI_URL = 'https://bachelor-figured-hopes-protocol.trycloudflare.com/ai-advice';
+    const AI_URL = 'https://cottage-helicopter-speeds-theology.trycloudflare.com/ai-advice';
     const resp = await fetch(AI_URL, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -4340,7 +4272,7 @@ function restoreHistory(index) {
 }
 
 // ===== CLIP IMAGE RECOGNITION =====
-const CLIP_URL = 'https://bachelor-figured-hopes-protocol.trycloudflare.com';
+const CLIP_URL = 'https://cottage-helicopter-speeds-theology.trycloudflare.com';
 
 function handleImageDrop(e) {
   const file = e.dataTransfer.files[0];
@@ -4408,8 +4340,8 @@ function analyze() {
   }
   if (!excellentData) { alert('数据加载中，请稍候...'); return; }
 
-  // Try semantic service first (https://bachelor-figured-hopes-protocol.trycloudflare.com), fall back to keyword matching
-  const semUrl = `https://bachelor-figured-hopes-protocol.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
+  // Try semantic service first (https://cottage-helicopter-speeds-theology.trycloudflare.com), fall back to keyword matching
+  const semUrl = `https://cottage-helicopter-speeds-theology.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
   fetch(semUrl, { signal: AbortSignal.timeout(90000) })
     .then(r => r.ok ? r.json() : Promise.reject('!ok'))
     .then(semResults => {
@@ -4720,7 +4652,7 @@ document.addEventListener('keydown', e => {
 
 <script>
 // ── 管理面板入口 ──────────────────────────────────────
-const _ERR_ADMIN_URL = 'https://bachelor-figured-hopes-protocol.trycloudflare.com';
+const _ERR_ADMIN_URL = 'https://cottage-helicopter-speeds-theology.trycloudflare.com';
 
 function openErrAdmin() {
   document.getElementById('err-admin-overlay').style.display = 'block';
@@ -4945,16 +4877,24 @@ function exportReport() {
     </tr>`;
   }).join('');
 
-  // ── 清理 DOM 区块（去掉按钮/输入框等交互元素）──
+  // ── 清理 DOM 区块（去掉按钮/输入框/图表等交互与不可打印元素）──
   function cleanSection(id) {
     const el = document.getElementById(id);
     if (!el || !el.innerText.trim()) return '';
     const clone = el.cloneNode(true);
+    // 交互元素
     clone.querySelectorAll('button, input, select, textarea, .err-form').forEach(e => e.remove());
+    // canvas 图表：克隆后内容丢失，但高度还在 → 产生大片空白，直接删除
+    clone.querySelectorAll('canvas, .chart-box, .chart-wrap, .chart-wrap-tall').forEach(e => e.remove());
+    // 空状态占位（有大 padding，打印没意义）
+    clone.querySelectorAll('.empty, .loading').forEach(e => e.remove());
     clone.querySelectorAll('[style*="animation"],[style*="spin"]').forEach(e => e.remove());
-    // 把内联 onclick 都去掉，防止打印窗口执行
+    // 去掉内联 onclick，防止打印窗口执行
     clone.querySelectorAll('[onclick]').forEach(e => e.removeAttribute('onclick'));
-    return clone.innerHTML;
+    // 折叠区块（display:none）在打印里也没意义，直接删
+    clone.querySelectorAll('[style*="display:none"],[style*="display: none"]').forEach(e => e.remove());
+    const html = clone.innerHTML.trim();
+    return html || '';
   }
 
   const optHtml = cleanSection('opt-content');
@@ -4993,10 +4933,16 @@ td { padding:7px 10px; border:1px solid #e5e7eb; vertical-align:top; }
 tr:nth-child(even) td { background:#f9fafb; }
 .section-body { font-size:12px; }
 .section-body button, .section-body input { display:none !important; }
+canvas, .chart-box, .chart-wrap, .chart-wrap-tall, .empty, .loading { display:none !important; }
+/* 强制所有容器高度由内容决定，避免空白撑高 */
+* { height:auto !important; min-height:0 !important; max-height:none !important; }
+table { height:auto !important; }
+td, th { height:auto !important; }
 @media print {
   body { padding:16px 20px; font-size:11px; }
   h2 { page-break-before:auto; margin-top:16px; }
-  .section-body { page-break-inside:avoid; }
+  /* 不用 avoid：section 过高会在当前页留大片空白 */
+  .section-body { page-break-inside:auto; }
 }
 </style>
 </head>
