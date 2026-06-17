@@ -2516,7 +2516,7 @@ function matchCategories(query, site) {
 
     const normGmv    = maxGmv > 0 ? (item.gmv_y || 0) / maxGmv : 0;
     const normSi     = maxSi  > 0 ? (item.si    || 0) / maxSi  : 0;
-    const normGrowth = Math.max(0, Math.min(1, ((item.yoy_y || 0) + 1) / 2));
+    const normGrowth = normGmv; // proxy: no YoY field in local data, use GMV scale
 
     // When query has tokens but nothing matches at all, score stays 0 so those
     // items sink to the bottom instead of being ranked by GMV alone
@@ -3515,9 +3515,9 @@ function generateCompetitorAnalysis() {
     const el = document.getElementById('comp-ai-result');
     if (el) { el.innerHTML = html; setTimeout(updateGapProgress, 0); }
   })
-  .catch(() => {
+  .catch(err => {
     const el = document.getElementById('comp-ai-result');
-    if (el) el.innerHTML = `<span style="color:#888;font-size:11px">⚠ AI 服务未启动（localhost:8001），规则分析已完成</span>`;
+    if (el) el.innerHTML = `<span style="color:#888;font-size:11px">⚠ AI 深度分析失败（${err}），规则匹配分析已完成</span>`;
   });
 }
 
@@ -4430,7 +4430,7 @@ function analyze() {
           yoy_y:      0,
           normGmv:    item.normGmv  || 0,
           normSi:     item.normSi   || 0,
-          normGrowth: 0,
+          normGrowth: item.normGrowth || 0,
           finalScore: item.similarity || 0,
           similarity: item.similarity || 0,
           _semantic:  true,
@@ -4458,7 +4458,7 @@ function normalizeData() {
     arr.forEach(item => {
       item.normGmv    = maxGmv > 0 ? (item.gmv_y || 0) / maxGmv : 0;
       item.normSi     = maxSi  > 0 ? (item.si    || 0) / maxSi  : 0;
-      item.normGrowth = Math.max(0, Math.min(1, ((item.yoy_y || 0) + 1) / 2));
+      item.normGrowth = item.normGmv; // proxy: no YoY field in local data, use GMV scale
     });
   });
 }
