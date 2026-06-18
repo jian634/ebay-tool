@@ -18,6 +18,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Micr
 .site-tab{padding:5px 12px;border-radius:4px;cursor:pointer;font-weight:700;font-size:12px;background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3);transition:all .15s;white-space:nowrap}
 .site-tab:hover{background:rgba(255,255,255,.25)}
 .site-tab.active{background:#fff;color:var(--blue)}
+.cat-tabs{display:flex;gap:4px;margin-right:8px}
+.cat-tab{padding:4px 10px;border-radius:4px;cursor:pointer;font-weight:700;font-size:11px;background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);transition:all .15s;white-space:nowrap}
+.cat-tab:hover{background:rgba(255,255,255,.22)}
+.cat-tab.active{background:rgba(255,255,255,.95);color:#0064D2}
 .lang-btn{padding:5px 10px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.4);border-radius:4px;color:#fff;cursor:pointer;font-size:11px;transition:all .15s;white-space:nowrap}
 .lang-btn:hover{background:rgba(255,255,255,.3)}
 
@@ -265,6 +269,11 @@ textarea.form-input{height:72px;resize:vertical}
 <div class="header">
   <div class="logo"><img src="ebay-logo.svg" alt="eBay" style="height:36px;display:block"></div>
   <div class="logo-sub" id="h-sub">汽配竞品分析工具</div>
+  <div class="cat-tabs" id="cat-tabs">
+    <div class="cat-tab active" data-cat="motor" onclick="selectCategory('motor')">🔧 Motor</div>
+    <div class="cat-tab" data-cat="bi" onclick="selectCategory('bi')">🏭 BI</div>
+    <div class="cat-tab" data-cat="lifestyle" onclick="selectCategory('lifestyle')">🎨 Lifestyle</div>
+  </div>
   <div class="site-tabs" id="site-tabs"></div>
   <button onclick="exportReport()" title="导出分析报告为 PDF"
     style="height:32px;padding:0 12px;border-radius:6px;border:1.5px solid rgba(255,255,255,.6);
@@ -2396,6 +2405,9 @@ const CN_EN = {
 
 let lang = 'zh';
 let currentSite = 'US';
+let currentCategory = 'motor';
+const categoryDataCache = {};
+const CAT_LABELS = {motor:'汽配 Motor', bi:'工业品 BI', lifestyle:'生活方式 Lifestyle'};
 let excellentData = null;
 let lastResults = null;
 let lastQuery = '';
@@ -2451,7 +2463,8 @@ function selectSite(site) {
     t.classList.toggle('active', Object.keys(SITES)[i] === site);
   });
   const si = SITES[site];
-  document.getElementById('l-banner').textContent = T('banner')(site, lang==='zh' ? si.name : si.nameEn);
+  const catLabel = currentCategory !== 'motor' ? CAT_LABELS[currentCategory] + ' · ' : '';
+  document.getElementById('l-banner').textContent = catLabel + T('banner')(site, lang==='zh' ? si.name : si.nameEn);
   if (lastResults) analyze();
 }
 
@@ -2742,7 +2755,7 @@ async function submitErrorReport(idx) {
   // Try backend
   let synced = false;
   try {
-    const r = await fetch('https://toll-adoption-hewlett-incentives.trycloudflare.com/error-report', {
+    const r = await fetch('https://demand-slot-saving-half.trycloudflare.com/error-report', {
       method: 'POST', headers: {'Content-Type':'application/json'},
       body: JSON.stringify(report), signal: AbortSignal.timeout(90000),
     });
@@ -2883,20 +2896,32 @@ function renderComparison(results) {
   const totalSim = top5.reduce((s,r)=>s+Math.max(r.similarity,0.01),0);
   const wAvg = key => top5.reduce((s,r)=>s+r[key]*Math.max(r.similarity,0.01),0)/totalSim;
 
+  // Normalize within the matched results so niche categories don't show as near-zero
+  const maxGmv5    = Math.max(...top5.map(r => r.normGmv    || 0), 0.001);
+  const maxSi5     = Math.max(...top5.map(r => r.normSi     || 0), 0.001);
+  const maxGrowth5 = Math.max(...top5.map(r => r.normGrowth || 0), 0.001);
+  window._localMax = { gmv: maxGmv5, si: maxSi5, growth: maxGrowth5 };
+
+  const tg = (top.normGmv    || 0) / maxGmv5;
+  const ts = (top.normSi     || 0) / maxSi5;
+  const tw = (top.normGrowth || 0) / maxGrowth5;
   const topScores = [
-    Math.round(top.normGmv    * 100),
-    Math.round(top.normGrowth * 100),
-    Math.round((1 - top.normGmv * 0.4) * 100),
-    Math.round(top.normSi     * 100),
-    Math.round((1 - top.normGmv * 0.3 + top.normGrowth * 0.3) * 80),
+    Math.round(tg * 100),
+    Math.round(tw * 100),
+    Math.round((1 - tg * 0.4) * 100),
+    Math.round(ts * 100),
+    Math.round((1 - tg * 0.3 + tw * 0.3) * 80),
   ];
 
+  const ug = wAvg('normGmv')    / maxGmv5;
+  const us = wAvg('normSi')     / maxSi5;
+  const uw = wAvg('normGrowth') / maxGrowth5;
   const userScores = [
-    Math.round(wAvg('normGmv')    * 100),
-    Math.round(wAvg('normGrowth') * 100),
-    Math.round((1 - wAvg('normGmv') * 0.4) * 100),
-    Math.round(wAvg('normSi')     * 100),
-    Math.round((1 - wAvg('normGmv') * 0.3 + wAvg('normGrowth') * 0.3) * 80),
+    Math.round(ug * 100),
+    Math.round(uw * 100),
+    Math.round((1 - ug * 0.4) * 100),
+    Math.round(us * 100),
+    Math.round((1 - ug * 0.3 + uw * 0.3) * 80),
   ];
 
   // store scores for seller radar and category switching
@@ -2931,7 +2956,7 @@ function renderComparison(results) {
     type: 'bar',
     data: {
       labels: barLabels,
-      datasets: [{ label: lang==='zh'?'品类规模指数':'Scale Index', data: top5bar.map(r => Math.round((r.normGmv||0)*100)), backgroundColor: top5bar.map((_,i) => i===0?'#0064D2':'rgba(0,100,210,.4)'), borderRadius:4 }]
+      datasets: [{ label: lang==='zh'?'品类规模指数':'Scale Index', data: top5bar.map(r => Math.round(((r.normGmv||0)/maxGmv5)*100)), backgroundColor: top5bar.map((_,i) => i===0?'#0064D2':'rgba(0,100,210,.4)'), borderRadius:4 }]
     },
     options: {
       responsive:true, maintainAspectRatio:false, indexAxis:'y',
@@ -3006,12 +3031,16 @@ function switchComparisonCat() {
   const r = lastResults[idx];
   if (!r) return;
 
+  const lm = window._localMax || { gmv: 0.001, si: 0.001, growth: 0.001 };
+  const rg = (r.normGmv    || 0) / lm.gmv;
+  const rs = (r.normSi     || 0) / lm.si;
+  const rw = (r.normGrowth || 0) / lm.growth;
   const newTopScores = [
-    Math.round((r.normGmv    || 0) * 100),
-    Math.round((r.normGrowth || 0) * 100),
-    Math.round((1 - (r.normGmv || 0) * 0.4) * 100),
-    Math.round((r.normSi     || 0) * 100),
-    Math.round((1 - (r.normGmv || 0) * 0.3 + (r.normGrowth || 0) * 0.3) * 80),
+    Math.round(rg * 100),
+    Math.round(rw * 100),
+    Math.round((1 - rg * 0.4) * 100),
+    Math.round(rs * 100),
+    Math.round((1 - rg * 0.3 + rw * 0.3) * 80),
   ];
   window._topRadarScores = newTopScores;
   window._topItem = r;
@@ -3132,13 +3161,13 @@ async function fetchSmartAdvice(productName, category) {
   const container = document.getElementById('smart-advice-container');
   if (!container) return;
 
-  const SMART_URL = 'https://toll-adoption-hewlett-incentives.trycloudflare.com/smart-advice';
+  const SMART_URL = 'https://demand-slot-saving-half.trycloudflare.com/smart-advice';
 
   try {
     const resp = await fetch(SMART_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ product_name: productName || category, category, site: currentSite }),
+      body: JSON.stringify({ product_name: productName || category, category, site: currentSite, category_type: currentCategory }),
       signal: AbortSignal.timeout(90000),
     });
     if (!resp.ok) throw new Error(resp.status);
@@ -3376,7 +3405,7 @@ async function fetchCompetitorItem(n) {
   status.textContent = '⏳ 抓取中（约 5-10 秒）...';
   try {
     const r = await fetch(
-      `https://toll-adoption-hewlett-incentives.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
+      `https://demand-slot-saving-half.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
       { signal: AbortSignal.timeout(90000) }
     );
     if (!r.ok) { const e = await r.json().catch(()=>({})); throw new Error(e.detail || 'HTTP ' + r.status); }
@@ -3534,7 +3563,7 @@ function generateCompetitorAnalysis() {
 
   // AI deep analysis
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  fetch('https://toll-adoption-hewlett-incentives.trycloudflare.com/competitor-compare', {
+  fetch('https://demand-slot-saving-half.trycloudflare.com/competitor-compare', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -3546,6 +3575,7 @@ function generateCompetitorAnalysis() {
       my_desc:   myDesc,
       category:  category,
       site:      currentSite,
+      category_type: currentCategory,
     }),
     signal: AbortSignal.timeout(90000),
   })
@@ -3861,14 +3891,14 @@ async function fetchImageAdvice(name, brand, desc) {
   if (!el) return;
   const product = [brand, name, desc].filter(Boolean).join(' ');
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  const AI_URL = 'https://toll-adoption-hewlett-incentives.trycloudflare.com/image-advice';
+  const AI_URL = 'https://demand-slot-saving-half.trycloudflare.com/image-advice';
   const isZh = lang === 'zh';
 
   try {
     const resp = await fetch(AI_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ product_name: product, category, site: currentSite }),
+      body: JSON.stringify({ product_name: product, category, site: currentSite, category_type: currentCategory }),
       signal: AbortSignal.timeout(90000),
     });
     if (!resp.ok) throw new Error(resp.status);
@@ -3972,7 +4002,7 @@ async function fetchAndFillItem() {
   status.textContent = '⏳ 正在抓取 eBay 商品数据（约 5-10 秒）...';
   try {
     const r = await fetch(
-      `https://toll-adoption-hewlett-incentives.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
+      `https://demand-slot-saving-half.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
       { signal: AbortSignal.timeout(90000) }
     );
     if (!r.ok) { const e = await r.json().catch(()=>({})); throw new Error(e.detail || 'HTTP ' + r.status); }
@@ -4008,7 +4038,7 @@ async function runListingCompare() {
 
   let bp;
   try {
-    const AI_URL = 'https://toll-adoption-hewlett-incentives.trycloudflare.com/ai-advice';
+    const AI_URL = 'https://demand-slot-saving-half.trycloudflare.com/ai-advice';
     const resp = await fetch(AI_URL, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -4349,7 +4379,7 @@ function restoreHistory(index) {
 }
 
 // ===== CLIP IMAGE RECOGNITION =====
-const CLIP_URL = 'https://toll-adoption-hewlett-incentives.trycloudflare.com';
+const CLIP_URL = 'https://demand-slot-saving-half.trycloudflare.com';
 
 function handleImageDrop(e) {
   const file = e.dataTransfer.files[0];
@@ -4417,8 +4447,8 @@ function analyze() {
   }
   if (!excellentData) { alert('数据加载中，请稍候...'); return; }
 
-  // Try semantic service first (https://toll-adoption-hewlett-incentives.trycloudflare.com), fall back to keyword matching
-  const semUrl = `https://toll-adoption-hewlett-incentives.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100`;
+  // Try semantic service first (https://demand-slot-saving-half.trycloudflare.com), fall back to keyword matching
+  const semUrl = `https://demand-slot-saving-half.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100&category=${encodeURIComponent(currentCategory)}`;
   fetch(semUrl, { signal: AbortSignal.timeout(90000) })
     .then(r => r.ok ? r.json() : Promise.reject('!ok'))
     .then(semResults => {
@@ -4474,11 +4504,38 @@ function normalizeData() {
 
 // ===== LOAD DATA =====
 async function loadData() {
-  excellentData = EMBEDDED_EXCELLENT;
+  categoryDataCache['motor'] = EMBEDDED_EXCELLENT;
+  excellentData = categoryDataCache['motor'];
   normalizeData();
-  console.log('Data loaded. Sites:', Object.keys(excellentData));
+  console.log('Motor data loaded. Sites:', Object.keys(excellentData));
   categoryTree = parseCategoryText(EMBEDDED_CATEGORIES);
   console.log('Category tree loaded, top-level count:', categoryTree.length);
+}
+
+// ===== CATEGORY SWITCHER =====
+async function selectCategory(cat) {
+  if (currentCategory === cat) return;
+  currentCategory = cat;
+  document.querySelectorAll('.cat-tab').forEach(t =>
+    t.classList.toggle('active', t.dataset.cat === cat));
+  if (!categoryDataCache[cat]) {
+    try {
+      const r = await fetch(`./${cat}_data.json`);
+      categoryDataCache[cat] = await r.json();
+    } catch (e) {
+      console.warn(`Failed to load ${cat}_data.json:`, e);
+      categoryDataCache[cat] = {};
+    }
+    excellentData = categoryDataCache[cat];
+    normalizeData();
+  } else {
+    excellentData = categoryDataCache[cat];
+  }
+  lastResults = null;
+  const si = SITES[currentSite];
+  document.getElementById('l-banner').textContent =
+    CAT_LABELS[cat] + ' · ' + (lang === 'zh' ? si.name : si.nameEn) + ' (' + currentSite + ')';
+  if (lastQuery) analyze();
 }
 
 // ===== CATEGORY TREE =====
@@ -4729,7 +4786,7 @@ document.addEventListener('keydown', e => {
 
 <script>
 // ── 管理面板入口 ──────────────────────────────────────
-const _ERR_ADMIN_URL = 'https://toll-adoption-hewlett-incentives.trycloudflare.com';
+const _ERR_ADMIN_URL = 'https://demand-slot-saving-half.trycloudflare.com';
 
 function openErrAdmin() {
   document.getElementById('err-admin-overlay').style.display = 'block';
