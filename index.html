@@ -2755,7 +2755,7 @@ async function submitErrorReport(idx) {
   // Try backend
   let synced = false;
   try {
-    const r = await fetch('https://cassette-eleven-prizes-correlation.trycloudflare.com/error-report', {
+    const r = await fetch('https://wallpaper-actually-wilson-stick.trycloudflare.com/error-report', {
       method: 'POST', headers: {'Content-Type':'application/json'},
       body: JSON.stringify(report), signal: AbortSignal.timeout(90000),
     });
@@ -3161,7 +3161,7 @@ async function fetchSmartAdvice(productName, category) {
   const container = document.getElementById('smart-advice-container');
   if (!container) return;
 
-  const SMART_URL = 'https://cassette-eleven-prizes-correlation.trycloudflare.com/smart-advice';
+  const SMART_URL = 'https://wallpaper-actually-wilson-stick.trycloudflare.com/smart-advice';
 
   try {
     const resp = await fetch(SMART_URL, {
@@ -3405,7 +3405,7 @@ async function fetchCompetitorItem(n) {
   status.textContent = '⏳ 抓取中（约 5-10 秒）...';
   try {
     const r = await fetch(
-      `https://cassette-eleven-prizes-correlation.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
+      `https://wallpaper-actually-wilson-stick.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
       { signal: AbortSignal.timeout(90000) }
     );
     if (!r.ok) { const e = await r.json().catch(()=>({})); throw new Error(e.detail || 'HTTP ' + r.status); }
@@ -3563,7 +3563,7 @@ function generateCompetitorAnalysis() {
 
   // AI deep analysis
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  fetch('https://cassette-eleven-prizes-correlation.trycloudflare.com/competitor-compare', {
+  fetch('https://wallpaper-actually-wilson-stick.trycloudflare.com/competitor-compare', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -3891,7 +3891,7 @@ async function fetchImageAdvice(name, brand, desc) {
   if (!el) return;
   const product = [brand, name, desc].filter(Boolean).join(' ');
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
-  const AI_URL = 'https://cassette-eleven-prizes-correlation.trycloudflare.com/image-advice';
+  const AI_URL = 'https://wallpaper-actually-wilson-stick.trycloudflare.com/image-advice';
   const isZh = lang === 'zh';
 
   try {
@@ -4002,7 +4002,7 @@ async function fetchAndFillItem() {
   status.textContent = '⏳ 正在抓取 eBay 商品数据（约 5-10 秒）...';
   try {
     const r = await fetch(
-      `https://cassette-eleven-prizes-correlation.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
+      `https://wallpaper-actually-wilson-stick.trycloudflare.com/fetch-item?id=${encodeURIComponent(itemId)}&site=${encodeURIComponent(currentSite)}`,
       { signal: AbortSignal.timeout(90000) }
     );
     if (!r.ok) { const e = await r.json().catch(()=>({})); throw new Error(e.detail || 'HTTP ' + r.status); }
@@ -4038,7 +4038,7 @@ async function runListingCompare() {
 
   let bp;
   try {
-    const AI_URL = 'https://cassette-eleven-prizes-correlation.trycloudflare.com/ai-advice';
+    const AI_URL = 'https://wallpaper-actually-wilson-stick.trycloudflare.com/ai-advice';
     const resp = await fetch(AI_URL, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -4379,7 +4379,7 @@ function restoreHistory(index) {
 }
 
 // ===== CLIP IMAGE RECOGNITION =====
-const CLIP_URL = 'https://cassette-eleven-prizes-correlation.trycloudflare.com';
+const CLIP_URL = 'https://wallpaper-actually-wilson-stick.trycloudflare.com';
 
 function handleImageDrop(e) {
   const file = e.dataTransfer.files[0];
@@ -4447,8 +4447,8 @@ function analyze() {
   }
   if (!excellentData) { alert('数据加载中，请稍候...'); return; }
 
-  // Try semantic service first (https://cassette-eleven-prizes-correlation.trycloudflare.com), fall back to keyword matching
-  const semUrl = `https://cassette-eleven-prizes-correlation.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100&category=${encodeURIComponent(currentCategory)}`;
+  // Try semantic service first (https://wallpaper-actually-wilson-stick.trycloudflare.com), fall back to keyword matching
+  const semUrl = `https://wallpaper-actually-wilson-stick.trycloudflare.com/search?q=${encodeURIComponent(query)}&site=${encodeURIComponent(currentSite)}&top_k=100&category=${encodeURIComponent(currentCategory)}`;
   fetch(semUrl, { signal: AbortSignal.timeout(90000) })
     .then(r => r.ok ? r.json() : Promise.reject('!ok'))
     .then(semResults => {
@@ -4786,7 +4786,7 @@ document.addEventListener('keydown', e => {
 
 <script>
 // ── 管理面板入口 ──────────────────────────────────────
-const _ERR_ADMIN_URL = 'https://cassette-eleven-prizes-correlation.trycloudflare.com';
+const _ERR_ADMIN_URL = 'https://wallpaper-actually-wilson-stick.trycloudflare.com';
 
 function openErrAdmin() {
   document.getElementById('err-admin-overlay').style.display = 'block';
