@@ -3547,7 +3547,8 @@ async function autoMatchCompetitors() {
     if (!idEl) return;
     idEl.value = item.id;
     if (stEl) {
-      const gmvStr = item.gmv > 0 ? ` · GMV $${item.gmv.toLocaleString()}` : '';
+      const gmvLabel = item.gmv > 50000 ? '销量极佳' : item.gmv > 10000 ? '销量优秀' : item.gmv > 2000 ? '销量良好' : item.gmv > 0 ? '销量一般' : '';
+      const gmvStr = gmvLabel ? ` · ${gmvLabel}` : '';
       stEl.textContent = `📊 ${bestGroup.categ}${gmvStr}`;
     }
     fetchCompetitorItem(n);
@@ -3725,22 +3726,24 @@ function generateCompetitorAnalysis() {
   const dbMetaList   = dbComps.map(c => {
     const idVal = (document.getElementById(`comp-id-${c.slot}`)?.value || '').trim();
     const matched = (_compDataCache[currentCategory]?.[currentSite] || []).flatMap(g => g.items || []).find(x => x.id === idVal);
-    return matched ? { item_id: idVal, title: c.title, gmv: matched.gmv, si: matched.si, categ: matched.categ } : null;
+    const gmvLevel = matched.gmv > 50000 ? '销量极佳' : matched.gmv > 10000 ? '销量优秀' : matched.gmv > 2000 ? '销量良好' : '销量一般';
+    const siLevel = matched.si > 0.8 ? '搜索曝光极高' : matched.si > 0.5 ? '搜索曝光良好' : matched.si > 0.2 ? '搜索曝光一般' : '搜索曝光较低';
+    return matched ? { item_id: idVal, title: c.title, gmv_level: gmvLevel, si_level: siLevel, categ: matched.categ } : null;
   }).filter(Boolean);
 
   const totalCount = compsList.length;
   const dbCount = dbComps.length;
   const manualCount = manualComps.length;
 
-  const analysisHint = `请综合分析${totalCount}个竞品（前${manualCount}个为商家自选，后${dbCount}个为数据库高GMV推荐），从以下多个维度给出可执行的具体建议：
+  const analysisHint = `请综合分析${totalCount}个竞品（${manualCount}个商家自选 + ${dbCount}个系统推荐），从以下多个维度给出可执行的具体建议：
 1. 标题关键词优化（品牌/年份/车型/零件名称格式，搜索关键词覆盖率）
 2. 兼容车型覆盖度（Vehicle Compatibility 宽度 vs 竞品，具体建议增加哪些车型）
-3. 价格定位策略（相对竞品GMV数据的定价建议，具体价格区间）
+3. 价格定位策略（参考竞品价格带，给出具体定价区间建议）
 4. 卖点差异化描述（USP亮点、安装指南、售后保障等描述优化）
 5. 图片策略（白底主图、多角度图、安装图、对比图的组合建议）
 6. 物流与售后政策（免运费/时效/退换货政策 vs 竞品）
 7. Promoted Listings促销策略（建议出价比例、重点关键词）
-8. 基于GMV/SI趋势的市场机会判断
+8. 基于竞品表现的市场机会判断
 每条建议必须具体可操作，避免笼统表述。`;
 
   fetch('https://wallpaper-actually-wilson-stick.trycloudflare.com/competitor-compare', {
@@ -3752,7 +3755,6 @@ function generateCompetitorAnalysis() {
       competitors: compsList.map(c => ({
         title: c.title,
         details: c.details,
-        source: c.isDb ? 'database_top_gmv' : 'manual',
       })),
       my_title:  myTitle,
       my_brand:  myBrand,
@@ -3760,7 +3762,6 @@ function generateCompetitorAnalysis() {
       category:  category,
       site:      currentSite,
       category_type: currentCategory,
-      db_competitors: dbMetaList,
       analysis_hint: analysisHint,
     }),
     signal: AbortSignal.timeout(90000),
