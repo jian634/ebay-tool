@@ -170,6 +170,14 @@ textarea.form-input{height:72px;resize:vertical}
 .comp-fetch-btn:hover{background:#4338ca}
 .comp-fetch-status{font-size:10px;color:#666;min-height:13px;margin-bottom:4px;line-height:1.3}
 .comp-slot .comp-textarea{min-height:44px;font-size:11px;margin-bottom:5px}
+.comp-slot-rec{background:#f0fdf4;border-color:#86b817}
+.comp-slot-rec .comp-slot-label{color:#15803d}
+.comp-slot-rec .comp-fetch-btn{background:#16a34a}
+.comp-slot-rec .comp-fetch-btn:hover{background:#15803d}
+.comp-rec-divider{display:flex;align-items:center;gap:8px;margin:10px 0 8px;font-size:11px;font-weight:700;color:#15803d;border-top:1px dashed #bbf7d0;padding-top:10px}
+.comp-auto-btn{margin-left:auto;padding:4px 12px;background:#16a34a;color:#fff;border:none;border-radius:5px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;transition:background .15s}
+.comp-auto-btn:hover{background:#15803d}
+.comp-rec-tip{font-size:10px;font-weight:400;color:#888}
 .comp-report{background:#f8f7ff;border-radius:8px;padding:14px;margin-bottom:12px;border:1.5px solid #c7d2fe}
 .comp-report-title{font-size:13px;font-weight:700;color:#1e1b4b;margin-bottom:10px}
 .comp-score-row{display:flex;align-items:center;gap:8px;margin-bottom:7px}
@@ -415,7 +423,7 @@ textarea.form-input{height:72px;resize:vertical}
       <div id="comp-section">
         <div class="comp-input-box">
           <div class="comp-input-header">🔍 <span id="comp-header-text">竞品对比分析</span></div>
-          <div class="comp-input-sub" id="comp-sub-text">输入竞品 Item ID 自动抓取，或手动粘贴标题 — 最多同时对比 3 个竞品</div>
+          <div class="comp-input-sub" id="comp-sub-text">输入竞品 Item ID 自动抓取，或手动粘贴标题 — 3个自填 + 3个数据库智能推荐，共6个竞品</div>
           <div class="comp-slots-row">
             <div class="comp-slot">
               <div class="comp-slot-label">竞品 1</div>
@@ -448,7 +456,46 @@ textarea.form-input{height:72px;resize:vertical}
               <textarea id="comp-details-3" class="comp-textarea" placeholder="卖点/规格（可选）"></textarea>
             </div>
           </div>
-          <button class="comp-btn" onclick="generateCompetitorAnalysis()"><span id="comp-btn-text">⚡ 生成竞品差距报告</span></button>
+          <!-- 数据库推荐竞品分隔线 -->
+          <div class="comp-rec-divider">
+            <span>📊 数据库智能推荐竞品</span>
+            <span class="comp-rec-tip">根据您的商品信息 + 当前站点自动匹配</span>
+            <button class="comp-auto-btn" onclick="autoMatchCompetitors()">⚡ 自动匹配</button>
+          </div>
+          <!-- 推荐竞品槽 4/5/6 -->
+          <div class="comp-slots-row">
+            <div class="comp-slot comp-slot-rec">
+              <div class="comp-slot-label">推荐竞品 4 <span class="comp-slot-optional">（数据库）</span></div>
+              <div class="comp-slot-fetch-row">
+                <input id="comp-id-4" class="comp-id-input" type="text" placeholder="自动填入 Item ID" onkeydown="if(event.key==='Enter') fetchCompetitorItem(4)">
+                <button class="comp-fetch-btn" onclick="fetchCompetitorItem(4)">⬇ 抓取</button>
+              </div>
+              <div id="comp-fetch-status-4" class="comp-fetch-status"></div>
+              <textarea id="comp-title-4" class="comp-textarea" placeholder="竞品标题（自动填入）"></textarea>
+              <textarea id="comp-details-4" class="comp-textarea" placeholder="卖点/规格（可选）"></textarea>
+            </div>
+            <div class="comp-slot comp-slot-rec">
+              <div class="comp-slot-label">推荐竞品 5 <span class="comp-slot-optional">（数据库）</span></div>
+              <div class="comp-slot-fetch-row">
+                <input id="comp-id-5" class="comp-id-input" type="text" placeholder="自动填入 Item ID" onkeydown="if(event.key==='Enter') fetchCompetitorItem(5)">
+                <button class="comp-fetch-btn" onclick="fetchCompetitorItem(5)">⬇ 抓取</button>
+              </div>
+              <div id="comp-fetch-status-5" class="comp-fetch-status"></div>
+              <textarea id="comp-title-5" class="comp-textarea" placeholder="竞品标题（自动填入）"></textarea>
+              <textarea id="comp-details-5" class="comp-textarea" placeholder="卖点/规格（可选）"></textarea>
+            </div>
+            <div class="comp-slot comp-slot-rec">
+              <div class="comp-slot-label">推荐竞品 6 <span class="comp-slot-optional">（数据库）</span></div>
+              <div class="comp-slot-fetch-row">
+                <input id="comp-id-6" class="comp-id-input" type="text" placeholder="自动填入 Item ID" onkeydown="if(event.key==='Enter') fetchCompetitorItem(6)">
+                <button class="comp-fetch-btn" onclick="fetchCompetitorItem(6)">⬇ 抓取</button>
+              </div>
+              <div id="comp-fetch-status-6" class="comp-fetch-status"></div>
+              <textarea id="comp-title-6" class="comp-textarea" placeholder="竞品标题（自动填入）"></textarea>
+              <textarea id="comp-details-6" class="comp-textarea" placeholder="卖点/规格（可选）"></textarea>
+            </div>
+          </div>
+          <button class="comp-btn" onclick="generateCompetitorAnalysis()"><span id="comp-btn-text">⚡ 生成竞品差距报告（综合6个竞品）</span></button>
         </div>
         <div id="comp-output"></div>
       </div>
@@ -3427,13 +3474,88 @@ async function fetchCompetitorItem(n) {
   }
 }
 
+// ===== COMPETITOR DB AUTO-MATCH =====
+let _compDataCache = {};
+
+async function loadCompData(cat) {
+  if (_compDataCache[cat]) return _compDataCache[cat];
+  try {
+    const r = await fetch(`./${cat}_competitors.json`);
+    if (!r.ok) throw new Error(r.status);
+    _compDataCache[cat] = await r.json();
+  } catch(e) {
+    console.warn(`${cat}_competitors.json load failed:`, e);
+    _compDataCache[cat] = {};
+  }
+  return _compDataCache[cat];
+}
+
+async function autoMatchCompetitors() {
+  const btn = document.querySelector('.comp-auto-btn');
+  if (btn) { btn.textContent = '⏳ 匹配中...'; btn.disabled = true; }
+
+  const data = await loadCompData(currentCategory);
+  const siteData = (data[currentSite] || []);
+
+  if (!siteData.length) {
+    [4,5,6].forEach(n => {
+      const s = document.getElementById(`comp-fetch-status-${n}`);
+      if (s) s.textContent = '⚠ 当前站点暂无数据库竞品';
+    });
+    if (btn) { btn.textContent = '⚡ 自动匹配'; btn.disabled = false; }
+    return;
+  }
+
+  const userText = [
+    document.getElementById('inp-name')?.value || '',
+    document.getElementById('inp-brand')?.value || '',
+    document.getElementById('inp-desc')?.value || '',
+  ].join(' ').trim();
+
+  const userTokens = tokenize(userText);
+
+  let scored;
+  if (userTokens.size > 0) {
+    scored = siteData.map(item => {
+      const itemTokens = tokenize(item.title);
+      const inter = [...userTokens].filter(t => itemTokens.has(t)).length;
+      const union = new Set([...userTokens, ...itemTokens]).size;
+      return { ...item, _score: union > 0 ? inter / union : 0 };
+    }).sort((a, b) => {
+      if (Math.abs(b._score - a._score) > 0.001) return b._score - a._score;
+      return b.gmv - a.gmv;  // 相似度相同时按 GMV 排
+    });
+  } else {
+    // 没有商品信息时直接按 GMV 取 Top3
+    scored = [...siteData].sort((a, b) => b.gmv - a.gmv);
+  }
+
+  const top3 = scored.slice(0, 3);
+  top3.forEach((item, i) => {
+    const n = i + 4;
+    const idEl = document.getElementById(`comp-id-${n}`);
+    const stEl = document.getElementById(`comp-fetch-status-${n}`);
+    if (!idEl) return;
+    idEl.value = item.id;
+    if (stEl) {
+      const gmvStr = item.gmv > 0 ? ` · GMV $${item.gmv.toLocaleString()}` : '';
+      const catStr = (item.categ4 || item.categ3 || '');
+      stEl.textContent = `📊 数据库推荐${catStr ? ' · ' + catStr : ''}${gmvStr}`;
+    }
+    fetchCompetitorItem(n);
+  });
+
+  if (btn) { btn.textContent = '⚡ 自动匹配'; btn.disabled = false; }
+}
+
 function generateCompetitorAnalysis() {
-  // Collect all filled competitor slots
+  // Collect all filled competitor slots (1-6)
   const compsList = [];
-  for (let n = 1; n <= 3; n++) {
+  for (let n = 1; n <= 6; n++) {
     const title = (document.getElementById(`comp-title-${n}`)?.value || '').trim();
     const details = (document.getElementById(`comp-details-${n}`)?.value || '').trim();
-    if (title) compsList.push({ title, details, text: [title, details].join(' ').trim() });
+    const isDb = n >= 4;
+    if (title) compsList.push({ title, details, text: [title, details].join(' ').trim(), isDb, slot: n });
   }
   const compTitle = compsList[0]?.title || '';
   const compDetails = compsList[0]?.details || '';
@@ -3552,9 +3674,18 @@ function generateCompetitorAnalysis() {
     ⏳ AI 深度分析中（约 10-20 秒）...
   </div>`;
 
+  const dbCountFilled = dbComps.length;
+  const manualCountFilled = manualComps.length;
+  const badgeHtml = `<div style="display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap">
+    <span style="background:#e0eeff;color:#0064D2;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700">🔍 共分析 ${compsList.length} 个竞品</span>
+    <span style="background:#f3f4f6;color:#374151;padding:3px 10px;border-radius:10px;font-size:11px">✋ ${manualCountFilled} 个自选</span>
+    <span style="background:#f0fdf4;color:#16a34a;padding:3px 10px;border-radius:10px;font-size:11px">📊 ${dbCountFilled} 个数据库推荐</span>
+  </div>`;
+
   document.getElementById('comp-output').innerHTML = `
     <div class="comp-report">
       <div class="comp-report-title">📊 ${typeLabel} 竞品差距分析</div>
+      ${badgeHtml}
       ${scoreSection}
       <div class="comp-gap-section">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
@@ -3569,19 +3700,48 @@ function generateCompetitorAnalysis() {
 
   // AI deep analysis
   const category = lastResults && lastResults[0] ? (lastResults[0].leaf || '') : '';
+  const manualComps  = compsList.filter(c => !c.isDb);
+  const dbComps      = compsList.filter(c => c.isDb);
+  const dbMetaList   = dbComps.map(c => {
+    const idVal = (document.getElementById(`comp-id-${c.slot}`)?.value || '').trim();
+    const matched = (_compDataCache[currentCategory]?.[currentSite] || []).find(x => x.id === idVal);
+    return matched ? { item_id: idVal, title: c.title, gmv: matched.gmv, si: matched.si, categ: matched.categ4 || matched.categ3 } : null;
+  }).filter(Boolean);
+
+  const totalCount = compsList.length;
+  const dbCount = dbComps.length;
+  const manualCount = manualComps.length;
+
+  const analysisHint = `请综合分析${totalCount}个竞品（前${manualCount}个为商家自选，后${dbCount}个为数据库高GMV推荐），从以下多个维度给出可执行的具体建议：
+1. 标题关键词优化（品牌/年份/车型/零件名称格式，搜索关键词覆盖率）
+2. 兼容车型覆盖度（Vehicle Compatibility 宽度 vs 竞品，具体建议增加哪些车型）
+3. 价格定位策略（相对竞品GMV数据的定价建议，具体价格区间）
+4. 卖点差异化描述（USP亮点、安装指南、售后保障等描述优化）
+5. 图片策略（白底主图、多角度图、安装图、对比图的组合建议）
+6. 物流与售后政策（免运费/时效/退换货政策 vs 竞品）
+7. Promoted Listings促销策略（建议出价比例、重点关键词）
+8. 基于GMV/SI趋势的市场机会判断
+每条建议必须具体可操作，避免笼统表述。`;
+
   fetch('https://wallpaper-actually-wilson-stick.trycloudflare.com/competitor-compare', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       competitor_title:   compTitle,
       competitor_details: compDetails,
-      competitors: compsList.map(c => ({ title: c.title, details: c.details })),
+      competitors: compsList.map(c => ({
+        title: c.title,
+        details: c.details,
+        source: c.isDb ? 'database_top_gmv' : 'manual',
+      })),
       my_title:  myTitle,
       my_brand:  myBrand,
       my_desc:   myDesc,
       category:  category,
       site:      currentSite,
       category_type: currentCategory,
+      db_competitors: dbMetaList,
+      analysis_hint: analysisHint,
     }),
     signal: AbortSignal.timeout(90000),
   })
