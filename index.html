@@ -3736,14 +3736,12 @@ function generateCompetitorAnalysis() {
   const manualCount = manualComps.length;
 
   const analysisHint = `请综合分析${totalCount}个竞品（${manualCount}个商家自选 + ${dbCount}个系统推荐），从以下多个维度给出可执行的具体建议：
-1. 标题关键词优化（品牌/年份/车型/零件名称格式，搜索关键词覆盖率）
-2. 兼容车型覆盖度（Vehicle Compatibility 宽度 vs 竞品，具体建议增加哪些车型）
-3. 价格定位策略（参考竞品价格带，给出具体定价区间建议）
-4. 卖点差异化描述（USP亮点、安装指南、售后保障等描述优化）
-5. 图片策略（白底主图、多角度图、安装图、对比图的组合建议）
-6. 物流与售后政策（免运费/时效/退换货政策 vs 竞品）
-7. Promoted Listings促销策略（建议出价比例、重点关键词）
-8. 基于竞品表现的市场机会判断
+1. 兼容车型覆盖度（Vehicle Compatibility 宽度 vs 竞品，具体建议增加哪些车型）
+2. 价格定位策略（参考竞品价格带，给出具体定价区间建议）
+3. 卖点差异化描述（USP亮点、安装指南、售后保障等描述优化）
+4. 物流与售后政策（免运费/时效/退换货政策 vs 竞品）
+5. Promoted Listings促销策略（建议出价比例、重点关键词）
+6. 基于竞品表现的市场机会判断
 每条建议必须具体可操作，避免笼统表述。`;
 
   fetch('https://wallpaper-actually-wilson-stick.trycloudflare.com/competitor-compare', {
