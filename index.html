@@ -3495,9 +3495,10 @@ async function autoMatchCompetitors() {
   if (btn) { btn.textContent = '⏳ 匹配中...'; btn.disabled = true; }
 
   const data = await loadCompData(currentCategory);
-  const siteData = (data[currentSite] || []);
+  // 新格式：{site: [{categ, categ_full, items:[{id,title,gmv,si}]}]}
+  const siteGroups = (data[currentSite] || []);
 
-  if (!siteData.length) {
+  if (!siteGroups.length) {
     [4,5,6].forEach(n => {
       const s = document.getElementById(`comp-fetch-status-${n}`);
       if (s) s.textContent = '⚠ 当前站点暂无数据库竞品';
@@ -3514,24 +3515,32 @@ async function autoMatchCompetitors() {
 
   const userTokens = tokenize(userText);
 
-  let scored;
+  let bestGroup;
   if (userTokens.size > 0) {
-    scored = siteData.map(item => {
-      const itemTokens = tokenize(item.title);
-      const inter = [...userTokens].filter(t => itemTokens.has(t)).length;
-      const union = new Set([...userTokens, ...itemTokens]).size;
-      return { ...item, _score: union > 0 ? inter / union : 0 };
-    }).sort((a, b) => {
-      if (Math.abs(b._score - a._score) > 0.001) return b._score - a._score;
-      return b.gmv - a.gmv;  // 相似度相同时按 GMV 排
-    });
+    // 用 Jaccard 相似度匹配商家商品描述 vs 类目名称
+    const scored = siteGroups.map(g => {
+      const catTokens = tokenize(g.categ_full);
+      const inter = [...userTokens].filter(t => catTokens.has(t)).length;
+      const union = new Set([...userTokens, ...catTokens]).size;
+      return { ...g, _score: union > 0 ? inter / union : 0 };
+    }).sort((a, b) => b._score - a._score);
+    bestGroup = scored[0];
   } else {
-    // 没有商品信息时直接按 GMV 取 Top3
-    scored = [...siteData].sort((a, b) => b.gmv - a.gmv);
+    // 没填商品信息时，取第一个（已按 GMV 排序）
+    bestGroup = siteGroups[0];
   }
 
-  const top3 = scored.slice(0, 3);
-  top3.forEach((item, i) => {
+  if (!bestGroup || !bestGroup.items || bestGroup.items.length === 0) {
+    [4,5,6].forEach(n => {
+      const s = document.getElementById(`comp-fetch-status-${n}`);
+      if (s) s.textContent = '⚠ 未找到匹配类目';
+    });
+    if (btn) { btn.textContent = '⚡ 自动匹配'; btn.disabled = false; }
+    return;
+  }
+
+  // 填入匹配类目的 Top3 item
+  bestGroup.items.forEach((item, i) => {
     const n = i + 4;
     const idEl = document.getElementById(`comp-id-${n}`);
     const stEl = document.getElementById(`comp-fetch-status-${n}`);
@@ -3539,11 +3548,22 @@ async function autoMatchCompetitors() {
     idEl.value = item.id;
     if (stEl) {
       const gmvStr = item.gmv > 0 ? ` · GMV $${item.gmv.toLocaleString()}` : '';
-      const catStr = (item.categ4 || item.categ3 || '');
-      stEl.textContent = `📊 数据库推荐${catStr ? ' · ' + catStr : ''}${gmvStr}`;
+      stEl.textContent = `📊 ${bestGroup.categ}${gmvStr}`;
     }
     fetchCompetitorItem(n);
   });
+  // 如果该类目不足3个商品，清空多余的槽
+  for (let i = bestGroup.items.length; i < 3; i++) {
+    const n = i + 4;
+    const idEl = document.getElementById(`comp-id-${n}`);
+    const stEl = document.getElementById(`comp-fetch-status-${n}`);
+    const t1 = document.getElementById(`comp-title-${n}`);
+    const t2 = document.getElementById(`comp-details-${n}`);
+    if (idEl) idEl.value = '';
+    if (stEl) stEl.textContent = '';
+    if (t1) t1.value = '';
+    if (t2) t2.value = '';
+  }
 
   if (btn) { btn.textContent = '⚡ 自动匹配'; btn.disabled = false; }
 }
@@ -3704,8 +3724,8 @@ function generateCompetitorAnalysis() {
   const dbComps      = compsList.filter(c => c.isDb);
   const dbMetaList   = dbComps.map(c => {
     const idVal = (document.getElementById(`comp-id-${c.slot}`)?.value || '').trim();
-    const matched = (_compDataCache[currentCategory]?.[currentSite] || []).find(x => x.id === idVal);
-    return matched ? { item_id: idVal, title: c.title, gmv: matched.gmv, si: matched.si, categ: matched.categ4 || matched.categ3 } : null;
+    const matched = (_compDataCache[currentCategory]?.[currentSite] || []).flatMap(g => g.items || []).find(x => x.id === idVal);
+    return matched ? { item_id: idVal, title: c.title, gmv: matched.gmv, si: matched.si, categ: matched.categ } : null;
   }).filter(Boolean);
 
   const totalCount = compsList.length;
