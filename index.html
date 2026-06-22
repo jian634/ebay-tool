@@ -2408,6 +2408,11 @@ let currentSite = 'US';
 let currentCategory = 'motor';
 const categoryDataCache = {};
 const CAT_LABELS = {motor:'汽配 Motor', bi:'工业品 BI', lifestyle:'生活方式 Lifestyle'};
+const CAT_HEADER = {
+  motor:     { zh: '汽配竞品分析工具',     en: 'Auto Parts Competitor Analysis' },
+  bi:        { zh: '工业品竞品分析工具',   en: 'B2B/Industrial Competitor Analysis' },
+  lifestyle: { zh: '生活方式竞品分析工具', en: 'Lifestyle Competitor Analysis' },
+};
 let excellentData = null;
 let lastResults = null;
 let lastQuery = '';
@@ -2431,7 +2436,8 @@ function initSiteTabs() {
 
 function updateTexts() {
   const L = LANG[lang];
-  document.getElementById('h-sub').textContent = L.headerSub;
+  const hdr = CAT_HEADER[currentCategory] || CAT_HEADER.motor;
+  document.getElementById('h-sub').textContent = lang === 'zh' ? hdr.zh : hdr.en;
   document.getElementById('lang-btn').textContent = L.langBtn;
   document.getElementById('l-title').textContent = L.leftTitle;
   document.getElementById('l-name-label').textContent = L.nameLabel;
@@ -4518,9 +4524,14 @@ async function selectCategory(cat) {
   currentCategory = cat;
   document.querySelectorAll('.cat-tab').forEach(t =>
     t.classList.toggle('active', t.dataset.cat === cat));
+  // 更新页头副标题
+  const hdr = CAT_HEADER[cat] || CAT_HEADER.motor;
+  document.getElementById('h-sub').textContent = lang === 'zh' ? hdr.zh : hdr.en;
+  // 加载对应品类数据
   if (!categoryDataCache[cat]) {
     try {
       const r = await fetch(`./${cat}_data.json`);
+      if (!r.ok) throw new Error(r.status);
       categoryDataCache[cat] = await r.json();
     } catch (e) {
       console.warn(`Failed to load ${cat}_data.json:`, e);
