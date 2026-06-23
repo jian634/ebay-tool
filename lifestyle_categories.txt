@@ -1,7 +1,7 @@
 ﻿eBay Lifestyle 类别树状图 (US站点)
 ============================================================
 
-◆ Everything Else (其他一切)
+Everything Else (其他一切)
   ├── Career Development & Education (职业发展与教育)
       ├── Certification & Licenses (认证与执照)
       ├── Computer & Technical (计算机与技术)
