@@ -1,1696 +1,1698 @@
 ﻿eBay Business & Industrial (BI) 类别树状图 (US站点)
 ============================================================
 
-◆ Adhesives, Sealants & Tapes
-  ├── Adhesive Guns & Dispensers
-      ├── Caulk Guns
-      ├── Glue Dispensing Syringes
-      ├── Glue Guns
-      ├── Glue Syringe Tips
-      ├── Hot Glue Dispensers
-      ├── Solder Paste Dispensers
-      ├── Tape Guns & Dispensers
-  ├── Adhesive Tapes
-  ├── Caulks, Sealants & Removers
-      ├── Caulk Removing Tools
-      ├── Caulking Tips & Caps
-      ├── Caulks & Sealants
-      ├── Liquid & Spray Caulk Removers
-      ├── Threadlockers
-  ├── Glues, Epoxies & Cements
-      ├── Conductive Wire Glue Pastes
-      ├── Hot Glue Sticks
-      ├── Liquid Glues & Cements
-      ├── Multi-Component Epoxies
-      ├── Spray Adhesives
+◆ Adhesives, Sealants & Tapes (粘合剂、密封剂与胶带)
+  ├── Adhesive Guns & Dispensers (粘合剂枪与分配器)
+      ├── Caulk Guns (填缝枪)
+      ├── Glue Dispensing Syringes (胶水注射器)
+      ├── Glue Guns (胶枪)
+      ├── Glue Syringe Tips (胶水注射器针头)
+      ├── Hot Glue Dispensers (热熔胶分配器)
+      ├── Solder Paste Dispensers (焊膏分配器)
+      ├── Tape Guns & Dispensers (胶带枪与分配器)
+  ├── Adhesive Tapes (粘合胶带)
+  ├── Caulks, Sealants & Removers (填缝剂、密封剂与清除剂)
+      ├── Caulk Removing Tools (填缝清除工具)
+      ├── Caulking Tips & Caps (填缝嘴与盖帽)
+      ├── Caulks & Sealants (填缝剂与密封剂)
+      ├── Liquid & Spray Caulk Removers (液体与喷雾填缝清除剂)
+      ├── Threadlockers (螺纹锁固剂)
+  ├── Glues, Epoxies & Cements (胶水、环氧树脂与水泥)
+      ├── Conductive Wire Glue Pastes (导电胶浆)
+      ├── Hot Glue Sticks (热熔胶棒)
+      ├── Liquid Glues & Cements (液体胶水与水泥)
+      ├── Multi-Component Epoxies (多组分环氧树脂)
+      ├── Spray Adhesives (喷胶)
 
-◆ Agriculture & Forestry
-  ├── Forestry Equipment & Supplies
-      ├── Equipment
-      ├── Other Forestry Equipment
-      ├── Supplies & Tools
-  ├── GPS & Guidance Equipment
-  ├── Livestock Supplies
-      ├── Animal Feed
-      ├── Animal Health & Veterinary
-      ├── Beef Cattle
-      ├── Beekeeping
-      ├── Dairy Cattle
-      ├── Fencing
-      ├── Horse
-      ├── Other Livestock Supplies
-      ├── Pig/Hog
-      ├── Poultry
-      ├── Sheep & Goat
-  ├── Other Agriculture & Forestry
+◆ Agriculture & Forestry (农业与林业)
+  ├── Forestry Equipment & Supplies (林业设备与用品)
+      ├── Equipment (设备)
+      ├── Other Forestry Equipment (其他林业设备)
+      ├── Supplies & Tools (用品与工具)
+  ├── GPS & Guidance Equipment (GPS 与导航设备)
+  ├── Livestock Supplies (牲畜用品)
+      ├── Animal Feed (动物饲料)
+      ├── Animal Health & Veterinary (动物健康与兽医)
+      ├── Beef Cattle (肉牛)
+      ├── Beekeeping (养蜂)
+      ├── Dairy Cattle (奶牛)
+      ├── Fencing (围栏)
+      ├── Horse (马匹)
+      ├── Other Livestock Supplies (其他牲畜用品)
+      ├── Pig/Hog (猪)
+      ├── Poultry (家禽)
+      ├── Sheep & Goat (绵羊与山羊)
+  ├── Other Agriculture & Forestry (其他农业与林业)
 
-◆ Building Materials & Supplies
-  ├── Cement, Concrete & Masonry
-      ├── Cement, Concrete, Mortar & Stucco Mix
-      ├── Concrete Blocks & Bricks
-      ├── Pavers & Stepping Stones
-      ├── Rock, Gravel & Sand
-  ├── Commercial Ceiling Tiles & Supplies
-      ├── Ceiling Grids & Suspension Systems
-      ├── Ceiling Suspension Hardware & Accessories
-      ├── Commercial Ceiling Tiles
-  ├── Commercial Doors & Door Hardware
-      ├── Commercial Door Frames
-      ├── Commercial Door Hardware
-      ├── Commercial Doors
-  ├── Commercial Flooring & Tiles
-      ├── Commercial Floor & Wall Tile Accessories
-      ├── Commercial Floor & Wall Tiles
-      ├── Commercial Floor Care
-      ├── Commercial Floor Transitions
-      ├── Commercial Flooring & Carpet
-      ├── Commercial Flooring Underlayment
-  ├── Contractor Guides & Manuals
-  ├── Drywall Construction
-      ├── Drywall Panels
-      ├── Drywall Plaster & Joint Compounds
-      ├── Drywall Tape & Accessories
-  ├── Industrial Paint, Coatings & Supplies
-      ├── Brushes, Rollers & Trays
-      ├── Industrial Coatings & Sealants
-      ├── Industrial Paints
-      ├── Paint Mixers & Shakers
-      ├── Paint Sprayer Parts
-      ├── Paint Sprayers & Striping Machines
-      ├── Paint Strippers & Removers
-      ├── Plastic Sheeting & Drop Cloths
-  ├── Industrial Plumbing & Fixtures
-      ├── Drain Components
-      ├── Faucet Accessories
-      ├── Faucets
-      ├── Pipe & Tubing
-      ├── Pipe Fittings
-      ├── Pipe Insulation
-      ├── Plumbing Accessories
-      ├── Sink Accessories
-      ├── Sinks
-      ├── Valves
-  ├── Industrial Stairways
-      ├── Balusters & Spindles
-      ├── Handrail Fittings
-      ├── Handrails
-      ├── Industrial Stair Units
-      ├── Posts
-      ├── Stair Railing Kits
-      ├── Treads & Risers
-  ├── Insulation & Accessories
-      ├── Insulation
-      ├── Insulation Accessories
-  ├── Lumber & Composites
-      ├── Lumber
-      ├── Wall Paneling & Wainscoting
-      ├── Wood Composite Panels & Sheets
-      ├── Wood Veneer Sheets
-  ├── Molding & Millwork
-      ├── Accents & Trim
-      ├── Baseboard Molding
-      ├── Chair Rail Molding
-      ├── Corbels & Supports
-      ├── Crown Molding
-      ├── Window & Door Trim
-      ├── Wood Applique
-  ├── Other Building Materials
-  ├── Roofing & Gutters
-      ├── Gutter Accessories
-      ├── Gutters
-      ├── Roof Caps
-      ├── Roof Flashing
-      ├── Roof Tiles & Shingles
-      ├── Roof Underlayment
-      ├── Roof Vents
-      ├── Roofing Sheets & Panels
-  ├── Vintage Construction
-      ├── Machine Parts & Tools
-      ├── Manuals & Brochures
-      ├── Other Vintage Construction
-  ├── Windows & Window Hardware
-      ├── Glass Blocks & Glass Panels
-      ├── Industrial & Commercial Windows
-      ├── Window Hardware
-      ├── Window Screens
-      ├── Window Sills
+◆ Building Materials & Supplies (建筑材料与用品)
+  ├── Cement, Concrete & Masonry (水泥、混凝土与砌体)
+      ├── Cement, Concrete, Mortar & Stucco Mix (水泥、混凝土、砂浆与灰泥混合物)
+      ├── Concrete Blocks & Bricks (混凝土砌块与砖)
+      ├── Pavers & Stepping Stones (铺路石与踏脚石)
+      ├── Rock, Gravel & Sand (岩石、砾石与沙子)
+  ├── Commercial Ceiling Tiles & Supplies (商用天花板瓷砖与用品)
+      ├── Ceiling Grids & Suspension Systems (天花板网格与悬挂系统)
+      ├── Ceiling Suspension Hardware & Accessories (天花板悬挂五金与配件)
+      ├── Commercial Ceiling Tiles (商用天花板瓷砖)
+  ├── Commercial Doors & Door Hardware (商用门与门五金)
+      ├── Commercial Door Frames (商用门框)
+      ├── Commercial Door Hardware (商用门五金)
+      ├── Commercial Doors (商用门)
+  ├── Commercial Flooring & Tiles (商用地板与瓷砖)
+      ├── Commercial Floor & Wall Tile Accessories (商用地面与墙面瓷砖配件)
+      ├── Commercial Floor & Wall Tiles (商用地面与墙面瓷砖)
+      ├── Commercial Floor Care (商用地板护理)
+      ├── Commercial Floor Transitions (商用地板过渡条)
+      ├── Commercial Flooring & Carpet (商用地板与地毯)
+      ├── Commercial Flooring Underlayment (商用地板垫层)
+  ├── Contractor Guides & Manuals (承包商指南与手册)
+  ├── Drywall Construction (石膏板施工)
+      ├── Drywall Panels (石膏板)
+      ├── Drywall Plaster & Joint Compounds (石膏板灰泥与接缝化合物)
+      ├── Drywall Tape & Accessories (石膏板胶带与配件)
+  ├── Industrial Paint, Coatings & Supplies (工业涂料、涂层与用品)
+      ├── Brushes, Rollers & Trays (刷子、滚筒与托盘)
+      ├── Industrial Coatings & Sealants (工业涂层与密封剂)
+      ├── Industrial Paints (工业涂料)
+      ├── Paint Mixers & Shakers (涂料混合器与摇匀机)
+      ├── Paint Sprayer Parts (喷漆机零件)
+      ├── Paint Sprayers & Striping Machines (喷漆机与划线机)
+      ├── Paint Strippers & Removers (脱漆剂与清除剂)
+      ├── Plastic Sheeting & Drop Cloths (塑料布与防护布)
+  ├── Industrial Plumbing & Fixtures (工业管道与卫浴设备)
+      ├── Drain Components (排水组件)
+      ├── Faucet Accessories (水龙头配件)
+      ├── Faucets (水龙头)
+      ├── Pipe & Tubing (管道与管材)
+      ├── Pipe Fittings (管件)
+      ├── Pipe Insulation (管道保温)
+      ├── Plumbing Accessories (管道配件)
+      ├── Sink Accessories (水槽配件)
+      ├── Sinks (水槽)
+      ├── Valves (阀门)
+  ├── Industrial Stairways (工业楼梯)
+      ├── Balusters & Spindles (栏杆柱与主轴)
+      ├── Handrail Fittings (扶手配件)
+      ├── Handrails (扶手)
+      ├── Industrial Stair Units (工业楼梯单元)
+      ├── Posts (立柱)
+      ├── Stair Railing Kits (楼梯栏杆套件)
+      ├── Treads & Risers (踏板与立板)
+  ├── Insulation & Accessories (保温材料与配件)
+      ├── Insulation (保温材料)
+      ├── Insulation Accessories (保温配件)
+  ├── Lumber & Composites (木材与复合材料)
+      ├── Lumber (木材)
+      ├── Wall Paneling & Wainscoting (墙板与护墙板)
+      ├── Wood Composite Panels & Sheets (木质复合板与板材)
+      ├── Wood Veneer Sheets (木皮板)
+  ├── Molding & Millwork (装饰线条与细木工)
+      ├── Accents & Trim (装饰线条与饰条)
+      ├── Baseboard Molding (踢脚线)
+      ├── Chair Rail Molding (椅轨线)
+      ├── Corbels & Supports (托架与支撑)
+      ├── Crown Molding (顶角线/冠饰线条)
+      ├── Window & Door Trim (门窗饰条)
+      ├── Wood Applique (木雕贴花)
+  ├── Other Building Materials (其他建筑材料)
+  ├── Roofing & Gutters (屋顶与排水沟)
+      ├── Gutter Accessories (排水沟配件)
+      ├── Gutters (排水沟)
+      ├── Roof Caps (屋顶帽)
+      ├── Roof Flashing (屋顶泛水/挡水板)
+      ├── Roof Tiles & Shingles (屋顶瓦与木瓦)
+      ├── Roof Underlayment (屋顶垫层)
+      ├── Roof Vents (屋顶通风口)
+      ├── Roofing Sheets & Panels (屋顶板与面板)
+  ├── Vintage Construction (复古建筑用品)
+      ├── Machine Parts & Tools (机械零件与工具)
+      ├── Manuals & Brochures (手册与宣传册)
+      ├── Other Vintage Construction (其他复古建筑用品)
+  ├── Windows & Window Hardware (窗户与窗户五金)
+      ├── Glass Blocks & Glass Panels (玻璃砖与玻璃板)
+      ├── Industrial & Commercial Windows (工业与商用窗户)
+      ├── Window Hardware (窗户五金)
+      ├── Window Screens (纱窗)
+      ├── Window Sills (窗台)
 
-◆ Cleaning & Janitorial Supplies
-  ├── Cleaners & Disinfectants
-      ├── Aerosol & Foam Cleaners
-      ├── Cleaning Wipes & Pads
-      ├── Disinfecting & Sterilizing Products
-      ├── Gel, Paste & Powder Cleaners
-      ├── Liquid Cleaners
-      ├── Pod, Cake & Screen Cleaners
-  ├── Floor & Upholstery Cleaning
-      ├── Blowers, Air Movers & Dryers
-      ├── Escalator Cleaners
-      ├── Extractors & Steam Cleaners
-      ├── Floor & Carpet Sweepers
-      ├── Scrubbers, Buffers & Polishers
-      ├── Vacuum Cleaners, Parts & Accessories
-  ├── Janitorial & Housekeeping Carts
-  ├── Janitorial Cart Bags
-  ├── Laundry Carts, Bags & Cleaners
-      ├── Laundry Carts, Hampers & Bags
-      ├── Laundry Detergents & Softeners
-  ├── Manual Cleaning Equipment
-      ├── Bottles, Nozzles & Sprayers
-      ├── Brooms & Dust Pans
-      ├── Brush Cleaners
-      ├── Cleaning Brushes
-      ├── Cleaning Sponges
-      ├── Disposable Janitorial Gloves
-      ├── Drain & Toilet Plungers
-      ├── Dusters & Duster Refills
-      ├── Extension Handles & Poles
-      ├── Mops, Mop Parts & Accessories
-      ├── Other Cleaning Equipment
-      ├── Pump Sprayers
-      ├── Rags, Towels & Wipers
-      ├── Reusable Dusting Cloths
-      ├── Sorbent Pads
-      ├── Squeegees & Replacement Blades
-      ├── Standard Buckets & Pails
-      ├── Steel Wool
-  ├── Other Cleaning Supplies
-  ├── Pest Control Supplies
-      ├── Insect Traps & Lures
-      ├── Pest Repellants & Poisons
-      ├── Pest Trap Parts & Accessories
-      ├── Rodent Traps & Boxes
-  ├── Pressure Washers, Parts & Accessories
-      ├── Diesel Pressure Washers
-      ├── Electric Pressure Washers
-      ├── Gas Pressure Washers
-      ├── Pressure Washer Parts & Accessories
-  ├── Sanitation Steam Cleaners
-      ├── Handheld Steam Cleaners
-      ├── Steam Cleaner Parts & Accessories
-      ├── Wheeled Steam Cleaners
-  ├── Trash Bags & Trash Liners
+◆ Cleaning & Janitorial Supplies (清洁与保洁用品)
+  ├── Cleaners & Disinfectants (清洁剂与消毒剂)
+      ├── Aerosol & Foam Cleaners (气雾与泡沫清洁剂)
+      ├── Cleaning Wipes & Pads (清洁湿巾与清洁垫)
+      ├── Disinfecting & Sterilizing Products (消毒与灭菌产品)
+      ├── Gel, Paste & Powder Cleaners (凝胶、膏状与粉末清洁剂)
+      ├── Liquid Cleaners (液体清洁剂)
+      ├── Pod, Cake & Screen Cleaners (胶囊、块状与滤网清洁剂)
+  ├── Floor & Upholstery Cleaning (地板与软装清洁)
+      ├── Blowers, Air Movers & Dryers (吹风机、空气移动器与烘干机)
+      ├── Escalator Cleaners (自动扶梯清洁机)
+      ├── Extractors & Steam Cleaners (抽洗机与蒸汽清洁机)
+      ├── Floor & Carpet Sweepers (地板与地毯清扫机)
+      ├── Scrubbers, Buffers & Polishers (洗地机、抛光机与打磨机)
+      ├── Vacuum Cleaners, Parts & Accessories (吸尘器、零件与配件)
+  ├── Janitorial & Housekeeping Carts (保洁与客房服务推车)
+  ├── Janitorial Cart Bags (保洁推车袋)
+  ├── Laundry Carts, Bags & Cleaners (洗衣推车、洗衣袋与清洁剂)
+      ├── Laundry Carts, Hampers & Bags (洗衣推车、洗衣篮与洗衣袋)
+      ├── Laundry Detergents & Softeners (洗衣液与柔顺剂)
+  ├── Manual Cleaning Equipment (手动清洁设备)
+      ├── Bottles, Nozzles & Sprayers (瓶子、喷嘴与喷雾器)
+      ├── Brooms & Dust Pans (扫帚与簸箕)
+      ├── Brush Cleaners (刷子清洁剂)
+      ├── Cleaning Brushes (清洁刷)
+      ├── Cleaning Sponges (清洁海绵)
+      ├── Disposable Janitorial Gloves (一次性保洁手套)
+      ├── Drain & Toilet Plungers (下水道与马桶搋子)
+      ├── Dusters & Duster Refills (除尘掸与除尘掸替换装)
+      ├── Extension Handles & Poles (延长手柄与长杆)
+      ├── Mops, Mop Parts & Accessories (拖把、拖把零件与配件)
+      ├── Other Cleaning Equipment (其他清洁设备)
+      ├── Pump Sprayers (泵式喷雾器)
+      ├── Rags, Towels & Wipers (抹布、毛巾与擦拭布)
+      ├── Reusable Dusting Cloths (可重复使用除尘布)
+      ├── Sorbent Pads (吸附垫)
+      ├── Squeegees & Replacement Blades (刮水器与替换刮片)
+      ├── Standard Buckets & Pails (标准水桶与提桶)
+      ├── Steel Wool (钢丝绒)
+  ├── Other Cleaning Supplies (其他清洁用品)
+  ├── Pest Control Supplies (害虫防治用品)
+      ├── Insect Traps & Lures (昆虫诱捕器与诱饵)
+      ├── Pest Repellants & Poisons (驱虫剂与毒药)
+      ├── Pest Trap Parts & Accessories (害虫诱捕器零件与配件)
+      ├── Rodent Traps & Boxes (啮齿动物诱捕器与盒子)
+  ├── Pressure Washers, Parts & Accessories (高压清洗机、零件与配件)
+      ├── Diesel Pressure Washers (柴油高压清洗机)
+      ├── Electric Pressure Washers (电动高压清洗机)
+      ├── Gas Pressure Washers (汽油高压清洗机)
+      ├── Pressure Washer Parts & Accessories (高压清洗机零件与配件)
+  ├── Sanitation Steam Cleaners (卫生蒸汽清洁机)
+      ├── Handheld Steam Cleaners (手持蒸汽清洁机)
+      ├── Steam Cleaner Parts & Accessories (蒸汽清洁机零件与配件)
+      ├── Wheeled Steam Cleaners (轮式蒸汽清洁机)
+  ├── Trash Bags & Trash Liners (垃圾袋与垃圾桶内衬)
 
-◆ CNC, Metalworking & Manufacturing
-  ├── Metalworking Equipment
-      ├── Bending Machines
-      ├── Beveling Machines
-      ├── Boring Machines
-      ├── Drilling & Tapping Machines
-      ├── Electrical Discharge Machines
-      ├── Finishing Machines
-      ├── Folding Machines
-      ├── Gear Cutting Machines
-      ├── Grinding Machines
-      ├── Honing & Lapping Machines
-      ├── Ironworker Machines
-      ├── Laser Cutting Machines
-      ├── Machining Centers & Milling Machines
-      ├── Metalworking Lathes
-      ├── Metalworking Saws & Cutters
-      ├── Notcher Machines
-      ├── Other Metalworking Equipment
-      ├── Polishing & Buffing Machines
-      ├── Press Brakes
-      ├── Punch Presses
-      ├── Riveting Machines
-      ├── Rollformer Machines
-      ├── Sanding Machines
-      ├── Screw Feeder & Screw Conveyor Machines
-      ├── Sheet Metal Shears
-      ├── Waterjet Cutting Machines
-  ├── Metalworking Equipment Replacement Parts
-  ├── Metalworking Fluids & Coolants
-  ├── Metalworking Inspection & Measurement
-      ├── CMM Machines & Comparators
-      ├── Calipers
-      ├── Gage Blocks & Spacers
-      ├── Indicators
-      ├── Inspection Gages
-      ├── Magnetic Holders
-      ├── Micrometers
-      ├── Other Metalworking Inspection & Measurement
-      ├── Protractors
-      ├── Rules
-      ├── Squares
-      ├── Surface Plates
-  ├── Metalworking Manuals, Books & Plans
-  ├── Metalworking Software
-  ├── Metalworking Supplies
-      ├── Abrasives
-      ├── Broaches
-      ├── Cutting Tool Sharpeners
-      ├── Dies
-      ├── Drills
-      ├── EDM
-      ├── End Mills
-      ├── Milling Cutters
-      ├── Other Metalworking Supplies
-      ├── Punches
-      ├── Reamers
-      ├── Saw Blades
-      ├── Taps
-      ├── Thread Mills
-      ├── Tool Bits
-      ├── Turning Tools
-  ├── Other CNC, Metalworking & Manufacturing
-  ├── Process Engineering Equipment
-      ├── Filtration Equipment
-      ├── Other Process Engineering Equipment
-      ├── Plastic Processing Equipment
-      ├── Process Boilers
-      ├── Process Mixers
-  ├── Raw Materials
-      ├── Carbon Fiber
-      ├── Graphite
-      ├── Lumber & Veneer
-      ├── Metals & Alloys
-      ├── Other Raw Materials
-      ├── Plastics
-      ├── Rubbers
-  ├── Semiconductor & PCB Manufacturing Equipment
-      ├── Burn-in Equipment
-      ├── Burn-in Equipment Components
-      ├── Cleanroom Components
-      ├── Cleanroom Equipment
-      ├── Inspection Equipment
-      ├── Other Semiconductor & PCB Manufacturing
-      ├── PCB Assembly Equipment
-      ├── Semiconductor Test & Assembly Equipment
-      ├── Tool & Machine Components
-      ├── Wafer Processing
-  ├── Textile & Apparel Equipment
-      ├── Cutting & Finishing Machines
-      ├── Embroidery Machines
-      ├── Industrial Sewing Machines
-      ├── Other Textile & Apparel Equipment
-      ├── Textile Machine Parts & Attachments
-      ├── Textile Supplies
-  ├── Welding & Soldering Equipment
-      ├── Soldering/Desoldering Equipment & Accessories
-      ├── Welding Equipment & Accessories
-  ├── Woodworking Equipment
-      ├── Bench & Floor Drill Presses
-      ├── Boring Machines
-      ├── Combination Machines
-      ├── Door Machines
-      ├── Dovetail Machines
-      ├── Edge Bander Machines
-      ├── Jointers
-      ├── Lathes
-      ├── Magnetic & Portable Drill Presses
-      ├── Mortising Machines
-      ├── Other Woodworking Equipment
-      ├── Planers
-      ├── Pocket Hole Machines
-      ├── Routers
-      ├── Sanders
-      ├── Saws
-      ├── Shaper Machines
-      ├── Tenon Machines
-  ├── Woodworking Manuals & Books
-  ├── Woodworking Supplies
-      ├── Blades
-      ├── Carving Tools & Chisels
-      ├── Other Woodworking Supplies
-      ├── Router Bits
-      ├── Wood Drill Bits
-  ├── Workholding & Toolholding
-      ├── Toolholding
-      ├── Workholding
+◆ CNC, Metalworking & Manufacturing (数控、金属加工与制造)
+  ├── Metalworking Equipment (金属加工设备)
+      ├── Bending Machines (折弯机)
+      ├── Beveling Machines (坡口机)
+      ├── Boring Machines (钻孔机)
+      ├── Drilling & Tapping Machines (钻孔与攻丝机)
+      ├── Electrical Discharge Machines (电火花加工机)
+      ├── Finishing Machines (精加工机床)
+      ├── Folding Machines (折边机)
+      ├── Gear Cutting Machines (齿轮加工机)
+      ├── Grinding Machines (磨床)
+      ├── Honing & Lapping Machines (珩磨与研磨机)
+      ├── Ironworker Machines (多功能冲剪机)
+      ├── Laser Cutting Machines (激光切割机)
+      ├── Machining Centers & Milling Machines (加工中心与铣床)
+      ├── Metalworking Lathes (金属加工车床)
+      ├── Metalworking Saws & Cutters (金属加工锯与切割机)
+      ├── Notcher Machines (开槽机)
+      ├── Other Metalworking Equipment (其他金属加工设备)
+      ├── Polishing & Buffing Machines (抛光与打磨机)
+      ├── Press Brakes (折弯压力机)
+      ├── Punch Presses (冲床)
+      ├── Riveting Machines (铆接机)
+      ├── Rollformer Machines (滚压成型机)
+      ├── Sanding Machines (砂光机)
+      ├── Screw Feeder & Screw Conveyor Machines (螺旋给料机与螺旋输送机)
+      ├── Sheet Metal Shears (钣金剪板机)
+      ├── Waterjet Cutting Machines (水刀切割机)
+  ├── Metalworking Equipment Replacement Parts (金属加工设备替换零件)
+  ├── Metalworking Fluids & Coolants (金属加工液与冷却液)
+  ├── Metalworking Inspection & Measurement (金属加工检测与测量)
+      ├── CMM Machines & Comparators (三坐标测量机与比较仪)
+      ├── Calipers (卡尺)
+      ├── Gage Blocks & Spacers (量块与垫块)
+      ├── Indicators (指示表)
+      ├── Inspection Gages (检验量规)
+      ├── Magnetic Holders (磁性表座)
+      ├── Micrometers (千分尺)
+      ├── Other Metalworking Inspection & Measurement (其他金属加工检测与测量)
+      ├── Protractors (量角器)
+      ├── Rules (直尺)
+      ├── Squares (角尺)
+      ├── Surface Plates (平板)
+  ├── Metalworking Manuals, Books & Plans (金属加工手册、书籍与图纸)
+  ├── Metalworking Software (金属加工软件)
+  ├── Metalworking Supplies (金属加工耗材)
+      ├── Abrasives (磨料)
+      ├── Broaches (拉刀)
+      ├── Cutting Tool Sharpeners (刀具磨锐器)
+      ├── Dies (模具/板牙)
+      ├── Drills (钻头)
+      ├── EDM (电火花加工)
+      ├── End Mills (立铣刀)
+      ├── Milling Cutters (铣刀)
+      ├── Other Metalworking Supplies (其他金属加工耗材)
+      ├── Punches (冲头)
+      ├── Reamers (铰刀)
+      ├── Saw Blades (锯片)
+      ├── Taps (丝锥)
+      ├── Thread Mills (螺纹铣刀)
+      ├── Tool Bits (刀具刀片)
+      ├── Turning Tools (车刀)
+  ├── Other CNC, Metalworking & Manufacturing (其他数控、金属加工与制造)
+  ├── Process Engineering Equipment (工艺工程设备)
+      ├── Filtration Equipment (过滤设备)
+      ├── Other Process Engineering Equipment (其他工艺工程设备)
+      ├── Plastic Processing Equipment (塑料加工设备)
+      ├── Process Boilers (工艺锅炉)
+      ├── Process Mixers (工艺混合机)
+  ├── Raw Materials (原材料)
+      ├── Carbon Fiber (碳纤维)
+      ├── Graphite (石墨)
+      ├── Lumber & Veneer (木材与木皮)
+      ├── Metals & Alloys (金属与合金)
+      ├── Other Raw Materials (其他原材料)
+      ├── Plastics (塑料)
+      ├── Rubbers (橡胶)
+  ├── Semiconductor & PCB Manufacturing Equipment (半导体与印刷电路板制造设备)
+      ├── Burn-in Equipment (老化测试设备)
+      ├── Burn-in Equipment Components (老化测试设备组件)
+      ├── Cleanroom Components (洁净室组件)
+      ├── Cleanroom Equipment (洁净室设备)
+      ├── Inspection Equipment (检测设备)
+      ├── Other Semiconductor & PCB Manufacturing (其他半导体与印刷电路板制造)
+      ├── PCB Assembly Equipment (印刷电路板组装设备)
+      ├── Semiconductor Test & Assembly Equipment (半导体测试与组装设备)
+      ├── Tool & Machine Components (工具与机械组件)
+      ├── Wafer Processing (晶圆加工)
+  ├── Textile & Apparel Equipment (纺织与服装设备)
+      ├── Cutting & Finishing Machines (裁剪与整理机)
+      ├── Embroidery Machines (刺绣机)
+      ├── Industrial Sewing Machines (工业缝纫机)
+      ├── Other Textile & Apparel Equipment (其他纺织与服装设备)
+      ├── Textile Machine Parts & Attachments (纺织机零件与附件)
+      ├── Textile Supplies (纺织耗材)
+  ├── Welding & Soldering Equipment (焊接与钎焊设备)
+      ├── Soldering/Desoldering Equipment & Accessories (焊接/拆焊设备与配件)
+      ├── Welding Equipment & Accessories (焊接设备与配件)
+  ├── Woodworking Equipment (木工设备)
+      ├── Bench & Floor Drill Presses (台式与落地钻床)
+      ├── Boring Machines (钻孔机)
+      ├── Combination Machines (组合机床)
+      ├── Door Machines (木门加工机)
+      ├── Dovetail Machines (燕尾榫机)
+      ├── Edge Bander Machines (封边机)
+      ├── Jointers (平刨机)
+      ├── Lathes (车床)
+      ├── Magnetic & Portable Drill Presses (磁力与便携式钻床)
+      ├── Mortising Machines (开榫机)
+      ├── Other Woodworking Equipment (其他木工设备)
+      ├── Planers (压刨机)
+      ├── Pocket Hole Machines (斜孔钻机)
+      ├── Routers (修边机/雕刻机)
+      ├── Sanders (砂光机)
+      ├── Saws (锯机)
+      ├── Shaper Machines (成型机)
+      ├── Tenon Machines (榫头机)
+  ├── Woodworking Manuals & Books (木工手册与书籍)
+  ├── Woodworking Supplies (木工耗材)
+      ├── Blades (刀片)
+      ├── Carving Tools & Chisels (雕刻工具与凿子)
+      ├── Other Woodworking Supplies (其他木工耗材)
+      ├── Router Bits (修边机刀头)
+      ├── Wood Drill Bits (木工钻头)
+  ├── Workholding & Toolholding (工件夹持与刀具夹持)
+      ├── Toolholding (刀具夹持)
+      ├── Workholding (工件夹持)
 
-◆ Electrical Equipment & Supplies
-  ├── Circuit Breakers & Disconnectors
-      ├── Circuit Breaker Accessories
-      ├── Circuit Breakers
-      ├── Disconnectors & Load Switches
-      ├── Ground Fault Interrupters & RCDs
-  ├── Contactors
-      ├── Contactor Accessories
-      ├── Definite Purpose Contactors
-      ├── IEC & NEMA Contactors
-      ├── Lighting Contactors
-      ├── Vacuum Contactors
-  ├── Electrical Boxes, Panels & Boards
-      ├── Electrical Boxes & Enclosures
-      ├── Electrical Enclosure Accessories
-      ├── Electrical Panel & Board Accessories
-      ├── Electrical Panel & Distribution Boards
-  ├── Electrical Plugs, Outlets & Covers
-      ├── Electrical Outlets & Receptacles
-      ├── Electrical Plugs
-      ├── Outlet Accessories
-      ├── Outlet Plates & Covers
-  ├── Electronic Components & Semiconductors
-      ├── Capacitors
-      ├── Circuit Boards & Prototyping
-      ├── Component Solenoids
-      ├── Electronic Components Books & Manuals
-      ├── LEDs, LCDs & Display Modules
-      ├── Passive Components
-      ├── Semiconductors & Actives
-      ├── Thermal Management
-  ├── Fuses
-      ├── Fuse Accessories
-      ├── Fuse Kits
-      ├── Fuses & Links
-  ├── Other Electrical Equipment & Supplies
-  ├── Phase Converters
-      ├── Digital Static Phase Converters
-      ├── Phase Converter Parts
-      ├── Rotary Phase Converters
-  ├── Power Supplies
-      ├── Power Supply Accessories
-      ├── Switching Mode Power Supplies
-      ├── UPS Batteries
-      ├── Uninterruptible Power Supplies
-  ├── Relays
-      ├── Control & Machine Tool Relays
-      ├── General Purpose Relays
-      ├── Latching Relays
-      ├── Overcurrent Protection Relays
-      ├── Overload Protection Relays
-      ├── Plug-In & Ice Cube Relays
-      ├── Reed Relays
-      ├── Relay Accessories
-      ├── Safety Relays
-      ├── Solid State Relays
-      ├── Time Delay Relays
-  ├── Switches
-      ├── Control Switches
-      ├── DIP & SIP Switches
-      ├── Joystick & Lever Switches
-      ├── Key Switches
-      ├── Limit & Snap Action Switches
-      ├── Magnetic & Reed Switches
-      ├── Microswitches
-      ├── Pressure Switches
-      ├── Pushbutton Switches
-      ├── Rocker Switches
-      ├── Rotary Switches
-      ├── Selector Switches
-      ├── Slide Switches
-      ├── Switch Accessories
-      ├── Tilt Switches
-      ├── Toggle Switches
-  ├── Transformers
-      ├── Autotransformers
-      ├── Current Transformers
-      ├── Industrial Control & General Purpose Transformers
-      ├── Power Transformers
-      ├── Pulse Transformers
-      ├── Telecom & Audio Transformers
-      ├── Transformer Accessories
-  ├── Wire, Cable & Conduit
-      ├── Conduit & Tubing
-      ├── Wire & Cable
-      ├── Wire & Cable Management
-      ├── Wire Connectors & Terminal Blocks
+◆ Electrical Equipment & Supplies (电气设备与用品)
+  ├── Circuit Breakers & Disconnectors (断路器与隔离开关)
+      ├── Circuit Breaker Accessories (断路器配件)
+      ├── Circuit Breakers (断路器)
+      ├── Disconnectors & Load Switches (隔离开关与负荷开关)
+      ├── Ground Fault Interrupters & RCDs (漏电保护器与剩余电流装置)
+  ├── Contactors (接触器)
+      ├── Contactor Accessories (接触器配件)
+      ├── Definite Purpose Contactors (专用接触器)
+      ├── IEC & NEMA Contactors (IEC 与 NEMA 接触器)
+      ├── Lighting Contactors (照明接触器)
+      ├── Vacuum Contactors (真空接触器)
+  ├── Electrical Boxes, Panels & Boards (电气箱、面板与配电板)
+      ├── Electrical Boxes & Enclosures (电气箱与外壳)
+      ├── Electrical Enclosure Accessories (电气外壳配件)
+      ├── Electrical Panel & Board Accessories (配电板与配电箱配件)
+      ├── Electrical Panel & Distribution Boards (配电板与配电箱)
+  ├── Electrical Plugs, Outlets & Covers (电气插头、插座与盖板)
+      ├── Electrical Outlets & Receptacles (电源插座与插孔)
+      ├── Electrical Plugs (电源插头)
+      ├── Outlet Accessories (插座配件)
+      ├── Outlet Plates & Covers (插座面板与盖板)
+  ├── Electronic Components & Semiconductors (电子元件与半导体)
+      ├── Capacitors (电容器)
+      ├── Circuit Boards & Prototyping (电路板与原型制作)
+      ├── Component Solenoids (元件电磁阀)
+      ├── Electronic Components Books & Manuals (电子元件书籍与手册)
+      ├── LEDs, LCDs & Display Modules (LED、LCD 与显示模块)
+      ├── Passive Components (无源元件)
+      ├── Semiconductors & Actives (半导体与有源器件)
+      ├── Thermal Management (热管理)
+  ├── Fuses (保险丝)
+      ├── Fuse Accessories (保险丝配件)
+      ├── Fuse Kits (保险丝套装)
+      ├── Fuses & Links (保险丝与熔丝链)
+  ├── Other Electrical Equipment & Supplies (其他电气设备与用品)
+  ├── Phase Converters (相位转换器)
+      ├── Digital Static Phase Converters (数字静态相位转换器)
+      ├── Phase Converter Parts (相位转换器零件)
+      ├── Rotary Phase Converters (旋转式相位转换器)
+  ├── Power Supplies (电源)
+      ├── Power Supply Accessories (电源配件)
+      ├── Switching Mode Power Supplies (开关电源)
+      ├── UPS Batteries (UPS 电池)
+      ├── Uninterruptible Power Supplies (不间断电源)
+  ├── Relays (继电器)
+      ├── Control & Machine Tool Relays (控制与机床继电器)
+      ├── General Purpose Relays (通用继电器)
+      ├── Latching Relays (锁存继电器)
+      ├── Overcurrent Protection Relays (过流保护继电器)
+      ├── Overload Protection Relays (过载保护继电器)
+      ├── Plug-In & Ice Cube Relays (插拔式与小型继电器)
+      ├── Reed Relays (干簧继电器)
+      ├── Relay Accessories (继电器配件)
+      ├── Safety Relays (安全继电器)
+      ├── Solid State Relays (固态继电器)
+      ├── Time Delay Relays (延时继电器)
+  ├── Switches (开关)
+      ├── Control Switches (控制开关)
+      ├── DIP & SIP Switches (DIP 与 SIP 开关)
+      ├── Joystick & Lever Switches (操纵杆与杠杆开关)
+      ├── Key Switches (钥匙开关)
+      ├── Limit & Snap Action Switches (限位与快动开关)
+      ├── Magnetic & Reed Switches (磁性与干簧开关)
+      ├── Microswitches (微动开关)
+      ├── Pressure Switches (压力开关)
+      ├── Pushbutton Switches (按钮开关)
+      ├── Rocker Switches (船型开关)
+      ├── Rotary Switches (旋转开关)
+      ├── Selector Switches (选择开关)
+      ├── Slide Switches (滑动开关)
+      ├── Switch Accessories (开关配件)
+      ├── Tilt Switches (倾斜开关)
+      ├── Toggle Switches (拨动开关)
+  ├── Transformers (变压器)
+      ├── Autotransformers (自耦变压器)
+      ├── Current Transformers (电流互感器)
+      ├── Industrial Control & General Purpose Transformers (工业控制与通用变压器)
+      ├── Power Transformers (电力变压器)
+      ├── Pulse Transformers (脉冲变压器)
+      ├── Telecom & Audio Transformers (电信与音频变压器)
+      ├── Transformer Accessories (变压器配件)
+  ├── Wire, Cable & Conduit (电线、电缆与导管)
+      ├── Conduit & Tubing (导管与管材)
+      ├── Wire & Cable (电线与电缆)
+      ├── Wire & Cable Management (电线与电缆管理)
+      ├── Wire Connectors & Terminal Blocks (电线连接器与接线端子)
 
-◆ Facility Maintenance & Safety
-  ├── Access Control Equipment
-      ├── Intercom Systems
-      ├── Key Management Supplies
-      ├── Keyless Access Systems
-      ├── Lock Boxes
-      ├── Locks
-      ├── Locksmith Equipment
-      ├── Other Access Control Equipment
-      ├── Safes
-  ├── Facility Bathroom & Refuse
-      ├── Air Fresheners
-      ├── Bathroom Dispensers
-      ├── Garbage & Recycling Receptacles
-      ├── Other Facility Bathroom & Refuse
-      ├── Smoking Receptacles
-  ├── Facility Lighting
-      ├── Bench, Machine & Work Lights
-      ├── Industrial Lighting Fixtures
-      ├── Light Bulbs & Lamps
-      ├── Lighting Ballasts & Starters
-      ├── Other Lights & Lighting
-  ├── Facility Safety Equipment
-      ├── Anti-Fatigue Flooring & Mats
-      ├── Anti-Slip Flooring & Mats
-      ├── Eyewash Stations
-      ├── Other Facility Safety Equipment
-  ├── Fire Protection Equipment
-      ├── Fire Alarms
-      ├── Fire Extinguishers
-      ├── Fire Hoses
-      ├── Fire Sprinkler Heads
-      ├── Heat Detectors
-      ├── Other Fire Protection Equipment
-      ├── Smoke Detectors
-  ├── Lockout/Tagout (LOTO) Supplies
-      ├── Lockout/Tagout (LOTO) Covers
-      ├── Lockout/Tagout (LOTO) Tags
-      ├── Lockout/Tagout Centers & Kits
-      ├── Other Lockout/Tagout (LOTO)
-  ├── Personal Protective Equipment (PPE)
-      ├── Ear Plugs & Ear Muffs
-      ├── Hard Hats & Face Shields
-      ├── Masks & Respirators
-      ├── Other Personal Protective Equipment
-      ├── Protective Jackets
-      ├── Protective Pants
-      ├── Protective Suits & Coveralls
-      ├── Safety Glasses & Goggles
-      ├── Safety Harnesses
-      ├── Safety Vests
-      ├── Work Boots & Shoes
-      ├── Work Gloves
-  ├── Public Safety Staff Equipment
-      ├── Fire Engine Accessories
-      ├── Firefighting Tools
-      ├── Other Public Safety Equipment
-      ├── Police & Turnout Gear
-      ├── Public Safety Training Equipment
-      ├── Rescue Air Supplies
-  ├── Safety Signs & Traffic Control
-      ├── Caution & Flagging Tapes
-      ├── Construction Signage
-      ├── Exit Signs
-      ├── Mounting Hardware
-      ├── Other Safety Signs & Traffic Control
-      ├── Parking Lot Signs & Stencils
-      ├── Pipe Markers
-      ├── Safety Cones, Posts & Barriers
-      ├── Safety Labels & Tags
-      ├── Safety Signs & Placards
-      ├── Sign Stands
-      ├── Sign Stencils
-      ├── Speed Bumps
-      ├── Strobe & Beacon Lights
-      ├── Traffic Control Signs
-      ├── Traffic Lights
-  ├── Surveillance & Alarm Equipment
-      ├── Alarm Systems & Accessories
-      ├── Commercial Pagers
-      ├── Other Facility Surveillance
-      ├── Portable & Worksite Radios
-      ├── Two-Way Radio Parts & Accessories
-      ├── Two-Way Radios
+◆ Facility Maintenance & Safety (设施维护与安全)
+  ├── Access Control Equipment (门禁设备)
+      ├── Intercom Systems (对讲系统)
+      ├── Key Management Supplies (钥匙管理用品)
+      ├── Keyless Access Systems (无钥匙门禁系统)
+      ├── Lock Boxes (锁盒)
+      ├── Locks (锁具)
+      ├── Locksmith Equipment (锁匠设备)
+      ├── Other Access Control Equipment (其他门禁设备)
+      ├── Safes (保险箱)
+  ├── Facility Bathroom & Refuse (设施卫生间与垃圾)
+      ├── Air Fresheners (空气清新剂)
+      ├── Bathroom Dispensers (卫生间分配器)
+      ├── Garbage & Recycling Receptacles (垃圾与回收容器)
+      ├── Other Facility Bathroom & Refuse (其他设施卫生间与垃圾用品)
+      ├── Smoking Receptacles (烟灰缸/吸烟容器)
+  ├── Facility Lighting (设施照明)
+      ├── Bench, Machine & Work Lights (工作台、机床与工作灯)
+      ├── Industrial Lighting Fixtures (工业照明灯具)
+      ├── Light Bulbs & Lamps (灯泡与灯管)
+      ├── Lighting Ballasts & Starters (照明镇流器与启辉器)
+      ├── Other Lights & Lighting (其他灯具与照明)
+  ├── Facility Safety Equipment (设施安全设备)
+      ├── Anti-Fatigue Flooring & Mats (抗疲劳地板与地垫)
+      ├── Anti-Slip Flooring & Mats (防滑地板与地垫)
+      ├── Eyewash Stations (洗眼站)
+      ├── Other Facility Safety Equipment (其他设施安全设备)
+  ├── Fire Protection Equipment (消防设备)
+      ├── Fire Alarms (火灾报警器)
+      ├── Fire Extinguishers (灭火器)
+      ├── Fire Hoses (消防水带)
+      ├── Fire Sprinkler Heads (消防喷淋头)
+      ├── Heat Detectors (热探测器)
+      ├── Other Fire Protection Equipment (其他消防设备)
+      ├── Smoke Detectors (烟雾探测器)
+  ├── Lockout/Tagout (LOTO) Supplies (上锁/挂牌 (LOTO) 用品)
+      ├── Lockout/Tagout (LOTO) Covers (上锁/挂牌 (LOTO) 保护罩)
+      ├── Lockout/Tagout (LOTO) Tags (上锁/挂牌 (LOTO) 标签)
+      ├── Lockout/Tagout Centers & Kits (上锁/挂牌中心与套装)
+      ├── Other Lockout/Tagout (LOTO) (其他上锁/挂牌 (LOTO) 用品)
+  ├── Personal Protective Equipment (PPE) (个人防护装备 (PPE))
+      ├── Ear Plugs & Ear Muffs (耳塞与耳罩)
+      ├── Hard Hats & Face Shields (安全帽与面罩)
+      ├── Masks & Respirators (口罩与呼吸器)
+      ├── Other Personal Protective Equipment (其他个人防护装备)
+      ├── Protective Jackets (防护夹克)
+      ├── Protective Pants (防护裤)
+      ├── Protective Suits & Coveralls (防护服与连体工作服)
+      ├── Safety Glasses & Goggles (安全眼镜与护目镜)
+      ├── Safety Harnesses (安全带)
+      ├── Safety Vests (安全背心)
+      ├── Work Boots & Shoes (工作靴与鞋)
+      ├── Work Gloves (工作手套)
+  ├── Public Safety Staff Equipment (公共安全人员装备)
+      ├── Fire Engine Accessories (消防车配件)
+      ├── Firefighting Tools (消防工具)
+      ├── Other Public Safety Equipment (其他公共安全装备)
+      ├── Police & Turnout Gear (警用与消防战斗服)
+      ├── Public Safety Training Equipment (公共安全训练设备)
+      ├── Rescue Air Supplies (救援空气供应)
+  ├── Safety Signs & Traffic Control (安全标志与交通控制)
+      ├── Caution & Flagging Tapes (警示与标记胶带)
+      ├── Construction Signage (施工标志)
+      ├── Exit Signs (出口标志)
+      ├── Mounting Hardware (安装五金)
+      ├── Other Safety Signs & Traffic Control (其他安全标志与交通控制)
+      ├── Parking Lot Signs & Stencils (停车场标志与模板)
+      ├── Pipe Markers (管道标识)
+      ├── Safety Cones, Posts & Barriers (安全锥、立柱与护栏)
+      ├── Safety Labels & Tags (安全标签与吊牌)
+      ├── Safety Signs & Placards (安全标志与标牌)
+      ├── Sign Stands (标志支架)
+      ├── Sign Stencils (标志模板)
+      ├── Speed Bumps (减速带)
+      ├── Strobe & Beacon Lights (频闪灯与警示灯)
+      ├── Traffic Control Signs (交通控制标志)
+      ├── Traffic Lights (交通信号灯)
+  ├── Surveillance & Alarm Equipment (监控与报警设备)
+      ├── Alarm Systems & Accessories (报警系统与配件)
+      ├── Commercial Pagers (商用寻呼机)
+      ├── Other Facility Surveillance (其他设施监控设备)
+      ├── Portable & Worksite Radios (便携式与工地对讲机)
+      ├── Two-Way Radio Parts & Accessories (双向对讲机零件与配件)
+      ├── Two-Way Radios (双向对讲机)
 
-◆ Fasteners & Hardware
-  ├── Brackets & Joining Plates
-  ├── Clamps, Ties & Cords
-      ├── Cable Ties
-      ├── Hose & Cable Clamps
-      ├── Shock Cords & Bungees
-  ├── Extension & Compression Springs
-  ├── Fastener Anchors
-      ├── Drywall Anchors
-      ├── Lag Shields
-      ├── Spring Anchors
-      ├── Toggle Bolts
-      ├── Wedge & Sleeve Anchors
-  ├── Fastener Nuts
-      ├── Acorn Nuts & Cap Nuts
-      ├── Castle Nuts & Slotted Nuts
-      ├── Hex Nuts
-      ├── Keps Nuts & Washer Nuts
-      ├── Square Nuts
-      ├── Tee Nuts
-      ├── Wing Nuts
-  ├── Fastening Pins
-      ├── Clevis Pins
-      ├── Detent & Hitch Pins
-      ├── Dowel Pins
-      ├── Hairpin & Straight Cotter Pins
-      ├── Spring Pins
-      ├── Tab-Lock & Safety Pins
-      ├── Taper Pins
-  ├── Hardware Washers
-  ├── Hooks & Eyes
-  ├── Magnets
-  ├── Nails & Staples
-      ├── Nail Gun Nails
-      ├── Standard Nails
-      ├── Staple Gun Staples
-  ├── Other Fasteners & Hardware
-  ├── Retaining Rings
-  ├── Rivets
-      ├── Blind & Drive Rivets
-      ├── Push-In Rivets
-      ├── Solid Rivets
-      ├── Split Rivets
-      ├── Tubular & Semi-Tubular Rivets
-  ├── Screws & Bolts
-  ├── Standoffs & Spacers
-      ├── Standoff & Spacer Mixed Sets
-      ├── Threaded Standoffs
-      ├── Unthreaded Spacers
-  ├── Threaded Inserts
-  ├── Threaded Rods & Threaded Studs
+◆ Fasteners & Hardware (紧固件与五金)
+  ├── Brackets & Joining Plates (支架与连接板)
+  ├── Clamps, Ties & Cords (夹具、扎带与绳索)
+      ├── Cable Ties (扎带)
+      ├── Hose & Cable Clamps (软管与电缆夹)
+      ├── Shock Cords & Bungees (弹力绳与蹦极绳)
+  ├── Extension & Compression Springs (拉伸与压缩弹簧)
+  ├── Fastener Anchors (紧固件锚栓)
+      ├── Drywall Anchors (石膏板锚栓)
+      ├── Lag Shields (膨胀套管)
+      ├── Spring Anchors (弹簧锚栓)
+      ├── Toggle Bolts (蝴蝶螺栓)
+      ├── Wedge & Sleeve Anchors (楔块与套筒锚栓)
+  ├── Fastener Nuts (紧固螺母)
+      ├── Acorn Nuts & Cap Nuts (盖形螺母与盖帽螺母)
+      ├── Castle Nuts & Slotted Nuts (槽形螺母与开口螺母)
+      ├── Hex Nuts (六角螺母)
+      ├── Keps Nuts & Washer Nuts (带齿螺母与垫圈螺母)
+      ├── Square Nuts (方螺母)
+      ├── Tee Nuts (T 型螺母)
+      ├── Wing Nuts (蝶形螺母)
+  ├── Fastening Pins (紧固销)
+      ├── Clevis Pins (U 形销)
+      ├── Detent & Hitch Pins (定位销与挂钩销)
+      ├── Dowel Pins (定位销)
+      ├── Hairpin & Straight Cotter Pins (开口销与直开口销)
+      ├── Spring Pins (弹簧销)
+      ├── Tab-Lock & Safety Pins (卡锁销与安全销)
+      ├── Taper Pins (锥形销)
+  ├── Hardware Washers (五金垫圈)
+  ├── Hooks & Eyes (钩与眼)
+  ├── Magnets (磁铁)
+  ├── Nails & Staples (钉子与订书钉)
+      ├── Nail Gun Nails (钉枪钉)
+      ├── Standard Nails (标准钉子)
+      ├── Staple Gun Staples (订书机钉)
+  ├── Other Fasteners & Hardware (其他紧固件与五金)
+  ├── Retaining Rings (挡圈)
+  ├── Rivets (铆钉)
+      ├── Blind & Drive Rivets (盲铆钉与拉铆钉)
+      ├── Push-In Rivets (推入式铆钉)
+      ├── Solid Rivets (实心铆钉)
+      ├── Split Rivets (开口铆钉)
+      ├── Tubular & Semi-Tubular Rivets (空心与半空心铆钉)
+  ├── Screws & Bolts (螺钉与螺栓)
+  ├── Standoffs & Spacers (间隔柱与垫柱)
+      ├── Standoff & Spacer Mixed Sets (间隔柱与垫柱混合套装)
+      ├── Threaded Standoffs (螺纹间隔柱)
+      ├── Unthreaded Spacers (无螺纹垫柱)
+  ├── Threaded Inserts (螺纹嵌件)
+  ├── Threaded Rods & Threaded Studs (螺纹杆与双头螺柱)
 
-◆ Fuel & Energy
-  ├── Alternative Fuel & Energy
-      ├── Biodiesel Equipment
-      ├── Hydrogen Power
-      ├── Other Alternative Fuel & Energy
-      ├── Solar Power
-      ├── Wind Power
-  ├── Oil & Gas
-      ├── Dispensers & Accessories
-      ├── Drilling Equipment
-      ├── Other Oil & Gas
-      ├── Supplies
-  ├── Other Fuel & Energy
-  ├── Power & Utilities
-      ├── Belts, Straps & Harnesses
-      ├── Cable Tools & Supplies
-      ├── Climbing Spikes & Gaffs
-      ├── Gas & Water Meters
-      ├── Other Power & Utilities
+◆ Fuel & Energy (燃料与能源)
+  ├── Alternative Fuel & Energy (替代燃料与能源)
+      ├── Biodiesel Equipment (生物柴油设备)
+      ├── Hydrogen Power (氢能)
+      ├── Other Alternative Fuel & Energy (其他替代燃料与能源)
+      ├── Solar Power (太阳能)
+      ├── Wind Power (风能)
+  ├── Oil & Gas (石油与天然气)
+      ├── Dispensers & Accessories (分配器与配件)
+      ├── Drilling Equipment (钻井设备)
+      ├── Other Oil & Gas (其他石油与天然气)
+      ├── Supplies (用品)
+  ├── Other Fuel & Energy (其他燃料与能源)
+  ├── Power & Utilities (电力与公用事业)
+      ├── Belts, Straps & Harnesses (安全带、背带与吊带)
+      ├── Cable Tools & Supplies (电缆工具与用品)
+      ├── Climbing Spikes & Gaffs (爬杆脚扣与脚钉)
+      ├── Gas & Water Meters (燃气表与水表)
+      ├── Other Power & Utilities (其他电力与公用事业)
 
-◆ Healthcare, Lab & Dental
-  ├── Handpieces & Instruments
-      ├── Biopsy & Surgical Punches
-      ├── Dental & Medical Calipers
-      ├── Dental Curettes & Scalers
-      ├── Dental Curing Lights
-      ├── Dental Handpiece Control Units
-      ├── Dental Handpiece Motors & Turbines
-      ├── Dental Handpieces
-      ├── Dental Instruments
-      ├── Endodontic Files, Broaches & Reamers
-      ├── Endodontic Obturation Systems
-      ├── Endoscope Systems & Camera Control Units
-      ├── Endoscopes
-      ├── Forceps, Hemostats & Needle Holders
-      ├── Gutta Percha Cutters & Trimmers
-      ├── Laparoscopic Instruments
-      ├── Laryngoscopes
-      ├── Medical Scissors & Shears
-      ├── Orthodontic Pliers
-      ├── Other Handpieces & Instruments
-      ├── Otoscopes & Ophthalmoscopes
-      ├── Reflex Hammers
-      ├── Scalpels, Surgical Blades & Handles
-      ├── Specula & Sounds
-      ├── Surgical & Orthopedic Instruments
-      ├── Surgical & Orthopedic Saws
-      ├── Surgical Handpieces
-      ├── Surgical Retractors
-      ├── Ultrasonic Scalers
-  ├── Medical & Lab Equipment, Devices
-      ├── AED Trainers & Training Pads
-      ├── Acoustic/Traditional Stethoscopes
-      ├── Aesthetic & Cosmetic Machines
-      ├── Anesthesia Machines
-      ├── Autoclaves & Sterilizers
-      ├── Autorefractors, Keratometers & Tonometers
-      ├── Autosamplers
-      ├── Bioreactors & Fermenters
-      ├── Blood Cell Counters
-      ├── Blood Pressure Machines & Monitors
-      ├── Blood/Fluid Warming Systems
-      ├── Blood/Hematology Analyzers
-      ├── Bone Densitometers
-      ├── CAD/CAM Acquisition Scanners & Milling Machines
-      ├── Centrifuges
-      ├── Chiropractic Activators/Adjusting Tools
-      ├── Chromatography Systems
-      ├── Colposcopes
-      ├── Continuous Passive Motion (CPM) Machines
-      ├── Corneal Topographers
-      ├── Defibrillators, AED Pads & Batteries
-      ├── Density Meters/Densometers
-      ├── Dental Air Compressors & Vacuum Systems
-      ├── Dental Amalgamators
-      ├── Dental Dust Collectors
-      ├── Dental Lasers
-      ├── Dialysis Machines
-      ├── Dissolved Oxygen Meters
-      ├── ECG & EKG Machines
-      ├── EEG Systems
-      ├── Electrocautery & Electrosurgery
-      ├── Electronic Apex Locators
-      ├── Electronic Stethoscopes
-      ├── Environmental Test Chambers
-      ├── Fetal Dopplers & Vascular Dopplers
-      ├── Fiber Optic Illuminators/Light Sources
-      ├── Fundus Cameras
-      ├── Gel Electrophoresis Systems
-      ├── Heating Mantles
-      ├── Hyperbaric Chambers
-      ├── Insufflators
-      ├── Intraoral Cameras
-      ├── Lab Evaporators
-      ├── Lab Freezers & Refrigerators
-      ├── Lab Furnaces & Ovens
-      ├── Lab Incubators
-      ├── Lab Jacks/Lifting Platforms
-      ├── Lab Lasers
-      ├── Lab Mixers, Shakers & Stirrers
-      ├── Lab Presses
-      ├── Lab Reactors
-      ├── Lab Refractometers
-      ├── Lab Scales & Beam Balances
-      ├── Lensmeters
-      ├── Luminometers
-      ├── MRI Systems
-      ├── Medical & Lab Pumps
-      ├── Medical Thermometers
-      ├── Microarray Scanners
-      ├── Microplate Washers
-      ├── Microscopes
-      ├── Microtomes
-      ├── Model Trimmers
-      ├── Moisture Analyzers
-      ├── Nurse Call Equipment
-      ├── Orthopedic Goniometers
-      ├── Other Medical & Lab Equipment
-      ├── PCR Thermal Cyclers
-      ├── Pachymeters
-      ├── Particle Counters
-      ├── Patient Monitors
-      ├── Patient Warming Units
-      ├── Phoropters & Manual Refractors
-      ├── Phototherapy Lights & Systems
-      ├── Pipettors/Automatic Pipettes
-      ├── Pulse Oximeters
-      ├── Pupilometers
-      ├── Slit Lamps
-      ├── Solvent Recyclers
-      ├── Spectrometers & Spectrophotometers
-      ├── Spinal Traction Units
-      ├── Spirometers & Peak Flow Meters
-      ├── Surgical Lasers
-      ├── TENS Machines & Electrical Muscle Stimulators
-      ├── Tissue Processors
-      ├── Titrators
-      ├── Training Manikins & Patient Simulators
-      ├── Transilluminators & UV Crosslinkers
-      ├── Tympanometers & Audiometers
-      ├── Ultrasonic Cleaners
-      ├── Ultrasound Machines
-      ├── Ultrasound Therapy Units
-      ├── Urine Analyzers
-      ├── Vacuum Regulators
-      ├── Ventilators
-      ├── Viscometers & Rheometers
-      ├── Vision Screeners & Visual Field Analyzers
-      ├── Water Baths, Circulators & Chillers
-      ├── Wax Heaters
-      ├── X-Ray Machines & Equipment
-  ├── Medical, Lab & Caregiving Furniture
-      ├── Chiropractic, Flexion & Traction Tables
-      ├── Commodes, Shower Chairs & Transfer Benches
-      ├── Dental Examination Chairs
-      ├── Examination & Operation Tables
-      ├── Fume Hoods & Biological Safety Cabinets
-      ├── Homecare & Hospital Beds
-      ├── IV Poles
-      ├── Lab Cabinets & Casework
-      ├── Lab Frames, Rods & Clamps
-      ├── Medical Carts & Stands
-      ├── Other Medical, Lab & Caregiving Furniture
-      ├── Patient Lifts & Slings
-      ├── Patient Privacy Curtains
-      ├── Stretchers & Backboards
-      ├── Surgical & Examination Lights
-      ├── Vibration Isolation Tables
-  ├── Medical, Lab & Dental Supplies
-      ├── Anatomical Models
-      ├── Anatomical, Eye/Vision & Reference Charts
-      ├── Articulating Paper
-      ├── Burn & Wound Dressings
-      ├── CPR Masks & Face Shields
-      ├── Cheek Retractors & Mouth Props
-      ├── Conductive & Ultrasound Gels
-      ├── Contouring, Polishing & Finishing Strips
-      ├── Cotton Rolls, Dispensers & Holders
-      ├── Crowns & Veneers
-      ├── Dental Articulators
-      ├── Dental Burs, Polishers & Finishers
-      ├── Dental Cements
-      ├── Dental Etchants, Primers & Bonding Agents
-      ├── Dental Face Shields, Head Lights & Loupes
-      ├── Dental Impression Materials, Trays & Dispensers
-      ├── Dental Matrix Systems & Wedges
-      ├── Dental Patient Bibs & Bib Clips
-      ├── Diagnostic Penlights
-      ├── Disposable Face Masks
-      ├── Disposable Gloves
-      ├── EMS/Trauma Bags & First Aid Kits
-      ├── Endodontic Posts
-      ├── Filter Paper
-      ├── Gingival Retraction Cords
-      ├── Glass Stirring Rods
-      ├── Glassware & Plasticware
-      ├── Gutta Percha Points & Absorbent Paper Points
-      ├── Instrument Sharpeners
-      ├── Intraoral Photographic Mirrors
-      ├── Lab Burners
-      ├── Lab Chemicals
-      ├── Lab Distillation Kits & Apparatus
-      ├── Lead Aprons
-      ├── Micro Applicators
-      ├── Orthodontic Arch Wire
-      ├── Orthodontic Brackets, Bands & Buccal Tubes
-      ├── Orthodontic Coil Springs
-      ├── Orthodontic Headgear
-      ├── Orthodontic Ligatures, Elastics & Power Chains
-      ├── Orthodontic Wax
-      ├── Orthopedic Nails, Pins & Wire
-      ├── Ostomy Pouches & Support Belts
-      ├── Ostomy Wafers/Skin Barriers
-      ├── Other Medical, Lab & Dental Supplies
-      ├── Phosphor Plates & Barrier Envelopes
-      ├── Prophy Brushes, Cups & Angles
-      ├── Prophy Paste
-      ├── Retainer & Denture Cases
-      ├── Rubber Dams, Clamps, Frames & Punches
-      ├── Saliva Ejectors
-      ├── Scaler Inserts/Tips
-      ├── Shade Guides
-      ├── Sharps Containers
-      ├── Shoe Covers
-      ├── Sterilization Trays & Cases
-      ├── Stoppers, Bungs & Seals
-      ├── Surgical Gowns
-      ├── Surgical Mesh
-      ├── Surgical Tape
-      ├── Syringe Filters
-      ├── Syringes
-      ├── Tooth Whitening Gels & Kits
-      ├── Tourniquets
-      ├── Trial Lens Sets
-      ├── Tube Racks
-      ├── Typodonts & Typodont Teeth
-      ├── X-Ray Markers
-      ├── pH Test Strips
-  ├── Medical/Lab Equipment Attachments & Accessories
-      ├── Blood Pressure Cuffs & Hoses
-      ├── Calibration Weights
-      ├── Centrifuge Rotors & Buckets
-      ├── Chromatography Columns & Reservoirs
-      ├── Dental Handpiece Cartridges & Rotors
-      ├── Dental Handpiece Couplers & Adapters
-      ├── Dental Nitrous Oxide Flowmeters
-      ├── Electrode Pads
-      ├── Foot Pedals
-      ├── Lab Clamps & Retort Stands
-      ├── Lamps, Bulbs & Laser Components
-      ├── Light Guides, Ring Lights & Rod Tips
-      ├── Magnetic Stir Bars
-      ├── Medical & Lab Equipment Power Supplies
-      ├── Medical Cables & Cords
-      ├── Medical Sensors & Ultrasound Probes
-      ├── Microscope Parts & Accessories
-      ├── Other Medical/Lab Equipment Attachments
-      ├── Photomultiplier Tubes
-      ├── Stethoscope Parts & Accessories
-      ├── X-Ray Plate & Sensor Holders
-  ├── Other Healthcare, Lab & Dental
+◆ Healthcare, Lab & Dental (医疗保健、实验室与牙科)
+  ├── Handpieces & Instruments (手机与器械)
+      ├── Biopsy & Surgical Punches (活检与手术穿孔器)
+      ├── Dental & Medical Calipers (牙科与医用卡尺)
+      ├── Dental Curettes & Scalers (牙科刮匙与洁治器)
+      ├── Dental Curing Lights (牙科光固化灯)
+      ├── Dental Handpiece Control Units (牙科手机控制单元)
+      ├── Dental Handpiece Motors & Turbines (牙科手机马达与涡轮)
+      ├── Dental Handpieces (牙科手机)
+      ├── Dental Instruments (牙科器械)
+      ├── Endodontic Files, Broaches & Reamers (根管锉、拔髓针与扩孔钻)
+      ├── Endodontic Obturation Systems (根管充填系统)
+      ├── Endoscope Systems & Camera Control Units (内窥镜系统与摄像头控制单元)
+      ├── Endoscopes (内窥镜)
+      ├── Forceps, Hemostats & Needle Holders (镊子、止血钳与持针器)
+      ├── Gutta Percha Cutters & Trimmers (牙胶切割器与修整器)
+      ├── Laparoscopic Instruments (腹腔镜器械)
+      ├── Laryngoscopes (喉镜)
+      ├── Medical Scissors & Shears (医用剪刀与剪切器)
+      ├── Orthodontic Pliers (正畸钳)
+      ├── Other Handpieces & Instruments (其他手机与器械)
+      ├── Otoscopes & Ophthalmoscopes (耳镜与检眼镜)
+      ├── Reflex Hammers (反射锤)
+      ├── Scalpels, Surgical Blades & Handles (手术刀、手术刀片与刀柄)
+      ├── Specula & Sounds (窥器与探子)
+      ├── Surgical & Orthopedic Instruments (外科与骨科器械)
+      ├── Surgical & Orthopedic Saws (外科与骨科锯)
+      ├── Surgical Handpieces (外科手机)
+      ├── Surgical Retractors (外科牵开器)
+      ├── Ultrasonic Scalers (超声波洁牙器)
+  ├── Medical & Lab Equipment, Devices (医疗与实验室设备、器械)
+      ├── AED Trainers & Training Pads (AED 训练器与训练电极片)
+      ├── Acoustic/Traditional Stethoscopes (声学/传统听诊器)
+      ├── Aesthetic & Cosmetic Machines (美容与医美设备)
+      ├── Anesthesia Machines (麻醉机)
+      ├── Autoclaves & Sterilizers (高压灭菌器与消毒器)
+      ├── Autorefractors, Keratometers & Tonometers (自动验光仪、角膜曲率计与眼压计)
+      ├── Autosamplers (自动进样器)
+      ├── Bioreactors & Fermenters (生物反应器与发酵罐)
+      ├── Blood Cell Counters (血细胞计数器)
+      ├── Blood Pressure Machines & Monitors (血压计与血压监测仪)
+      ├── Blood/Fluid Warming Systems (血液/液体加温系统)
+      ├── Blood/Hematology Analyzers (血液/血液学分析仪)
+      ├── Bone Densitometers (骨密度仪)
+      ├── CAD/CAM Acquisition Scanners & Milling Machines (CAD/CAM 采集扫描仪与铣床)
+      ├── Centrifuges (离心机)
+      ├── Chiropractic Activators/Adjusting Tools (脊椎矫正激活器/调整工具)
+      ├── Chromatography Systems (色谱系统)
+      ├── Colposcopes (阴道镜)
+      ├── Continuous Passive Motion (CPM) Machines (持续被动运动 (CPM) 机)
+      ├── Corneal Topographers (角膜地形图仪)
+      ├── Defibrillators, AED Pads & Batteries (除颤器、AED 电极片与电池)
+      ├── Density Meters/Densometers (密度计)
+      ├── Dental Air Compressors & Vacuum Systems (牙科空气压缩机与真空系统)
+      ├── Dental Amalgamators (牙科汞合金搅拌机)
+      ├── Dental Dust Collectors (牙科粉尘收集器)
+      ├── Dental Lasers (牙科激光器)
+      ├── Dialysis Machines (透析机)
+      ├── Dissolved Oxygen Meters (溶解氧测定仪)
+      ├── ECG & EKG Machines (心电图机)
+      ├── EEG Systems (脑电图系统)
+      ├── Electrocautery & Electrosurgery (电凝与电外科)
+      ├── Electronic Apex Locators (电子根尖定位仪)
+      ├── Electronic Stethoscopes (电子听诊器)
+      ├── Environmental Test Chambers (环境试验箱)
+      ├── Fetal Dopplers & Vascular Dopplers (胎儿多普勒与血管多普勒)
+      ├── Fiber Optic Illuminators/Light Sources (光纤照明器/光源)
+      ├── Fundus Cameras (眼底照相机)
+      ├── Gel Electrophoresis Systems (凝胶电泳系统)
+      ├── Heating Mantles (加热套)
+      ├── Hyperbaric Chambers (高压氧舱)
+      ├── Insufflators (充气机)
+      ├── Intraoral Cameras (口腔内窥镜)
+      ├── Lab Evaporators (实验室蒸发器)
+      ├── Lab Freezers & Refrigerators (实验室冷冻箱与冰箱)
+      ├── Lab Furnaces & Ovens (实验室炉与烘箱)
+      ├── Lab Incubators (实验室培养箱)
+      ├── Lab Jacks/Lifting Platforms (实验台升降架/升降平台)
+      ├── Lab Lasers (实验室激光器)
+      ├── Lab Mixers, Shakers & Stirrers (实验室混合器、摇床与搅拌器)
+      ├── Lab Presses (实验室压机)
+      ├── Lab Reactors (实验室反应器)
+      ├── Lab Refractometers (实验室折射仪)
+      ├── Lab Scales & Beam Balances (实验室天平与梁式天平)
+      ├── Lensmeters (焦度计)
+      ├── Luminometers (发光计)
+      ├── MRI Systems (核磁共振系统)
+      ├── Medical & Lab Pumps (医疗与实验室泵)
+      ├── Medical Thermometers (医用体温计)
+      ├── Microarray Scanners (微阵列扫描仪)
+      ├── Microplate Washers (微孔板清洗机)
+      ├── Microscopes (显微镜)
+      ├── Microtomes (切片机)
+      ├── Model Trimmers (模型修整器)
+      ├── Moisture Analyzers (水分分析仪)
+      ├── Nurse Call Equipment (护士呼叫设备)
+      ├── Orthopedic Goniometers (骨科量角器)
+      ├── Other Medical & Lab Equipment (其他医疗与实验室设备)
+      ├── PCR Thermal Cyclers (PCR 热循环仪)
+      ├── Pachymeters (角膜测厚仪)
+      ├── Particle Counters (粒子计数器)
+      ├── Patient Monitors (病人监护仪)
+      ├── Patient Warming Units (病人加温设备)
+      ├── Phoropters & Manual Refractors (综合验光仪与手动验光器)
+      ├── Phototherapy Lights & Systems (光疗灯与系统)
+      ├── Pipettors/Automatic Pipettes (移液器/自动移液器)
+      ├── Pulse Oximeters (脉搏血氧仪)
+      ├── Pupilometers (瞳孔测量仪)
+      ├── Slit Lamps (裂隙灯)
+      ├── Solvent Recyclers (溶剂回收器)
+      ├── Spectrometers & Spectrophotometers (光谱仪与分光光度计)
+      ├── Spinal Traction Units (脊柱牵引装置)
+      ├── Spirometers & Peak Flow Meters (肺活量计与峰流速仪)
+      ├── Surgical Lasers (外科激光器)
+      ├── TENS Machines & Electrical Muscle Stimulators (TENS 机与电肌肉刺激器)
+      ├── Tissue Processors (组织处理机)
+      ├── Titrators (滴定仪)
+      ├── Training Manikins & Patient Simulators (训练人体模型与病人模拟器)
+      ├── Transilluminators & UV Crosslinkers (透照仪与紫外交联仪)
+      ├── Tympanometers & Audiometers (鼓室计与听力计)
+      ├── Ultrasonic Cleaners (超声波清洗机)
+      ├── Ultrasound Machines (超声波诊断仪)
+      ├── Ultrasound Therapy Units (超声波治疗设备)
+      ├── Urine Analyzers (尿液分析仪)
+      ├── Vacuum Regulators (真空调节器)
+      ├── Ventilators (呼吸机)
+      ├── Viscometers & Rheometers (粘度计与流变仪)
+      ├── Vision Screeners & Visual Field Analyzers (视力筛查仪与视野分析仪)
+      ├── Water Baths, Circulators & Chillers (水浴、循环器与冷却器)
+      ├── Wax Heaters (蜡加热器)
+      ├── X-Ray Machines & Equipment (X 光机与设备)
+  ├── Medical, Lab & Caregiving Furniture (医疗、实验室与护理家具)
+      ├── Chiropractic, Flexion & Traction Tables (脊椎矫正、屈曲与牵引床)
+      ├── Commodes, Shower Chairs & Transfer Benches (坐便椅、淋浴椅与转移凳)
+      ├── Dental Examination Chairs (牙科检查椅)
+      ├── Examination & Operation Tables (检查与手术台)
+      ├── Fume Hoods & Biological Safety Cabinets (通风橱与生物安全柜)
+      ├── Homecare & Hospital Beds (家庭护理与医院病床)
+      ├── IV Poles (输液架)
+      ├── Lab Cabinets & Casework (实验室柜与实验台)
+      ├── Lab Frames, Rods & Clamps (实验室支架、杆与夹具)
+      ├── Medical Carts & Stands (医疗推车与支架)
+      ├── Other Medical, Lab & Caregiving Furniture (其他医疗、实验室与护理家具)
+      ├── Patient Lifts & Slings (病人升降机与吊索)
+      ├── Patient Privacy Curtains (病人隐私帘)
+      ├── Stretchers & Backboards (担架与背板)
+      ├── Surgical & Examination Lights (手术与检查灯)
+      ├── Vibration Isolation Tables (隔振台)
+  ├── Medical, Lab & Dental Supplies (医疗、实验室与牙科耗材)
+      ├── Anatomical Models (解剖模型)
+      ├── Anatomical, Eye/Vision & Reference Charts (解剖、眼/视觉与参考图表)
+      ├── Articulating Paper (咬合纸)
+      ├── Burn & Wound Dressings (烧伤与伤口敷料)
+      ├── CPR Masks & Face Shields (CPR 面罩与面罩)
+      ├── Cheek Retractors & Mouth Props (颊拉钩与开口器)
+      ├── Conductive & Ultrasound Gels (导电与超声凝胶)
+      ├── Contouring, Polishing & Finishing Strips (塑形、抛光与精修条)
+      ├── Cotton Rolls, Dispensers & Holders (棉卷、分配器与支架)
+      ├── Crowns & Veneers (牙冠与贴面)
+      ├── Dental Articulators (牙合架)
+      ├── Dental Burs, Polishers & Finishers (牙科车针、抛光器与精修器)
+      ├── Dental Cements (牙科水门汀)
+      ├── Dental Etchants, Primers & Bonding Agents (牙科酸蚀剂、底涂剂与粘接剂)
+      ├── Dental Face Shields, Head Lights & Loupes (牙科面罩、头灯与放大镜)
+      ├── Dental Impression Materials, Trays & Dispensers (牙科印模材料、托盘与分配器)
+      ├── Dental Matrix Systems & Wedges (牙科成型片系统与楔子)
+      ├── Dental Patient Bibs & Bib Clips (牙科病人围兜与围兜夹)
+      ├── Diagnostic Penlights (诊断笔灯)
+      ├── Disposable Face Masks (一次性口罩)
+      ├── Disposable Gloves (一次性手套)
+      ├── EMS/Trauma Bags & First Aid Kits (急救/创伤包与急救箱)
+      ├── Endodontic Posts (根管桩)
+      ├── Filter Paper (滤纸)
+      ├── Gingival Retraction Cords (牙龈收缩线)
+      ├── Glass Stirring Rods (玻璃搅拌棒)
+      ├── Glassware & Plasticware (玻璃器皿与塑料器皿)
+      ├── Gutta Percha Points & Absorbent Paper Points (牙胶尖与吸潮纸尖)
+      ├── Instrument Sharpeners (器械磨刀器)
+      ├── Intraoral Photographic Mirrors (口腔摄影镜)
+      ├── Lab Burners (实验室燃烧器)
+      ├── Lab Chemicals (实验室化学品)
+      ├── Lab Distillation Kits & Apparatus (实验室蒸馏套件与装置)
+      ├── Lead Aprons (铅围裙)
+      ├── Micro Applicators (微型涂药器)
+      ├── Orthodontic Arch Wire (正畸弓丝)
+      ├── Orthodontic Brackets, Bands & Buccal Tubes (正畸托槽、带环与颊面管)
+      ├── Orthodontic Coil Springs (正畸螺旋弹簧)
+      ├── Orthodontic Headgear (正畸头帽)
+      ├── Orthodontic Ligatures, Elastics & Power Chains (正畸结扎丝、橡皮圈与链状橡皮圈)
+      ├── Orthodontic Wax (正畸蜡)
+      ├── Orthopedic Nails, Pins & Wire (骨科钉、针与钢丝)
+      ├── Ostomy Pouches & Support Belts (造口袋与支撑带)
+      ├── Ostomy Wafers/Skin Barriers (造口底盘/皮肤保护膜)
+      ├── Other Medical, Lab & Dental Supplies (其他医疗、实验室与牙科耗材)
+      ├── Phosphor Plates & Barrier Envelopes (磷光板与避光袋)
+      ├── Prophy Brushes, Cups & Angles (抛光刷、抛光杯与抛光角)
+      ├── Prophy Paste (抛光膏)
+      ├── Retainer & Denture Cases (保持器与义齿盒)
+      ├── Rubber Dams, Clamps, Frames & Punches (橡皮障、夹子、框架与打孔器)
+      ├── Saliva Ejectors (吸唾管)
+      ├── Scaler Inserts/Tips (洁治器工作尖/刀头)
+      ├── Shade Guides (比色板)
+      ├── Sharps Containers (利器盒)
+      ├── Shoe Covers (鞋套)
+      ├── Sterilization Trays & Cases (消毒托盘与消毒盒)
+      ├── Stoppers, Bungs & Seals (塞子、瓶塞与密封件)
+      ├── Surgical Gowns (手术服)
+      ├── Surgical Mesh (手术网片)
+      ├── Surgical Tape (医用胶带)
+      ├── Syringe Filters (注射器过滤器)
+      ├── Syringes (注射器)
+      ├── Tooth Whitening Gels & Kits (牙齿美白凝胶与套装)
+      ├── Tourniquets (止血带)
+      ├── Trial Lens Sets (试镜片组)
+      ├── Tube Racks (试管架)
+      ├── Typodonts & Typodont Teeth (牙颌模型与牙颌模型牙)
+      ├── X-Ray Markers (X 光标记)
+      ├── pH Test Strips (pH 试纸)
+  ├── Medical/Lab Equipment Attachments & Accessories (医疗/实验室设备附件与配件)
+      ├── Blood Pressure Cuffs & Hoses (血压袖带与软管)
+      ├── Calibration Weights (校准砝码)
+      ├── Centrifuge Rotors & Buckets (离心机转子与吊桶)
+      ├── Chromatography Columns & Reservoirs (色谱柱与储液器)
+      ├── Dental Handpiece Cartridges & Rotors (牙科手机卡盒与转子)
+      ├── Dental Handpiece Couplers & Adapters (牙科手机连接器与适配器)
+      ├── Dental Nitrous Oxide Flowmeters (牙科氧化亚氮流量计)
+      ├── Electrode Pads (电极片)
+      ├── Foot Pedals (脚踏板)
+      ├── Lab Clamps & Retort Stands (实验室夹具与铁架台)
+      ├── Lamps, Bulbs & Laser Components (灯、灯泡与激光组件)
+      ├── Light Guides, Ring Lights & Rod Tips (导光管、环形灯与杆头)
+      ├── Magnetic Stir Bars (磁力搅拌子)
+      ├── Medical & Lab Equipment Power Supplies (医疗与实验室设备电源)
+      ├── Medical Cables & Cords (医疗线缆与导线)
+      ├── Medical Sensors & Ultrasound Probes (医疗传感器与超声探头)
+      ├── Microscope Parts & Accessories (显微镜零件与配件)
+      ├── Other Medical/Lab Equipment Attachments (其他医疗/实验室设备附件)
+      ├── Photomultiplier Tubes (光电倍增管)
+      ├── Stethoscope Parts & Accessories (听诊器零件与配件)
+      ├── X-Ray Plate & Sensor Holders (X 光片与传感器支架)
+  ├── Other Healthcare, Lab & Dental (其他医疗保健、实验室与牙科)
 
-◆ Heavy Equipment, Parts & Attachments
-  ├── Heavy Equipment
-      ├── Antique & Vintage Farm Equipment
-      ├── Asphalt & Concrete Pavers
-      ├── Backhoe Loaders
-      ├── Combines & Harvesters
-      ├── Compactors & Asphalt Rollers
-      ├── Cranes
-      ├── Crawler Dozers & Loaders
-      ├── Directional Drills
-      ├── Excavators
-      ├── Forklifts & Telehandlers
-      ├── Forwarders & Skidders
-      ├── Mining Equipment
-      ├── Motor Graders
-      ├── Other Heavy Equipment
-      ├── Scissor & Boom Lifts
-      ├── Skid Steer Loaders
-      ├── Snow Equipment
-      ├── Tractors
-      ├── Trailers
-      ├── Trenchers
-      ├── Utility Vehicles
-      ├── Wheel Loaders
-      ├── Wood Chippers, Stump Grinders & Mulchers
-  ├── Heavy Equipment Attachments
-      ├── Antique & Vintage Implements
-      ├── Augers
-      ├── Backhoe Attachments
-      ├── Bale Spears
-      ├── Balers
-      ├── Blades & Box Blades
-      ├── Booms
-      ├── Brooms & Sweepers
-      ├── Buckets
-      ├── Chippers
-      ├── Compactors
-      ├── Couplers
-      ├── Cultivators
-      ├── Dump Hoppers
-      ├── Forks & Fork Extensions
-      ├── Grain Equipment
-      ├── Grapples
-      ├── Harrows
-      ├── Harvesting Equipment
-      ├── Hay Rakes
-      ├── Hay Tedders
-      ├── Hitches
-      ├── Irrigation Equipment
-      ├── Manure Spreaders
-      ├── Material Handling Equipment
-      ├── Mount Plates
-      ├── Mowers, Mower Decks & Mower Conditioners
-      ├── Other Heavy Equipment Attachments
-      ├── Planters
-      ├── Plows
-      ├── Post Hole Diggers
-      ├── Rakes
-      ├── Rippers
-      ├── Seeders & Spreaders
-      ├── Snow Blowers & Snowplows
-      ├── Sprayers
-      ├── Thumbs
-      ├── Tillers & Trenchers
-  ├── Heavy Equipment Parts & Accessories
-      ├── Adapters
-      ├── Air Conditioning & Heating
-      ├── Air Intake & Fuel Delivery
-      ├── Antique & Vintage Equipment Parts
-      ├── Belts
-      ├── Brakes & Brake Parts
-      ├── Cab Enclosures, Enclosure Parts & Glass Panels
-      ├── Charging & Starting Systems
-      ├── Complete Engines & Engine Parts
-      ├── Doors, Door Glass & Accessories
-      ├── Electronics
-      ├── Engine Cooling Systems
-      ├── Exhausts
-      ├── Fenders, Mudguards & Hoods
-      ├── Filters
-      ├── Gaskets
-      ├── Gauges
-      ├── Gearboxes
-      ├── Grilles & Grille Inserts
-      ├── Hardware Parts
-      ├── Heavy Equipment Accessories
-      ├── Heavy Equipment Attachment Parts
-      ├── Heavy Equipment Manuals & Books
-      ├── Hydraulics
-      ├── Ignition Systems
-      ├── Joystick Controllers & Controller Boxes
-      ├── Lights, Reflectors & Accessories
-      ├── Mirrors
-      ├── Other Heavy Equipment Parts & Accessories
-      ├── Pistons, Rings, Rods & Piston Racks
-      ├── Power Take Off Parts
-      ├── Power Units
-      ├── Seals & O-Rings
-      ├── Seats, Components, Cushions & Covers
-      ├── Sensors
-      ├── Steering & Power Steering
-      ├── Trailer Axles
-      ├── Transmission, Drivetrain & Axles
-      ├── Valves
-      ├── Wheels, Tires, Tracks & Parts
+◆ Heavy Equipment, Parts & Attachments (重型设备、零件与附件)
+  ├── Heavy Equipment (重型设备)
+      ├── Antique & Vintage Farm Equipment (古董与复古农用设备)
+      ├── Asphalt & Concrete Pavers (沥青与混凝土摊铺机)
+      ├── Backhoe Loaders (挖掘装载机)
+      ├── Combines & Harvesters (联合收割机与收获机)
+      ├── Compactors & Asphalt Rollers (压路机与沥青压路机)
+      ├── Cranes (起重机)
+      ├── Crawler Dozers & Loaders (履带式推土机与装载机)
+      ├── Directional Drills (定向钻机)
+      ├── Excavators (挖掘机)
+      ├── Forklifts & Telehandlers (叉车与伸缩臂叉车)
+      ├── Forwarders & Skidders (集材机与集材拖拉机)
+      ├── Mining Equipment (采矿设备)
+      ├── Motor Graders (平地机)
+      ├── Other Heavy Equipment (其他重型设备)
+      ├── Scissor & Boom Lifts (剪叉式与臂式升降机)
+      ├── Skid Steer Loaders (滑移装载机)
+      ├── Snow Equipment (除雪设备)
+      ├── Tractors (拖拉机)
+      ├── Trailers (拖车)
+      ├── Trenchers (开沟机)
+      ├── Utility Vehicles (多功能车)
+      ├── Wheel Loaders (轮式装载机)
+      ├── Wood Chippers, Stump Grinders & Mulchers (碎木机、树桩研磨机与覆盖机)
+  ├── Heavy Equipment Attachments (重型设备附件)
+      ├── Antique & Vintage Implements (古董与复古农具)
+      ├── Augers (螺旋钻)
+      ├── Backhoe Attachments (反铲附件)
+      ├── Bale Spears (草捆叉)
+      ├── Balers (打捆机)
+      ├── Blades & Box Blades (刀片与箱式刀片)
+      ├── Booms (吊臂)
+      ├── Brooms & Sweepers (扫帚与清扫器)
+      ├── Buckets (铲斗)
+      ├── Chippers (碎木机)
+      ├── Compactors (压实机)
+      ├── Couplers (联轴器/连接器)
+      ├── Cultivators (中耕机)
+      ├── Dump Hoppers (倾卸料斗)
+      ├── Forks & Fork Extensions (货叉与货叉延长件)
+      ├── Grain Equipment (谷物设备)
+      ├── Grapples (抓斗)
+      ├── Harrows (耙)
+      ├── Harvesting Equipment (收获设备)
+      ├── Hay Rakes (干草耙)
+      ├── Hay Tedders (干草翻晒机)
+      ├── Hitches (牵引装置)
+      ├── Irrigation Equipment (灌溉设备)
+      ├── Manure Spreaders (撒肥机)
+      ├── Material Handling Equipment (物料搬运设备)
+      ├── Mount Plates (安装板)
+      ├── Mowers, Mower Decks & Mower Conditioners (割草机、割草机甲板与割草机调节器)
+      ├── Other Heavy Equipment Attachments (其他重型设备附件)
+      ├── Planters (播种机)
+      ├── Plows (犁)
+      ├── Post Hole Diggers (柱孔挖掘机)
+      ├── Rakes (耙)
+      ├── Rippers (松土机)
+      ├── Seeders & Spreaders (播种机与撒播机)
+      ├── Snow Blowers & Snowplows (吹雪机与除雪犁)
+      ├── Sprayers (喷雾器)
+      ├── Thumbs (拇指夹)
+      ├── Tillers & Trenchers (旋耕机与开沟机)
+  ├── Heavy Equipment Parts & Accessories (重型设备零件与配件)
+      ├── Adapters (适配器)
+      ├── Air Conditioning & Heating (空调与加热)
+      ├── Air Intake & Fuel Delivery (进气与燃油供给)
+      ├── Antique & Vintage Equipment Parts (古董与复古设备零件)
+      ├── Belts (皮带)
+      ├── Brakes & Brake Parts (制动器与制动零件)
+      ├── Cab Enclosures, Enclosure Parts & Glass Panels (驾驶室围板、围板零件与玻璃面板)
+      ├── Charging & Starting Systems (充电与启动系统)
+      ├── Complete Engines & Engine Parts (整机发动机与发动机零件)
+      ├── Doors, Door Glass & Accessories (车门、车门玻璃与配件)
+      ├── Electronics (电子产品)
+      ├── Engine Cooling Systems (发动机冷却系统)
+      ├── Exhausts (排气系统)
+      ├── Fenders, Mudguards & Hoods (挡泥板、挡泥板与引擎盖)
+      ├── Filters (滤清器)
+      ├── Gaskets (垫片)
+      ├── Gauges (仪表)
+      ├── Gearboxes (变速箱)
+      ├── Grilles & Grille Inserts (格栅与格栅嵌件)
+      ├── Hardware Parts (五金零件)
+      ├── Heavy Equipment Accessories (重型设备配件)
+      ├── Heavy Equipment Attachment Parts (重型设备附件零件)
+      ├── Heavy Equipment Manuals & Books (重型设备手册与书籍)
+      ├── Hydraulics (液压系统)
+      ├── Ignition Systems (点火系统)
+      ├── Joystick Controllers & Controller Boxes (操纵杆控制器与控制箱)
+      ├── Lights, Reflectors & Accessories (灯、反光镜与配件)
+      ├── Mirrors (后视镜)
+      ├── Other Heavy Equipment Parts & Accessories (其他重型设备零件与配件)
+      ├── Pistons, Rings, Rods & Piston Racks (活塞、活塞环、连杆与活塞架)
+      ├── Power Take Off Parts (动力输出零件)
+      ├── Power Units (动力单元)
+      ├── Seals & O-Rings (密封件与 O 型圈)
+      ├── Seats, Components, Cushions & Covers (座椅、组件、坐垫与座套)
+      ├── Sensors (传感器)
+      ├── Steering & Power Steering (转向与动力转向)
+      ├── Trailer Axles (拖车车轴)
+      ├── Transmission, Drivetrain & Axles (变速箱、传动系统与车轴)
+      ├── Valves (阀门)
+      ├── Wheels, Tires, Tracks & Parts (车轮、轮胎、履带与零件)
 
-◆ HVAC & Refrigeration
-  ├── HVAC & Refrigeration Components
-      ├── Air Handlers
-      ├── Compressors
-      ├── Condensers
-      ├── Evaporators
-      ├── Heat Exchangers
-      ├── Refrigerants
-      ├── Refrigeration Compressor Racks
-      ├── Refrigeration Systems
-  ├── HVAC & Refrigeration Tools
-      ├── Ducting Crimpers
-      ├── Ducting Installation Tools
-      ├── HVAC & Refrigeration Leak Detectors
-      ├── HVAC & Refrigeration: Gauges & Probes
-      ├── HVAC Flush Kits
-      ├── HVAC Installation Tools
-      ├── Recovery Cylinder Tanks
-      ├── Refrigerant Evacuation Pumps
-      ├── Refrigerant Recovery Units
-      ├── Refrigerant Replacement Kits
-      ├── Refrigerant Scales & Meters
-      ├── Refrigeration Tubing Tools
-  ├── HVAC & Refrigeration: Parts & Accessories
-      ├── Accumulators
-      ├── Boiler Expansion Tanks
-      ├── Coil & Surface Protectants
-      ├── Drain Pans
-      ├── Duct Mounted Air Purifiers & Media Cleaners
-      ├── Duct Mounted Humidifiers & Dehumidifiers
-      ├── Electrical Heat Strips
-      ├── Filter Driers
-      ├── Gas Conversion Kits
-      ├── HVAC & Refrigeration Adapters
-      ├── HVAC & Refrigeration Cartridge Heaters
-      ├── HVAC & Refrigeration Cartridges
-      ├── HVAC & Refrigeration Coil Assemblies
-      ├── HVAC & Refrigeration Coils
-      ├── HVAC & Refrigeration Contactors
-      ├── HVAC & Refrigeration Leak Sealants
-      ├── HVAC & Refrigeration Motors
-      ├── HVAC & Refrigeration Pressure Regulators
-      ├── HVAC & Refrigeration Pressure Switches
-      ├── HVAC & Refrigeration Thermostats
-      ├── HVAC & Refrigeration Valves
-      ├── HVAC & Refrigeration: Controls & Circuit Boards
-      ├── HVAC & Refrigeration: Fans & Blowers
-      ├── HVAC & Refrigeration: Pipes & Tubes
-      ├── HVAC Air Filters
-      ├── HVAC Capacitors
-      ├── HVAC Damper Actuators
-      ├── HVAC Dampers
-      ├── HVAC Ducting & Duct Hoses
-      ├── HVAC Pumps
-      ├── HVAC Sensors
-      ├── HVAC Vents
-      ├── Hot Surface Ignitors
-      ├── Pilot Assemblies
-      ├── Plenum & Filter Boxes
-      ├── Radiator Covers
-      ├── Refrigerant Cap Locks
-      ├── Refrigerant Labels
-      ├── Refrigerant Line Sets
-      ├── Refrigeration Gaskets
-      ├── Refrigeration Hoses
-      ├── Refrigeration Lubricants
-      ├── Restrictors & Orifices
-      ├── Scale Inhibitors & Removers
-      ├── Sight Glasses & Moisture Indicators
-      ├── Thermocouples & Thermopiles
-      ├── Thermostat Wires
-  ├── HVAC Systems
-      ├── Air Conditioner & Furnace Split Systems
-      ├── Boilers
-      ├── Central Air Conditioners
-      ├── Central Furnaces
-      ├── Central Heating Radiators
-      ├── Ducted Evaporative Coolers
-      ├── Ductless Mini Split Systems
-      ├── Rooftop Unit Air Conditioners
-      ├── Underfloor Heating Systems
-  ├── Heating & Cooling Appliances
-      ├── Air Cleaner & Purifier Units
-      ├── Humidifier & Dehumidifier Units
-      ├── PTAC Air Conditioners
-      ├── Portable Air Conditioners
-      ├── Portable Evaporative Coolers
-      ├── Portable Fans
-      ├── Space Heaters
-      ├── Window & Wall Air Conditioners
-  ├── Other HVAC & Refrigeration
-  ├── Water Heaters
-      ├── Industrial Combination Boilers
-      ├── Industrial Tanked Water Heaters
-      ├── Industrial Tankless Water Heaters
-      ├── Industrial Water Heater Accessories
-      ├── Industrial Water Heater Parts
+◆ HVAC & Refrigeration (暖通空调与制冷)
+  ├── HVAC & Refrigeration Components (暖通空调与制冷组件)
+      ├── Air Handlers (空气处理机组)
+      ├── Compressors (压缩机)
+      ├── Condensers (冷凝器)
+      ├── Evaporators (蒸发器)
+      ├── Heat Exchangers (换热器)
+      ├── Refrigerants (制冷剂)
+      ├── Refrigeration Compressor Racks (制冷压缩机组)
+      ├── Refrigeration Systems (制冷系统)
+  ├── HVAC & Refrigeration Tools (暖通空调与制冷工具)
+      ├── Ducting Crimpers (风管压接钳)
+      ├── Ducting Installation Tools (风管安装工具)
+      ├── HVAC & Refrigeration Leak Detectors (暖通空调与制冷检漏仪)
+      ├── HVAC & Refrigeration: Gauges & Probes (暖通空调与制冷：压力表与探头)
+      ├── HVAC Flush Kits (暖通空调冲洗套件)
+      ├── HVAC Installation Tools (暖通空调安装工具)
+      ├── Recovery Cylinder Tanks (回收钢瓶)
+      ├── Refrigerant Evacuation Pumps (制冷剂抽真空泵)
+      ├── Refrigerant Recovery Units (制冷剂回收机)
+      ├── Refrigerant Replacement Kits (制冷剂更换套件)
+      ├── Refrigerant Scales & Meters (制冷剂秤与仪表)
+      ├── Refrigeration Tubing Tools (制冷管工具)
+  ├── HVAC & Refrigeration: Parts & Accessories (暖通空调与制冷：零件与配件)
+      ├── Accumulators (储液器)
+      ├── Boiler Expansion Tanks (锅炉膨胀水箱)
+      ├── Coil & Surface Protectants (盘管与表面保护剂)
+      ├── Drain Pans (接水盘)
+      ├── Duct Mounted Air Purifiers & Media Cleaners (风管式空气净化器与介质清洁器)
+      ├── Duct Mounted Humidifiers & Dehumidifiers (风管式加湿器与除湿器)
+      ├── Electrical Heat Strips (电加热条)
+      ├── Filter Driers (干燥过滤器)
+      ├── Gas Conversion Kits (燃气转换套件)
+      ├── HVAC & Refrigeration Adapters (暖通空调与制冷适配器)
+      ├── HVAC & Refrigeration Cartridge Heaters (暖通空调与制冷筒式加热器)
+      ├── HVAC & Refrigeration Cartridges (暖通空调与制冷滤芯)
+      ├── HVAC & Refrigeration Coil Assemblies (暖通空调与制冷盘管组件)
+      ├── HVAC & Refrigeration Coils (暖通空调与制冷盘管)
+      ├── HVAC & Refrigeration Contactors (暖通空调与制冷接触器)
+      ├── HVAC & Refrigeration Leak Sealants (暖通空调与制冷密封剂)
+      ├── HVAC & Refrigeration Motors (暖通空调与制冷电机)
+      ├── HVAC & Refrigeration Pressure Regulators (暖通空调与制冷压力调节器)
+      ├── HVAC & Refrigeration Pressure Switches (暖通空调与制冷压力开关)
+      ├── HVAC & Refrigeration Thermostats (暖通空调与制冷温控器)
+      ├── HVAC & Refrigeration Valves (暖通空调与制冷阀门)
+      ├── HVAC & Refrigeration: Controls & Circuit Boards (暖通空调与制冷：控制器与电路板)
+      ├── HVAC & Refrigeration: Fans & Blowers (暖通空调与制冷：风机与鼓风机)
+      ├── HVAC & Refrigeration: Pipes & Tubes (暖通空调与制冷：管道与管材)
+      ├── HVAC Air Filters (暖通空调空气过滤器)
+      ├── HVAC Capacitors (暖通空调电容器)
+      ├── HVAC Damper Actuators (暖通空调风门执行器)
+      ├── HVAC Dampers (暖通空调风门)
+      ├── HVAC Ducting & Duct Hoses (暖通空调风管与软管)
+      ├── HVAC Pumps (暖通空调泵)
+      ├── HVAC Sensors (暖通空调传感器)
+      ├── HVAC Vents (暖通空调通风口)
+      ├── Hot Surface Ignitors (热表面点火器)
+      ├── Pilot Assemblies (引火组件)
+      ├── Plenum & Filter Boxes (静压箱与过滤箱)
+      ├── Radiator Covers (散热器罩)
+      ├── Refrigerant Cap Locks (制冷剂盖锁)
+      ├── Refrigerant Labels (制冷剂标签)
+      ├── Refrigerant Line Sets (制冷剂管路组)
+      ├── Refrigeration Gaskets (制冷垫片)
+      ├── Refrigeration Hoses (制冷软管)
+      ├── Refrigeration Lubricants (制冷润滑剂)
+      ├── Restrictors & Orifices (节流器与孔板)
+      ├── Scale Inhibitors & Removers (水垢抑制剂与除垢剂)
+      ├── Sight Glasses & Moisture Indicators (视液镜与湿度指示器)
+      ├── Thermocouples & Thermopiles (热电偶与热电堆)
+      ├── Thermostat Wires (温控器电线)
+  ├── HVAC Systems (暖通空调系统)
+      ├── Air Conditioner & Furnace Split Systems (空调与炉分体系统)
+      ├── Boilers (锅炉)
+      ├── Central Air Conditioners (中央空调)
+      ├── Central Furnaces (中央炉)
+      ├── Central Heating Radiators (中央供暖散热器)
+      ├── Ducted Evaporative Coolers (风管式蒸发冷却器)
+      ├── Ductless Mini Split Systems (无风管迷你分体系统)
+      ├── Rooftop Unit Air Conditioners (屋顶机组空调)
+      ├── Underfloor Heating Systems (地板采暖系统)
+  ├── Heating & Cooling Appliances (供暖与制冷电器)
+      ├── Air Cleaner & Purifier Units (空气净化器)
+      ├── Humidifier & Dehumidifier Units (加湿器与除湿器)
+      ├── PTAC Air Conditioners (PTAC 空调)
+      ├── Portable Air Conditioners (便携式空调)
+      ├── Portable Evaporative Coolers (便携式蒸发冷却器)
+      ├── Portable Fans (便携式风扇)
+      ├── Space Heaters (空间加热器)
+      ├── Window & Wall Air Conditioners (窗式与壁挂式空调)
+  ├── Other HVAC & Refrigeration (其他暖通空调与制冷)
+  ├── Water Heaters (热水器)
+      ├── Industrial Combination Boilers (工业组合锅炉)
+      ├── Industrial Tanked Water Heaters (工业储水式热水器)
+      ├── Industrial Tankless Water Heaters (工业即热式热水器)
+      ├── Industrial Water Heater Accessories (工业热水器配件)
+      ├── Industrial Water Heater Parts (工业热水器零件)
 
-◆ Hydraulics, Pneumatics, Pumps & Plumbing
-  ├── Air Compressors & Blowers
-      ├── Compressed Air Tanks
-      ├── Other Air Compressors
-      ├── Portable Air Compressors
-      ├── Positive Displacement Blowers
-      ├── Reciprocating Air Compressors
-      ├── Rotary Screw Air Compressors
-      ├── Scroll Air Compressors
-  ├── Air Pressure Gauges
-  ├── Compressed Air Treatment
-      ├── Air Line Lubricators
-      ├── Air Pressure Regulators
-      ├── Compressed Air Dryers
-      ├── Compressed Air Filters
-      ├── Condensate Drains
-      ├── Filter Regulator Lubricators
-      ├── Oil-Water Separators
-      ├── Other Compressed Air Treatment
-  ├── Faucet & Hydrant Repair Kits
-  ├── Fittings & Adapters
-      ├── Drain Fittings
-      ├── Hose Bibbs & Sillcocks
-      ├── Other Fittings & Adapters
-      ├── Pipe & Hose Adapters
-      ├── Pipe & Hose Fittings
-      ├── Pipe Nipples
-      ├── Water Supply Connectors
-  ├── Hydraulic & Pneumatic Cylinders
-  ├── Hydraulic & Pneumatic Motors
-  ├── Hydraulic Filters & Cartridges
-      ├── Filter Cartridges & Elements
-      ├── Hydraulic Filter Housings
-      ├── Hydraulic Filters
-      ├── Other Hydraulic Filter Accessories
-      ├── Suction Strainers
-  ├── Hydraulic Fluid
-  ├── Hydraulic Fluid Reservoirs
-  ├── Other Hydraulics & Pneumatics
-  ├── Pipe, Hose & Tubing
-      ├── Hose & Tubing
-      ├── Other Pipe, Hose & Tubing
-      ├── Pipe
-      ├── Pipe Clamps, Hangers & Straps
-  ├── Pneumatic Mufflers & Silencers
-  ├── Pump & Flow Controllers
-      ├── Flow Controllers & Meters
-      ├── Hydraulic Controllers
-      ├── Pneumatic Controllers
-      ├── Pump Controllers
-  ├── Pumps & Pump Accessories
-      ├── Boiler Feed Pumps
-      ├── Booster Pumps
-      ├── Centrifugal Pumps
-      ├── Circulator Pumps
-      ├── Deep Well & Borehole Pumps
-      ├── Drum, Coolant & Grease Pumps
-      ├── Grinder & Shredder Pumps
-      ├── Hydraulic Pumps
-      ├── Hydrostatic Test Pumps
-      ├── Lubrication Pumps
-      ├── Magnetic Drive Pumps
-      ├── Metering & Dosing Pumps
-      ├── Oil Transfer Pumps
-      ├── Other Pumps
-      ├── Pump Parts & Accessories
-      ├── Shallow Well & Jet Pumps
-      ├── Slurry Pumps
-      ├── Sump, Trash & Utility Pumps
-      ├── Turbine Pumps
-      ├── Vacuum Pumps
-  ├── Rupture Discs
-  ├── Valves & Manifolds
-      ├── Air Control Valves
-      ├── Air Pilot Valves
-      ├── Backflow Preventers
-      ├── Ball Valves
-      ├── Butterfly Valves
-      ├── Cartridge Valves
-      ├── Check & Foot Valves
-      ├── Diaphragm Valves
-      ├── Directional Control Valves
-      ├── Float Valves
-      ├── Flow Dividers
-      ├── Flush Valves
-      ├── Gate Valves
-      ├── Globe Valves
-      ├── Manifolds
-      ├── Mixing Valves
-      ├── Needle Valves
-      ├── Other Valves & Manifolds
-      ├── Plug Valves
-      ├── Quick Exhaust Valves
-      ├── Relief Valves
-      ├── Sequence Valves
-      ├── Shuttle Valves
-      ├── Stop Valves
-      ├── Vacuum Breakers
-      ├── Water Pressure Reducing Valves
 
-◆ Industrial Automation & Motion Controls
-  ├── Drives & Starters
-      ├── Drives & Motor Controls
-      ├── Starters
-  ├── Electric Motors
-      ├── Blower Motors
-      ├── Definite Purpose Motors
-      ├── Electric Motor Parts & Accessories
-      ├── Gearmotors
-      ├── General Purpose Motors
-      ├── Permanent Magnet Motors
-      ├── Pump Motors
-      ├── Servo Motors
-      ├── Starter Motors
-      ├── Stepper Motors
-      ├── Vibration Motors
-      ├── Wound Field Motors
-  ├── Indicators & Signal Towers
-      ├── Audio Indicators
-      ├── Indicator Bulbs
-      ├── Indicator Lampholders
-      ├── Indicator Lenses
-      ├── Other Indicator Accessories
-      ├── Panel Indicators & Lamps
-      ├── Signal Towers
-  ├── Industrial Robot Parts
-  ├── Industrial Robotic Arms
-  ├── Mechanical Power Transmission
-      ├── Bearings & Bushings
-      ├── Brakes & Clutches
-      ├── Chains & Sprockets
-      ├── Gearboxes & Speed Reducers
-      ├── Gears & Gear Racks
-      ├── Industrial Vibrators
-      ├── Mechanical Couplings & U-Joints
-      ├── Other Mechanical Power Transmission
-      ├── Output Filters
-      ├── Power Transmission Belts
-      ├── Power Transmission Shafts
-      ├── Pulleys & Sheaves
-      ├── Seals, O-Rings & Gaskets
-      ├── Shaft Adapters & Bore Reducers
-      ├── Shaft Collars & Clamps
-      ├── Solenoid Valves & Coils
-      ├── Tensioners & Tighteners
-      ├── Torque Limiters
-  ├── Other Automation Equipment
-  ├── PLCs & HMIs
-      ├── Control Systems
-      ├── HMI & Open Interface Panels
-      ├── Microcontrollers
-      ├── PLC Cables
-      ├── PLC Chassis
-      ├── PLC Peripheral Modules
-      ├── PLC Processors
-      ├── PLC Software
-  ├── Rotary & Linear Motion
-      ├── Bearing Blocks & Supports
-      ├── Lead, Ball & Roller Screws
-      ├── Linear Actuator Controls
-      ├── Linear Actuators
-      ├── Linear Bearings & Bushings
-      ├── Linear Encoders
-      ├── Linear Motion System
-      ├── Linear Nuts
-      ├── Linear Rings & Seals
-      ├── Other Rotary & Linear Motion
-      ├── Pulse Generators
-      ├── Rail & Shaft Supports
-      ├── Rotary Actuators
-      ├── Rotary Encoders
-      ├── Slides, Rails & Carriages
-      ├── XY & Rotary Positioning Stages
-  ├── Sensors
-      ├── Acceleration Sensors
-      ├── Fiber Optic Sensors
-      ├── Hall Effect Sensor Diodes
-      ├── Level Sensors
-      ├── Other Sensors
-      ├── PIR Motion Sensors
-      ├── Pressure Sensors
-      ├── Proximity Sensors
-      ├── Rotary Encoders
-      ├── Sensor Mountings
-      ├── Temperature & Humidity Sensors
-      ├── Ultrasonic Sensors
-      ├── Vibration Sensors
+◆ Hydraulics, Pneumatics, Pumps & Plumbing (液压、气动、泵与管道)
+  ├── Air Compressors & Blowers (空气压缩机与鼓风机)
+      ├── Compressed Air Tanks (压缩空气储罐)
+      ├── Other Air Compressors (其他空气压缩机)
+      ├── Portable Air Compressors (便携式空气压缩机)
+      ├── Positive Displacement Blowers (容积式鼓风机)
+      ├── Reciprocating Air Compressors (往复式空气压缩机)
+      ├── Rotary Screw Air Compressors (螺杆式空气压缩机)
+      ├── Scroll Air Compressors (涡旋式空气压缩机)
+  ├── Air Pressure Gauges (气压表)
+  ├── Compressed Air Treatment (压缩空气处理)
+      ├── Air Line Lubricators (气管润滑器)
+      ├── Air Pressure Regulators (气压调节器)
+      ├── Compressed Air Dryers (压缩空气干燥机)
+      ├── Compressed Air Filters (压缩空气过滤器)
+      ├── Condensate Drains (冷凝水排放器)
+      ├── Filter Regulator Lubricators (过滤调压润滑器)
+      ├── Oil-Water Separators (油水分离器)
+      ├── Other Compressed Air Treatment (其他压缩空气处理)
+  ├── Faucet & Hydrant Repair Kits (水龙头与消防栓维修套件)
+  ├── Fittings & Adapters (管件与适配器)
+      ├── Drain Fittings (排水管件)
+      ├── Hose Bibbs & Sillcocks (软管龙头与壁式龙头)
+      ├── Other Fittings & Adapters (其他管件与适配器)
+      ├── Pipe & Hose Adapters (管道与软管适配器)
+      ├── Pipe & Hose Fittings (管道与软管管件)
+      ├── Pipe Nipples (管接头)
+      ├── Water Supply Connectors (供水连接器)
+  ├── Hydraulic & Pneumatic Cylinders (液压与气动缸)
+  ├── Hydraulic & Pneumatic Motors (液压与气动马达)
+  ├── Hydraulic Filters & Cartridges (液压过滤器与滤芯)
+      ├── Filter Cartridges & Elements (滤芯与滤元)
+      ├── Hydraulic Filter Housings (液压过滤器壳体)
+      ├── Hydraulic Filters (液压过滤器)
+      ├── Other Hydraulic Filter Accessories (其他液压过滤器配件)
+      ├── Suction Strainers (吸油滤网)
+  ├── Hydraulic Fluid (液压油)
+  ├── Hydraulic Fluid Reservoirs (液压油箱)
+  ├── Other Hydraulics & Pneumatics (其他液压与气动)
+  ├── Pipe, Hose & Tubing (管道、软管与管材)
+      ├── Hose & Tubing (软管与管材)
+      ├── Other Pipe, Hose & Tubing (其他管道、软管与管材)
+      ├── Pipe (管道)
+      ├── Pipe Clamps, Hangers & Straps (管夹、吊架与管卡)
+  ├── Pneumatic Mufflers & Silencers (气动消声器与消音器)
+  ├── Pump & Flow Controllers (泵与流量控制器)
+      ├── Flow Controllers & Meters (流量控制器与流量计)
+      ├── Hydraulic Controllers (液压控制器)
+      ├── Pneumatic Controllers (气动控制器)
+      ├── Pump Controllers (泵控制器)
+  ├── Pumps & Pump Accessories (泵与泵配件)
+      ├── Boiler Feed Pumps (锅炉给水泵)
+      ├── Booster Pumps (增压泵)
+      ├── Centrifugal Pumps (离心泵)
+      ├── Circulator Pumps (循环泵)
+      ├── Deep Well & Borehole Pumps (深井与钻孔泵)
+      ├── Drum, Coolant & Grease Pumps (桶泵、冷却液泵与润滑脂泵)
+      ├── Grinder & Shredder Pumps (研磨泵与切碎泵)
+      ├── Hydraulic Pumps (液压泵)
+      ├── Hydrostatic Test Pumps (静压试验泵)
+      ├── Lubrication Pumps (润滑泵)
+      ├── Magnetic Drive Pumps (磁力驱动泵)
+      ├── Metering & Dosing Pumps (计量泵)
+      ├── Oil Transfer Pumps (输油泵)
+      ├── Other Pumps (其他泵)
+      ├── Pump Parts & Accessories (泵零件与配件)
+      ├── Shallow Well & Jet Pumps (浅井与喷射泵)
+      ├── Slurry Pumps (泥浆泵)
+      ├── Sump, Trash & Utility Pumps (污水泵、杂物泵与通用泵)
+      ├── Turbine Pumps (涡轮泵)
+      ├── Vacuum Pumps (真空泵)
+  ├── Rupture Discs (爆破片)
+  ├── Valves & Manifolds (阀门与歧管)
+      ├── Air Control Valves (空气控制阀)
+      ├── Air Pilot Valves (空气先导阀)
+      ├── Backflow Preventers (防回流装置)
+      ├── Ball Valves (球阀)
+      ├── Butterfly Valves (蝶阀)
+      ├── Cartridge Valves (插装阀)
+      ├── Check & Foot Valves (止回阀与底阀)
+      ├── Diaphragm Valves (隔膜阀)
+      ├── Directional Control Valves (方向控制阀)
+      ├── Float Valves (浮球阀)
+      ├── Flow Dividers (分流器)
+      ├── Flush Valves (冲洗阀)
+      ├── Gate Valves (闸阀)
+      ├── Globe Valves (截止阀)
+      ├── Manifolds (歧管)
+      ├── Mixing Valves (混合阀)
+      ├── Needle Valves (针阀)
+      ├── Other Valves & Manifolds (其他阀门与歧管)
+      ├── Plug Valves (旋塞阀)
+      ├── Quick Exhaust Valves (快速排气阀)
+      ├── Relief Valves (安全阀)
+      ├── Sequence Valves (顺序阀)
+      ├── Shuttle Valves (梭阀)
+      ├── Stop Valves (截止阀)
+      ├── Vacuum Breakers (真空破坏器)
+      ├── Water Pressure Reducing Valves (水压减压阀)
 
-◆ Light Equipment & Tools
-  ├── Air Tools
-      ├── Air Tool Accessories
-      ├── Other Air Tools
-      ├── Pneumatic Drills
-      ├── Pneumatic Grinders
-      ├── Pneumatic Impact Wrenches
-      ├── Pneumatic Nailers
-      ├── Pneumatic Riveters
-      ├── Pneumatic Staplers
-      ├── Pneumatic Wrenches
-  ├── Breakers & Demolition Hammers
-  ├── Concrete Stamps, Forms & Mats
-  ├── Concrete Vibrators
-  ├── Drills & Hammers
-  ├── Drywall Tools
-  ├── Electrical Tools
-  ├── Generator Parts & Accessories
-  ├── Generators
-  ├── Grinders
-  ├── Hand Tools
-  ├── Heat Guns
-  ├── Jobsite Heaters
-  ├── Mortar & Concrete Mixers
-  ├── Other Light Equipment & Tools
-  ├── Pipe Tools
-  ├── Powder Actuated Tools
-  ├── Routers
-  ├── Sanders
-  ├── Saws
-  ├── Stationary Engines
-  ├── Tool Batteries & Chargers
-  ├── Tool Combo Kits
-  ├── Tooling Storage & Cabinets
-  ├── Transfer Switches
-  ├── Walk-Behind Compactors
-  ├── Walk-Behind Trenchers
+◆ Industrial Automation & Motion Controls (工业自动化与运动控制)
+  ├── Drives & Starters (驱动器与启动器)
+      ├── Drives & Motor Controls (驱动器与电机控制)
+      ├── Starters (启动器)
+  ├── Electric Motors (电动机)
+      ├── Blower Motors (鼓风机电机)
+      ├── Definite Purpose Motors (专用电机)
+      ├── Electric Motor Parts & Accessories (电动机零件与配件)
+      ├── Gearmotors (减速电机)
+      ├── General Purpose Motors (通用电机)
+      ├── Permanent Magnet Motors (永磁电机)
+      ├── Pump Motors (泵用电机)
+      ├── Servo Motors (伺服电机)
+      ├── Starter Motors (启动电机)
+      ├── Stepper Motors (步进电机)
+      ├── Vibration Motors (振动电机)
+      ├── Wound Field Motors (绕线磁场电机)
+  ├── Indicators & Signal Towers (指示灯与信号塔)
+      ├── Audio Indicators (音频指示器)
+      ├── Indicator Bulbs (指示灯泡)
+      ├── Indicator Lampholders (指示灯座)
+      ├── Indicator Lenses (指示灯罩)
+      ├── Other Indicator Accessories (其他指示灯配件)
+      ├── Panel Indicators & Lamps (面板指示灯与灯)
+      ├── Signal Towers (信号塔)
+  ├── Industrial Robot Parts (工业机器人零件)
+  ├── Industrial Robotic Arms (工业机械臂)
+  ├── Mechanical Power Transmission (机械动力传动)
+      ├── Bearings & Bushings (轴承与轴套)
+      ├── Brakes & Clutches (制动器与离合器)
+      ├── Chains & Sprockets (链条与链轮)
+      ├── Gearboxes & Speed Reducers (齿轮箱与减速器)
+      ├── Gears & Gear Racks (齿轮与齿条)
+      ├── Industrial Vibrators (工业振动器)
+      ├── Mechanical Couplings & U-Joints (机械联轴器与万向节)
+      ├── Other Mechanical Power Transmission (其他机械动力传动)
+      ├── Output Filters (输出滤波器)
+      ├── Power Transmission Belts (动力传动带)
+      ├── Power Transmission Shafts (动力传动轴)
+      ├── Pulleys & Sheaves (皮带轮与滑轮)
+      ├── Seals, O-Rings & Gaskets (密封件、O 型圈与垫片)
+      ├── Shaft Adapters & Bore Reducers (轴适配器与孔径缩小器)
+      ├── Shaft Collars & Clamps (轴环与轴夹)
+      ├── Solenoid Valves & Coils (电磁阀与线圈)
+      ├── Tensioners & Tighteners (张紧器与紧固器)
+      ├── Torque Limiters (扭矩限制器)
+  ├── Other Automation Equipment (其他自动化设备)
+  ├── PLCs & HMIs (PLC 与 HMI)
+      ├── Control Systems (控制系统)
+      ├── HMI & Open Interface Panels (HMI 与开放接口面板)
+      ├── Microcontrollers (微控制器)
+      ├── PLC Cables (PLC 电缆)
+      ├── PLC Chassis (PLC 机架)
+      ├── PLC Peripheral Modules (PLC 外围模块)
+      ├── PLC Processors (PLC 处理器)
+      ├── PLC Software (PLC 软件)
+  ├── Rotary & Linear Motion (旋转与直线运动)
+      ├── Bearing Blocks & Supports (轴承座与支撑)
+      ├── Lead, Ball & Roller Screws (梯形丝杠、滚珠丝杠与滚柱丝杠)
+      ├── Linear Actuator Controls (线性执行器控制)
+      ├── Linear Actuators (线性执行器)
+      ├── Linear Bearings & Bushings (直线轴承与轴套)
+      ├── Linear Encoders (直线编码器)
+      ├── Linear Motion System (直线运动系统)
+      ├── Linear Nuts (直线螺母)
+      ├── Linear Rings & Seals (直线环与密封件)
+      ├── Other Rotary & Linear Motion (其他旋转与直线运动)
+      ├── Pulse Generators (脉冲发生器)
+      ├── Rail & Shaft Supports (导轨与轴支撑)
+      ├── Rotary Actuators (旋转执行器)
+      ├── Rotary Encoders (旋转编码器)
+      ├── Slides, Rails & Carriages (滑块、导轨与滑架)
+      ├── XY & Rotary Positioning Stages (XY 与旋转定位平台)
+  ├── Sensors (传感器)
+      ├── Acceleration Sensors (加速度传感器)
+      ├── Fiber Optic Sensors (光纤传感器)
+      ├── Hall Effect Sensor Diodes (霍尔效应传感器二极管)
+      ├── Level Sensors (液位传感器)
+      ├── Other Sensors (其他传感器)
+      ├── PIR Motion Sensors (PIR 运动传感器)
+      ├── Pressure Sensors (压力传感器)
+      ├── Proximity Sensors (接近传感器)
+      ├── Rotary Encoders (旋转编码器)
+      ├── Sensor Mountings (传感器安装座)
+      ├── Temperature & Humidity Sensors (温湿度传感器)
+      ├── Ultrasonic Sensors (超声波传感器)
+      ├── Vibration Sensors (振动传感器)
 
-◆ Material Handling
-  ├── Carts & Trucks
-      ├── Drum Dollies
-      ├── Drum Trucks & Hand Trucks
-      ├── Furniture & Appliance Dollies
-      ├── Lift Trucks
-      ├── Mail Carts
-      ├── Other Carts & Trucks
-      ├── Panel Trucks
-      ├── Platform & Wagon Trucks
-      ├── Shelf Trucks & Utility Carts
-      ├── Tilt-Trucks & Hoppers
-  ├── Casters & Wheels
-      ├── Caster Accessories & Hardware
-      ├── Caster Wheels
-      ├── Casters
-      ├── Dolly & Cart Wheels
-  ├── Conveyors & Conveyor Parts
-      ├── Conveyor Parts & Accessories
-      ├── Conveyor Systems
-  ├── Hoists, Winches & Rigging
-      ├── Cranes & Hoists
-      ├── Lifting Machine Parts, Rigging
-      ├── Winches
-  ├── Industrial Tarps
-  ├── Ladders, Scaffolding & Platforms
-      ├── Attic & Loft Ladders
-      ├── Cross-Over Ladders
-      ├── Dock, Wall-Mount & Tank Ladders
-      ├── Folding & Step Ladders
-      ├── Ladder Accessories
-      ├── Ladder Parts
-      ├── Modular Scaffolding Components
-      ├── Rolling Ladders & Scaffolds
-      ├── Step-Stands & Stools
-      ├── Straight & Extension Ladders
-      ├── Work Stands & Platforms
-  ├── Material Handling Manuals & Books
-  ├── Other Material Handling
-  ├── Packing & Shipping
-      ├── Envelopes & Mailers
-      ├── Filling & Sealing Machines
-      ├── Letter Folders
-      ├── Other Packing & Shipping
-      ├── Packing & Shipping Bags
-      ├── Packing Tapes, Straps & String
-      ├── Postage Meter Supplies
-      ├── Shipping & Cushioning Supplies
-      ├── Shipping & Moving Boxes
-      ├── Shipping & Postal Scales
-      ├── Shipping Labels & Tags
-      ├── Shrink Wrap
-  ├── Shelving & Storage
-      ├── Bins & Cabinets
-      ├── Other Industrial Storage
-      ├── Shelving Parts & Accessories
-      ├── Shelving Units
-      ├── Storage Bags
-      ├── Storage Bottles, Drums & Pails
-      ├── Storage Containers
-      ├── Storage Racks
-  ├── Shipping Containers
-  ├── Warehouse Loading & Unloading
-      ├── Dock Levelers
-      ├── Dock Plates, Ramps & Boards
-      ├── Dock Rails & Bumpers
-      ├── Other Warehouse Loading Equipment
-      ├── Pallet Jacks & Trucks
-      ├── Pallet Racks
-      ├── Pallets
-      ├── Strip Doors
-      ├── Warehouse Forklift Parts & Accessories
-      ├── Warehouse Forklifts & Stackers
+◆ Light Equipment & Tools (轻型设备与工具)
+  ├── Air Tools (气动工具)
+      ├── Air Tool Accessories (气动工具配件)
+      ├── Other Air Tools (其他气动工具)
+      ├── Pneumatic Drills (气动钻)
+      ├── Pneumatic Grinders (气动磨光机)
+      ├── Pneumatic Impact Wrenches (气动冲击扳手)
+      ├── Pneumatic Nailers (气动钉枪)
+      ├── Pneumatic Riveters (气动铆钉枪)
+      ├── Pneumatic Staplers (气动订书机)
+      ├── Pneumatic Wrenches (气动扳手)
+  ├── Breakers & Demolition Hammers (破碎锤与拆除锤)
+  ├── Concrete Stamps, Forms & Mats (混凝土压印模具、模板与垫板)
+  ├── Concrete Vibrators (混凝土振捣器)
+  ├── Drills & Hammers (电钻与电锤)
+  ├── Drywall Tools (石膏板工具)
+  ├── Electrical Tools (电气工具)
+  ├── Generator Parts & Accessories (发电机零件与配件)
+  ├── Generators (发电机)
+  ├── Grinders (磨光机)
+  ├── Hand Tools (手动工具)
+  ├── Heat Guns (热风枪)
+  ├── Jobsite Heaters (工地加热器)
+  ├── Mortar & Concrete Mixers (砂浆与混凝土搅拌机)
+  ├── Other Light Equipment & Tools (其他轻型设备与工具)
+  ├── Pipe Tools (管道工具)
+  ├── Powder Actuated Tools (火药驱动工具)
+  ├── Routers (修边机)
+  ├── Sanders (砂光机)
+  ├── Saws (锯)
+  ├── Stationary Engines (固定式发动机)
+  ├── Tool Batteries & Chargers (工具电池与充电器)
+  ├── Tool Combo Kits (工具组合套装)
+  ├── Tooling Storage & Cabinets (工具存储与工具柜)
+  ├── Transfer Switches (转换开关)
+  ├── Walk-Behind Compactors (手扶式压实机)
+  ├── Walk-Behind Trenchers (手扶式开沟机)
 
-◆ Modular & Prefabricated Buildings
 
-◆ Office
-  ├── Microfilm & Microfiche
-  ├── Office Equipment
-      ├── Calculator Accessories
-      ├── Calculators
-      ├── Copiers, Parts & Accessories
-      ├── Dictation & Stenography
-      ├── Electronic Dictionaries & Translators
-      ├── Fax Machines, Parts & Accessories
-      ├── Label Making
-      ├── Laminating Equipment
-      ├── Other Office Equipment
-      ├── Shredders
-      ├── Time Clocks & Supplies
-      ├── Typewriters & Word Processors
-  ├── Office Furniture
-      ├── Bookshelves
-      ├── Chairs & Stools
-      ├── Computer Furniture
-      ├── Cubicles & Systems Furniture
-      ├── Desks & Tables
-      ├── Filing Cabinets
-      ├── Footrests
-      ├── Other Office Furniture
-      ├── Presentation Stands & Lecterns
-  ├── Office Supplies
-      ├── Blank Labels
-      ├── Bulk Blank Media
-      ├── Calendars & Planners
-      ├── Desk Accessories
-      ├── Filing, Storage & Binding
-      ├── Mousepads
-      ├── Other Office Supplies
-      ├── Paper Products
-      ├── Pens, Pencils & Markers
-  ├── Other Office
-  ├── Projectors & Presentation Equipment
-      ├── Dry Erase Boards
-      ├── Laser Pointers
-      ├── Microphones & Speakers
-      ├── Other Presentation Equipment
-      ├── Overhead Projectors
-      ├── Projector Bulbs
-      ├── Screens
-      ├── Transparency Film
-  ├── Telecom Systems
-      ├── Business Phone Sets & Handsets
-      ├── Conference Equipment
-      ├── Multiplexers
-      ├── Music On-Hold Systems
-      ├── Other Telecom Systems
-      ├── Phone Switching Systems & PBXs
-      ├── Voicemail & Voice Processing Systems
-  ├── Trade Show Displays
-      ├── Banner Systems & Signage
-      ├── Other Trade Show Displays
-      ├── Pop-Up & Booth Displays
-      ├── Tabletop & Portable Displays
-      ├── Trade Show Display Accessories
+◆ Material Handling (物料搬运)
+  ├── Carts & Trucks (推车与手推车)
+      ├── Drum Dollies (桶用台车)
+      ├── Drum Trucks & Hand Trucks (桶用手推车与手推车)
+      ├── Furniture & Appliance Dollies (家具与电器台车)
+      ├── Lift Trucks (升降车)
+      ├── Mail Carts (邮件推车)
+      ├── Other Carts & Trucks (其他推车与手推车)
+      ├── Panel Trucks (平板推车)
+      ├── Platform & Wagon Trucks (平台车与货车)
+      ├── Shelf Trucks & Utility Carts (货架推车与实用推车)
+      ├── Tilt-Trucks & Hoppers (倾卸推车与料斗)
+  ├── Casters & Wheels (脚轮与轮子)
+      ├── Caster Accessories & Hardware (脚轮配件与五金)
+      ├── Caster Wheels (脚轮)
+      ├── Casters (万向轮)
+      ├── Dolly & Cart Wheels (台车与推车车轮)
+  ├── Conveyors & Conveyor Parts (输送机与输送零件)
+      ├── Conveyor Parts & Accessories (输送零件与配件)
+      ├── Conveyor Systems (输送系统)
+  ├── Hoists, Winches & Rigging (起重机、绞车与索具)
+      ├── Cranes & Hoists (起重机与升降机)
+      ├── Lifting Machine Parts, Rigging (起重机械零件与索具)
+      ├── Winches (绞车)
+  ├── Industrial Tarps (工业防水布)
+  ├── Ladders, Scaffolding & Platforms (梯子、脚手架与平台)
+      ├── Attic & Loft Ladders (阁楼梯)
+      ├── Cross-Over Ladders (跨梯)
+      ├── Dock, Wall-Mount & Tank Ladders (码头、壁挂与储罐梯子)
+      ├── Folding & Step Ladders (折叠梯与踏步梯)
+      ├── Ladder Accessories (梯子配件)
+      ├── Ladder Parts (梯子零件)
+      ├── Modular Scaffolding Components (模块化脚手架组件)
+      ├── Rolling Ladders & Scaffolds (滚动梯子与脚手架)
+      ├── Step-Stands & Stools (踏步架与凳子)
+      ├── Straight & Extension Ladders (直梯与伸缩梯)
+      ├── Work Stands & Platforms (工作台与平台)
+  ├── Material Handling Manuals & Books (物料搬运手册与书籍)
+  ├── Other Material Handling (其他物料搬运)
+  ├── Packing & Shipping (包装与运输)
+      ├── Envelopes & Mailers (信封与邮寄袋)
+      ├── Filling & Sealing Machines (灌装与封口机)
+      ├── Letter Folders (折信机)
+      ├── Other Packing & Shipping (其他包装与运输)
+      ├── Packing & Shipping Bags (包装与运输袋)
+      ├── Packing Tapes, Straps & String (包装胶带、绑带与绳子)
+      ├── Postage Meter Supplies (邮资机耗材)
+      ├── Shipping & Cushioning Supplies (运输与缓冲用品)
+      ├── Shipping & Moving Boxes (运输与搬家箱)
+      ├── Shipping & Postal Scales (运输与邮政秤)
+      ├── Shipping Labels & Tags (运输标签与吊牌)
+      ├── Shrink Wrap (收缩膜)
+  ├── Shelving & Storage (货架与存储)
+      ├── Bins & Cabinets (料箱与柜)
+      ├── Other Industrial Storage (其他工业存储)
+      ├── Shelving Parts & Accessories (货架零件与配件)
+      ├── Shelving Units (货架单元)
+      ├── Storage Bags (储物袋)
+      ├── Storage Bottles, Drums & Pails (储物瓶、桶与提桶)
+      ├── Storage Containers (储物容器)
+      ├── Storage Racks (储物架)
+  ├── Shipping Containers (运输集装箱)
+  ├── Warehouse Loading & Unloading (仓库装卸)
+      ├── Dock Levelers (码头调平器)
+      ├── Dock Plates, Ramps & Boards (码头板、坡道与跳板)
+      ├── Dock Rails & Bumpers (码头护栏与缓冲器)
+      ├── Other Warehouse Loading Equipment (其他仓库装卸设备)
+      ├── Pallet Jacks & Trucks (托盘搬运车与叉车)
+      ├── Pallet Racks (托盘货架)
+      ├── Pallets (托盘)
+      ├── Strip Doors (条帘门)
+      ├── Warehouse Forklift Parts & Accessories (仓库叉车零件与配件)
+      ├── Warehouse Forklifts & Stackers (仓库叉车与堆垛机)
 
-◆ Other Business & Industrial
+◆ Modular & Prefabricated Buildings (模块化与预制建筑)
 
-◆ Printing & Graphic Arts
-  ├── Bindery & Finishing Equipment
-      ├── Binders & Stitchers
-      ├── Collators & Bookletmakers
-      ├── Folders
-      ├── Numbering Machines
-      ├── Other Bindery & Finishing
-      ├── Paper Cutters & Trimmers
-      ├── Paper Drills & Punches
-      ├── Paper Joggers
-  ├── Commercial Printing Essentials
-      ├── Commercial Printing Books & Manuals
-      ├── Letter Presses & Die Cutters
-      ├── Other Commercial Print Accessories
-      ├── Parts, Feeders & Attachments
-  ├── Commercial Printing Presses
-      ├── Other Printing Presses
-      ├── Sheet-fed Offset Presses
-      ├── Web-fed Offset Presses
-  ├── Direct Mail Equipment
-  ├── Ink, Plates & Film
-      ├── Blankets
-      ├── Film
-      ├── Inks & Coatings
-      ├── Other Ink, Plates & Film
-      ├── Plates
-  ├── Other Printing & Graphic Arts
-  ├── Plotters & Wide Format Printers
-  ├── PrePress Equipment
-  ├── Printing & Graphic Essentials
-      ├── Books & Manuals
-      ├── Color Guides & Pantone
-      ├── Densitometers
-      ├── Duplicator Supplies
-      ├── General Accessories
-      ├── Other Printing & Graphic Accessories
-      ├── Software & Clipart
-      ├── Type, Cuts & Printing Blocks
-  ├── Screen & Specialty Printing
-      ├── Engraving
-      ├── Heat Transfer
-      ├── Other Specialty Printing
-      ├── Pad Printing
-      ├── Screen Printing
-      ├── Stamping & Embossing
-  ├── Sign Making Supplies
-      ├── Magnetic Sheets & Supplies
-      ├── Other Sign Making Supplies
-      ├── Sign Lettering
-      ├── Vinyl & Sign Film
+◆ Office (办公用品)
+  ├── Microfilm & Microfiche (缩微胶卷与缩微平片)
+  ├── Office Equipment (办公设备)
+      ├── Calculator Accessories (计算器配件)
+      ├── Calculators (计算器)
+      ├── Copiers, Parts & Accessories (复印机、零件与配件)
+      ├── Dictation & Stenography (听写与速记)
+      ├── Electronic Dictionaries & Translators (电子词典与翻译器)
+      ├── Fax Machines, Parts & Accessories (传真机、零件与配件)
+      ├── Label Making (标签制作)
+      ├── Laminating Equipment (覆膜设备)
+      ├── Other Office Equipment (其他办公设备)
+      ├── Shredders (碎纸机)
+      ├── Time Clocks & Supplies (考勤钟与用品)
+      ├── Typewriters & Word Processors (打字机与文字处理器)
+  ├── Office Furniture (办公家具)
+      ├── Bookshelves (书架)
+      ├── Chairs & Stools (椅子与凳子)
+      ├── Computer Furniture (电脑家具)
+      ├── Cubicles & Systems Furniture (隔间与系统家具)
+      ├── Desks & Tables (办公桌与桌子)
+      ├── Filing Cabinets (文件柜)
+      ├── Footrests (脚踏板)
+      ├── Other Office Furniture (其他办公家具)
+      ├── Presentation Stands & Lecterns (演示台与讲台)
+  ├── Office Supplies (办公用品)
+      ├── Blank Labels (空白标签)
+      ├── Bulk Blank Media (批量空白介质)
+      ├── Calendars & Planners (日历与计划本)
+      ├── Desk Accessories (桌面配件)
+      ├── Filing, Storage & Binding (归档、存储与装订)
+      ├── Mousepads (鼠标垫)
+      ├── Other Office Supplies (其他办公用品)
+      ├── Paper Products (纸制品)
+      ├── Pens, Pencils & Markers (钢笔、铅笔与记号笔)
+  ├── Other Office (其他办公)
+  ├── Projectors & Presentation Equipment (投影仪与演示设备)
+      ├── Dry Erase Boards (白板)
+      ├── Laser Pointers (激光笔)
+      ├── Microphones & Speakers (麦克风与扬声器)
+      ├── Other Presentation Equipment (其他演示设备)
+      ├── Overhead Projectors (高射投影仪)
+      ├── Projector Bulbs (投影仪灯泡)
+      ├── Screens (屏幕)
+      ├── Transparency Film (透明胶片)
+  ├── Telecom Systems (电信系统)
+      ├── Business Phone Sets & Handsets (商务电话机与手柄)
+      ├── Conference Equipment (会议设备)
+      ├── Multiplexers (多路复用器)
+      ├── Music On-Hold Systems (等待音乐系统)
+      ├── Other Telecom Systems (其他电信系统)
+      ├── Phone Switching Systems & PBXs (电话交换系统与程控交换机)
+      ├── Voicemail & Voice Processing Systems (语音信箱与语音处理系统)
+  ├── Trade Show Displays (展会展示)
+      ├── Banner Systems & Signage (横幅系统与标牌)
+      ├── Other Trade Show Displays (其他展会展示)
+      ├── Pop-Up & Booth Displays (弹出式与展位展示)
+      ├── Tabletop & Portable Displays (桌面与便携式展示)
+      ├── Trade Show Display Accessories (展会展示配件)
 
-◆ Restaurant & Food Service
-  ├── Bar & Beverage Equipment
-      ├── Commercial Bar Supplies
-      ├── Commercial Blenders, Juicers & Milkshake Machines
-      ├── Commercial Coffee, Cocoa & Tea Equipment
-      ├── Commercial Cold & Frozen Beverage Dispensers
-      ├── Commercial Water Filtration
-      ├── Coolers & Glass Frosters
-      ├── Draft Beer Dispensing
-      ├── Other Bar & Beverage Equipment
-      ├── Portable Bars
-      ├── Underbar Equipment
-  ├── Bulk Food
-  ├── Commercial Kitchen Equipment
-      ├── Baking & Dough Equipment
-      ├── Cleaning & Warewashing
-      ├── Commercial Cookware & Kitchen Tools
-      ├── Cooking Equipment
-      ├── Food Holding & Warming Equipment
-      ├── Food Preparation Equipment
-      ├── Hood Systems
-      ├── Other Commercial Kitchen Equipment
-      ├── Storage & Handling Equipment
-  ├── Food Trucks, Trailers & Carts
-      ├── Food Truck Parts & Accessories
-      ├── Food Trucks & Concession Trailers
-      ├── Vending Carts, Stands & Kiosks
-  ├── Furniture, Signs & Décor
-      ├── Air Curtains
-      ├── Display Food
-      ├── Other Restaurant Décor
-      ├── Restaurant Chairs & Seating
-      ├── Restaurant Doors
-      ├── Restaurant Décor
-      ├── Restaurant Furniture Parts & Accessories
-      ├── Restaurant Menu Boards
-      ├── Restaurant Sign Holders
-      ├── Restaurant Signs
-      ├── Restaurant Tables
-  ├── Other Restaurant & Food Service
-  ├── Refrigeration Equipment
-      ├── Commercial Freezers & Refrigerators
-      ├── Commercial Ice Machines
-      ├── Ice Cream Equipment
-      ├── Ice Storage Bins
-      ├── Other Restaurant Refrigeration
-      ├── Refrigeration Equipment Parts & Accessories
-  ├── Tabletop & Serving
-      ├── Other Tabletop & Serving
-      ├── Restaurant Disposables
-      ├── Serving, Buffet & Catering
-      ├── Tabletop
-  ├── Tabletop Concession Machines
-      ├── Churro Machines
-      ├── Concession Condiment Systems
-      ├── Concession Displays & Warmers
-      ├── Concession Machine Parts & Accessories
-      ├── Concession Machine Supplies
-      ├── Cotton Candy Machines
-      ├── Hot Dog Rollers & Bun Warmers
-      ├── Other Tabletop Concession
-      ├── Popcorn Machines
-      ├── Snow Cone & Ice Shaving Machines
-  ├── Uniforms & Aprons
-      ├── Chef Coats & Jackets
-      ├── Chef Hats & Headwear
-      ├── Chef Neckerchiefs
-      ├── Chef Pants
-      ├── Cook & Server Shirts
-      ├── Other Restaurant Uniforms
-      ├── Restaurant Aprons
-  ├── Vending Machines & Dispensers
-      ├── ATM Machines
-      ├── Beverage & Snack Vending
-      ├── Candy & Bulk Vending Machines
-      ├── Change Machines
-      ├── Medicine & Condom Vending
-      ├── Vending Machine Parts & Accessories
-  ├── Vintage Equipment
-  ├── Wholesale Lots
+◆ Other Business & Industrial (其他商业与工业)
 
-◆ Retail & Services
-  ├── Business Signs
-  ├── Dry Cleaning & Laundromat
-      ├── Commercial Washers & Dryers
-      ├── Dry Cleaning Equipment
-      ├── Other Dry Cleaning & Laundromat
-  ├── Jewelry Packaging & Display
-      ├── Carrying Cases
-      ├── Cases & Displays
-      ├── Gem Boxes & Jars
-      ├── Gift Boxes
-      ├── Jewelry Pouches
-      ├── Jewelry Trays
-      ├── Other Retail Jewelry Packaging
-  ├── Labeling & Tagging Supplies
-      ├── Barbs & Hooks
-      ├── Label Guns
-      ├── Other Retail Labeling
-      ├── Price Labels
-      ├── Price Tags
-      ├── Tag Guns
-  ├── Mannequins & Dress Forms
-  ├── Other Retail & Services
-  ├── Point of Sale & Money Handling
-      ├── Barcode Scanners
-      ├── Bill Counters
-      ├── Card Encoders & Readers
-      ├── Cash Drawers & Boxes
-      ├── Cash Register Inserts
-      ├── Cash Registers
-      ├── Check Readers
-      ├── Coin & Change Sorting
-      ├── Complete PC-Based Systems
-      ├── Counterfeit Detection Equipment
-      ├── Credit Card Imprinters
-      ├── Credit Card Terminals, Readers
-      ├── Other Point of Sale & Money Handling
-      ├── POS Printer Ribbons & Paper
-      ├── POS Printers
-      ├── POS Scales
-      ├── POS Software
-      ├── Pin Pads & Keyboards
-      ├── Pole Displays
-  ├── Racks & Fixtures
-      ├── Card & Literature Stands
-      ├── Clothing Racks
-      ├── Display Cases
-      ├── Other Retail Racks & Fixtures
-      ├── Pegboard & Gridwall Hooks
-      ├── Pegboards & Gridwalls
-      ├── Racks, Stands & Spinners
-      ├── Shelving
-      ├── Shelving Clips, Brackets & Label Holders
-      ├── Sign Holders
-  ├── Security & Surveillance
-      ├── Camera & Video Systems
-      ├── EAS, Tag-based Systems
-      ├── Locking Devices & Alarms
-      ├── Other Retail Security
-  ├── Shopping Carts & Baskets
-  ├── Wholesale Retail Supplies
+◆ Printing & Graphic Arts (印刷与图形艺术)
+  ├── Bindery & Finishing Equipment (装订与整饰设备)
+      ├── Binders & Stitchers (装订机与订书机)
+      ├── Collators & Bookletmakers (配页机与小册子制作机)
+      ├── Folders (折页机)
+      ├── Numbering Machines (编号机)
+      ├── Other Bindery & Finishing (其他装订与整饰)
+      ├── Paper Cutters & Trimmers (切纸机与裁纸机)
+      ├── Paper Drills & Punches (纸张钻孔机与打孔机)
+      ├── Paper Joggers (纸张整理机)
+  ├── Commercial Printing Essentials (商业印刷必需品)
+      ├── Commercial Printing Books & Manuals (商业印刷书籍与手册)
+      ├── Letter Presses & Die Cutters (凸版印刷机与模切机)
+      ├── Other Commercial Print Accessories (其他商业印刷配件)
+      ├── Parts, Feeders & Attachments (零件、送纸器与附件)
+  ├── Commercial Printing Presses (商业印刷机)
+      ├── Other Printing Presses (其他印刷机)
+      ├── Sheet-fed Offset Presses (单张纸胶印机)
+      ├── Web-fed Offset Presses (卷筒纸胶印机)
+  ├── Direct Mail Equipment (直邮设备)
+  ├── Ink, Plates & Film (油墨、印版与胶片)
+      ├── Blankets (橡皮布)
+      ├── Film (胶片)
+      ├── Inks & Coatings (油墨与涂料)
+      ├── Other Ink, Plates & Film (其他油墨、印版与胶片)
+      ├── Plates (印版)
+  ├── Other Printing & Graphic Arts (其他印刷与图形艺术)
+  ├── Plotters & Wide Format Printers (绘图仪与大幅面打印机)
+  ├── PrePress Equipment (印前设备)
+  ├── Printing & Graphic Essentials (印刷与图形必需品)
+      ├── Books & Manuals (书籍与手册)
+      ├── Color Guides & Pantone (色彩指南与潘通)
+      ├── Densitometers (密度计)
+      ├── Duplicator Supplies (复印机耗材)
+      ├── General Accessories (通用配件)
+      ├── Other Printing & Graphic Accessories (其他印刷与图形配件)
+      ├── Software & Clipart (软件与剪贴画)
+      ├── Type, Cuts & Printing Blocks (活字、刀模与印刷版)
+  ├── Screen & Specialty Printing (丝网与特种印刷)
+      ├── Engraving (雕刻)
+      ├── Heat Transfer (热转印)
+      ├── Other Specialty Printing (其他特种印刷)
+      ├── Pad Printing (移印)
+      ├── Screen Printing (丝网印刷)
+      ├── Stamping & Embossing (压印与凹凸印)
+  ├── Sign Making Supplies (标牌制作耗材)
+      ├── Magnetic Sheets & Supplies (磁性片与耗材)
+      ├── Other Sign Making Supplies (其他标牌制作耗材)
+      ├── Sign Lettering (标牌字体)
+      ├── Vinyl & Sign Film (乙烯基与标牌膜)
 
-◆ Test, Measurement & Inspection
-  ├── Analyzers & Data Acquisition
-      ├── Analyzer Parts & Accessories
-      ├── Cable & Antenna Analyzers
-      ├── Communication Service Monitors
-      ├── Data Acquisition & Loggers
-      ├── Gas & Combustion Analyzers
-      ├── LAN/WAN & Protocol Analyzers
-      ├── Logic Analyzers
-      ├── Network Analyzers
-      ├── Oscilloscopes & Vectorscopes
-      ├── Other Analyzers
-      ├── Parameter Analyzers
-      ├── Power Quality Analyzers
-      ├── RF Communication Test Sets
-      ├── Signal & Spectrum Analyzers
-  ├── Cameras & Imaging
-      ├── Borescopes & Fiberscopes
-      ├── Camera & CCTV Testers
-      ├── Imaging Parts & Accessories
-      ├── Infrared & Thermal Imaging
-      ├── Optical Fiber Inspection
-      ├── Other Cameras & Imaging
-  ├── Fault Locators & Reflectometry
-      ├── Cable & Pipe Locators
-      ├── OTDRs
-      ├── Time-Domain Reflectometers
-      ├── Visual Fault Locators
-  ├── Leads & Probes
-      ├── Current Probes
-      ├── High Frequency/RF Probes
-      ├── High Voltage Probes
-      ├── Logic Probes
-      ├── Multimeter Test Leads
-      ├── Other Leads & Probes
-      ├── Piercing Probes
-      ├── Transducer Probes
-  ├── Levels & Surveying Equipment
-      ├── Levels & Autolevels
-      ├── Other Surveying Equipment
-      ├── Total Stations & Accessories
-      ├── Transits & Theodolites
-      ├── Tripods & Grade Rods
-  ├── NIM & CAMAC Systems
-      ├── NIM & CAMAC Bins/Crates
-      ├── NIM & CAMAC Controllers
-      ├── NIM & CAMAC Modules
-      ├── Other NIM & CAMAC Equipment
-  ├── Other Test, Measurement & Inspection
-  ├── PXI & VXI Systems
-      ├── Other PXI & VXI Equipment
-      ├── PXI & VXI Boards & Modules
-      ├── PXI & VXI Controllers
-      ├── PXI & VXI Mainframes & Chassis
-  ├── Signal Sources & Conditioning
-      ├── Adjustable Power Supplies
-      ├── Other Signal Sources & Conditioning
-      ├── RF & Microwave Amplifiers
-      ├── RF & Microwave Pass Filters
-      ├── Signal Generators
-      ├── Variable/Step Attenuators
-  ├── Test Equipment Manuals & Books
-  ├── Test Equipment Parts & Accessories
-      ├── Other Test Equipment Parts & Accessories
-      ├── Test Equipment Cables
-      ├── Test Equipment Cases
-      ├── Test Equipment Controllers
-      ├── Test Equipment Plug-Ins
-      ├── Test Equipment Power Amplifiers
-      ├── Test Equipment Software
-      ├── Test Equipment Waveguides
-  ├── Test Meters & Detectors
-      ├── Air Flow & Anemometers
-      ├── Ammeters
-      ├── Capacitance & ESR Meters
-      ├── Digital Tachometers
-      ├── Dynamometers
-      ├── EMF & Gaussmeters
-      ├── Earth Ground Resistance Meters
-      ├── Electrical Usage Meters
-      ├── Fiber Optic Power Meters
-      ├── Frequency Counters
-      ├── Gas Detectors & Monitors
-      ├── Hygrometers
-      ├── LCR Meters & Impedance Analyzers
-      ├── Light & Lux Meters
-      ├── Liquid & Mass Flow Meters
-      ├── Manometers/Air Pressure Meters
-      ├── Metal Detector Accessories
-      ├── Metal Detectors
-      ├── Multimeters
-      ├── Ohmmeters & Megohmmeters
-      ├── Other Test Meters & Detectors
-      ├── Panel Meters
-      ├── RF & Microwave Power Meters
-      ├── Radiation Detectors
-      ├── Signal Level Meters
-      ├── Sound Level Meters
-      ├── Test Meter Parts & Accessories
-      ├── Thermometers & Temperature Measurement
-      ├── Ultrasonic Flaw Detectors
-      ├── Vibration Meters
-      ├── Voltage Detectors
-      ├── Voltmeters
-      ├── pH, Conductivity & TDS Meters
-  ├── Testers & Calibrators
-      ├── Cable Testers & Trackers
-      ├── Calibrators
-      ├── Decade Boxes
-      ├── Lineman's Handsets/Butt Sets
-      ├── Other Testers & Calibrators
-      ├── Tester Parts & Accessories
-      ├── Tone Probes & Generators
-      ├── Tube Testers
+◆ Restaurant & Food Service (餐饮与食品服务)
+  ├── Bar & Beverage Equipment (酒吧与饮料设备)
+      ├── Commercial Bar Supplies (商用酒吧用品)
+      ├── Commercial Blenders, Juicers & Milkshake Machines (商用搅拌机、榨汁机与奶昔机)
+      ├── Commercial Coffee, Cocoa & Tea Equipment (商用咖啡、可可与茶设备)
+      ├── Commercial Cold & Frozen Beverage Dispensers (商用冷饮与冷冻饮料分配器)
+      ├── Commercial Water Filtration (商用净水设备)
+      ├── Coolers & Glass Frosters (冷却器与玻璃杯冷冻机)
+      ├── Draft Beer Dispensing (生啤分配)
+      ├── Other Bar & Beverage Equipment (其他酒吧与饮料设备)
+      ├── Portable Bars (便携式酒吧)
+      ├── Underbar Equipment (吧台下方设备)
+  ├── Bulk Food (散装食品)
+  ├── Commercial Kitchen Equipment (商用厨房设备)
+      ├── Baking & Dough Equipment (烘焙与面团设备)
+      ├── Cleaning & Warewashing (清洁与餐具清洗)
+      ├── Commercial Cookware & Kitchen Tools (商用炊具与厨房工具)
+      ├── Cooking Equipment (烹饪设备)
+      ├── Food Holding & Warming Equipment (食品保温与加热设备)
+      ├── Food Preparation Equipment (食品制备设备)
+      ├── Hood Systems (排烟罩系统)
+      ├── Other Commercial Kitchen Equipment (其他商用厨房设备)
+      ├── Storage & Handling Equipment (储存与搬运设备)
+  ├── Food Trucks, Trailers & Carts (餐车、拖车与推车)
+      ├── Food Truck Parts & Accessories (餐车零件与配件)
+      ├── Food Trucks & Concession Trailers (餐车与特许拖车)
+      ├── Vending Carts, Stands & Kiosks (售货车、摊位与售货亭)
+  ├── Furniture, Signs & Décor (家具、标牌与装饰)
+      ├── Air Curtains (风幕机)
+      ├── Display Food (展示食品)
+      ├── Other Restaurant Décor (其他餐厅装饰)
+      ├── Restaurant Chairs & Seating (餐厅椅子与座位)
+      ├── Restaurant Doors (餐厅门)
+      ├── Restaurant Décor (餐厅装饰)
+      ├── Restaurant Furniture Parts & Accessories (餐厅家具零件与配件)
+      ├── Restaurant Menu Boards (餐厅菜单板)
+      ├── Restaurant Sign Holders (餐厅标牌支架)
+      ├── Restaurant Signs (餐厅标牌)
+      ├── Restaurant Tables (餐厅桌子)
+  ├── Other Restaurant & Food Service (其他餐饮与食品服务)
+  ├── Refrigeration Equipment (制冷设备)
+      ├── Commercial Freezers & Refrigerators (商用冷冻柜与冰箱)
+      ├── Commercial Ice Machines (商用制冰机)
+      ├── Ice Cream Equipment (冰淇淋设备)
+      ├── Ice Storage Bins (储冰桶)
+      ├── Other Restaurant Refrigeration (其他餐厅制冷设备)
+      ├── Refrigeration Equipment Parts & Accessories (制冷设备零件与配件)
+  ├── Tabletop & Serving (桌面与服务)
+      ├── Other Tabletop & Serving (其他桌面与服务)
+      ├── Restaurant Disposables (餐厅一次性用品)
+      ├── Serving, Buffet & Catering (服务、自助餐与餐饮)
+      ├── Tabletop (桌面用品)
+  ├── Tabletop Concession Machines (桌面特许机器)
+      ├── Churro Machines (油条机)
+      ├── Concession Condiment Systems (特许调味品系统)
+      ├── Concession Displays & Warmers (特许展示与保温设备)
+      ├── Concession Machine Parts & Accessories (特许机器零件与配件)
+      ├── Concession Machine Supplies (特许机器耗材)
+      ├── Cotton Candy Machines (棉花糖机)
+      ├── Hot Dog Rollers & Bun Warmers (热狗滚筒与面包保温器)
+      ├── Other Tabletop Concession (其他桌面特许)
+      ├── Popcorn Machines (爆米花机)
+      ├── Snow Cone & Ice Shaving Machines (雪锥与刨冰机)
+  ├── Uniforms & Aprons (制服与围裙)
+      ├── Chef Coats & Jackets (厨师外套与夹克)
+      ├── Chef Hats & Headwear (厨师帽与头饰)
+      ├── Chef Neckerchiefs (厨师领巾)
+      ├── Chef Pants (厨师裤)
+      ├── Cook & Server Shirts (厨师与服务员衬衫)
+      ├── Other Restaurant Uniforms (其他餐厅制服)
+      ├── Restaurant Aprons (餐厅围裙)
+  ├── Vending Machines & Dispensers (自动售货机与分配器)
+      ├── ATM Machines (自动取款机)
+      ├── Beverage & Snack Vending (饮料与零食自动售货)
+      ├── Candy & Bulk Vending Machines (糖果与散装自动售货机)
+      ├── Change Machines (换币机)
+      ├── Medicine & Condom Vending (药品与避孕套自动售货)
+      ├── Vending Machine Parts & Accessories (自动售货机零件与配件)
+  ├── Vintage Equipment (复古设备)
+  ├── Wholesale Lots (批发批量)
 
-◆ Websites & Businesses for Sale
-  ├── Internet Businesses & Websites
-  ├── Manufacturing
-  ├── Marketing
-  ├── Other Businesses for Sale
-  ├── Patents & Trademarks
-  ├── Retail & General Stores
-  ├── Service Businesses
-  ├── Vending & Coin-op
-  ├── Wholesale Trade & Distribution
 
+◆ Retail & Services (零售与服务)
+  ├── Business Signs (商业标牌)
+  ├── Dry Cleaning & Laundromat (干洗与自助洗衣店)
+      ├── Commercial Washers & Dryers (商用洗衣机与烘干机)
+      ├── Dry Cleaning Equipment (干洗设备)
+      ├── Other Dry Cleaning & Laundromat (其他干洗与自助洗衣店)
+  ├── Jewelry Packaging & Display (珠宝包装与展示)
+      ├── Carrying Cases (携带箱)
+      ├── Cases & Displays (箱子与展示架)
+      ├── Gem Boxes & Jars (宝石盒与罐子)
+      ├── Gift Boxes (礼品盒)
+      ├── Jewelry Pouches (珠宝袋)
+      ├── Jewelry Trays (珠宝托盘)
+      ├── Other Retail Jewelry Packaging (其他零售珠宝包装)
+  ├── Labeling & Tagging Supplies (标签与吊牌用品)
+      ├── Barbs & Hooks (倒钩与挂钩)
+      ├── Label Guns (标签枪)
+      ├── Other Retail Labeling (其他零售标签)
+      ├── Price Labels (价格标签)
+      ├── Price Tags (价签)
+      ├── Tag Guns (吊牌枪)
+  ├── Mannequins & Dress Forms (人体模型与服装模特)
+  ├── Other Retail & Services (其他零售与服务)
+  ├── Point of Sale & Money Handling (销售点与现金处理)
+      ├── Barcode Scanners (条码扫描器)
+      ├── Bill Counters (点钞机)
+      ├── Card Encoders & Readers (卡片编码器与读卡器)
+      ├── Cash Drawers & Boxes (钱箱与现金盒)
+      ├── Cash Register Inserts (收银机内胆)
+      ├── Cash Registers (收银机)
+      ├── Check Readers (支票读卡器)
+      ├── Coin & Change Sorting (硬币与零钱分类)
+      ├── Complete PC-Based Systems (完整 PC 系统)
+      ├── Counterfeit Detection Equipment (伪钞检测设备)
+      ├── Credit Card Imprinters (信用卡压印机)
+      ├── Credit Card Terminals, Readers (信用卡终端与读卡器)
+      ├── Other Point of Sale & Money Handling (其他销售点与现金处理)
+      ├── POS Printer Ribbons & Paper (POS 打印机色带与纸张)
+      ├── POS Printers (POS 打印机)
+      ├── POS Scales (POS 秤)
+      ├── POS Software (POS 软件)
+      ├── Pin Pads & Keyboards (密码键盘与键盘)
+      ├── Pole Displays (杆式显示屏)
+  ├── Racks & Fixtures (货架与固定装置)
+      ├── Card & Literature Stands (卡片与文献架)
+      ├── Clothing Racks (服装架)
+      ├── Display Cases (展示柜)
+      ├── Other Retail Racks & Fixtures (其他零售货架与固定装置)
+      ├── Pegboard & Gridwall Hooks (钉板与网格墙挂钩)
+      ├── Pegboards & Gridwalls (钉板与网格墙)
+      ├── Racks, Stands & Spinners (货架、支架与旋转架)
+      ├── Shelving (货架)
+      ├── Shelving Clips, Brackets & Label Holders (货架夹、支架与标签架)
+      ├── Sign Holders (标牌支架)
+  ├── Security & Surveillance (安全与监控)
+      ├── Camera & Video Systems (摄像与视频系统)
+      ├── EAS, Tag-based Systems (EAS 标签系统)
+      ├── Locking Devices & Alarms (锁定装置与报警器)
+      ├── Other Retail Security (其他零售安全)
+  ├── Shopping Carts & Baskets (购物车与购物篮)
+  ├── Wholesale Retail Supplies (批发零售用品)
+
+◆ Test, Measurement & Inspection (测试、测量与检测)
+  ├── Analyzers & Data Acquisition (分析仪与数据采集)
+      ├── Analyzer Parts & Accessories (分析仪零件与配件)
+      ├── Cable & Antenna Analyzers (电缆与天线分析仪)
+      ├── Communication Service Monitors (通信服务监视器)
+      ├── Data Acquisition & Loggers (数据采集与记录仪)
+      ├── Gas & Combustion Analyzers (气体与燃烧分析仪)
+      ├── LAN/WAN & Protocol Analyzers (局域网/广域网与协议分析仪)
+      ├── Logic Analyzers (逻辑分析仪)
+      ├── Network Analyzers (网络分析仪)
+      ├── Oscilloscopes & Vectorscopes (示波器与矢量示波器)
+      ├── Other Analyzers (其他分析仪)
+      ├── Parameter Analyzers (参数分析仪)
+      ├── Power Quality Analyzers (电能质量分析仪)
+      ├── RF Communication Test Sets (射频通信测试套件)
+      ├── Signal & Spectrum Analyzers (信号与频谱分析仪)
+  ├── Cameras & Imaging (相机与成像)
+      ├── Borescopes & Fiberscopes (内窥镜与光纤镜)
+      ├── Camera & CCTV Testers (摄像机与闭路电视测试仪)
+      ├── Imaging Parts & Accessories (成像零件与配件)
+      ├── Infrared & Thermal Imaging (红外与热成像)
+      ├── Optical Fiber Inspection (光纤检测)
+      ├── Other Cameras & Imaging (其他相机与成像)
+  ├── Fault Locators & Reflectometry (故障定位仪与反射测量)
+      ├── Cable & Pipe Locators (电缆与管道定位仪)
+      ├── OTDRs (光时域反射仪)
+      ├── Time-Domain Reflectometers (时域反射仪)
+      ├── Visual Fault Locators (可视故障定位仪)
+  ├── Leads & Probes (导线与探头)
+      ├── Current Probes (电流探头)
+      ├── High Frequency/RF Probes (高频/射频探头)
+      ├── High Voltage Probes (高压探头)
+      ├── Logic Probes (逻辑探头)
+      ├── Multimeter Test Leads (万用表测试导线)
+      ├── Other Leads & Probes (其他导线与探头)
+      ├── Piercing Probes (穿刺探头)
+      ├── Transducer Probes (传感器探头)
+  ├── Levels & Surveying Equipment (水平仪与测量设备)
+      ├── Levels & Autolevels (水平仪与自动水平仪)
+      ├── Other Surveying Equipment (其他测量设备)
+      ├── Total Stations & Accessories (全站仪与配件)
+      ├── Transits & Theodolites (经纬仪与经纬仪)
+      ├── Tripods & Grade Rods (三脚架与水准尺)
+  ├── NIM & CAMAC Systems (NIM 与 CAMAC 系统)
+      ├── NIM & CAMAC Bins/Crates (NIM 与 CAMAC 机箱/机架)
+      ├── NIM & CAMAC Controllers (NIM 与 CAMAC 控制器)
+      ├── NIM & CAMAC Modules (NIM 与 CAMAC 模块)
+      ├── Other NIM & CAMAC Equipment (其他 NIM 与 CAMAC 设备)
+  ├── Other Test, Measurement & Inspection (其他测试、测量与检测)
+  ├── PXI & VXI Systems (PXI 与 VXI 系统)
+      ├── Other PXI & VXI Equipment (其他 PXI 与 VXI 设备)
+      ├── PXI & VXI Boards & Modules (PXI 与 VXI 板卡与模块)
+      ├── PXI & VXI Controllers (PXI 与 VXI 控制器)
+      ├── PXI & VXI Mainframes & Chassis (PXI 与 VXI 主机与机箱)
+  ├── Signal Sources & Conditioning (信号源与调理)
+      ├── Adjustable Power Supplies (可调电源)
+      ├── Other Signal Sources & Conditioning (其他信号源与调理)
+      ├── RF & Microwave Amplifiers (射频与微波放大器)
+      ├── RF & Microwave Pass Filters (射频与微波通带滤波器)
+      ├── Signal Generators (信号发生器)
+      ├── Variable/Step Attenuators (可变/步进衰减器)
+  ├── Test Equipment Manuals & Books (测试设备手册与书籍)
+  ├── Test Equipment Parts & Accessories (测试设备零件与配件)
+      ├── Other Test Equipment Parts & Accessories (其他测试设备零件与配件)
+      ├── Test Equipment Cables (测试设备电缆)
+      ├── Test Equipment Cases (测试设备机箱)
+      ├── Test Equipment Controllers (测试设备控制器)
+      ├── Test Equipment Plug-Ins (测试设备插件)
+      ├── Test Equipment Power Amplifiers (测试设备功率放大器)
+      ├── Test Equipment Software (测试设备软件)
+      ├── Test Equipment Waveguides (测试设备波导)
+  ├── Test Meters & Detectors (测试仪表与检测器)
+      ├── Air Flow & Anemometers (气流与风速计)
+      ├── Ammeters (电流表)
+      ├── Capacitance & ESR Meters (电容与等效串联电阻表)
+      ├── Digital Tachometers (数字转速表)
+      ├── Dynamometers (测功机)
+      ├── EMF & Gaussmeters (电磁场与高斯计)
+      ├── Earth Ground Resistance Meters (接地电阻表)
+      ├── Electrical Usage Meters (用电量表)
+      ├── Fiber Optic Power Meters (光纤功率计)
+      ├── Frequency Counters (频率计数器)
+      ├── Gas Detectors & Monitors (气体检测器与监测仪)
+      ├── Hygrometers (湿度计)
+      ├── LCR Meters & Impedance Analyzers (LCR 表与阻抗分析仪)
+      ├── Light & Lux Meters (光照度与勒克斯计)
+      ├── Liquid & Mass Flow Meters (液体与质量流量计)
+      ├── Manometers/Air Pressure Meters (压力计/气压表)
+      ├── Metal Detector Accessories (金属探测器配件)
+      ├── Metal Detectors (金属探测器)
+      ├── Multimeters (万用表)
+      ├── Ohmmeters & Megohmmeters (欧姆表与兆欧表)
+      ├── Other Test Meters & Detectors (其他测试仪表与检测器)
+      ├── Panel Meters (面板仪表)
+      ├── RF & Microwave Power Meters (射频与微波功率计)
+      ├── Radiation Detectors (辐射检测器)
+      ├── Signal Level Meters (信号电平表)
+      ├── Sound Level Meters (声级计)
+      ├── Test Meter Parts & Accessories (测试仪表零件与配件)
+      ├── Thermometers & Temperature Measurement (温度计与温度测量)
+      ├── Ultrasonic Flaw Detectors (超声波探伤仪)
+      ├── Vibration Meters (振动计)
+      ├── Voltage Detectors (电压检测器)
+      ├── Voltmeters (电压表)
+      ├── pH, Conductivity & TDS Meters (pH、电导率与总溶解固体表)
+  ├── Testers & Calibrators (测试仪与校准器)
+      ├── Cable Testers & Trackers (电缆测试仪与追踪器)
+      ├── Calibrators (校准器)
+      ├── Decade Boxes (十进位箱)
+      ├── Lineman's Handsets/Butt Sets (线路工电话/测试电话)
+      ├── Other Testers & Calibrators (其他测试仪与校准器)
+      ├── Tester Parts & Accessories (测试仪零件与配件)
+      ├── Tone Probes & Generators (音调探头与发生器)
+      ├── Tube Testers (电子管测试仪)
+
+◆ Websites & Businesses for Sale (网站与待售企业)
+  ├── Internet Businesses & Websites (互联网企业与网站)
+  ├── Manufacturing (制造业)
+  ├── Marketing (市场营销)
+  ├── Other Businesses for Sale (其他待售企业)
+  ├── Patents & Trademarks (专利与商标)
+  ├── Retail & General Stores (零售与综合商店)
+  ├── Service Businesses (服务业)
+  ├── Vending & Coin-op (自动售货与投币式)
+  ├── Wholesale Trade & Distribution (批发贸易与分销)
